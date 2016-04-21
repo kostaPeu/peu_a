@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+
+.fff{
+	font-size: 16px; 
+	color: rgb(255, 255, 255);
+	 text-align: center; 
+	 line-height: 2.5em; 
+	 border-radius: 4px; 
+	 background-color: rgb(94, 94, 94); 
+	
+}
