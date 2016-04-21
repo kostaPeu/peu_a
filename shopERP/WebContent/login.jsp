@@ -24,7 +24,7 @@
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin">
                 <span id="reauth-num" class="reauth-num"></span>
-                <input type="NUM" id="inputNUM" class="form-control" placeholder="사번번호" required autofocus>
+                <input type="NUM" id="inputNUM" class="form-control" placeholder="사번" required autofocus>
                 <input type="password" id="inputPassword" class="form-control" placeholder="비밀번호" required>
                 <div id="remember" class="checkbox">
                     <label>
