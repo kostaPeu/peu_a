@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-    
+	pageEncoding="EUC-KR"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,12 +8,20 @@
 <title>Insert title here</title>
 </head>
 <body>
+<<<<<<< HEAD
 <p>yo man</p>
 <<<<<<< HEAD
 
 <h1>³ª´Â Áê¾îÂ¯ÀÌ¾Æ´Õ´Ï´ç.</h1>
 =======
 <h1>hoho</h1>
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
+=======
+
+	<p>yo man</p>
+	<p>asdfasdf</p>
+	<h1>hoho</h1>
+
 >>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 </body>
 
