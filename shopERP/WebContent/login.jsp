@@ -11,6 +11,7 @@
 <meta name="author" content="">
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
 <script type="text/javascript">
 	
 </script>
