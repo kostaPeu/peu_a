@@ -11,28 +11,28 @@
 <meta name="author" content="">
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
+<link href="css/login.css" rel="stylesheet">
 <script type="text/javascript">
 	
 </script>
 </head>
 <body>
-
-	<div class="container">
+<!-- 로그인부분 -->
+<div class="container" id="loginBody">
 		<form class="form-signin">
-			<h2 class="form-signin-heading">Power ERP 시스템</h2>
-			<label class="sr-only" for="inputID">사용자 ID</label> <input
-				id="inputEmail" class="form-control" type="ID"  placeholder="사용자 ID">
-				<label class="sr-only" for="inputPassword">Password</label> <input
-				id="inputPassword" class="form-control" type="password" placeholder="패스워드">
-				<div class="checkbox">
-				<label> <input type="checkbox" value="remember-me">
-					기억하기
+		<h2 class="form-signin-heading">Power ERP 시스템</h2>
+			<label class="sr-only" for="inputNUM">사번</label>
+				<input id="inputEmail" class="form-control" type="NUM"  placeholder="사번">
+			<label class="sr-only" for="inputPassword">Password</label>
+				<input id="inputPassword" class="form-control" type="password" placeholder="패스워드">
+			<div class="checkbox">
+				<label>
+				<input type="checkbox" value="remember-me">기억하기
 				</label>
-			</div>
+			</div><!-- 체크박스 -->
 			<button class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>
 		</form>
-	</div>
+</div><!-- 로그인부분 -->
 
 </body>
 </html>
