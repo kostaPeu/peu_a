@@ -51,12 +51,13 @@
 			</div>
 		</div>
 				<div class="wrapper-erp-local-nav">
-					<div class="erp-local-nav-title">급여관리 I</div>
+					<div class="erp-local-nav-title">판매관리</div>
 						<div class="erp-local-nav">
 							<ul class="local">
-								<li><a href="#">구매조회</a></li>
-								<li><a href="#">구매현황</a></li>
-								<li><a href="#">구매처별 정산</a></li>
+								<li><a href="#">판매조회</a></li>
+								<li><a href="#">판매현황</a></li>
+								<li><a href="#">판매처별 정산</a></li>
+								<li><a href="#">사입관리</a></li>
 							</ul>
 						</div>
 				</div>
