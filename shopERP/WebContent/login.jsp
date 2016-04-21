@@ -21,7 +21,7 @@
 	<div class="container">
 		<form class="form-signin">
 			<h2 class="form-signin-heading">Power ERP 시스템</h2>
-			<label class="sr-only" for="inputEmail">사용자 ID</label> <input
+			<label class="sr-only" for="inputID">사용자 ID</label> <input
 				id="inputEmail" class="form-control" type="ID"  placeholder="사용자 ID">
 				<label class="sr-only" for="inputPassword">Password</label> <input
 				id="inputPassword" class="form-control" type="password" placeholder="패스워드">
