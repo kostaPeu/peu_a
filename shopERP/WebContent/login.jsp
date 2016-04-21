@@ -18,21 +18,26 @@
 </head>
 <body>
 <!-- 로그인부분 -->
-<div class="container" id="loginBody">
-		<form class="form-signin">
-		<h2 class="form-signin-heading">Power ERP 시스템</h2>
-			<label class="sr-only" for="inputNUM">사번</label>
-				<input id="inputEmail" class="form-control" type="NUM"  placeholder="사번">
-			<label class="sr-only" for="inputPassword">Password</label>
-				<input id="inputPassword" class="form-control" type="password" placeholder="패스워드">
-			<div class="checkbox">
-				<label>
-				<input type="checkbox" value="remember-me">기억하기
-				</label>
-			</div><!-- 체크박스 -->
-			<button class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>
-		</form>
-</div><!-- 로그인부분 -->
+<div class="container">
+        <div class="card card-container">
+                       <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <span id="reauth-num" class="reauth-num"></span>
+                <input type="NUM" id="inputNUM" class="form-control" placeholder="사번번호" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="비밀번호" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> 기억하기
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">로그인</button>
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                	비밀번호를 잊어버렸나요?
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- 로그인부분 -->
 
 </body>
 </html>
