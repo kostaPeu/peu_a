@@ -30,6 +30,7 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 	<!-- 상단바 -->
 	<div class="wapper">
 		<div class="wapper-topbar">
@@ -56,12 +57,26 @@
 							<li><a href="#">마이페이지</a></li>
 						</ul>
 					</div>
+=======
+	<div class="container-fluid">
+		<div class="row">
+			<div class="container-fluid">
+				<div class="col-md-12 pull-left" id="bland">
+					<a>Power ERP</a>
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<!-- 좌측 bar -->
 		<div class="wapper-left">
+=======
+	</div>
+	<div class="mainmenu-area">
+		<div class="navbar-collapse collapse">
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 			<div class="container-fluid">
+<<<<<<< HEAD
 				<div class="wrapper-erp-local-nav">
 					<div class="erp-local-nav-title">판매관리</div>
 					<div class="erp-local-nav">
@@ -406,12 +421,39 @@
 						</table>
 					</div>
 				</div>
+=======
+				<ul class="nav navbar-nav">
+					<li><a href="#">기초관리</a></li>
+					<li><a href="#">구매관리</a></li>
+					<li><a href="#">판매관리</a></li>
+					<li><a href="#">주문/배송관리</a></li>
+					<li><a href="#">재고현황</a></li>
+					<li><a href="#">회계</a></li>
+					<li><a href="#">인사관리</a></li>
+					<li><a href="#">그룹웨어</a></li>
+					<li><a href="#">마이페이지</a></li>
+				</ul>
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
 
 
 
+=======
+	<div class="wrapper-erp-local-nav">
+		<div class="erp-local-nav-title">판매관리</div>
+		<div class="erp-local-nav">
+			<ul class="local">
+				<li><a href="#">판매조회</a></li>
+				<li><a href="#">판매현황</a></li>
+				<li><a href="#">판매처별 정산</a></li>
+				<li><a href="#">사입관리</a></li>
+			</ul>
+		</div>
+	</div>
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
