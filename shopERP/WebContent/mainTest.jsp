@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%
+	String left = request.getParameter("left");
+	if(left == null){
+		left = "./sale/view/sale.jsp";
+	}
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,12 +30,13 @@
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/contents.css">
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="./groupware/js/test.js"></script>
+<!-- <script src="./groupware/js/test.js"></script> -->
 
 </head>
 <body>
@@ -48,11 +55,11 @@
 		<div class="navbar-collapse collapse">
 			<div class="container-fluid">
 				<ul class="nav navbar-nav">
-					<li><a href="#">기초관리</a></li>
-					<li><a href="#">구매관리</a></li>
-					<li><a href="#">판매관리</a></li>
-					<li><a href="#">주문/배송관리</a></li>
-					<li><a href="#">재고현황</a></li>
+					<li><a href="./mainTest.jsp?left=./basic/view/basic.jsp">기초관리</a></li>
+					<li><a href="./mainTest.jsp?left=./purchase/view/purchase.jsp">구매관리</a></li>
+					<li><a href="./sale/view/sale">판매관리</a></li>
+					<li><a href="./odm/view/odm">주문/배송관리</a></li>
+					<li><a href="./stock/view/stock">재고현황</a></li>
 					<li><a href="#">회계</a></li>
 					<li><a href="#">인사관리</a></li>
 					<li><a href="./groupware/GroupWare">그룹웨어</a></li>
@@ -63,17 +70,12 @@
 	</div>
 
 	<div class="wrapper-erp-local-nav">
-		<div class="erp-local-nav-title">판매관리</div>
-		<div class="erp-local-nav">
-			<ul class="local">
-				<li><a href="#">판매조회</a></li>
-				<li><a href="#">판매현황</a></li>
-				<li><a href="#">판매처별 정산</a></li>
-				<li><a href="#">사입관리</a></li>
-			</ul>
-		</div>
+		<jsp:include page="<%=left %>"></jsp:include>
 	</div>
-
+	
+	<div class="container" id="contents">
+		
+	</div>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
