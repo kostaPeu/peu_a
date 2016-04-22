@@ -1,11 +1,10 @@
 $(function() {
-	$('.container-fluid li a').on('click', function(e) {
+	$('.local li a').on('click', function(e) {
 		e.preventDefault();
-		$('.wrapper-erp-local-nav').empty();
+		$('#contents').empty();
 
 		$(this).each(function(key, value) {
-			var thisHref = $(this).attr('href') + '.jsp';
-
+			var thisHref = $(this).attr('href');
 			var AjaxHTML = $.ajax({
 				url : thisHref,
 				type : "POST",
@@ -13,7 +12,7 @@ $(function() {
 				async : false
 			}).responseText;
 			
-			$('.wrapper-erp-local-nav').html(AjaxHTML);
+			$('#contents').html(AjaxHTML);
 		});
 	});
 });
