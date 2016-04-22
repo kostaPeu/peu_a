@@ -21,55 +21,47 @@
 	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <!-- Custom CSS -->
-
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/m_style.css">
 <link rel="stylesheet" href="css/responsive.css">
-
 <link href="css/bootstrap.min.css" rel="stylesheet">
+
 
 </head>
 <body>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="container-fluid">
-				<div class="col-md-12 pull-left" id="bland">
-					<a>Power ERP</a>
+	<div class="wapper">
+		<div class="wapper-fixed">
+			<div class="wapper-topbar">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12 pull-left" id="bland">
+							<img alt="로고" src="images/logo2.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mainmenu-area">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="nav navbar-nav">
+								<li><a href="#">기초관리</a></li>
+								<li><a href="#">구매관리</a></li>
+								<li><a href="#">판매관리</a></li>
+								<li><a href="#">주문/배송관리</a></li>
+								<li><a href="#">재고현황</a></li>
+								<li><a href="#">회계</a></li>
+								<li><a href="#">인사관리</a></li>
+								<li><a href="#">그룹웨어</a></li>
+								<li><a href="#">마이페이지</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<div class="mainmenu-area">
-		<div class="navbar-collapse collapse">
-			<div class="container-fluid">
-				<ul class="nav navbar-nav">
-					<li><a href="#">기초관리</a></li>
-					<li><a href="#">구매관리</a></li>
-					<li><a href="#">판매관리</a></li>
-					<li><a href="#">주문/배송관리</a></li>
-					<li><a href="#">재고현황</a></li>
-					<li><a href="#">회계</a></li>
-					<li><a href="#">인사관리</a></li>
-					<li><a href="#">그룹웨어</a></li>
-					<li><a href="#">마이페이지</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<div class="wrapper-erp-local-nav">
-		<div class="erp-local-nav-title">판매관리</div>
-		<div class="erp-local-nav">
-			<ul class="local">
-				<li><a href="#">판매조회</a></li>
-				<li><a href="#">판매현황</a></li>
-				<li><a href="#">판매처별 정산</a></li>
-				<li><a href="#">사입관리</a></li>
-			</ul>
-		</div>
-	</div>
-
+	<jsp:include page="selectable.html" flush="false"></jsp:include>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
