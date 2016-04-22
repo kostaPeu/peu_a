@@ -24,6 +24,8 @@
 <link rel="stylesheet" href="css/m_style.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
 </head>
 <body>
 
@@ -58,27 +60,8 @@
 				</div>
 			</div>
 		</div>
-
-
-		<div class="wapper-left">
-			<div class="container-fluid">
-				<div class="wrapper-erp-local-nav">
-					<div class="erp-local-nav-title">판매관리</div>
-					<div class="erp-local-nav">
-						<ul class="local">
-							<li><a href="#">판매조회</a></li>
-							<li><a href="#">판매현황</a></li>
-							<li><a href="#">판매처별 정산</a></li>
-							<li><a href="#">사입관리</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<jsp:include page="selectable.html" flush="false"></jsp:include>
 	</div>
-
-
+	<jsp:include page="selectable.html" flush="false"></jsp:include>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
