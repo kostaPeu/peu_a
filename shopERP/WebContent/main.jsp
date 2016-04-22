@@ -41,36 +41,32 @@
 				</div>
 			</div>
 			<div class="mainmenu-area">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-12">
-							<ul class="nav navbar-nav">
-								<li><a href="#">기초관리</a></li>
-								<li><a href="#">구매관리</a></li>
-								<li><a href="#">판매관리</a></li>
-								<li><a href="#">주문/배송관리</a></li>
-								<li><a href="#">재고현황</a></li>
-								<li><a href="#">회계</a></li>
-								<li><a href="#">인사관리</a></li>
-								<li><a href="#">그룹웨어</a></li>
-								<li><a href="#">마이페이지</a></li>
-							</ul>
+				<div class="navbar-collapse collapse">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="nav navbar-nav">
+									<li><a href="#">기초관리</a></li>
+									<li><a href="#">구매관리</a></li>
+									<li><a href="#">판매관리</a></li>
+									<li><a href="#">주문/배송관리</a></li>
+									<li><a href="#">재고현황</a></li>
+									<li><a href="./accounting/AccounTing">회계</a></li>
+									<li><a href="#">인사관리</a></li>
+									<li><a href="#">그룹웨어</a></li>
+									<li><a href="#">마이페이지</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+
+
 	
-		<div class="calendar">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6 pull-light"> 
-						<jsp:include page="selectable.html" flush="false"></jsp:include>
-					</div>
-				</div>				
-			</div>
-		</div>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

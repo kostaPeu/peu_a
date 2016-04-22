@@ -54,7 +54,7 @@
 					<li><a href="#">주문/배송관리</a></li>
 					<li><a href="#">재고현황</a></li>
 					<li><a href="#">회계</a></li>
-					<li><a href="#">인사관리</a></li>
+					<li><a href='<jsp:include page="accounting/AccounTing.jsp"></jsp:include>'>인사관리</a></li>
 					<li><a href="./groupware/NewFile">그룹웨어</a></li>
 					<li><a href="#">마이페이지</a></li>
 				</ul>
@@ -62,15 +62,13 @@
 		</div>
 	</div>
 
-	<div class="wrapper-erp-local-nav">
-		<div class="erp-local-nav-title">판매관리</div>
-		<div class="erp-local-nav">
-			<ul class="local">
-				<li><a href="#">판매조회</a></li>
-				<li><a href="#">판매현황</a></li>
-				<li><a href="#">판매처별 정산</a></li>
-				<li><a href="#">사입관리</a></li>
-			</ul>
+	<div class="calendar">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 pull-light">
+					<jsp:include page="selectable.html" flush="false"></jsp:include>
+				</div>
+			</div>
 		</div>
 	</div>
 
