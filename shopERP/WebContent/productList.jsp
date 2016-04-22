@@ -23,7 +23,6 @@
 
 </head>
 <body>
-
 	<div class="container-fluid">
 		<div class="row">
 			<div class="container-fluid">
@@ -61,6 +60,32 @@
 			</ul>
 		</div>
 	</div>
-	<script src="js/bootstrap.min.js"></script>
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th><input type="checkbox"></th>
+				<th>품목코드</th>
+				<th>품목명</th>
+				<th>그룹명</th>
+				<th>바코드</th>
+				<th>입고단가</th>
+				<th>출고단가</th>
+				<th>품목구분</th>
+				<th>원산지</th>
+			</tr>
+		</thead>
+		<tr>
+			<td><input type="checkbox"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<input type="button" class="btn btn-default" value="등록">
 </body>
 </html>
