@@ -27,12 +27,21 @@ h6 {
 }
 body { font-family: 'Titillium Web', sans-serif; }
 
+
+.wapper-fixed{
+	position: fixed;
+	
+}
 .wapper-topbar{
- height:35px;
+ 			height:35px;
+            width:100%;
+            color: #555;
+            font-size:12px;
             position:fixed;
             z-index:999;
             top:0px;
             left:0px;
+            -webkit-box-shadow: 0 1px 2px 0 #777;
 }
 
 /*로고*/
@@ -68,11 +77,11 @@ body { font-family: 'Titillium Web', sans-serif; }
 
 /*메인 상단바*/
 .mainmenu-area {
-background: none repeat scroll 0 0 #aaa;
-font-family: "Roboto Condensed",sans-serif;
+	background: none repeat scroll 0 0 #aaa;
+	font-family: "Roboto Condensed",sans-serif;
 text-transform: uppercase;
 width: 100%;
-position: fixed;
+position: relative;
 
 }
 
@@ -101,7 +110,6 @@ position: fixed;
     margin: 0px;
     padding: 0px;
     left: -5px
-
 }
 
 /*좌측 상단 타이틀*/
@@ -112,6 +120,10 @@ position: fixed;
     font-weight: bold;
     padding: 14px 10px;
  
+}
+
+.wapper-maincontent{
+	position: fixed;
 }
 
 /* ul태그 볼드삭제*/
