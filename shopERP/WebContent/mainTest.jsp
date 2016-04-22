@@ -27,6 +27,10 @@
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
+<script src="./groupware/js/jquery-1.10.2.min.js"></script>
+<script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="./groupware/js/test.js"></script>
+
 </head>
 <body>
 
@@ -51,7 +55,7 @@
 					<li><a href="#">재고현황</a></li>
 					<li><a href="#">회계</a></li>
 					<li><a href="#">인사관리</a></li>
-					<li><a href="#">그룹웨어</a></li>
+					<li><a href="./groupware/NewFile">그룹웨어</a></li>
 					<li><a href="#">마이페이지</a></li>
 				</ul>
 			</div>
