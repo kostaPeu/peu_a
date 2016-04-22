@@ -7,19 +7,25 @@
 <title>Insert title here</title>
 
 <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600'
+	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100'
+	rel='stylesheet' type='text/css'>
 
- <!-- Font Awesome -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <!-- Custom CSS -->
-   
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -33,6 +39,7 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="mainmenu-area">
 		<div class="navbar-collapse collapse">
 			<div class="container-fluid">
@@ -50,6 +57,7 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="wrapper-erp-local-nav">
 		<div class="erp-local-nav-title">판매관리</div>
 		<div class="erp-local-nav">
@@ -61,6 +69,7 @@
 			</ul>
 		</div>
 	</div>
+
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
