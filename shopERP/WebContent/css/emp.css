@@ -18,12 +18,15 @@
 	margin-left: 30px;
 }
 
-#emp_insert .form-group{
-	width: 500px;
-} 
+#emp_insert{
+	margin-top: 50px;
+}
+#basic_insert td, #basic_insert th{
+	text-align: center;
+}
 
-#emp_insert .form-group input{
-	width: 200px;
-} 
+#basic_insert{
+	margin-top: 30px;
+}
 
 body { font-family: 'Titillium Web', sans-serif; }
