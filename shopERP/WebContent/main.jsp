@@ -61,7 +61,16 @@
 			</div>
 		</div>
 	</div>
-	<jsp:include page="selectable.html" flush="false"></jsp:include>
+	
+		<div class="calendar">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 pull-light"> 
+						<jsp:include page="selectable.html" flush="false"></jsp:include>
+					</div>
+				</div>				
+			</div>
+		</div>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
