@@ -34,7 +34,7 @@
 	background-color: white;
 	display: none;
 	z-index: 100;
-	box-shadow: 1px 1px 10000px darkgray;
+	box-shadow: 1px 1px 100px darkgray;
 }
 .title {
 	background-color: darkgray;
@@ -65,6 +65,9 @@ th {
 	height:30px;
 	width: 90px;
 }
+.buttongroup{
+	text-align: center;
+}
 </style>
 <script type="text/javascript">
 $(function(){
@@ -75,38 +78,56 @@ $(function(){
 		$('.add').css("display","none")
 	})
 })
+$(function(){
+	$('input').keyup(function(){
+		if($(this).val() != null){
+			$(this).next().addClass("glyphicon");
+			$(this).next().addClass("glyphicon-ok");
+			$(this).next().addClass("form-control-feedback");
+		}if($(this).val() == ""){
+			$(this).next().removeClass("glyphicon");
+			$(this).next().removeClass("glyphicon-ok");
+			$(this).next().removeClass("form-control-feedback");
+		}
+	})
+})
+//if()
 </script>
 </head>
 <body>
 	<div class="add">
 		<div class="title">
-			<span class=""><b>품목등록</b></span>
-			<button type="button" class="close" id="closeBtn"><span aria-hidden="true">&times;</span></button>
+			<span class=""><strong>품목등록</strong></span>
+			<button type="button" class="close" id="closeBtn"><span>&times;</span></button>
 		</div>
 		<form class="form-horizontal" action="">
 			<div class="form1">
-				<div class="form-group">
-					<label for="product_id" class="col-sm-2 control-label">품목코드</label>
+				<div class="form-group has-feedback">
+					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
 					<div class="col-sm-10">
 						<input type="text" class="form-control" id="product_id">
+						<span></span>
 					</div>
 				</div>
-				<div class="form-group">
-					<label for="product_name" class="col-sm-2 control-label">품목명</label>
+				<div class="form-group has-feedback">
+					<label for="product_name" class="col-sm-2 control-label"><strong>품목명</strong></label>
 					<div class="col-sm-10">
 						<input type="text" class="form-control" id="product_name">
+						<span></span>
 					</div>
 				</div>
-				<div class="form-group">
-					<label for="product_name" class="col-sm-2 control-label">품목명</label>
+				<div class="form-group has-feedback">
+					<label for="pgroup_name" class="col-sm-2 control-label">그룹명</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="product_name">
+						<input type="text" class="form-control" id="pgroup_name">
+						<span></span>
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group has-feedback">
 					<label for="in_customer" class="col-sm-2 control-label">구매처</label>
 					<div class="col-sm-10">
 						<input type="text" class="form-control" id="in_customer">
+						<span></span>
 					</div>
 				</div>
 				<div class="form-group">
@@ -129,22 +150,22 @@ $(function(){
 						</select>
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group has-feedback">
 					<label for="in_price" class="col-sm-2 control-label">입고단가</label>
 					<div class="col-sm-10">
 						<input type="text" class="form-control" id="in_price">
+						<span></span>
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group has-feedback">
 					<label for="out_price" class="col-sm-2 control-label">출고단가</label>
 					<div class="col-sm-10">
 						<input type="text" class="form-control" id="out_price">
+						<span></span>
 					</div>
 				</div>
-<!-- 				<input type="submit" class="btn btn-primary" id="saveBtn" value="저장" size="500">
-				<input type="button" class="btn btn-primary" id="closeBtn" value="닫기" size="500"> -->
 				<button class="btnn btn btn-default" type="submit" id="saveBtn">저장</button>
-				<button class="btnn btn btn-default" type="reset" id="closeBtn">닫기</button>
+				<button class="btnn btn btn-default" id="closeBtn">닫기</button>
 			</div>
 		</form>
 	</div>
@@ -174,6 +195,10 @@ $(function(){
 			<td></td>
 		</tr>
 	</table>
-	<input type="button" id="newBtn" class="btn btn-default" value="등록">
+	<div class="buttongroup">
+		<input type="button" id="newBtn" class="btn btn-default" value="등록">
+		<input type="button" id="newBtn" class="btn btn-default" value="수정">
+		<input type="button" id="newBtn" class="btn btn-default" value="삭제">
+	</div>
 </body>
 </html>
