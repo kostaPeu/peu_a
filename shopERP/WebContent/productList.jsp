@@ -89,6 +89,10 @@ $(function(){
 				<th>aa</th>
 				<td><input type="text"></td>
 			</tr>
+			<tr>
+				<th>aa</th>
+				<td><input type="text"></td>
+			</tr>
 		</table>
 		<input type="submit" class="btn btn-default" id="saveBtn" value="저장">
 		<input type="button" class="btn btn-default" id="closeBtn" value="닫기">
