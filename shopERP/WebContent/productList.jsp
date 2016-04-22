@@ -20,47 +20,85 @@
     <link rel="stylesheet" href="css/responsive.css">
     
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <script src="js/jquery.js" type="text/javascript"></script>
+<style type="text/css">
+.add {
+	width: 400px;
+	height: 500px;
+	border: 2px;
+	border-color: gray;
+	border-style: solid;
+	position: absolute;
+	background-color: white;
+	display: none;
+	z-index: 100;
+	box-shadow: 1px 1px 50px rgba(0,0,0,.5);
+}
+.title {
+	background-color: darkgray;
+}
+tr {
+	border: 1px;
+	border-color: black;
+	border-style: solid;
+}
+th {
+	border: 1px;
+	border-right: black;
+	border-style: solid;
+}
+.new {
+ 	position: relative;
+}
+</style>
+<script type="text/javascript">
+$(function(){
+	$('#newBtn').click(function(){
+		$('.add').css("display","block")
+	})
+	$('#closeBtn').click(function(){
+		$('.add').css("display","none")
+	})
+})
+</script>
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="container-fluid">
-				<div class="col-md-12 pull-left" id="bland">
-					<a>Power ERP</a>
-				</div>
-			</div>
-		</div>
+	<div class="add">
+	<div class="title">
+		<span>품목등록</span>
 	</div>
-	<div class="mainmenu-area">
-		<div class="navbar-collapse collapse">
-			<div class="container-fluid">
-				<ul class="nav navbar-nav">
-					<li><a href="#">기초관리</a></li>
-					<li><a href="#">구매관리</a></li>
-					<li><a href="#">판매관리</a></li>
-					<li><a href="#">주문/배송관리</a></li>
-					<li><a href="#">재고현황</a></li>
-					<li><a href="#">회계</a></li>
-					<li><a href="#">인사관리</a></li>
-					<li><a href="#">그룹웨어</a></li>
-					<li><a href="#">마이페이지</a></li>
-				</ul>
-			</div>
-		</div>
+	<form action="">
+		<table>
+			<tr>
+				<th>aa</th>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<th>aa</th>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<th>aa</th>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<th>aa</th>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<th>aa</th>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<th>aa</th>
+				<td><input type="text"></td>
+			</tr>
+		</table>
+		<input type="submit" class="btn btn-default" id="saveBtn" value="저장">
+		<input type="button" class="btn btn-default" id="closeBtn" value="닫기">
+	</form>
 	</div>
-	<div class="wrapper-erp-local-nav">
-		<div class="erp-local-nav-title">판매관리</div>
-		<div class="erp-local-nav">
-			<ul class="local">
-				<li><a href="#">판매조회</a></li>
-				<li><a href="#">판매현황</a></li>
-				<li><a href="#">판매처별 정산</a></li>
-				<li><a href="#">사입관리</a></li>
-			</ul>
-		</div>
-	</div>
-	<table class="table table-bordered table-hover">
+	<table class="table table-bordered table-hover new">
 		<thead>
 			<tr>
 				<th><input type="checkbox"></th>
@@ -86,6 +124,6 @@
 			<td></td>
 		</tr>
 	</table>
-	<input type="button" class="btn btn-default" value="등록">
+	<input type="button" id="newBtn" class="btn btn-default" value="등록">
 </body>
 </html>
