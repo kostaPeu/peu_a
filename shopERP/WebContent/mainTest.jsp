@@ -55,7 +55,7 @@
 					<li><a href="#">재고현황</a></li>
 					<li><a href="#">회계</a></li>
 					<li><a href="#">인사관리</a></li>
-					<li><a href="./groupware/NewFile">그룹웨어</a></li>
+					<li><a href="./groupware/GroupWare">그룹웨어</a></li>
 					<li><a href="#">마이페이지</a></li>
 				</ul>
 			</div>

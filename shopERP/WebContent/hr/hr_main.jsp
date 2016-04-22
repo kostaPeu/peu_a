@@ -15,9 +15,9 @@
 
 <!-- Custom CSS -->
    
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <!--/인사관리 -->
