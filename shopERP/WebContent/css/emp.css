@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+.emp_info_table{
+	border-collapse: collapse;
+	empty-cells: show;
+	border: 1px solid gray;
+}
+.emp_info_body td{
+	text-align: center;
+}
+.emp_info_head th{
+	text-align: center;
+}
+.emp_info_body button{
+	margin: 0px;
+}
+#search_form{
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+
+body { font-family: 'Titillium Web', sans-serif; }
