@@ -21,8 +21,8 @@
 
 <link href="../../css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/productList.css" rel="stylesheet">
-<script src="../../js/jquery.js" type="text/javascript"></script>
-<script src="../js/productList.js"></script>
+<script src="../../js/jquery.min.js" type="text/javascript"></script>
+<script src="../js/productList.js" type="text/javascript"></script>
 </head>
 <body>
 	<div class="add">

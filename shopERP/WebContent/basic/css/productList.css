@@ -1,0 +1,39 @@
+.add {
+	width: 50%;
+	height: 500px;
+	border: 2px;
+	left: 28%;
+	top: 7%;
+	border-color: gray;
+	border-style: solid;
+	position: absolute;
+	background-color: white;
+	display: none;
+	z-index: 100;
+	box-shadow: 1px 1px 100px darkgray;
+}
+.title {
+	background-color: darkgray;
+	padding: 1%;
+	text-align: center;
+	font-size: 1.1em;
+}
+.new {
+ 	position: relative;
+}
+.form1{
+	width: 90%;
+	margin-left: 3%;
+	margin-top: 3%;
+	text-align: center;
+}
+.btnn{
+	height:30px;
+	width: 90px;
+}
+.buttongroup{
+	text-align: center;
+}
+table tr td, table tr th{
+	text-align: center;
+}
