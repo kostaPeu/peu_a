@@ -21,6 +21,7 @@
     
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/jquery.js" type="text/javascript"></script>
+    
 <style type="text/css">
 .add {
 	width: 400px;

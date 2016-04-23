@@ -1,3 +1,8 @@
 #contents {
-	float: right;
+    float: right;
+    width: 84.7%;
+}
+.container{
+	padding-left: 0px;
+	padding-right: 0px;
 }

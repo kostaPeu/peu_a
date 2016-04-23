@@ -73,9 +73,9 @@
 		<jsp:include page="<%=left %>"></jsp:include>
 	</div>
 	
-	<div class="container" id="contents">
+ 	<div class="container" id="contents">
 		
-	</div>
+	</div> 
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
