@@ -17,5 +17,8 @@
 			</ul>
 		</div>
 	</div>
+		<div id="contents">
+		
+		</div>
 </body>
 </html>
