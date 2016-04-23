@@ -1,32 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<!-- <meta charset="utf-8"> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 
-<!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="../../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/productList.css" rel="stylesheet">
+<script src="../../js/jquery.min.js" type="text/javascript"></script>
+<script src="../js/productList.js" type="text/javascript"></script>
 
- <!-- Font Awesome -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-<!-- Custom CSS -->
-
-<link rel="stylesheet" href="../../css/style.css">
-<link rel="stylesheet" href="../../css/responsive.css">
-<script src="/shopERP/js/jquery.min.js"></script>
-<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
-<link href="/shopERP/css/productList.css" rel="stylesheet">
-<script src="/shopERP/basic/js/productList.js" type="text/javascript"></script>
 </head>
 <body>
 	<div class="add">
 		<div class="title">
-			<span class=""><strong>품목등록</strong></span>
+			<span class=""><strong>거래처등록</strong></span>
 			<button type="button" class="close" id="closeBtn"><span>&times;</span></button>
 		</div>
 		<form class="form-horizontal" action="">
@@ -98,37 +92,23 @@
 			</div>
 		</form>
 	</div>
-	<table class="table table-bordered table-hover new">
-		<thead>
-			<tr>
-				<th><input type="checkbox"></th>
-				<th>품목코드</th>
-				<th>품목명</th>
-				<th>그룹명</th>
-				<th>바코드</th>
-				<th>입고단가</th>
-				<th>출고단가</th>
-				<th>품목구분</th>
-				<th>원산지</th>
-			</tr>
-		</thead>
+	<table class="table table-bordered table-hover">
 		<tr>
-			<td><input type="checkbox"></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<th><input type="checkbox"></th>
+			<th>거래처코드</th>
+			<th>거래처명</th>
+			<th>대표자명</th>
+			<th>전화번호</th>
+			<th>주소</th>
+			<th>통장사본</th>
+			<th>통장등록여부</th>
+			<th>EMAIL</th>
+			<th>FAX</th>
+			<th>담당자</th>
 		</tr>
 	</table>
-	<div class="buttongroup">
-		<input type="button" id ="newBtn" class="btn btn-default" value="등록">
- 		<input type="button" class="btn btn-default newBtn" value="수정">
-		<input type="button" class="btn btn-default newBtn" value="삭제">
-	</div>
-
+	<input type="button" class="btn btn-default" value="등록">
+	<input type="button" class="btn btn-default" value="수정">
+	<input type="button" class="btn btn-default" value="삭제">
 </body>
 </html>

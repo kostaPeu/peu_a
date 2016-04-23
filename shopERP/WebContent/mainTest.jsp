@@ -36,19 +36,16 @@
 
 <link href="basic/css/productList.css" rel="stylesheet">
 
-<!-- <script src="js/jquery.min.js"></script>
-<script src="basic/js/productList.js"></script> -->
-
 <script src="groupware/js/jquery-1.10.2.min.js"></script>
 <script src="groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
 
-<!-- <script src="js/jquery.min.js"></script> -->
 <script src="basic/js/productList.js"></script>
+
+
 <!-- <script src="./groupware/js/test.js"></script> -->
 
 </head>
 <body>
-
 	<div class="container-fluid">
 		<div class="row">
 			<div class="container-fluid">
@@ -84,6 +81,8 @@
  	<div class="container" id="contents">
 		
 	</div> 
-	<script src="js/bootstrap.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+	
 </body>
 </html>

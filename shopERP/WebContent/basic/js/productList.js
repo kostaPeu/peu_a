@@ -1,5 +1,5 @@
 $(function(){
-	$('#newBtn').click(function(){
+	$('#newBtn').on('click', function(){
 		$('.add').css("display","block")
 	})
 	$('#closeBtn').click(function(){
