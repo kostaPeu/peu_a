@@ -93,6 +93,11 @@ $(function(){
 })
 //if()
 </script>
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script> -->
+<script type="text/javascript">
+	$('.add').draggable();
+</script>
 </head>
 <body>
 	<div class="add">
@@ -119,8 +124,11 @@ $(function(){
 				<div class="form-group has-feedback">
 					<label for="pgroup_name" class="col-sm-2 control-label">그룹명</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="pgroup_name">
-						<span></span>
+						<select class="form-control" id="pgroup_name">
+							<option>컴퓨터</option>
+							<option>마우스</option>
+							<option>키보드</option>
+						</select>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
@@ -134,9 +142,9 @@ $(function(){
 					<label for="standard" class="col-sm-2 control-label">규격명</label>
 					<div class="col-sm-10">
 						<select class="form-control" id="standard">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
+							<option>500GB</option>
+							<option>1TB</option>
+							<option>무선</option>
 						</select>
 					</div>
 				</div>
@@ -144,9 +152,9 @@ $(function(){
 					<label for="pgroup" class="col-sm-2 control-label">품목구분</label>
 					<div class="col-sm-10">
 						<select class="form-control" id="standard">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
+							<option>상품</option>
+							<option>식품</option>
+							<option>가전기기</option>
 						</select>
 					</div>
 				</div>
