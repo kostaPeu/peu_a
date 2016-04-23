@@ -12,8 +12,8 @@
 		<div class="erp-local-nav-title">기초등록</div>
 		<div class="erp-local-nav">
 			<ul class="local">
-				<li><a href="./basic/view/productList.jsp">품목관리</a></li>
-				<li><a href="./basic/view/customer.jsp">거래처관리</a></li>
+				<li><a href="./basic/view/basic_productList.jsp">품목관리</a></li>
+				<li><a href="./basic/view/basic_customer.jsp">거래처관리</a></li>
 			</ul>
 		</div>
 	</div>
