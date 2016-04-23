@@ -34,6 +34,11 @@
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
+
+<link href="./basic/css/productList.css" rel="stylesheet">
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="./basic/js/productList.js"></script>
+
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
 <!-- <script src="./groupware/js/test.js"></script> -->
