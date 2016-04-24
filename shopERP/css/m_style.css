@@ -1,0 +1,98 @@
+#bland {
+	top: 5px;
+	left: 10px;
+	padding-bottom: 5px;
+	font-size: 30px;
+	font-weight: 3px;
+	position: relative;
+}
+
+.wapper-fixed {
+	position: fixed;
+}
+
+.main-contents-wapper {
+	position: fixed;
+	margin-top: 100px;
+}
+
+#bland a {
+	color: #222;
+	text-decoration: none;
+}
+
+/*메인 상단바*/
+.mainmenu-area {
+	background: none repeat scroll 0 0 #aaa;
+	font-family: "Roboto Condensed", sans-serif;
+	text-transform: uppercase;
+	width: 100%;
+	position: fixed;
+}
+
+/*상단메뉴 글자*/
+.mainmenu-area ul.navbar-nav li a {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+/*상단메뉴 오버효과*/
+.mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a
+	{
+	background: #222
+}
+/*상단메뉴 클릭효과*/
+.mainmenu-area .nav>li>a:focus {
+	color: #bbb
+}
+
+/*좌측 고정바*/
+.wrapper-erp-local-nav {
+	background-color: #f8f8f8;
+	border-right: 1px solid #c0c0c0;
+	height: 100%;
+	overflow-y: auto;
+	position: fixed;
+	width: 200px;
+	top: 100px;
+	margin: 0px;
+	padding: 0px;
+	left: -5px
+}
+
+/*좌측 상단 타이틀*/
+.wrapper-erp-local-nav>.erp-local-nav-title {
+	background: #e9e8e8 none repeat scroll 0 0;
+	border-bottom: 1px solid #ccc;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 14px 10px;
+}
+
+.main-contents-wapper {
+	position: relative;
+	margin-left: +180px;
+	top: 0px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+ul {
+	list-style: none;
+}
+
+.calendar {
+	margin: 40px 10px;
+	padding: 0;
+	font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14px;
+}
+
+#calendar {
+		max-width: 900px;
+		height: 357px;
+		margin: 0 auto;
+	}
