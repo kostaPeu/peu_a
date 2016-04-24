@@ -13,6 +13,7 @@
 		<div class="erp-local-nav">
 			<ul class="local">
 				<li><a href="./purchase/view/purchase_check.jsp">구매조회</a></li>
+				<li><a href="./purchase/view/purchase_add.jsp">구매입력</a></li>
 				<li><a href="./purchase/view/purchase_search.jsp">구매현황</a></li>
 				<li><a href="./purchase/view/purchase_accounts.jsp">구매처별 정산</a></li>
 			</ul>
