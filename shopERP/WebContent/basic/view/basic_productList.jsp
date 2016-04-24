@@ -172,7 +172,7 @@
 			</div>
 		</form>
 	</div>
-	<table class="table table-bordered table-hover new">
+	<table>
 		<thead>
 			<tr>
 				<th><input type="checkbox"></th>

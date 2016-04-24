@@ -8,13 +8,18 @@
 <link rel="stylesheet" href="/shopERP/stock/css/jquery-ui.min.css">
 <script src="/shopERP/stock/js/jquery.min.js"></script>
 <script src="/shopERP/stock/js/jquery-ui.min.js"></script>
+<script src="/shopERP/js/ajax.js"></script>
 <script>
 $(function() {
-  $( "#datepicker1" ).datepicker({
+  $("#datepicker1").datepicker({
     dateFormat: 'yy-mm-dd'
   });
 });
-
+$(function(){
+	$("#warehouse_search").on("click",function(){
+		
+	});
+});
 
 </script>
 </head>
@@ -23,83 +28,25 @@ $(function() {
 		<div class="title">
 			<span class=""><strong>재고현황</strong></span>
 		</div>
-		<form class="form-horizontal" action="">
+		<form class="form" action="">
 			<div class="searchform">
 			<table class="table table-bordered table-hover new">
 				<tr>
 					<td>기준일자</td>
-					<td><input type="text" id="datepicker1"></td>
+					<td><input type="text" id="datepicker1">-<input type="text" id="datepicker1"></td>
+				</tr> 
+				<tr>
+					<td>창고</td>
+					<td><input type="text" id="warehouse"><button id="warehouse_search" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button></td>
 				</tr>
 				<tr>
+					<td>품목코드</td>
+					<td><input type="text" id="product_id"><button id="product_search" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button></td>
 				</tr>
 			</table>
-				<!-- <div class="form-group has-feedback">
-					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="product_id">
-						<span></span>
-					</div>
-				</div>
-				<div class="form-group has-feedback">
-					<label for="product_name" class="col-sm-2 control-label"><strong>품목명</strong></label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="product_name">
-						<span></span>
-					</div>
-				</div>
-				<div class="form-group has-feedback">
-					<label for="pgroup_name" class="col-sm-2 control-label">그룹명</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="pgroup_name">
-						<span></span>
-					</div>
-				</div>
-				<div class="form-group has-feedback">
-					<label for="in_customer" class="col-sm-2 control-label">구매처</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="in_customer">
-						<span></span>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="standard" class="col-sm-2 control-label">규격명</label>
-					<div class="col-sm-10">
-						<select class="form-control" id="standard">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="pgroup" class="col-sm-2 control-label">품목구분</label>
-					<div class="col-sm-10">
-						<select class="form-control" id="standard">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group has-feedback">
-					<label for="in_price" class="col-sm-2 control-label">입고단가</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="in_price">
-						<span></span>
-					</div>
-				</div>
-				<div class="form-group has-feedback">
-					<label for="out_price" class="col-sm-2 control-label">출고단가</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="out_price">
-						<span></span>
-					</div>
-				</div>
-				<button type="submit" class="btnn btn btn-default"  id="saveBtn">등록</button>
-				<button class="btnn btn btn-default closeBtn">닫기</button>
-			</div> -->
+				<a href="/shopERP/stock/view/stock_search_calendar.jsp" class="btn btn-default btn-sm"><span class="fa fa-search"></span></a>
+			</div>
 		</form>
 	</div>
-
 </body>
 </html>
