@@ -62,7 +62,7 @@
 					<li><a href="./mainTest.jsp?left=./stock/view/stock.jsp">재고현황</a></li>
 					<li><a href="#">회계</a></li>
 					<li><a href="#">인사관리</a></li>
-					<li><a href="./groupware/GroupWare">그룹웨어</a></li>
+					<li><a href="./mainTest.jsp?left=./groupware/view/groupware.jsp">그룹웨어</a></li>
 					<li><a href="#">마이페이지</a></li>
 				</ul>
 			</div>
