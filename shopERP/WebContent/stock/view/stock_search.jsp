@@ -1,12 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<meta charset='utf-8' />
+<link href='/shopERP/css/fullcalendar.css' rel='stylesheet' />
+<link href='/shopERP/css/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link href='/shopERP/stock/css/stock_search.css' rel='stylesheet'>
+<script src='/shopERP/js/moment.min.js'></script>
+<script src='/shopERP/js/jquery.min.js'></script>
+<script src='/shopERP/js/fullcalendar.min.js'></script>
+<script src='/shopERP/stock/js/stock_search.js'></script>
+
 </head>
 <body>
+
+	<div id='calendar'></div>
 
 </body>
 </html>
