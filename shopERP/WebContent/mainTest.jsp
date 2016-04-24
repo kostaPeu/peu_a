@@ -68,20 +68,9 @@
 			</div>
 		</div>
 	</div>
-<
-
-	<div class="calendar">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-6 pull-light">
-					<jsp:include page="selectable.html" flush="false"></jsp:include>
-				</div>
-			</div>
-		</div>
 
 	<div class="wrapper-erp-local-nav">
 		<jsp:include page="<%=left %>"></jsp:include>
-
 	</div>
 	
 	<div class="container" id="contents">
