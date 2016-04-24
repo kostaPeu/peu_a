@@ -16,8 +16,8 @@
 
 <!-- Custom CSS -->
 
-<link rel="stylesheet" href="../../css/style.css">
-<link rel="stylesheet" href="../../css/responsive.css">
+<link rel="stylesheet" href="/shopERP/css/style.css">
+<link rel="stylesheet" href="/shopERP/css/responsive.css">
 <script src="/shopERP/js/jquery.min.js"></script>
 <link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 <link href="/shopERP/basic/css/basic_customerList.css" rel="stylesheet">

@@ -7,12 +7,18 @@
 <title>Insert title here</title>
 
 <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600'
+	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100'
+	rel='stylesheet' type='text/css'>
 
- <!-- Font Awesome -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <!-- Custom CSS -->
 
@@ -28,15 +34,16 @@
 	<div class="add xclose">
 		<div class="title">
 			<span class=""><strong>품목등록</strong></span>
-			<button type="button" class="close closeBtn"><span>&times;</span></button>
+			<button type="button" class="close closeBtn">
+				<span>&times;</span>
+			</button>
 		</div>
 		<form class="form-horizontal" action="">
 			<div class="addform">
 				<div class="form-group has-feedback">
 					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="product_id">
-						<span></span>
+						<input type="text" class="form-control" id="product_id"> <span></span>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
@@ -83,34 +90,32 @@
 				<div class="form-group has-feedback">
 					<label for="in_price" class="col-sm-2 control-label">입고단가</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="in_price">
-						<span></span>
+						<input type="text" class="form-control" id="in_price"> <span></span>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
 					<label for="out_price" class="col-sm-2 control-label">출고단가</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="out_price">
-						<span></span>
+						<input type="text" class="form-control" id="out_price"> <span></span>
 					</div>
 				</div>
-				<button type="submit" class="btnn btn btn-default"  id="saveBtn">등록</button>
-			<!-- 	<button class="btnn btn btn-default closeBtn">닫기</button> -->
+				<button type="submit" class="btnn btn btn-default" id="saveBtn">등록</button>
 			</div>
 		</form>
 	</div>
 	<div class="update xclose">
 		<div class="title">
 			<span class=""><strong>품목수정</strong></span>
-			<button type="button" class="close closeBtn"><span>&times;</span></button>
+			<button type="button" class="close closeBtn">
+				<span>&times;</span>
+			</button>
 		</div>
 		<form class="form-horizontal" action="">
 			<div class="updateform">
 				<div class="form-group has-feedback">
 					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="product_id">
-						<span></span>
+						<input type="text" class="form-control" id="product_id"> <span></span>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
@@ -157,53 +162,51 @@
 				<div class="form-group has-feedback">
 					<label for="in_price" class="col-sm-2 control-label">입고단가</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="in_price">
-						<span></span>
+						<input type="text" class="form-control" id="in_price"> <span></span>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
 					<label for="out_price" class="col-sm-2 control-label">출고단가</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="out_price">
-						<span></span>
+						<input type="text" class="form-control" id="out_price"> <span></span>
 					</div>
 				</div>
-				<button type="submit" class="btnn btn btn-default"  id="saveBtn">수정</button>
-				</div>
-				</form>
-
-	<table>
-		<thead>
+				<button type="submit" class="btnn btn btn-default" id="saveBtn">수정</button>
+			</div>
+		</form>
+</div>
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th><input type="checkbox"></th>
+					<th>품목코드</th>
+					<th>품목명</th>
+					<th>그룹명</th>
+					<th>바코드</th>
+					<th>입고단가</th>
+					<th>출고단가</th>
+					<th>품목구분</th>
+					<th>원산지</th>
+				</tr>
+			</thead>
 			<tr>
-				<th><input type="checkbox"></th>
-				<th>품목코드</th>
-				<th>품목명</th>
-				<th>그룹명</th>
-				<th>바코드</th>
-				<th>입고단가</th>
-				<th>출고단가</th>
-				<th>품목구분</th>
-				<th>원산지</th>
+				<td><input type="checkbox"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
-		</thead>
-		<tr>
-			<td><input type="checkbox"></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
-	<div class="buttongroup">
-		<input type="button" id ="newBtn" class="btn btn-default" value="등록">
- 		<input type="button" id ="updateBtn" class="btn btn-default" value="수정">
-		<input type="button" id ="deleteBtn" class="btn btn-default" value="삭제">
-	</div>
+		</table>
+		<div class="buttongroup">
+			<input type="button" id="newBtn" class="btn btn-default" value="등록">
+			<input type="button" id="updateBtn" class="btn btn-default" value="수정"> 
+			<input type="button" id="deleteBtn" class="btn btn-default" value="삭제">
+		</div>
 
-	</div>
+	
 </body>
 </html>

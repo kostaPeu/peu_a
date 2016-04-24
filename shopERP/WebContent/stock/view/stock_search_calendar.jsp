@@ -8,7 +8,7 @@
 <script src='/shopERP/js/moment.min.js'></script>
 <script src='/shopERP/js/jquery.min.js'></script>
 <script src='/shopERP/js/fullcalendar.min.js'></script>
-<script src='/shopERP/stock/js/stock_search.js'></script>
+<script src='/shopERP/stock/js/stock_search_calendar.js'></script>
 
 </head>
 <body>

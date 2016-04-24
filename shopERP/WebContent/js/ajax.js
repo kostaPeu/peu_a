@@ -1,5 +1,5 @@
 $(function() {
-	$('a').on('click', function(e) {
+	$('.local li a').on('click', function(e) {
 		e.preventDefault();
 		$('#contents').empty();
 

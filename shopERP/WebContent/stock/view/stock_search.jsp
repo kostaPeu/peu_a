@@ -7,34 +7,20 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="/shopERP/stock/css/jquery-ui.min.css">
 <link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
+<link href="/shopERP/stock/css/stock.css" rel="stylesheet">
 <script src="/shopERP/stock/js/jquery.min.js"></script>
 <script src="/shopERP/stock/js/jquery-ui.min.js"></script>
 <script src="/shopERP/js/ajax.js"></script>
-<script>
-$(function() {
-  $("#datepicker1").datepicker({
-    dateFormat: 'yy-mm-dd'
-  });
-});
-$(function(){
-	$("#warehouse_search").on("click",function(){
-		
-	});
-});
-
-</script>
+<script src="/shopERP/stock/js/stock_search.js"></script>
 </head>
 <body>
 <div class="search">
-		<div class="title">
-			<span class=""><strong>재고현황</strong></span>
-		</div>
 		<form class="form" action="">
 			<div class="searchform">
 			<table class="table table-bordered table-hover new">
 				<tr>
 					<td>기준일자</td>
-					<td><input type="text" id="datepicker1">-<input type="text" id="datepicker1"></td>
+					<td><input type="text" class="datepicker1">  -  <input type="text" class="datepicker1"></td>
 				</tr> 
 				<tr>
 					<td>창고</td>
@@ -45,7 +31,9 @@ $(function(){
 					<td><input type="text" id="product_id"><button id="product_search" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button></td>
 				</tr>
 			</table>
-				<a href="/shopERP/stock/view/stock_search_calendar.jsp" class="btn btn-default btn-sm"><span class="fa fa-search"></span></a>
+			<ul class="local localcenter">
+				<li><a href="/shopERP/stock/view/stock_search_calendar.jsp" class="btn btn-default btn-sm"><span class="fa fa-search"></span></a></li>
+			</ul>
 			</div>
 		</form>
 	</div>
