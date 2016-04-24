@@ -95,7 +95,7 @@ $(function(){
 </script>
 </head>
 <body>
-	<div class="add">
+	<div class="add in">
 		<div class="title">
 			<span class=""><strong>품목등록</strong></span>
 			<button type="button" class="close" id="closeBtn"><span>&times;</span></button>

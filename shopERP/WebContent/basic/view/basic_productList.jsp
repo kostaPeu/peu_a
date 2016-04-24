@@ -20,17 +20,17 @@
 <link rel="stylesheet" href="../../css/responsive.css">
 <script src="/shopERP/js/jquery.min.js"></script>
 <link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
-<link href="/shopERP/css/productList.css" rel="stylesheet">
-<script src="/shopERP/basic/js/productList.js" type="text/javascript"></script>
+<link href="/shopERP/basic/css/basic_productList.css" rel="stylesheet">
+<script src="/shopERP/basic/js/basic_productList.js" type="text/javascript"></script>
 </head>
 <body>
-	<div class="add">
+	<div class="add xclose">
 		<div class="title">
 			<span class=""><strong>품목등록</strong></span>
-			<button type="button" class="close" id="closeBtn"><span>&times;</span></button>
+			<button type="button" class="close closeBtn"><span>&times;</span></button>
 		</div>
 		<form class="form-horizontal" action="">
-			<div class="form1">
+			<div class="addform">
 				<div class="form-group has-feedback">
 					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
 					<div class="col-sm-10">
@@ -93,8 +93,82 @@
 						<span></span>
 					</div>
 				</div>
-				<button class="btnn btn btn-default" type="submit" id="saveBtn">저장</button>
-				<button class="btnn btn btn-default" id="closeBtn">닫기</button>
+				<button type="submit" class="btnn btn btn-default"  id="saveBtn">등록</button>
+			<!-- 	<button class="btnn btn btn-default closeBtn">닫기</button> -->
+			</div>
+		</form>
+	</div>
+	<div class="update xclose">
+		<div class="title">
+			<span class=""><strong>품목수정</strong></span>
+			<button type="button" class="close closeBtn"><span>&times;</span></button>
+		</div>
+		<form class="form-horizontal" action="">
+			<div class="updateform">
+				<div class="form-group has-feedback">
+					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="product_id">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="product_name" class="col-sm-2 control-label"><strong>품목명</strong></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="product_name">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="pgroup_name" class="col-sm-2 control-label">그룹명</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="pgroup_name">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="in_customer" class="col-sm-2 control-label">구매처</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="in_customer">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="standard" class="col-sm-2 control-label">규격명</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="standard">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="pgroup" class="col-sm-2 control-label">품목구분</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="standard">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="in_price" class="col-sm-2 control-label">입고단가</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="in_price">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="out_price" class="col-sm-2 control-label">출고단가</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="out_price">
+						<span></span>
+					</div>
+				</div>
+				<button type="submit" class="btnn btn btn-default"  id="saveBtn">수정</button>
+				<button class="btnn btn btn-default closeBtn">닫기</button>
 			</div>
 		</form>
 	</div>
@@ -126,8 +200,8 @@
 	</table>
 	<div class="buttongroup">
 		<input type="button" id ="newBtn" class="btn btn-default" value="등록">
- 		<input type="button" class="btn btn-default newBtn" value="수정">
-		<input type="button" class="btn btn-default newBtn" value="삭제">
+ 		<input type="button" id ="updateBtn" class="btn btn-default" value="수정">
+		<input type="button" id ="deleteBtn" class="btn btn-default" value="삭제">
 	</div>
 
 </body>

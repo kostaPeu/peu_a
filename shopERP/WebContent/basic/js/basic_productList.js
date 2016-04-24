@@ -2,9 +2,13 @@ $(function(){
 	$('#newBtn').on('click', function(){
 		$('.add').css("display","block")
 	})
-	$('#closeBtn').click(function(){
-		$('.add').css("display","none")
+	$('#updateBtn').on('click', function(){
+		$('.update').css("display","block")
 	})
+	$('.closeBtn').click(function(){
+		$('.xclose').css("display","none")
+	})
+	
 })
 $(function(){
 	$('input').keyup(function(){

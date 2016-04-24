@@ -1,89 +1,103 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
 <html>
 <head>
-<!-- <meta charset="utf-8"> -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="../../css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/productList.css" rel="stylesheet">
-<script src="../../js/jquery.min.js" type="text/javascript"></script>
-<script src="../js/productList.js" type="text/javascript"></script>
+<!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 
+ <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<!-- Custom CSS -->
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+<script src="/shopERP/js/jquery.min.js"></script>
+<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
+<link href="/shopERP/basic/css/basic_productList.css" rel="stylesheet">
+<script src="/shopERP/basic/js/basic_productList.js" type="text/javascript"></script>
 </head>
 <body>
-	<div class="add">
+	<div class="add xclose">
 		<div class="title">
 			<span class=""><strong>거래처등록</strong></span>
 			<button type="button" class="close" id="closeBtn"><span>&times;</span></button>
 		</div>
 		<form class="form-horizontal" action="">
-			<div class="form1">
+			<div class="add">
 				<div class="form-group has-feedback">
-					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
+					<label for="customer_id" class="col-sm-2 control-label"><strong>거래처코드</strong></label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="product_id">
+						<input type="text" class="form-control" id=""customer_id"">
 						<span></span>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
-					<label for="product_name" class="col-sm-2 control-label"><strong>품목명</strong></label>
+					<label for="customer_name" class="col-sm-2 control-label"><strong>거래처명</strong></label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="product_name">
+						<input type="text" class="form-control" id="customer_name">
 						<span></span>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
-					<label for="pgroup_name" class="col-sm-2 control-label">그룹명</label>
+					<label for="repre_name" class="col-sm-2 control-label">대표자명</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="pgroup_name">
+						<input type="text" class="form-control" id="repre_name">
 						<span></span>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
-					<label for="in_customer" class="col-sm-2 control-label">구매처</label>
+					<label for="customer_tel" class="col-sm-2 control-label">전화번호</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="in_customer">
-						<span></span>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="standard" class="col-sm-2 control-label">규격명</label>
-					<div class="col-sm-10">
-						<select class="form-control" id="standard">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="pgroup" class="col-sm-2 control-label">품목구분</label>
-					<div class="col-sm-10">
-						<select class="form-control" id="standard">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group has-feedback">
-					<label for="in_price" class="col-sm-2 control-label">입고단가</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="in_price">
+						<input type="text" class="form-control" id="customer_tel">
 						<span></span>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
-					<label for="out_price" class="col-sm-2 control-label">출고단가</label>
+					<label for="customer_address" class="col-sm-2 control-label">주소</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="out_price">
+						<input type="text" class="form-control" id="customer_address">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="customer_account" class="col-sm-2 control-label">계좌번호</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="customer_account">
+						<span></span>
+					</div>
+				</div>
+					<div class="form-group has-feedback radio">
+					<label for="account_check" class="col-sm-2 control-label">통장등록여부</label>
+					<div class="col-sm-10">
+						<input type="radio" id="check_yes" name="account_check" value="예">
+						<input type="radio" id="check_no" name="account_check" value="아니오">
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="customer_email" class="col-sm-2 control-label">EMAIL</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="customer_email">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="customer_fax" class="col-sm-2 control-label">FAX</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="customer_fax">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="checkman" class="col-sm-2 control-label">담당자</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="checkman">
 						<span></span>
 					</div>
 				</div>
@@ -107,8 +121,8 @@
 			<th>담당자</th>
 		</tr>
 	</table>
-	<input type="button" class="btn btn-default" value="등록">
-	<input type="button" class="btn btn-default" value="수정">
-	<input type="button" class="btn btn-default" value="삭제">
+	<input type="button" id="newBtn" class="btn btn-default" value="등록">
+	<input type="button" id="updateBtn" class="btn btn-default" value="수정">
+	<input type="button" id="deleteBtn" class="btn btn-default" value="삭제">
 </body>
 </html>
