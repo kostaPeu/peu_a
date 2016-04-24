@@ -16,7 +16,7 @@
 				<li><a href="./groupware/view/depboard/dep_board_list.jsp">부서게시판</a></li>
 				<li><a href="./groupware/view/sign/sign_alldraft_list.jsp">전자결재</a></li>
 				<li><a href="./groupware/view/imageboard/imageboard_list.jsp">이미지게시판</a></li>
-				<li><a href="./groupware/view/projectboard/pb_myproject_list.jsp">프로젝트판</a></li>
+				<li><a href="./groupware/view/projectboard/pb_allproject_list.jsp">프로젝트게시판</a></li>
 			</ul>
 		</div>
 	</div>
