@@ -16,18 +16,22 @@
 </head>
 <body>
 	<!-- 기초등록 -->
+<div id="Left_Menu" class="wrapper-frame-erp-local-nav show">
 	<div class="wrapper-erp-local-nav">
-		<div class="erp-local-nav-title">기초등록</div>
+		<div class="erp-local-nav-title">기초관리
+		</div>
 		<div class="erp-local-nav">
 			<ul class="local">
-				<li><a href="#">품목관리</a></li>
-				<li><a href="#">거래처관리</a></li>
+				<li><a href="#">품목등록</a></li>
+				<li><a href="#">거래처등록</a></li>
 			</ul>
-		</div>
-	</div>
+		</div>		
+	</div>	
+</div>
 	<!--/기초등록 -->
 
-	<!-- 구매관리-->
+<!-- 구매관리-->
+<div id="Left_Menu" class="wrapper-frame-erp-local-nav show">
 	<div class="wrapper-erp-local-nav">
 		<div class="erp-local-nav-title">구매관리</div>
 		<div class="erp-local-nav">
@@ -38,10 +42,12 @@
 			</ul>
 		</div>
 	</div>
+</div><!-- /구매관리-->
 	
 	<!-- 판매관리 -->
-		<div class="wrapper-erp-local-nav">
-			<div class="erp-local-nav-title">판매관리</div>
+<div id="Left_Menu" class="wrapper-frame-erp-local-nav show">
+	<div class="wrapper-erp-local-nav">
+		<div class="erp-local-nav-title">판매관리</div>
 			<div class="erp-local-nav">
 				<ul class="local">
 					<li><a href="#">판매조회</a></li>
@@ -50,10 +56,12 @@
 					<li><a href="#">사입관리</a></li>
 				</ul>
 			</div>
-		</div><!-- /판매관리 -->
+	</div>
+</div><!-- /판매관리 -->
 		
 		<!-- 주문/배송관리 -->
-		<div class="wrapper-erp-local-nav">
+<div id="Left_Menu" class="wrapper-frame-erp-local-nav show">
+	<div class="wrapper-erp-local-nav">
 			<div class="erp-local-nav-title">주문/배송관리</div>
 			<div class="erp-local-nav">
 				<ul class="local">
@@ -63,9 +71,11 @@
 					<li><a href="#">C/S관리</a></li>
 				</ul>
 			</div>
-		</div><!--/주문/배송관리 -->
+		</div>
+	</div><!--/주문/배송관리 -->
 		
 		<!-- 재고관리 -->
+	<div id="Left_Menu" class="wrapper-frame-erp-local-nav show">
 		<div class="wrapper-erp-local-nav">
 			<div class="erp-local-nav-title">재고관리</div>
 			<div class="erp-local-nav">
@@ -74,9 +84,11 @@
 					<li><a href="#">재고수불부</a></li>
 				</ul>
 			</div>
-		</div><!--/재고관리 -->
+		</div>
+	</div><!--/재고관리 -->
 		
 		<!-- 회계관리 -->
+	<div id="Left_Menu" class="wrapper-frame-erp-local-nav show">
 		<div class="wrapper-erp-local-nav">
 			<div class="erp-local-nav-title">회계관리</div>
 			<div class="erp-local-nav">
@@ -88,9 +100,11 @@
 					<li><a href="#">손익분석</a></li>
 				</ul>
 			</div>
-		</div><!--/회계관리 -->
+		</div>
+	</div><!--/회계관리 -->
 		
 		<!-- 인사관리 -->
+	<div id="Left_Menu" class="wrapper-frame-erp-local-nav show">
 		<div class="wrapper-erp-local-nav">
 			<div class="erp-local-nav-title">인사관리</div>
 			<div class="erp-local-nav">
@@ -102,9 +116,11 @@
 					<li><a href="#"></a></li>
 				</ul>
 			</div>
-		</div><!--/인사관리 -->
+		</div>
+	</div><!--/인사관리 -->
 		
 		<!-- 그룹웨어 -->
+	<div id="Left_Menu" class="wrapper-frame-erp-local-nav show">
 		<div class="wrapper-erp-local-nav">
 			<div class="erp-local-nav-title">그룹웨어</div>
 			<div class="erp-local-nav">
@@ -116,9 +132,11 @@
 					<li><a href="#">프로젝트</a></li>
 				</ul>
 			</div>
-		</div><!--/그룹웨어 -->
+		</div>
+	</div><!--/그룹웨어 -->
 		
 		<!-- 마이페이지 -->
+	<div id="Left_Menu" class="wrapper-frame-erp-local-nav show">
 		<div class="wrapper-erp-local-nav">
 			<div class="erp-local-nav-title">마이페이지</div>
 			<div class="erp-local-nav">
@@ -129,7 +147,8 @@
 					<li><a href="#">내가 작성한 글</a></li>
 				</ul>
 			</div>
-		</div><!--/마이페이지 -->	
+		</div>
+	</div><!--/마이페이지 -->	
 
 	
 	<script src="js/bootstrap.min.js"></script>

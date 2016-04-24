@@ -30,17 +30,17 @@
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/contents.css">
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
-<script src="./groupware/js/jquery-1.10.2.min.js"></script>
-<script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="groupware/js/jquery-1.10.2.min.js"></script>
+<script src="groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+
 <!-- <script src="./groupware/js/test.js"></script> -->
 
 </head>
 <body>
-
 	<div class="container-fluid">
 		<div class="row">
 			<div class="container-fluid">
@@ -73,9 +73,11 @@
 		<jsp:include page="<%=left %>"></jsp:include>
 	</div>
 	
-	<div class="container" id="contents">
+ 	<div class="container" id="contents">
 		
-	</div>
-	<script src="js/bootstrap.min.js"></script>
+	</div> 
+
+<script src="js/bootstrap.min.js"></script>
+	
 </body>
 </html>

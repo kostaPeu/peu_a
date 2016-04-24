@@ -7,123 +7,206 @@
 <title>Insert title here</title>
 
 <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600'
+	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100'
+	rel='stylesheet' type='text/css'>
 
- <!-- Font Awesome -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <!-- Custom CSS -->
-   
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/jquery.js" type="text/javascript"></script>
-<style type="text/css">
-.add {
-	width: 400px;
-	height: 500px;
-	border: 2px;
-	border-color: gray;
-	border-style: solid;
-	position: absolute;
-	background-color: white;
-	display: none;
-	z-index: 100;
-	box-shadow: 1px 1px 50px rgba(0,0,0,.5);
-}
-.title {
-	background-color: darkgray;
-}
-tr {
-	border: 1px;
-	border-color: black;
-	border-style: solid;
-}
-th {
-	border: 1px;
-	border-right: black;
-	border-style: solid;
-}
-.new {
- 	position: relative;
-}
-</style>
-<script type="text/javascript">
-$(function(){
-	$('#newBtn').click(function(){
-		$('.add').css("display","block")
-	})
-	$('#closeBtn').click(function(){
-		$('.add').css("display","none")
-	})
-})
-</script>
+
+<link rel="stylesheet" href="/shopERP/css/style.css">
+<link rel="stylesheet" href="/shopERP/css/responsive.css">
+<script src="/shopERP/js/jquery.min.js"></script>
+<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
+<link href="/shopERP/basic/css/basic_productList.css" rel="stylesheet">
+<script src="/shopERP/basic/js/basic.js" type="text/javascript"></script>
+
 </head>
 <body>
-	<div class="add">
-	<div class="title">
-		<span>품목등록</span>
+	<div class="add xclose">
+		<div class="title">
+			<span class=""><strong>품목등록</strong></span>
+			<button type="button" class="close closeBtn">
+				<span>&times;</span>
+			</button>
+		</div>
+		<form class="form-horizontal" action="">
+			<div class="addform">
+				<div class="form-group has-feedback">
+					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="product_id"> <span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="product_name" class="col-sm-2 control-label"><strong>품목명</strong></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="product_name">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="pgroup_name" class="col-sm-2 control-label">그룹명</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="pgroup_name">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="in_customer" class="col-sm-2 control-label">구매처</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="in_customer">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="standard" class="col-sm-2 control-label">규격명</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="standard">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="pgroup" class="col-sm-2 control-label">품목구분</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="standard">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="in_price" class="col-sm-2 control-label">입고단가</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="in_price"> <span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="out_price" class="col-sm-2 control-label">출고단가</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="out_price"> <span></span>
+					</div>
+				</div>
+				<button type="submit" class="btnn btn btn-default" id="saveBtn">등록</button>
+			</div>
+		</form>
 	</div>
-	<form action="">
-		<table>
+	<div class="update xclose">
+		<div class="title">
+			<span class=""><strong>품목수정</strong></span>
+			<button type="button" class="close closeBtn">
+				<span>&times;</span>
+			</button>
+		</div>
+		<form class="form-horizontal" action="">
+			<div class="updateform">
+				<div class="form-group has-feedback">
+					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="product_id"> <span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="product_name" class="col-sm-2 control-label"><strong>품목명</strong></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="product_name">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="pgroup_name" class="col-sm-2 control-label">그룹명</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="pgroup_name">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="in_customer" class="col-sm-2 control-label">구매처</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="in_customer">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="standard" class="col-sm-2 control-label">규격명</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="standard">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="pgroup" class="col-sm-2 control-label">품목구분</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="standard">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="in_price" class="col-sm-2 control-label">입고단가</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="in_price"> <span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="out_price" class="col-sm-2 control-label">출고단가</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="out_price"> <span></span>
+					</div>
+				</div>
+				<button type="submit" class="btnn btn btn-default" id="saveBtn">수정</button>
+			</div>
+		</form>
+</div>
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th><input type="checkbox"></th>
+					<th>품목코드</th>
+					<th>품목명</th>
+					<th>그룹명</th>
+					<th>바코드</th>
+					<th>입고단가</th>
+					<th>출고단가</th>
+					<th>품목구분</th>
+					<th>원산지</th>
+				</tr>
+			</thead>
 			<tr>
-				<th>aa</th>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<th>aa</th>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<th>aa</th>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<th>aa</th>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<th>aa</th>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<th>aa</th>
-				<td><input type="text"></td>
+				<td><input type="checkbox"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 		</table>
-		<input type="submit" class="btn btn-default" id="saveBtn" value="저장">
-		<input type="button" class="btn btn-default" id="closeBtn" value="닫기">
-	</form>
-	</div>
-	<table class="table table-bordered table-hover new">
-		<thead>
-			<tr>
-				<th><input type="checkbox"></th>
-				<th>품목코드</th>
-				<th>품목명</th>
-				<th>그룹명</th>
-				<th>바코드</th>
-				<th>입고단가</th>
-				<th>출고단가</th>
-				<th>품목구분</th>
-				<th>원산지</th>
-			</tr>
-		</thead>
-		<tr>
-			<td><input type="checkbox"></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
-	<input type="button" id="newBtn" class="btn btn-default" value="등록">
+		<div class="buttongroup">
+			<input type="button" id="newBtn" class="btn btn-default" value="등록">
+			<input type="button" id="updateBtn" class="btn btn-default" value="수정"> 
+			<input type="button" id="deleteBtn" class="btn btn-default" value="삭제">
+		</div>
+
+	
 </body>
 </html>
