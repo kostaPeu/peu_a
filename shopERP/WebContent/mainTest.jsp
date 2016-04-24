@@ -31,16 +31,16 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/contents.css">
-
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/shopERP/purchase/css/jquery-ui.min.css">
+<link rel="stylesheet" href="/shopERP/purchase/css/jquery-ui.css">
+<script src="/shopERP/purchase/js/jquery.min.js"></script>
+<script src="/shopERP/purchase/js/jquery-ui.min.js"></script>
 
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
-<!-- <script src="./groupware/js/test.js"></script> -->
-
 </head>
 <body>
-
 	<div class="container-fluid">
 		<div class="row">
 			<div class="container-fluid">
@@ -69,7 +69,7 @@
 		</div>
 	</div>
 
-	<div class="wrapper-erp-local-nav">
+	<div class="wrapper-erp-local-nav left">
 		<jsp:include page="<%=left %>"></jsp:include>
 	</div>
 	
