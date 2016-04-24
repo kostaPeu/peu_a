@@ -4,11 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<<<<<<< HEAD
 <script src="/shopERP/js/ajax.js"></script>
-=======
-<script src="./js/ajax.js"></script>
->>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 <title>Insert title here</title>
 </head>
 <body>
@@ -16,12 +12,8 @@
 		<div class="erp-local-nav-title">재고관리</div>
 		<div class="erp-local-nav">
 			<ul class="local">
-				<li><a href="./stock/view/stock_search.jsp">재고현황</a></li>
-<<<<<<< HEAD
-				<li><a href="#">재고수불부</a></li>
-=======
-				<li><a href="./stock/view/stock_rp.jsp">재고수불부</a></li>
->>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
+				<li><a href="/shopERP/stock/view/stock_search.jsp">재고현황</a></li>
+				<li><a href="/shopERP/stock/view/stock_rp.jsp">재고수불부</a></li>
 			</ul>
 		</div>
 	</div>

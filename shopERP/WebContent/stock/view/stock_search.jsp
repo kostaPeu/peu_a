@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/shopERP/stock/css/jquery-ui.min.css">
+<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 <script src="/shopERP/stock/js/jquery.min.js"></script>
 <script src="/shopERP/stock/js/jquery-ui.min.js"></script>
 <script src="/shopERP/js/ajax.js"></script>
@@ -24,7 +25,6 @@ $(function(){
 </script>
 </head>
 <body>
-<<<<<<< HEAD
 <div class="search">
 		<div class="title">
 			<span class=""><strong>재고현황</strong></span>
@@ -49,8 +49,5 @@ $(function(){
 			</div>
 		</form>
 	</div>
-=======
-	<h1>재고현황</h1>
->>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 </body>
 </html>
