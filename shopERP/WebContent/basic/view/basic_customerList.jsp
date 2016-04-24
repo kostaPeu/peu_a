@@ -21,7 +21,7 @@
 <script src="/shopERP/js/jquery.min.js"></script>
 <link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 <link href="/shopERP/basic/css/basic_customerList.css" rel="stylesheet">
-<script src="/shopERP/basic/js/basic_customerList.js" type="text/javascript"></script>
+<script src="/shopERP/basic/js/basic.js" type="text/javascript"></script>
 </head>
 <body>
 	<div class="add xclose">

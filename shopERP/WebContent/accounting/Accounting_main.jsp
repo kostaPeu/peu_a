@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>재고수불부</h1>
+
+
 </body>
 </html>

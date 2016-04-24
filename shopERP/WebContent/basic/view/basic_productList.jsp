@@ -16,12 +16,13 @@
 
 <!-- Custom CSS -->
 
-<link rel="stylesheet" href="../../css/style.css">
-<link rel="stylesheet" href="../../css/responsive.css">
+<link rel="stylesheet" href="/shopERP/css/style.css">
+<link rel="stylesheet" href="/shopERP/css/responsive.css">
 <script src="/shopERP/js/jquery.min.js"></script>
 <link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 <link href="/shopERP/basic/css/basic_productList.css" rel="stylesheet">
-<script src="/shopERP/basic/js/basic_productList.js" type="text/javascript"></script>
+<script src="/shopERP/basic/js/basic.js" type="text/javascript"></script>
+
 </head>
 <body>
 	<div class="add xclose">
@@ -168,10 +169,9 @@
 					</div>
 				</div>
 				<button type="submit" class="btnn btn btn-default"  id="saveBtn">수정</button>
-				<button class="btnn btn btn-default closeBtn">닫기</button>
-			</div>
-		</form>
-	</div>
+				</div>
+				</form>
+
 	<table>
 		<thead>
 			<tr>
@@ -204,5 +204,6 @@
 		<input type="button" id ="deleteBtn" class="btn btn-default" value="삭제">
 	</div>
 
+	</div>
 </body>
 </html>

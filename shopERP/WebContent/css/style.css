@@ -1,102 +1,53 @@
-.alignleft {
-    float: left;
-    margin-right: 15px;
-}
-.alignright {
-    float: right;
-    margin-left: 15px;
-}
-.aligncenter {
-    display: block;
-    margin: 0 auto 15px;
-}
-a:focus { outline: 0px solid }
-img {
-    max-width: 100%;
-    height: auto;
-}
-.fix { overflow: hidden }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-    margin: 0 0 15px;
-}
-body { font-family: 'Titillium Web', sans-serif; }
 
 
-.wapper-fixed{
-	position: fixed;
-	
-}
-.wapper-topbar{
- 			height:35px;
-            width:100%;
-            color: #555;
-            font-size:12px;
-            position:fixed;
-            z-index:999;
-            top:0px;
-            left:0px;
-            -webkit-box-shadow: 0 1px 2px 0 #777;
-}
-
-/*로고*/
-#bland{
+#bland {
 	top: 5px;
 	left: 10px;
 	padding-bottom: 5px;
 	font-size: 30px;
 	font-weight: 3px;
 	position: relative;
-
-	
 }
 
+.wapper-fixed{
+	position: fixed;
+}
+
+.main-contents-wapper{
+	position: fixed;
+	margin-top: 100px;
+
+}
 #bland a {
-
 	color: #222;
-	text-decoration: none;	
-}
-
-#top-title {
-	margin-top: 15px;
-}
-
-#top-title a {
-	font-size: 16px;
-	color: rgb(255, 255, 255);
-	text-align: center;
-	line-height: 1.5em;
-	border-radius: 3px;
-	background-color: rgb(94, 94, 94);
+	text-decoration: none;
 }
 
 /*메인 상단바*/
 .mainmenu-area {
 	background: none repeat scroll 0 0 #aaa;
-	font-family: "Roboto Condensed",sans-serif;
-text-transform: uppercase;
-width: 100%;
-position: relative;
-
+	font-family: "Roboto Condensed", sans-serif;
+	text-transform: uppercase;
+	width: 100%;
+	position: fixed;
 }
 
 /*상단메뉴 글자*/
 .mainmenu-area ul.navbar-nav li a {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
 }
 
 /*상단메뉴 오버효과*/
-.mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #222}
+.mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a
+	{
+	background: #222
+}
 /*상단메뉴 클릭효과*/
-.mainmenu-area .nav > li > a:focus {color: #bbb}
+.mainmenu-area .nav>li>a:focus {
+	color: #bbb
+}
 
 /*좌측 고정바*/
 .wrapper-erp-local-nav {
@@ -123,11 +74,16 @@ position: relative;
  
 }
 
-.wapper-maincontent{
-	position: fixed;
+.main-contents-wapper{
+position: relative;
+	 margin-left: +180px;
+	top: 0px;
+	 -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
-/* ul태그 볼드삭제*/
 ul{
 	list-style: none;
 }

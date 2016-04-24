@@ -24,6 +24,7 @@ $(function(){
 </script>
 </head>
 <body>
+<<<<<<< HEAD
 <div class="search">
 		<div class="title">
 			<span class=""><strong>재고현황</strong></span>
@@ -48,5 +49,8 @@ $(function(){
 			</div>
 		</form>
 	</div>
+=======
+	<h1>재고현황</h1>
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 </body>
 </html>
