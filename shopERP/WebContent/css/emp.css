@@ -1,15 +1,9 @@
 @CHARSET "UTF-8";
-.emp_info_table{
-	border-collapse: collapse;
-	empty-cells: show;
-	border: 1px solid gray;
-}
-.emp_info_body td{
+
+.emp_info_body td, .indol_info_body td, .emp_info_head th, .indol_info_head th{
 	text-align: center;
 }
-.emp_info_head th{
-	text-align: center;
-}
+
 .emp_info_body button{
 	margin: 0px;
 }
@@ -18,15 +12,29 @@
 	margin-left: 30px;
 }
 
-#emp_insert{
+#emp_insert, #indol_update{
 	margin-top: 50px;
 }
-#basic_insert td, #basic_insert th{
+
+#basic_insert td, #basic_insert th, .add_basic th, .add_basic td{
 	text-align: center;
 }
 
 #basic_insert{
 	margin-top: 30px;
+}
+.add_basic{
+	width: 60%;
+	height: 280px;
+	border: 2px;
+	left: 28%;
+	top: 7%;
+	border-color: gray;
+	border-style: solid;
+	position: absolute;
+	background-color: white;
+	display: none;
+	z-index: 100;
 }
 
 body { font-family: 'Titillium Web', sans-serif; }

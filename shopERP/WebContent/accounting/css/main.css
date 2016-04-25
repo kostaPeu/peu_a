@@ -1,4 +1,8 @@
 @CHARSET "UTF-8";
+.container-fluid{
+	margin: 0;
+	padding: 0;
+}
 
 /* 로고부분*/
 .wrapper-erp-global-nav>.erp-global-nav-qm {
@@ -126,10 +130,4 @@
 .erp-local-nav ul {
 	margin: 0;
 	padding: 0;
-}
-
-#contents{
-	margin: 0;
-	padding: 0;
-	left: -200px;	
 }

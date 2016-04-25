@@ -5,45 +5,40 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script src="/shopERP/js/jquery.js"></script>
-<script src="/shopERP/js/main.js" type="text/javascript"></script>
-<script src="/shopERP/js/bootstrap.min.js"></script>
-<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
+<script src="/shopERP/accounting/js/jquery.js"></script>
+<script src="/shopERP/accounting/js/main.js" type="text/javascript"></script>
+<script src="/shopERP/accounting/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href="/shopERP/accounting/css/bootstrap.min.css" rel="stylesheet">
 <link href="/shopERP/accounting/css/card.css" rel="stylesheet">
 
 </head>
 <body id="body_html" class="font-dotum">
 
 	<!-- 상단 컨텐츠 이름 -->
-	<div class="container-fluid">
 		<div class="contentsName">
 			<a id="title">프로젝트리스트</a>
-		</div>
-	</div>
+		</div>	
 	<br>
 	<!-- 프로젝트리스트 -->
 	<div class="container-fluid">
 		<div class="table-responsive">
-			<table class="table table-bordered table-hover table-striped"
-				id="Card">
+			<table class="table table-bordered table-hover table-striped" id="Card">
 				<thead id="cardList">
 					<tr class="mainTable">
 						<th>프로젝트번호</th>
 						<th>프로젝트명</th>
-						<th>코드사용메뉴</th>						
-						<th>사용</th>
 						<th>사용여부</th>
 						<th>비고</th>
 					</tr>
 				</thead>
 				<tbody id="cardInfos">
 					<tr class="mainTable">
-						<td>110-389-749708</td>
-						<td>신한은행-9708</td>
-						<td>보통예금</td>
-						<td>국내거래통장</td>
+						<td>100</td>
+						<td>여름방학 시즌판매</td>
 						<td>사용</td>
-						<td>오픈마켓용</td>
+						<td></td>
 					</tr>
 				</tbody>
 
@@ -76,24 +71,14 @@
 				</colgroup>
 				<tbody>
 					<tr id="row-BankBookNumber">
-						<th>계좌번호</th>
+						<th>프로젝트번호</th>
 						<td><input class="form-control" type="text" value=""
-							placeholder="계좌번호"></td>
+							placeholder="프로젝트번호"></td>
 					</tr>
 					<tr id="row-BackBookName">
-						<th>계좌명</th>
+						<th>프로젝트명</th>
 						<td><input class="form-control" type="text" value=""
 							placeholder="계좌명"></td>
-					</tr>
-					<tr id="row-BackBookCode">
-						<th>계정코드</th>
-						<td><input class="form-control" type="text" value=""
-							placeholder="계정코드"></td>
-					</tr>
-					<tr id="row-BackBookSelect">
-						<th>검색창내용</th>
-						<td><input class="form-control" type="text" value=""
-							placeholder="검색창내용"></td>
 					</tr>
 					<tr id="row-BackBookUseCheck">
 						<th>사용여부 <span class="card-Info" data-html="true"
