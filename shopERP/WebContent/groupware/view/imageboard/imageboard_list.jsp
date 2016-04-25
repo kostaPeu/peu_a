@@ -13,78 +13,77 @@
 		<table class="table table-hover">
 			<tr class="row">
 				<td class="col-sm-3">
-					<img src="../images/image_pic1.png" alt="게시한이미지"/>
+					<img src="../groupware/images/image_pic1.png" alt="게시한이미지"/>
 					<a href="#">이미지제목</a>
 					<p>16.04.25</p>
 					<p>김보람</p>
 				</td>
 				<td class="col-sm-3">
-					<img src="../images/image_pic2.png" alt="게시한이미지"/>
+					<img src="../groupware/images/image_pic2.png" alt="게시한이미지"/>
 					<a href="#">이미지제목</a>
 					<p>오파도</p>
 				</td>
 				<td class="col-sm-3">
-					<img src="../images/image_pic1.png" alt="게시한이미지"/>
+					<img src="../groupware/images/image_pic1.png" alt="게시한이미지"/>
 					<a href="#">이미지제목</a>
 					<p>16.04.25</p>
 					<p>김보람</p>
 				</td>
 				<td class="col-sm-3">
-					<img src="../images/image_pic2.png" alt="게시한이미지"/>
+					<img src="../groupware/images/image_pic2.png" alt="게시한이미지"/>
+					<a href="#">이미지제목</a>
+					<p>오파도</p>
+				</td>
+			</tr>
+			<tr class="row">
+				<td class="col-sm-3">
+					<img src="../groupware/images/image_pic1.png" alt="게시한이미지"/>
+					<a href="#">이미지제목</a>
+					<p>16.04.25</p>
+					<p>김보람</p>
+				</td>
+				<td class="col-sm-3">
+					<img src="../groupware/images/image_pic2.png" alt="게시한이미지"/>
+					<a href="#">이미지제목</a>
+					<p>오파도</p>
+				</td>
+				<td class="col-sm-3">
+					<img src="../groupware/images/image_pic1.png" alt="게시한이미지"/>
+					<a href="#">이미지제목</a>
+					<p>16.04.25</p>
+					<p>김보람</p>
+				</td>
+				<td class="col-sm-3">
+					<img src="../groupware/images/image_pic2.png" alt="게시한이미지"/>
+					<a href="#">이미지제목</a>
+					<p>오파도</p>
+				</td>
+			</tr>
+			<tr class="row">
+				<td class="col-sm-3">
+					<img src="../groupware/images/image_pic1.png" alt="게시한이미지"/>
+					<a href="#">이미지제목</a>
+					<p>16.04.25</p>
+					<p>김보람</p>
+				</td>
+				<td class="col-sm-3">
+					<img src="../groupware/images/image_pic2.png" alt="게시한이미지"/>
+					<a href="#">이미지제목</a>
+					<p>오파도</p>
+				</td>
+				<td class="col-sm-3">
+					<img src="../groupware/images/image_pic1.png" alt="게시한이미지"/>
+					<a href="#">이미지제목</a>
+					<p>16.04.25</p>
+					<p>김보람</p>
+				</td>
+				<td class="col-sm-3">
+					<img src="../groupware/images/image_pic2.png" alt="게시한이미지"/>
 					<a href="#">이미지제목</a>
 					<p>오파도</p>
 				</td>
 			</tr>
 			
-			<tr class="row">
-				<td class="col-sm-3">
-					<img src="../images/image_pic1.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>16.04.25</p>
-					<p>김보람</p>
-				</td>
-				<td class="col-sm-3">
-					<img src="../images/image_pic2.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>오파도</p>
-				</td>
-				<td class="col-sm-3">
-					<img src="../images/image_pic1.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>16.04.25</p>
-					<p>김보람</p>
-				</td>
-				<td class="col-sm-3">
-					<img src="../images/image_pic2.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>오파도</p>
-				</td>
-			</tr>
-			
-			<tr class="row">
-				<td class="col-sm-3">
-					<img src="../images/image_pic1.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>16.04.25</p>
-					<p>김보람</p>
-				</td>
-				<td class="col-sm-3">
-					<img src="../images/image_pic2.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>오파도</p>
-				</td>
-				<td class="col-sm-3">
-					<img src="../images/image_pic1.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>16.04.25</p>
-					<p>김보람</p>
-				</td>
-				<td class="col-sm-3">
-					<img src="../images/image_pic2.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>오파도</p>
-				</td>
-			</tr>
 		</table>
 
 		<ul class="pager">
