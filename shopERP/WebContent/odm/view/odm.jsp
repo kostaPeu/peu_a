@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./js/ajax.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -11,10 +12,10 @@
 		<div class="erp-local-nav-title">주문/배송관리</div>
 		<div class="erp-local-nav">
 			<ul class="local">
-				<li><a href="#">주문관리</a></li>
-				<li><a href="#">배송관리</a></li>
-				<li><a href="#">취소/환불관리</a></li>
-				<li><a href="#">C/S관리</a></li>
+				<li><a href="./odm/view/odm_order.jsp">주문관리</a></li>
+				<li><a href="./odm/view/odm_delivery.jsp">배송관리</a></li>
+				<li><a href="./odm/view/odm_crMgt.jsp">취소/환불관리</a></li>
+				<li><a href="./odm/view/odm_csMgt.jsp">C/S관리</a></li>
 			</ul>
 		</div>
 	</div>

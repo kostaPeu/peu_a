@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="./groupware/js/test.js"></script>
+<script src="./js/ajax.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -12,9 +12,10 @@
 		<div class="erp-local-nav-title">구매관리</div>
 		<div class="erp-local-nav">
 			<ul class="local">
-				<li><a href="#">구매조회</a></li>
-				<li><a href="#">구매현황</a></li>
-				<li><a href="#">구매처별 정산</a></li>
+				<li><a href="./purchase/view/purchase_check.jsp">구매조회</a></li>
+				<li><a href="./purchase/view/purchase_add.jsp">구매입력</a></li>
+				<li><a href="./purchase/view/purchase_search.jsp">구매현황</a></li>
+				<li><a href="./purchase/view/purchase_accounts.jsp">구매처별 정산</a></li>
 			</ul>
 		</div>
 	</div>

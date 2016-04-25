@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>거래처관리</h1>
+	<h1>C/S관리</h1>
 </body>
 </html>
