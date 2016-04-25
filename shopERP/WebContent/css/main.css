@@ -128,8 +128,10 @@
 	padding: 0;
 }
 
-#contents{
-	margin: 0;
-	padding: 0;
-	left: -200px;	
+
+#contents {
+    float: right;
+    width: 82.5%;
+    padding:0;
+    margin: 3.9% 0 0;
 }

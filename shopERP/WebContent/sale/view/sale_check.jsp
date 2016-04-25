@@ -21,8 +21,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="sale/css/sale.css" rel="stylesheet">
     
-    <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="sale/js/sale.js" type="text/javascript"></script>
+    <script src="/shopERP/js/jquery.js" type="text/javascript"></script>
+    <script src="/shopERP/sale/js/sale.js" type="text/javascript"></script>
 </head>
 <body>
 	<table class="table table-bordered table-hover new">

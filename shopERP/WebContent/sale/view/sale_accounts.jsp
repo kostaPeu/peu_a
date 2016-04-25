@@ -111,11 +111,11 @@
 		</tr>
 		<tr>
 			<td>거래처</td>
-			<td><button id="customer_search" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button><input type="text" id="" name=""></td>
+			<td><input type="text" id="" name=""><button id="customer_search" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button></td>
 		</tr>
 		<tr>
 			<td>기타</td>			
-			<td><button id="item_search" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button><input type="text" id="" name=""></td>
+			<td><input type="text" id="" name=""><button id="item_search" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button></td>
 		</tr>
 	</table>
 	<div class="buttongroup">
