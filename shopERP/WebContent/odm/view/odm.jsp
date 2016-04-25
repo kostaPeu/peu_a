@@ -12,7 +12,12 @@
 		<div class="erp-local-nav-title">주문/배송관리</div>
 		<div class="erp-local-nav">
 			<ul class="local">
-				<li><a href="./odm/view/odm_order.jsp">주문관리</a></li>
+				<li><a class="" data-target="#one" data-toggle="collapse" href="javascript:;">주문관리</a>
+						<ul id="one" class="collapse local"  style="">
+							<li><a href="/shopERP/odm/view/odm_orderCollect.jsp">주문수집</a></li>
+							<li><a href="/shopERP/odm/view/odm_list.jsp">주문리스트</a></li>
+						</ul>
+					</li>					
 				<li><a href="./odm/view/odm_delivery.jsp">배송관리</a></li>
 				<li><a href="./odm/view/odm_crMgt.jsp">취소/환불관리</a></li>
 				<li><a href="./odm/view/odm_csMgt.jsp">C/S관리</a></li>
