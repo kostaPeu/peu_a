@@ -4,9 +4,31 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<link href="/shopERP/stock/css/stock.css" rel="stylesheet">
 </head>
 <body>
-	<h1>배송관리</h1>
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th><input type="checkbox"></th>
+				<th>배송번호</th>
+				<th>주문번호</th>
+				<th>송장번호</th>
+				<th>수취인</th>
+				<th>수취인주소</th>
+				<th>배송상태</th>
+			</tr>
+		</thead>
+		<tr class="tablecenter">
+			<td><input type="checkbox"></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
 </body>
 </html>
