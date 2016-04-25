@@ -3,9 +3,52 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<mapper namespace="shopERP.mapper.ErpMapper">
+<mapper namespace="shopERP.basic.mapper.ErpMapper">
 	<cache />
+<resultMap type="Product" id="productResultMap">
+	<id property="product_id" column="product_id"/>
+	<result property="product_name" column="product_name"/>
+	<result property="price_in" column="price_in"/>
+	<result property="price_out" column="price_out"/>
+	<result property="barcode" column="barcodee"/>
+	<result property="made_in" column="made_in"/>
+	<collection property="pgroup_id" column="pgroup_id" ofType="ProductGroup" javaType="String" resultMap="productGroupResultMap"></collection>
+</resultMap>
+<resultMap type="ProductGroup" id="productGroupResultMap">
+	<id property="pgroup_id" column="pgroup_id"/>
+	<result property="pgroup_name" column="pgroup_name"/>
+	<result property="ptype" column="ptype"/>
+</resultMap>
+<resultMap type="Standards" id="standardsResultMap">
+	<id property="standard_id" column="standard_id"/>
+	<result property="standard_name" column="standard_name"/>
+</resultMap>
 
+<insert id="insertProduct" parameterType="Product">
+	insert into Product (
+		product_id,
+		product_name,
+		pgroup_id,
+		price_in,
+		price_out,
+		barcode,
+		standard_id,
+		made_in
+	) values(
+		#{product_id},
+		#{product_name},
+		#{pgroup_id},
+		#{price_in},
+		#{price_out},
+		#{barcode},
+		#{standard_id},
+		#{made_in}
+	)
+</insert>
+<select id="selectAllProducts" resultMap="productResultMap" resultType="Product">
+	select p.product_id, p.product_name, g.pgroup_name, p.price_in,s.standard_id from product p, product_group g, standards s 
+		where p.pgroup_id = g.pgroup_id and s.standard_id = p.standard_id
+</select>
 </mapper>
 
 
