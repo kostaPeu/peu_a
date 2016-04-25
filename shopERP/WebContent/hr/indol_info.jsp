@@ -8,18 +8,15 @@
 <link rel="stylesheet" href="../css/emp.css">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript">
-	function fn_emp_update(){
-		location.href="update_emp.jsp";
-	}
-	function fn_emp_insert(){
-		location.href="insert_emp.jsp";
+	function fn_indol_update(){
+		location.href="update_indol.jsp";
 	}
 </script>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<h3 class="col-md-2 col-md-offset-2">직원조회</h3>
+			<h3 class="col-md-2 col-md-offset-2">직원근태사항</h3>
 		</div>
 	</div>
 	<div class="container-fluid">
@@ -39,25 +36,21 @@
 		<div class="col-md-8 col-md-offset-2">
 			<table class="table table-condensed table table-bordered">
 				<thead>
-					<tr class="emp_info_head">
+					<tr class="indol_info_head">
 						<th>사번</th>
 						<th>이름</th>
-						<th>나이</th>
-						<th>입사일</th>
-						<th>부서명</th>
-						<th>연봉</th>
-						<th>주소</th>
+						<th>지각</th>
+						<th>조퇴</th>
+						<th>휴가</th>
+						<th>반차</th>
+						<th>결근</th>
 						<th>이메일</th>
-						<th>전화번호</th>
-						<th>직급명</th>
-						<th>직무명</th>
-						<th>직책명</th>
-						<th>프로필사진</th>
+						<th>연차</th>
 						<th>수정</th>
 						<th>삭제</th>
 					</tr>
 				</thead>
-				<tr class="emp_info_body">
+				<tr class="indol_info_body">
 					<td>aa</td>
 					<td>aa</td>
 					<td>aa</td>
@@ -67,19 +60,10 @@
 					<td>aa</td>
 					<td>aa</td>
 					<td>aa</td>
-					<td>aa</td>
-					<td>aa</td>
-					<td>aa</td>
-					<td><button type="button" class="btn btn-default btn-xs">사진</button></td>
-					<td><button type="button" class="btn btn-default btn-xs" onclick="fn_emp_update()">수정</button></td>
+					<td><button type="button" class="btn btn-default btn-xs" onclick="fn_indol_update()">수정</button></td>
 					<td><button type="button" class="btn btn-default btn-xs">삭제</button></td>
 				</tr>
 			</table>
-		</div>
-	</div>
-	<div class="container-fluid">
-		<div class="col-md-1 col-md-offset-2">
-			<button type="button" class="btn btn-default" onclick="fn_emp_insert()">신규등록</button>
 		</div>
 	</div>
 	<script src="../js/bootstrap.min.js"></script>

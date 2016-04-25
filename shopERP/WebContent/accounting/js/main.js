@@ -1,8 +1,14 @@
+
+//팝업창 클릭이벤트
 $(function(){
 	$('#newAdd').click(function(){
-		$('.miniTitle-panel').css("display","block")
+		$('.newAddCard').css("display","block")
 	})
 	$('#closeBtn').click(function(){
-		$('.miniTitle-panel').css("display","none")
+		$('.newAddCard').css("display","none")
+	})
+	
+	$("#btn-footer-Close").click(function() {
+		$('.newAddCard').css("display","none")
 	})
 });
