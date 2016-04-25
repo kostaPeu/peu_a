@@ -127,3 +127,9 @@
 	margin: 0;
 	padding: 0;
 }
+
+#contents{
+	margin: 0;
+	padding: 0;
+	left: -200px;	
+}

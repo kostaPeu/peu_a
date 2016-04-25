@@ -169,3 +169,9 @@ a, button, li, li::before {
 	transition: color 0.2s ease-in-out 0s, background-color 0.2s ease-in-out
 		0s;
 }
+
+#contents{
+	margin-left: 0;
+	padding: 0;
+}
+
