@@ -5,85 +5,185 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<!-- Custom CSS -->
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="./groupware/css/imageboard_list.css">
+
+
+<script src="./groupware/js/jquery-1.10.2.min.js"></script>
+<script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="./groupware/js/gw_ajax.js"></script>
+
+
+
+
 </head>
 <body>
 	
 	<div class="container">
 		<h2>이미지 게시판</h2>
-		<table class="table table-hover">
-			<tr class="row">
-				<td class="col-sm-3">
-					<img src="../groupware/images/image_pic1.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>16.04.25</p>
-					<p>김보람</p>
+		<table id="imageboard_list" class="td-over">
+			<tr>
+				<td>
+					<a href="./groupware/view/imageboard/imageboard_view.jsp">
+					<div class="box">
+						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
+						<h3>이미지제목</h3>
+						<p>
+							<span>16.04.25</span><br/>
+							<span>김보람</span>
+						</p>
+					</div>
+					</a>
 				</td>
-				<td class="col-sm-3">
-					<img src="../groupware/images/image_pic2.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>오파도</p>
+				<td>
+					<a href="#">
+					<div class="box">
+						<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
+						<h3>이미지제목</h3>
+						<p>
+							<span>16.04.25</span><br/>
+							<span>오파도</span>
+						</p>
+					</div>
+					</a>
 				</td>
-				<td class="col-sm-3">
-					<img src="../groupware/images/image_pic1.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>16.04.25</p>
-					<p>김보람</p>
+				<td>
+					<a href="#">
+					<div class="box">
+						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
+						<h3>이미지제목</h3>
+						<p>
+							<span>16.04.25</span><br/>
+							<span>김보람</span>
+						</p>
+					</div>
+					</a>
 				</td>
-				<td class="col-sm-3">
-					<img src="../groupware/images/image_pic2.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>오파도</p>
-				</td>
-			</tr>
-			<tr class="row">
-				<td class="col-sm-3">
-					<img src="../groupware/images/image_pic1.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>16.04.25</p>
-					<p>김보람</p>
-				</td>
-				<td class="col-sm-3">
-					<img src="../groupware/images/image_pic2.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>오파도</p>
-				</td>
-				<td class="col-sm-3">
-					<img src="../groupware/images/image_pic1.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>16.04.25</p>
-					<p>김보람</p>
-				</td>
-				<td class="col-sm-3">
-					<img src="../groupware/images/image_pic2.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>오파도</p>
-				</td>
-			</tr>
-			<tr class="row">
-				<td class="col-sm-3">
-					<img src="../groupware/images/image_pic1.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>16.04.25</p>
-					<p>김보람</p>
-				</td>
-				<td class="col-sm-3">
-					<img src="../groupware/images/image_pic2.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>오파도</p>
-				</td>
-				<td class="col-sm-3">
-					<img src="../groupware/images/image_pic1.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>16.04.25</p>
-					<p>김보람</p>
-				</td>
-				<td class="col-sm-3">
-					<img src="../groupware/images/image_pic2.png" alt="게시한이미지"/>
-					<a href="#">이미지제목</a>
-					<p>오파도</p>
+				<td>
+					<a href="#">
+					<div class="box">
+						<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
+						<h3>이미지제목</h3>
+						<p>
+							<span>16.04.25</span><br/>
+							<span>오파도</span>
+						</p>
+					</div>
+					</a>
 				</td>
 			</tr>
-			
+			<tr>
+				<td>
+					<a href="#">
+					<div class="box">
+						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
+						<h3>이미지제목</h3>
+						<p>
+							<span>16.04.25</span><br/>
+							<span>김보람</span>
+						</p>
+					</div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<div class="box">
+						<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
+						<h3>이미지제목</h3>
+						<p>
+							<span>16.04.25</span><br/>
+							<span>오파도</span>
+						</p>
+					</div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<div class="box">
+						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
+						<h3>이미지제목</h3>
+						<p>
+							<span>16.04.25</span><br/>
+							<span>김보람</span>
+						</p>
+					</div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<div class="box">
+						<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
+						<h3>이미지제목</h3>
+						<p>
+							<span>16.04.25</span><br/>
+							<span>오파도</span>
+						</p>
+					</div>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#">
+					<div class="box">
+						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
+						<h3>이미지제목</h3>
+						<p>
+							<span>16.04.25</span><br/>
+							<span>김보람</span>
+						</p>
+					</div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<div class="box">
+						<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
+						<h3>이미지제목</h3>
+						<p>
+							<span>16.04.25</span><br/>
+							<span>오파도</span>
+						</p>
+					</div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<div class="box">
+						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
+						<h3>이미지제목</h3>
+						<p>
+							<span>16.04.25</span><br/>
+							<span>김보람</span>
+						</p>
+					</div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<div class="box">
+						<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
+						<h3>이미지제목</h3>
+						<p>
+							<span>16.04.25</span><br/>
+							<span>오파도</span>
+						</p>
+					</div>
+					</a>
+				</td>
+			</tr>
 		</table>
 
 		<ul class="pager">
