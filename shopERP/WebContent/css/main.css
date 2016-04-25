@@ -98,7 +98,6 @@
 /*좌측 타이틀 박스*/
 .wrapper-erp-local-nav>.erp-local-nav-title::before {
 	color: #000;
-	display: inline-block;
 	font-family: FontAwesome;
 	font-size: 14px;
 	font-weight: normal;

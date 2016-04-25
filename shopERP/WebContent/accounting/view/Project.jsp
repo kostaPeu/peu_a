@@ -7,12 +7,10 @@
 <title>Insert title here</title>
 <script src="/shopERP/accounting/js/jquery.js"></script>
 <script src="/shopERP/accounting/js/main.js" type="text/javascript"></script>
-<script src="/shopERP/accounting/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href="/shopERP/accounting/css/bootstrap.min.css" rel="stylesheet">
 <link href="/shopERP/accounting/css/card.css" rel="stylesheet">
-
 </head>
 <body id="body_html" class="font-dotum">
 
