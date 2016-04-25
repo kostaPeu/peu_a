@@ -33,7 +33,7 @@
 </head>
 <body>
 	<div class="container">
-		<h2>공지사항</h2>
+		<h2>프로젝트게시판</h2>
 		<table class="table table-hover">
 			<thead>
 				<tr class="row">

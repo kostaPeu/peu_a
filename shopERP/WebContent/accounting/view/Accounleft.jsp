@@ -17,7 +17,7 @@
 			<div class="erp-local-nav">
 				<ul class="local">
 					<li><a href="./accounting/view/money_check.jsp">재무상태표</a></li>
-					<li><a class="" data-target="#one" data-toggle="collapse" href="javascript:;">회계 기초등록</a>
+					<li data-toggle="collapse" href="#one"><a href="/shopERP/accounting/view/card.jsp">회계 기초등록</a>
 						<ul id="one" class="collapse"  style="">
 							<li><a href="#">기초잔액등록</a></li>
 							<li><a href="/shopERP/accounting/view/card.jsp">신용카드등록</a></li>

@@ -36,9 +36,6 @@
 <script src="groupware/js/jquery-1.10.2.min.js"></script>
 <script src="groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
 
-
-<!-- <script src="./groupware/js/test.js"></script> -->
-
 </head>
 <body>
 	<div class="container-fluid">
