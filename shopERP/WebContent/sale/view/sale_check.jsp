@@ -5,17 +5,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
+<!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
  <!-- Font Awesome -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <!-- Custom CSS -->
    
-	<link href="/shopERP/accounting/css/card.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">    
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="sale/css/sale.css" rel="stylesheet">
     
-    <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="sale/js/sale.js" type="text/javascript"></script>
+    <script src="/shopERP/js/jquery.js" type="text/javascript"></script>
+    <script src="/shopERP/sale/js/sale.js" type="text/javascript"></script>
 </head>
 <body>
 	<table class="table table-bordered table-hover new">

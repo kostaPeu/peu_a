@@ -11,9 +11,29 @@
     <link rel="stylesheet" href="./css/responsive.css">    
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="/shopERP/sale/css/sale.css" rel="stylesheet">    
-    <script src="/shopERP/js/jquery.js" type="text/javascript"></script>
     <script src="/shopERP/sale/js/sale.js" type="text/javascript"></script>
+   	<script src="/shopERP/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	$('.saleListAdd').on("click",function(){
+		var html = "<tr>";
+		html += "<td><input type='checkbox'></td>";
+		html += "<td></td>";
+		html += "<td><input type='text' name='' id='' size='8'></td>";
+		html += "<td><input type='text' name='' id='' size='8'></td>";
+		html += "<td><input type='text' name='' id='' size='8'></td>";
+		html += "<td><input type='text' name='' id='' size='8'></td>";
+		html += "<td><input type='text' name='' id='' size='8'></td>";
+		html += "<td><input type='text' name='' id='' size='8'></td>";
+		html += "<td><input type='text' name='' id='' size='8'></td>";
+		html += "<td><input type='text' name='' id='' size='8'></td>";
+		html += "</tr>";
+		$('#saleList').append(html);
+	})
+})	
+</script>
 </head>
+
 <body>
 <div class="container">
 	<form class="form-horizontal" action="">
@@ -29,44 +49,44 @@
 					<th>판매수량</th>
 					<th>판매일자</th>
 					<th>입고창고</th>
-					<th><input type="button" id="test" class="btn btn-default" value="저장">지급방법</th>					
+					<th>지급방법</th>					
 				</tr>
 				</thead>
 				<tr>
 					<td><input type="checkbox"></td>
 					<td></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
 				</tr>
 				<tr>
 					<td><input type="checkbox"></td>
 					<td></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
 				</tr>
 				<tr>
 					<td><input type="checkbox"></td>
 					<td></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
 				</tr>	
 			</table>
 			<table class="table table-bordered table-hover new">

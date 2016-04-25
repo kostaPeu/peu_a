@@ -19,22 +19,14 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">    
     <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-	<link href="sale/css/sale.css" rel="stylesheet">
+    <link rel="stylesheet" href="/shopERP/purchase/css/jquery-ui.min.css">
+	<link href="/shopERP/sale/css/sale.css" rel="stylesheet">
     
-    <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="sale/js/sale.js" type="text/javascript"></script>
-	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="/shopERP/js/jquery.js" type="text/javascript"></script>
+    <script src="/shopERP/sale/js/sale.js" type="text/javascript"></script>	
+	<script src="/shopERP/sale/js/jquery.min.js"></script>
+	<script src="/shopERP/sale/js/jquery-ui.min.js"></script>
 
-<script type="text/javascript">
-/* $(function(){
- 	$('#purchase_date').datepicker();
- 	$('#searchBtn').on("click", function(){
-		alert("aaaaaaaa");
-	})
-}) */
-</script>
 </head>
 <body>
 	<div class="item_div">
@@ -116,7 +108,7 @@
 	<table class="table table-bordered table-hover new">
 		<tr>
 			<td>기준일자</td>
-			<td><input type="text" id="purchase_date" name="" id=""> ~ <input type="text" id="purchase_date" name="" id=""></td>
+			<td><input type="text" class="purchase_date" name="" id=""> ~ <input type="text" class="purchase_date" name="" id=""></td>
 		</tr>
 		<tr>
 			<td>판매번호</td>
