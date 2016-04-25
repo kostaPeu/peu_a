@@ -60,7 +60,7 @@
 					<li><a href="./mainTest.jsp?left=./sale/view/sale.jsp">판매관리</a></li>
 					<li><a href="./mainTest.jsp?left=./odm/view/odm.jsp">주문/배송관리</a></li>
 					<li><a href="./mainTest.jsp?left=./stock/view/stock.jsp">재고현황</a></li>
-					<li><a href="#">회계</a></li>
+					<li><a href="./mainTest2.jsp?left=./accounting/view/Accounleft.jsp"">회계</a></li>
 					<li><a href="#">인사관리</a></li>
 					<li><a href="./mainTest.jsp?left=./groupware/view/groupware.jsp">그룹웨어</a></li>
 					<li><a href="#">마이페이지</a></li>
@@ -69,12 +69,12 @@
 		</div>
 	</div>
 
+<div id="Left_Menu" class="wrapper-frame-erp-local-nav show">
 	<div class="wrapper-erp-local-nav">
 		<jsp:include page="<%=left %>"></jsp:include>
 	</div>
-	
+</div>
  	<div class="container" id="contents">
-		
 	</div> 
 
 <script src="js/bootstrap.min.js"></script>
