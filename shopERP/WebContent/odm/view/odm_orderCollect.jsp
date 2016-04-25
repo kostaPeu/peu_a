@@ -5,72 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-.success, .fail{
-	width: 40%;
-	height: 120px;
-	border: 2px;
-	left: 28%;
-	top: 15%;
-	border-color: gray;
-	border-style: solid;
-	position: absolute;
-	background-color: white;
-	display: none;
-	z-index: 100;
-	box-shadow: 1px 1px 100px darkgray;
-}
-.title {
-	background-color: darkgray;
-	padding: 1%;
-	text-align: center;
-	font-size: 1.1em;
-}
-.new {
- 	position: relative;
-}
-.contentsMsg{
-	width: 90%;
-	margin-left: 3%;
-	margin-top: 3%;
-	text-align: center;
-}
-.btnn{
-	height:30px;
-	width: 90px;
-}
-.buttongroup{
-	text-align: center;
-}
-table tr td, table tr th{
-	text-align: center;
-}
-</style>
-<script type="text/javascript">
-$(function(){
-	$('#collectBtn').on('click', function(){
-		$('.success').css("display","block");
-		//$('.fail').css("display","block");
-	})
-	$('.closeBtn').click(function(){
-		$('.xclose').css("display","none");
-	})
-	
-})
-$(function(){
-	$('input').keyup(function(){
-		if($(this).val() != null){
-			$(this).next().addClass("glyphicon");
-			$(this).next().addClass("glyphicon-ok");
-			$(this).next().addClass("form-control-feedback");
-		}if($(this).val() == ""){
-			$(this).next().removeClass("glyphicon");
-			$(this).next().removeClass("glyphicon-ok");
-			$(this).next().removeClass("form-control-feedback");
-		}
-	})
-})
-</script>
+<link href="/shopERP/odm/css/odm_orderCollect.css" rel="stylesheet">
+<script src="/shopERP/odm/js/odm_orderCollect.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="success xclose">
