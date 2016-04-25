@@ -15,4 +15,15 @@ $(function() {
 			$('#contents').html(AjaxHTML);
 		});
 	});
+	
+	$('.td-over a').on('click', function(e) {
+	    e.preventDefault();
+	      
+	      $('#contents').empty();
+	      $('#contents').load($(this).attr('href'), function() {
+	         alert('hoho')
+	      });
+	});
+	
+	
 });

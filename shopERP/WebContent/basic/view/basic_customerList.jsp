@@ -112,7 +112,7 @@
 	</div>
 	<div class="update xclose">
 		<div class="title">
-			<span class=""><strong>거래처수정</strong></span>
+			<span class=""><strong>거래처수</strong></span>
 			<button type="button" class="close closeBtn"><span>&times;</span></button>
 		</div>
 		<form class="form-horizontal" action="">
