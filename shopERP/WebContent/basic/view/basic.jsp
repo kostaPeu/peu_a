@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="./js/ajax.js"></script>
+<script src="/shopERP/js/ajax.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -12,8 +12,8 @@
 		<div class="erp-local-nav-title">기초등록</div>
 		<div class="erp-local-nav">
 			<ul class="local">
-				<li><a href="./basic/view/basic_productList.jsp">품목관리</a></li>
-				<li><a href="./basic/view/basic_customer.jsp">거래처관리</a></li>
+				<li><a href="/shopERP/basic/view/basic_productList.jsp">품목관리</a></li>
+				<li><a href="/shopERP/basic/view/basic_customerList.jsp">거래처관리</a></li>
 			</ul>
 		</div>
 	</div>

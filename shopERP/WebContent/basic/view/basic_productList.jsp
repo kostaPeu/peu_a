@@ -7,83 +7,43 @@
 <title>Insert title here</title>
 
 <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600'
+	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100'
+	rel='stylesheet' type='text/css'>
 
- <!-- Font Awesome -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <!-- Custom CSS -->
-   
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="basic/js/basic.js" type="text/javascript"></script>
-    <script src="js/jquery.js" type="text/javascript"></script>
-<style type="text/css">
-.add {
-	width: 50%;
-	height: 500px;
-	border: 2px;
-	left: 28%;
-	top: 7%;
-	border-color: gray;
-	border-style: solid;
-	position: absolute;
-	background-color: white;
-	display: none;
-	z-index: 100;
-	box-shadow: 1px 1px 100px darkgray;
-}
-.title {
-	background-color: darkgray;
-	padding: 1%;
-	text-align: center;
-	font-size: 1.1em;
-}
-tr {
-	border: 1px;
-	border-color: black;
-	border-style: solid;
-}
-th {
-	border: 1px;
-	border-right: black;
-	border-style: solid;
-}
-.new {
- 	position: relative;
-}
-.form1{
-	width: 90%;
-	margin-left: 3%;
-	margin-top: 3%;
-	text-align: center;
-}
-.btnn{
-	height:30px;
-	width: 90px;
-}
-.buttongroup{
-	text-align: center;
-}
-</style>
+
+<link rel="stylesheet" href="/shopERP/css/style.css">
+<link rel="stylesheet" href="/shopERP/css/responsive.css">
+<script src="/shopERP/js/jquery.min.js"></script>
+<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
+<link href="/shopERP/basic/css/basic_productList.css" rel="stylesheet">
+<script src="/shopERP/basic/js/basic.js" type="text/javascript"></script>
+
 </head>
 <body>
-	<div class="add">
+	<div class="add xclose">
 		<div class="title">
 			<span class=""><strong>품목등록</strong></span>
-			<button type="button" class="close" id="closeBtn"><span>&times;</span></button>
+			<button type="button" class="close closeBtn">
+				<span>&times;</span>
+			</button>
 		</div>
 		<form class="form-horizontal" action="">
-			<div class="form1">
+			<div class="addform">
 				<div class="form-group has-feedback">
 					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="product_id">
-						<span></span>
+						<input type="text" class="form-control" id="product_id"> <span></span>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
@@ -130,52 +90,123 @@ th {
 				<div class="form-group has-feedback">
 					<label for="in_price" class="col-sm-2 control-label">입고단가</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="in_price">
-						<span></span>
+						<input type="text" class="form-control" id="in_price"> <span></span>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
 					<label for="out_price" class="col-sm-2 control-label">출고단가</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="out_price">
-						<span></span>
+						<input type="text" class="form-control" id="out_price"> <span></span>
 					</div>
 				</div>
-				<button class="btnn btn btn-default" type="submit" id="saveBtn">저장</button>
-				<button class="btnn btn btn-default" id="closeBtn">닫기</button>
+				<button type="submit" class="btnn btn btn-default" id="saveBtn">등록</button>
 			</div>
 		</form>
 	</div>
-	<table class="table table-bordered table-hover new">
-		<thead>
+	<div class="update xclose">
+		<div class="title">
+			<span class=""><strong>품목수정</strong></span>
+			<button type="button" class="close closeBtn">
+				<span>&times;</span>
+			</button>
+		</div>
+		<form class="form-horizontal" action="">
+			<div class="updateform">
+				<div class="form-group has-feedback">
+					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="product_id"> <span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="product_name" class="col-sm-2 control-label"><strong>품목명</strong></label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="product_name">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="pgroup_name" class="col-sm-2 control-label">그룹명</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="pgroup_name">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="in_customer" class="col-sm-2 control-label">구매처</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="in_customer">
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="standard" class="col-sm-2 control-label">규격명</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="standard">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="pgroup" class="col-sm-2 control-label">품목구분</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="standard">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="in_price" class="col-sm-2 control-label">입고단가</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="in_price"> <span></span>
+					</div>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="out_price" class="col-sm-2 control-label">출고단가</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="out_price"> <span></span>
+					</div>
+				</div>
+				<button type="submit" class="btnn btn btn-default" id="saveBtn">수정</button>
+			</div>
+		</form>
+</div>
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th><input type="checkbox"></th>
+					<th>품목코드</th>
+					<th>품목명</th>
+					<th>그룹명</th>
+					<th>바코드</th>
+					<th>입고단가</th>
+					<th>출고단가</th>
+					<th>품목구분</th>
+					<th>원산지</th>
+				</tr>
+			</thead>
 			<tr>
-				<th><input type="checkbox"></th>
-				<th>품목코드</th>
-				<th>품목명</th>
-				<th>그룹명</th>
-				<th>바코드</th>
-				<th>입고단가</th>
-				<th>출고단가</th>
-				<th>품목구분</th>
-				<th>원산지</th>
+				<td><input type="checkbox"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
-		</thead>
-		<tr>
-			<td><input type="checkbox"></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
-	<div class="buttongroup">
-		<input type="button" id="newBtn" class="btn btn-default" value="등록">
-		<input type="button" id="newBtn" class="btn btn-default" value="수정">
-		<input type="button" id="newBtn" class="btn btn-default" value="삭제">
-	</div>
+		</table>
+		<div class="buttongroup">
+			<input type="button" id="newBtn" class="btn btn-default" value="등록">
+			<input type="button" id="updateBtn" class="btn btn-default" value="수정"> 
+			<input type="button" id="deleteBtn" class="btn btn-default" value="삭제">
+		</div>
+
+	
 </body>
 </html>

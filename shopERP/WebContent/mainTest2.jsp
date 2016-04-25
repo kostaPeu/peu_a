@@ -50,7 +50,7 @@
 				<li class=""><a id="TopMainMenu6"
 					href="./mainTest2.jsp?left=./accounting/view/Accounleft.jsp">회계관리</a></li>
 				<li class=""><a id="TopMainMenu7" href="#">인사관리</a></li>
-				<li class=""><a id="TopMainMenu8" href="./groupware/GroupWare">그룹웨어</a></li>
+				<li class=""><a id="TopMainMenu8" href="./mainTest2.jsp?left=./groupware/view/groupware.jsp">그룹웨어</a></li>
 				<li class=""><a id="TopMainMenu9" href="#">마이페이지</a></li>
 			</ul>
 		</div>
