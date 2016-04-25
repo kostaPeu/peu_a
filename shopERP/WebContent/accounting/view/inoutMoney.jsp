@@ -21,8 +21,8 @@
 	</div>
 
 	<form class="form-horizontal" action="">
-		<table class="table table-bordered table-hover new" id="saleList">
-			<thead>
+		<table class="table table-bordered table-hover new" id="saleList" style="width: 50%">
+			<thead style="width: 50%">
 				<tr id="abc">
 					<th><input type="checkbox"></th>
 					<th><input type="button"
