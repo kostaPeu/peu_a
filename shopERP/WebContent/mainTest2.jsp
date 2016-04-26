@@ -82,7 +82,7 @@
 
 	<div class="container" id="contents">
 		<jsp:include page="<%=contents %>"></jsp:include>
-
 	</div>
+	
 </body>
 </html>

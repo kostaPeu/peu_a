@@ -23,10 +23,6 @@
 
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="./groupware/js/gw_ajax.js"></script>
-
-
-
 
 </head>
 <body>
@@ -36,7 +32,7 @@
 		<table id="imageboard_list" class="td-over">
 			<tr>
 				<td>
-					<a href="./groupware/view/imageboard/imageboard_view.jsp">
+					<a href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/imageboard/imageboard_view.jsp">
 					<div class="box">
 						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
 						<h3>이미지제목</h3>
