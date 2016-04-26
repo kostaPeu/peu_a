@@ -63,7 +63,13 @@ ul li {
 				</li>
 				<li><a class="" data-target="#five" data-toggle="collapse"
 					href="javascript:;">자금계획관리</a>
-					<ul id="five" class="collapse"></ul></li>
+					<ul id="five" class="collapse">
+						<li><a href="#">자금계획등록</a></li>
+						<li><a href="#">자금계획현금조회</a></li>
+						<li><a href="#">자금계획전표조회</a></li>
+						<li><a href="#">자금증감계획일정표</a></li>
+						
+					</ul></li>
 			</ul>
 		</div>
 	</div>
