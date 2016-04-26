@@ -11,8 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import shopERP.basic.action.Action;
 import shopERP.basic.action.ActionForward;
+import shopERP.basic.action.deleteProductAction;
 import shopERP.basic.action.insertProductAction;
 import shopERP.basic.action.productListAction;
+import shopERP.basic.action.updateProductAction;
 
 @WebServlet("*.basic")
 public class Controller extends HttpServlet {
@@ -46,8 +48,14 @@ public class Controller extends HttpServlet {
 		if (command.equals("insertProduct.basic")) {
 			action = new insertProductAction();
 			forward = action.excute(request, response);
-		}else if (command.equals("basic/view/basic_productList.basic")) {
+		}else if (command.equals("productList.basic")) {
 			action = new productListAction();
+			forward = action.excute(request, response);
+		}else if (command.equals("updateProduct.basic")){
+			action = new updateProductAction();
+			forward = action.excute(request, response);
+		}else if (command.equals("deleteProduct.basic")){
+			action = new deleteProductAction();
 			forward = action.excute(request, response);
 		}
 		

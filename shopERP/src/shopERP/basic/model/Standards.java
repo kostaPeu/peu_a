@@ -1,6 +1,8 @@
 package shopERP.basic.model;
 
-public class Standards {
+import java.io.Serializable;
+
+public class Standards implements Serializable{
 	private String standard_id;
 	private String standard_name;
 	

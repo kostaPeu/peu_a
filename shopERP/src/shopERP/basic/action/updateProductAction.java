@@ -1,20 +1,21 @@
 package shopERP.basic.action;
 
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import shopERP.basic.model.ErpDao;
 import shopERP.basic.model.ErpService;
 import shopERP.basic.model.Product;
 
-public class insertProductAction implements Action {
+public class updateProductAction implements Action {
 
 	@Override
 	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) {
+		
 		Product product = new Product();
+		
 		int price_in = 0;
 		int price_out = 0;
+		
 		product.setProduct_id(request.getParameter("product_id"));
 		product.setProduct_name(request.getParameter("product_name"));
 		product.setPgroup_id(request.getParameter("pgroup_id"));
@@ -35,7 +36,7 @@ public class insertProductAction implements Action {
 		
 		int re = -1;
 		try {
-			re = service.insertProduct(product);
+			re = service.updateProduct(product);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -44,6 +45,7 @@ public class insertProductAction implements Action {
 		
 		if(re == 1){
 			forward.setRedirect(true);
+			System.out.println("성공");
 			forward.setPath("productList.basic");
 		}else{
 			System.out.println("실패");
@@ -52,6 +54,5 @@ public class insertProductAction implements Action {
 		}
 		return forward;
 	}
+
 }
-
-

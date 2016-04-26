@@ -15,7 +15,16 @@ public class ErpService {
 		return dao.insertProduct(product);
 	}
 
-	public List<Product> selectAllProducts() {
+	public List<ProductList> selectAllProducts() {
 		return dao.selectAllProducts();
 	}
+
+	public int updateProduct(Product product) {
+		return dao.updateProduct(product);
+	}
+
+	public int deleteProduct(String check) {
+		return dao.deleteProduct(check);
+	}
+
 }

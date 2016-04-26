@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import shopERP.basic.model.ErpService;
 import shopERP.basic.model.Product;
+import shopERP.basic.model.ProductList;
 
 public class productListAction implements Action {
 
@@ -14,7 +15,7 @@ public class productListAction implements Action {
 	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) {
 		
 		ErpService service = ErpService.getInstance();
-		List<Product> list = null;
+		List<ProductList> list = null;
 		try {
 			list = service.selectAllProducts();
 		} catch (Exception e) {
@@ -24,7 +25,7 @@ public class productListAction implements Action {
 		request.setAttribute("list", list);
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("basic_productList.jsp");
+		forward.setPath("./mainTest.jsp?left=./basic/view/basic.jsp&contents=./basic/view/basic_productList.jsp");
 		
 		return forward;	
 	}

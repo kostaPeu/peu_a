@@ -1,12 +1,12 @@
 $(function(){
 	$('#newBtn').on('click', function(){
-		$('.add').css("display","block")
+		$('.add').css("display","block");
 	})
 	$('#updateBtn').on('click', function(){
-		$('.update').css("display","block")
+		$('.update').css("display","block");
 	})
 	$('.closeBtn').click(function(){
-		$('.xclose').css("display","none")
+		$('.xclose').css("display","none");
 	})
 	
 })

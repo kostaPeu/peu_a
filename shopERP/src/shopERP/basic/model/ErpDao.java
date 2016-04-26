@@ -48,9 +48,9 @@ private static ErpDao dao = new ErpDao();
 		return re;
 	}
 
-	public List<Product> selectAllProducts() {
+	public List<ProductList> selectAllProducts() {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		List<Product> list = null;
+		List<ProductList> list = null;
 		try {
 			list = sqlSession.getMapper(ErpMapper.class).selectAllProducts();
 		} catch (Exception e) {
@@ -59,5 +59,43 @@ private static ErpDao dao = new ErpDao();
 			sqlSession.close();
 		}
 		return list;
+	}
+
+	public int updateProduct(Product product) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = -1;
+		
+		try {
+			re = sqlSession.getMapper(ErpMapper.class).updateProduct(product);
+			if(re > 0){
+				sqlSession.commit();
+			}else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			sqlSession.close();
+		}
+		return re;
+	}
+
+	public int deleteProduct(String check) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = -1;
+		
+		try {
+			re = sqlSession.getMapper(ErpMapper.class).deleteProduct(check);
+			if(re > 0){
+				sqlSession.commit();
+			}else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			sqlSession.close();
+		}
+		return re;
 	}
 }

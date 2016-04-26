@@ -5,7 +5,7 @@
 
 <mapper namespace="shopERP.basic.mapper.ErpMapper">
 	<cache />
-<resultMap type="Product" id="productResultMap">
+<!-- <resultMap type="Product" id="productResultMap">
 	<id property="product_id" column="product_id"/>
 	<result property="product_name" column="product_name"/>
 	<result property="price_in" column="price_in"/>
@@ -22,7 +22,7 @@
 <resultMap type="Standards" id="standardsResultMap">
 	<id property="standard_id" column="standard_id"/>
 	<result property="standard_name" column="standard_name"/>
-</resultMap>
+</resultMap> -->
 
 <insert id="insertProduct" parameterType="Product">
 	insert into Product (
@@ -45,10 +45,18 @@
 		#{made_in}
 	)
 </insert>
-<select id="selectAllProducts" resultMap="productResultMap" resultType="Product">
-	select p.product_id, p.product_name, g.pgroup_name, p.price_in,s.standard_id from product p, product_group g, standards s 
+<select id="selectAllProducts" resultType="ProductList">
+	select p.product_id, p.product_name, g.pgroup_name, p.barcode, p.price_in, p.price_out, s.standard_name, p.made_in from product p, product_group g, standards s 
 		where p.pgroup_id = g.pgroup_id and s.standard_id = p.standard_id
 </select>
+<update id="updateProduct" parameterType="Product">
+	update product set product_name = #{product_name}, pgroup_id = #{pgroup_id}, price_in = #{price_in},
+		price_out = #{price_out}, barcode = #{barcode}, standard_id = #{standard_id}, made_in = #{made_in}
+			where product_id = #{product_id}
+</update>
+<delete id="deleteProduct" parameterType="String">
+	delete from product where product_id = #{product_id}
+</delete>
 </mapper>
 
 

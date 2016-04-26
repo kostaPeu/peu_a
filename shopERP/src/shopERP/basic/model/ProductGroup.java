@@ -1,6 +1,8 @@
 package shopERP.basic.model;
 
-public class ProductGroup {
+import java.io.Serializable;
+
+public class ProductGroup implements Serializable{
 	private String pgroup_id;
 	private String ptype;
 	private String pgroup_name;

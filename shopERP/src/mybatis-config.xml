@@ -8,6 +8,7 @@
 		<typeAlias type="shopERP.basic.model.Product" alias="Product"/>
 		<typeAlias type="shopERP.basic.model.Standards" alias="Standards"/>
 		<typeAlias type="shopERP.basic.model.ProductGroup" alias="ProductGroup"/>
+		<typeAlias type="shopERP.basic.model.ProductList" alias="ProductList"/>
 	</typeAliases>
 	
 	<environments default="development">
