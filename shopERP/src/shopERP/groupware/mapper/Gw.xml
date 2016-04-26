@@ -6,6 +6,15 @@
 <mapper namespace="shopERP.groupware.mapper.GwMapper">
 	<cache />
 
+<!-- notice list 불러옴. -->
+	<select id="noticeList" resultType="Notice">
+		select * from notice
+	</select>
+	
+	<!-- emp_id로 emp_name 불러옴 -->
+	<select id="getEmpName" resultType="String" parameterType="int">
+		select e_name from employee where emp_id=#{emp_id}	
+	</select>
 </mapper>
 
 
