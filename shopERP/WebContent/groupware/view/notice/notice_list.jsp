@@ -124,8 +124,9 @@
 		</ul>
 
 		<div class="row">
-			<a href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_write.jsp" class="btn btn-info col-sm-1 col-sm-push-11">글쓰기</a>
+			<a href="notice_write.gw" class="btn btn-info col-sm-1 col-sm-push-11">글쓰기</a>
 		</div>
+		
 		<div class="col-xs-2">
 			<div class="dropdown">
 				<button class="btn btn-primary dropdown-toggle" type="button"
