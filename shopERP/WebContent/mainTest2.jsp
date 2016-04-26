@@ -67,7 +67,7 @@
 
 				<li class=""><a id="TopMainMenu8"
 					href="./mainTest2.jsp?left=./groupware/view/groupware.jsp">그룹웨어</a></li>
-				<li class=""><a id="TopMainMenu9" href="#">마이페이지</a></li>
+				<li class=""><a id="TopMainMenu9" href="./mainTest2.jsp?left=./mypage/view/mypage.jsp">마이페이지</a></li>
 			</ul>
 		</div>
 		<!-- topbar end -->
