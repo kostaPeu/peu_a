@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="/shopERP/css/emp.css">
 <link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
-<script src="/shopERP/js/jquery.js" type="text/javascript"></script>
+
 <script type="text/javascript">
 	$(function() {
 		$("#dept").click(function() {
