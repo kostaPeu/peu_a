@@ -38,7 +38,7 @@
 		<div class="erp-local-nav-title">그룹웨어</div>
 		<div class="erp-local-nav">
 			<ul class="local">
-				<li><a href="notice_list.gw">공지사항</a></li>
+				<li><a href="notice_list.jsp">공지사항</a></li>
 				
 				<li data-toggle="collapse" href="#dep_board"><a href="./groupware/view/depboard/dep_board_list.jsp">부서게시판</a>
 					<ul id="dep_board" class="collapse">
