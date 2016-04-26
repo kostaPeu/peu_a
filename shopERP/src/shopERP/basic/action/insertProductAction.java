@@ -44,7 +44,7 @@ public class insertProductAction implements Action {
 		
 		if(re == 1){
 			forward.setRedirect(true);
-			forward.setPath("productList.basic");
+			forward.setPath("productList.ba");
 		}else{
 			System.out.println("½ÇÆÐ");
 /*			forward.setRedirect(true);

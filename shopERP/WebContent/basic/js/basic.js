@@ -23,3 +23,18 @@ $(function(){
 		}
 	})
 })
+$(function(){
+	$(".productChecked").click(function() {
+		$("input[name=productRow]:checked").each(function() {
+			var checks = $(this).val();
+			$(".product_id2").attr("value",checks);
+		});
+	});
+	$("#deleteBtn").on('click',function(){
+ 		$("input[name=productRow]:checked").each(function() {
+			var checks = $(this).val();
+			$(location).attr("href","deleteProduct.ba?checks="+checks);
+		});
+	});
+	
+});

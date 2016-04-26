@@ -9,6 +9,8 @@
 		<typeAlias type="shopERP.basic.model.Standards" alias="Standards"/>
 		<typeAlias type="shopERP.basic.model.ProductGroup" alias="ProductGroup"/>
 		<typeAlias type="shopERP.basic.model.ProductList" alias="ProductList"/>
+		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
+		<typeAlias type="shopERP.groupware.model.Gw" alias="Gw"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -22,6 +24,7 @@
 	
 	<mappers>
 		<mapper resource="shopERP/basic/mapper/Erp.xml"/>
+		<mapper resource="shopERP/groupware/mapper/Gw.xml"/>
 	</mappers>
 	
 </configuration>

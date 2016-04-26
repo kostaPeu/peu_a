@@ -4,59 +4,62 @@
 
 
 <mapper namespace="shopERP.basic.mapper.ErpMapper">
-	<cache />
-<!-- <resultMap type="Product" id="productResultMap">
-	<id property="product_id" column="product_id"/>
-	<result property="product_name" column="product_name"/>
-	<result property="price_in" column="price_in"/>
-	<result property="price_out" column="price_out"/>
-	<result property="barcode" column="barcodee"/>
-	<result property="made_in" column="made_in"/>
-	<collection property="pgroup_id" column="pgroup_id" ofType="ProductGroup" javaType="String" resultMap="productGroupResultMap"></collection>
-</resultMap>
-<resultMap type="ProductGroup" id="productGroupResultMap">
-	<id property="pgroup_id" column="pgroup_id"/>
-	<result property="pgroup_name" column="pgroup_name"/>
-	<result property="ptype" column="ptype"/>
-</resultMap>
-<resultMap type="Standards" id="standardsResultMap">
-	<id property="standard_id" column="standard_id"/>
-	<result property="standard_name" column="standard_name"/>
-</resultMap> -->
+	<cache />	
 
-<insert id="insertProduct" parameterType="Product">
-	insert into Product (
-		product_id,
-		product_name,
-		pgroup_id,
-		price_in,
-		price_out,
-		barcode,
-		standard_id,
-		made_in
-	) values(
-		#{product_id},
-		#{product_name},
-		#{pgroup_id},
-		#{price_in},
-		#{price_out},
-		#{barcode},
-		#{standard_id},
-		#{made_in}
-	)
-</insert>
-<select id="selectAllProducts" resultType="ProductList">
-	select p.product_id, p.product_name, g.pgroup_name, p.barcode, p.price_in, p.price_out, s.standard_name, p.made_in from product p, product_group g, standards s 
-		where p.pgroup_id = g.pgroup_id and s.standard_id = p.standard_id
-</select>
-<update id="updateProduct" parameterType="Product">
-	update product set product_name = #{product_name}, pgroup_id = #{pgroup_id}, price_in = #{price_in},
-		price_out = #{price_out}, barcode = #{barcode}, standard_id = #{standard_id}, made_in = #{made_in}
-			where product_id = #{product_id}
-</update>
-<delete id="deleteProduct" parameterType="String">
-	delete from product where product_id = #{product_id}
-</delete>
+	<insert id="insertProduct" parameterType="Product">
+		insert into Product (
+			product_id,
+			product_name,
+			pgroup_id,
+			price_in,
+			price_out,
+			barcode,
+			standard_id,
+			made_in
+		) values(
+			#{product_id},
+			#{product_name},
+			#{pgroup_id},
+			#{price_in},
+			#{price_out},
+			#{barcode},
+			#{standard_id},
+			#{made_in}
+		)
+	</insert>
+	<select id="selectAllProducts" resultType="ProductList">
+		select p.product_id, p.product_name, g.pgroup_name, p.barcode, p.price_in, p.price_out, s.standard_name, p.made_in from product p, product_group g, standards s 
+			where p.pgroup_id = g.pgroup_id and s.standard_id = p.standard_id
+	</select>
+	<update id="updateProduct" parameterType="Product">
+		update product set product_name = #{product_name}, pgroup_id = #{pgroup_id}, price_in = #{price_in},
+			price_out = #{price_out}, barcode = #{barcode}, standard_id = #{standard_id}, made_in = #{made_in}
+				where product_id = #{product_id}
+	</update>
+	<delete id="deleteProduct" parameterType="String">
+		delete from product where product_id = #{product_id}
+	</delete>
+	<insert id="insertCustomer" parameterType="Customer">
+		insert into customer(
+			customer_id, customer_name, repre_name, phone_number, customer_address, copy_bankbook,
+			bankbook_check, customer_email, customer_fax, checkman
+		)
+		values(
+			#{customer_id}, #{customer_name}, #{repre_name}, #{phone_number},
+			#{customer_address}, #{copy_bankbook}, #{bankbook_check}, #{customer_email},
+			#{customer_fax}, #{checkman}
+		)
+	</insert>
+	<select id="customerList" resultType="Customer">
+		select * from customer
+			order by customer_name
+	</select>
+	<select id="totalCount" resultType="Integer">
+		select count(*) from customer
+	</select>
+	<select id="totalCountProduct" resultType="int">
+		select count(*) from product
+	</select>
 </mapper>
 
 

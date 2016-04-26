@@ -15,8 +15,10 @@ import shopERP.basic.action.deleteProductAction;
 import shopERP.basic.action.insertProductAction;
 import shopERP.basic.action.productListAction;
 import shopERP.basic.action.updateProductAction;
+import shopERP.basic.action.CustomerAction;
+import shopERP.basic.action.CustomerList;
 
-@WebServlet("*.basic")
+@WebServlet("*.ba")
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -40,22 +42,27 @@ public class Controller extends HttpServlet {
 		String requestUri = request.getRequestURI();
 		String conPath = request.getContextPath();
 		String command = requestUri.substring(conPath.length() + 1);
-
-		ActionForward forward = null;
 		Action action = null;
+		ActionForward forward = null;
 		System.out.println(command);
 		
-		if (command.equals("insertProduct.basic")) {
+		if (command.equals("insertProduct.ba")) {
 			action = new insertProductAction();
 			forward = action.excute(request, response);
-		}else if (command.equals("productList.basic")) {
+		}else if (command.equals("productList.ba")) {
 			action = new productListAction();
 			forward = action.excute(request, response);
-		}else if (command.equals("updateProduct.basic")){
+		}else if (command.equals("updateProduct.ba")){
 			action = new updateProductAction();
 			forward = action.excute(request, response);
-		}else if (command.equals("deleteProduct.basic")){
+		}else if (command.equals("deleteProduct.ba")){
 			action = new deleteProductAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("customerProc.ba")) {
+			action = new CustomerAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("CustomerList.ba")){
+			action = new CustomerList();
 			forward = action.excute(request, response);
 		}
 		

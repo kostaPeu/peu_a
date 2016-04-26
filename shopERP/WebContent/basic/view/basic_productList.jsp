@@ -29,23 +29,6 @@
 <link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 <link href="/shopERP/basic/css/basic_productList.css" rel="stylesheet">
 <script src="/shopERP/basic/js/basic.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(function(){
-	$(".productChecked").click(function() {
-		$("input[name=productRow]:checked").each(function() {
-			var checks = $(this).val();
-			$(".product_id2").attr("value",checks);
-		});
-	});
-	$("#deleteBtn").on('click',function(){
- 		$("input[name=productRow]:checked").each(function() {
-			var checks = $(this).val();
-			$(location).attr("href","deleteProduct.basic?checks="+checks);
-		});
-	});
-	
-});
-</script>
 </head>
 <body>
 	<div class="add xclose">
@@ -55,12 +38,15 @@ $(function(){
 				<span>&times;</span>
 			</button>
 		</div>
-		<form class="form-horizontal" action="insertProduct.basic" method="post">
+		<form class="form-horizontal" action="insertProduct.ba" method="post">
 			<div class="addform">
 				<div class="form-group has-feedback">
 					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
-					<div class="col-sm-10">
+					<div class="col-sm-9">
 						<input type="text" class="form-control" id="product_id" name="product_id">
+					</div>
+					<div class="col-sm-1">
+						<button class="btn btn-default btn-sm" type="submit"><span class="fa fa-search"></span></button>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
@@ -123,7 +109,7 @@ $(function(){
 				<span>&times;</span>
 			</button>
 		</div>
-				<form class="form-horizontal" action="updateProduct.basic" method="post">
+				<form class="form-horizontal" action="updateProduct.ba" method="post">
 			<div class="addform">
 				<div class="form-group has-feedback">
 					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong>
@@ -199,7 +185,7 @@ $(function(){
 					<th>규격명</th>
 				</tr>
 			</thead>
-			<c:forEach var="product" items="${list }">
+			<c:forEach var="product" items="${listModel.list }">
 				<tr>
 					<td><input type="checkbox" class="productChecked" name="productRow" value="${product.product_id }"></td>
 					<td>${product.product_id }</td>
@@ -213,12 +199,22 @@ $(function(){
 				</tr>
 			</c:forEach>
 	</table>
-		<div class="buttongroup">
-			<input type="button" id="newBtn" class="btn btn-default" value="등록">
-			<input type="button" id="updateBtn" class="btn btn-default" value="수정"> 
-			<input type="submit" id="deleteBtn" class="btn btn-default" value="삭제">
-		</div>
-
+	<c:if test="${listModel.startPage > 5 }">
+		<a href="productList.ba?pageNum=${listModel.startPage - 5}">[이전]</a>
+	</c:if>
+	<c:forEach var="page" begin="${listModel.startPage }" end="${listModel.endPage }">
+		<c:if test="${listModel.requestPage == page }"><b></c:if>
+		<a href="productList.ba?pageNum=${page }">[${page }]</a>
+	 	<c:if test="${listModel.requestPage == page }"></b></c:if>
+	</c:forEach>
+	<c:if test="${listModel.endPage < listModel.totalPageCount}">
+		<a href="productList.ba?pageNum=${listModel.startPage + 5}">[다음]</a>
+	</c:if>
+	<div class="buttongroup">
+		<input type="button" id="newBtn" class="btn btn-default" value="등록">
+		<input type="button" id="updateBtn" class="btn btn-default" value="수정">
+		<input type="button" id="deleteBtn" class="btn btn-default" value="삭제">
+	</div>
 	
 </body>
 </html>

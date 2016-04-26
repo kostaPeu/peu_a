@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="../css/emp.css">
-<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/shopERP/css/emp.css">
+<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 <title>Insert title here</title>
 </head>
 <body>
@@ -13,6 +13,13 @@
 		<div class="col-md-8 col-md-offset-2">
 			<form class="form-horizontal" id="emp_insert">
 				<div class="form-group">
+					<label for="emp_id_label" class="col-sm-2 control-label">사번</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control" name="emp_id">
+					</div>
+					<div class="col-sm-1">
+						<button type="button" class="btn btn-default">중복확인</button>
+					</div>
 					<label for="e_pwd_label" class="col-sm-2 control-label">암호</label>
 					<div class="col-sm-3">
 						<input type="password" class="form-control" name="e_pwd">
@@ -118,6 +125,6 @@
 			</form>
 		</div>
 	</div>
-	<script src="../js/bootstrap.min.js"></script>
+	<script src="/shopERP/js/bootstrap.min.js"></script>
 </body>
 </html>

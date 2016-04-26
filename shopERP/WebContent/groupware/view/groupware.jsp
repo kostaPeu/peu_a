@@ -4,7 +4,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="./js/ajax.js"></script>
 <title>Insert title here</title>
 
 <!-- Google Fonts -->
@@ -28,22 +27,29 @@
 <link rel="stylesheet" href="css/contents.css">
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
-
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="./groupware/js/gw_ajax.js"></script>
+<script src="./groupware/js/gw_js.js"></script>
 
 </head>
+
 <body>
 	<div class="wrapper-erp-local-nav">
 		<div class="erp-local-nav-title">그룹웨어</div>
 		<div class="erp-local-nav">
 			<ul class="local">
-				<li><a href="./groupware/view/notice/notice_list.jsp">공지사항</a></li>
-				<li><a href="./groupware/view/depboard/dep_board_list.jsp">부서게시판</a></li>
+				<li><a href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_list.jsp">공지사항</a></li>
 				
-				<li data-toggle="collapse" href="#nnaa"><a href="./groupware/view/sign/sign_alldraft_list.jsp">전자결재</a>
-					<ul id="nnaa" class="collapse">
+				<li data-toggle="collapse" href="#dep_board"><a href="./groupware/view/depboard/dep_board_list.jsp">부서게시판</a>
+					<ul id="dep_board" class="collapse">
+						<li><a href="./groupware/view/depboard/dep_board_list.jsp">부서 게시판</a></li>
+						<li><a href="./groupware/view/depboard/dep_sharedfolder_list.jsp">공유 폴더</a></li>
+						<li><a id="gw_cal" href="./selectable.html">부서 일정</a></li>
+					</ul>
+				</li>
+				
+				<li data-toggle="collapse" href="#dep_sign"><a href="./groupware/view/sign/sign_alldraft_list.jsp">전자결재</a>
+					<ul id="dep_sign" class="collapse">
 						<li><a href="./groupware/view/sign/sign_alldraft_list.jsp">기안서 작성</a></li>
 						<li><a href="#">내 결재 관리</a></li>
 						<li><a href="#">기안서 통합 관리</a></li>
@@ -51,9 +57,13 @@
 					</ul>
 				</li>
 				
-				<li><a href="./groupware/view/imageboard/imageboard_list.jsp">이미지게시판</a></li>
-				<li><a
-					href="./groupware/view/projectboard/pb_allproject_list.jsp">프로젝트게시판</a></li>
+				<li><a href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/imageboard/imageboard_list.jsp">이미지게시판</a></li>
+				<li data-toggle="collapse" href="#dep_project"><a href="./groupware/view/projectboard/pb_allproject_list.jsp">프로젝트게시판</a>
+					<ul id="dep_project" class="collapse">
+						<li><a href="./groupware/view/projectboard/pb_allproject_list.jsp">전체 프로젝트</a></li>
+						<li><a href="#">내 프로젝트</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</div>

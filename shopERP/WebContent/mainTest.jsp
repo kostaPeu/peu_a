@@ -2,36 +2,25 @@
 	pageEncoding="UTF-8"%>
 <%
 	String left = request.getParameter("left");
+	String contents = request.getParameter("contents");
 	if(left == null){
 		left = "";
 	}
-	String contents = request.getParameter("contents");
 	if(contents == null){
 		contents = "";
 	}
+
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-
-<!-- Google Fonts -->
-<link
-	href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600'
-	rel='stylesheet' type='text/css'>
-<link
-	href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300'
-	rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,100'
-	rel='stylesheet' type='text/css'>
-
 <!-- Font Awesome -->
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <!-- Custom CSS -->
-
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
 
@@ -61,7 +50,7 @@
 					<li><a href="./mainTest.jsp?left=./sale/view/sale.jsp">판매관리</a></li>
 					<li><a href="./mainTest.jsp?left=./odm/view/odm.jsp">주문/배송관리</a></li>
 					<li><a href="./mainTest.jsp?left=./stock/view/stock.jsp">재고현황</a></li>
-					<li><a href="./mainTest2.jsp?left=./accounting/view/Accounleft.jsp"">회계</a></li>
+					<li><a href="./mainTest.jsp?left=./accounting/view/Accounleft.jsp">회계</a></li>
 					<li><a href="#">인사관리</a></li>
 					<li><a href="./mainTest.jsp?left=./groupware/view/groupware.jsp">그룹웨어</a></li>
 					<li><a href="#">마이페이지</a></li>
@@ -78,6 +67,8 @@
  	<div class="container" id="contents">
  		<jsp:include page="<%=contents %>"></jsp:include>
 	</div> 
+	
+	
 
 <script src="js/bootstrap.min.js"></script>
 	

@@ -46,7 +46,7 @@ public class updateProductAction implements Action {
 		if(re == 1){
 			forward.setRedirect(true);
 			System.out.println("성공");
-			forward.setPath("productList.basic");
+			forward.setPath("productList.ba");
 		}else{
 			System.out.println("실패");
 /*			forward.setRedirect(true);

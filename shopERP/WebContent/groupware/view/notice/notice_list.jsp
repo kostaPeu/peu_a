@@ -30,7 +30,6 @@
 
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="./groupware/js/gw_ajax.js"></script>
 
 </head>
 <body>
@@ -50,7 +49,8 @@
 			<tbody>
 				<tr class="row">
 					<td class="col-sm-1">10001</td>
-					<td class="col-sm-6"><a href="./groupware/view/notice/notice_view.jsp">라면을 먹자</a></td>
+					<td class="col-sm-6"><a
+						href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_view.jsp">라면을 먹자</a></td>
 					<td class="col-sm-2">김밥</td>
 					<td class="col-sm-2">16.04.24</td>
 					<td class="col-sm-1">14</td>
@@ -111,7 +111,7 @@
 					<td class="col-sm-2">16.04.24</td>
 					<td class="col-sm-1">14</td>
 				</tr>
-				
+
 			</tbody>
 		</table>
 
@@ -123,23 +123,27 @@
 			<li class="next"><a href="#">Next</a></li>
 		</ul>
 
-		<div class="col-xs-2">
-		<div class="dropdown">
-			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-				제목+내용 <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu col-xs-2">
-				<li><a href="#">제목</a></li>
-				<li><a href="#">내용</a></li>
-				<li><a href="#">작성자</a></li>
-			</ul>
+		<div class="row">
+			<a href="notice_write.gw" class="btn btn-info col-sm-1 col-sm-push-11">글쓰기</a>
 		</div>
+		
+		<div class="col-xs-2">
+			<div class="dropdown">
+				<button class="btn btn-primary dropdown-toggle" type="button"
+					data-toggle="dropdown">
+					제목+내용 <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu col-xs-2">
+					<li><a href="#">제목</a></li>
+					<li><a href="#">내용</a></li>
+					<li><a href="#">작성자</a></li>
+				</ul>
+			</div>
 		</div>
 		<div class="col-xs-2">
-  			<input class="form-control" id="ex1" type="text">
+			<input class="form-control" id="ex1" type="text">
 		</div>
 		<button type="button" class="btn btn-default">검색</button>
-
 	</div>
 
 </body>
