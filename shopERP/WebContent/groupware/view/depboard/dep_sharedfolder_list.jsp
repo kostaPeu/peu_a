@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="css/contents.css">
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="./groupware/css/gw_css.css" rel="stylesheet">
+<link href="./groupware/css/sharedfolder.css" rel="stylesheet">
 
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>

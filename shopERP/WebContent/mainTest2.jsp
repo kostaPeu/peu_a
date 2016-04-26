@@ -22,7 +22,8 @@
 <script src="/shopERP/js/main.js" type="text/javascript"></script>
 <script src="/shopERP/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
 
@@ -81,8 +82,7 @@
 	</div>
 
 	<div class="container" id="contents">
-		<jsp:include page="<%=contents %>"></jsp:include>
+		<jsp:include page="<%=contents%>"></jsp:include>
 	</div>
-	
 </body>
 </html>
