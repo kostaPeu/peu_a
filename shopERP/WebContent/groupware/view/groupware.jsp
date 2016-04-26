@@ -57,22 +57,12 @@
 					</ul>
 				</li>
 				
-<<<<<<< HEAD
 				<li data-toggle="collapse" href="#dep_project"><a href="./groupware/view/projectboard/pb_allproject_list.jsp">프로젝트게시판</a>
                <ul id="dep_project" class="collapse">
                   <li><a href="./groupware/view/projectboard/pb_allproject_list.jsp">전체 프로젝트</a></li>
                   <li><a href="#">내 프로젝트</a></li>
                </ul>
             </li>
-=======
-				<li><a href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/imageboard/imageboard_list.jsp">이미지게시판</a></li>
-				<li data-toggle="collapse" href="#dep_project"><a href="./groupware/view/projectboard/pb_allproject_list.jsp">프로젝트게시판</a>
-					<ul id="dep_project" class="collapse">
-						<li><a href="./groupware/view/projectboard/pb_allproject_list.jsp">전체 프로젝트</a></li>
-						<li><a href="#">내 프로젝트</a></li>
-					</ul>
-				</li>
->>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 			</ul>
 		</div>
 	</div>
