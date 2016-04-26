@@ -9,10 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import shopERP.action.Action;
-import shopERP.action.ActionForward;
+import shopERP.basic.action.Action;
+import shopERP.basic.action.ActionForward;
+import shopERP.basic.action.CustomerAction;
+import shopERP.basic.action.CustomerList;
 
-@WebServlet("*.do")
+@WebServlet("*.ba")
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -36,12 +38,15 @@ public class Controller extends HttpServlet {
 		String requestUri = request.getRequestURI();
 		String conPath = request.getContextPath();
 		String command = requestUri.substring(conPath.length() + 1);
-
+		
 		Action action = null;
 		ActionForward forward = null;
 
-		if (command.equals("~~~.do")) {
-			action = null;
+		if(command.equals("customerProc.ba")) {
+			action = new CustomerAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("CustomerList.ba")){
+			action = new CustomerList();
 			forward = action.excute(request, response);
 		}
 		

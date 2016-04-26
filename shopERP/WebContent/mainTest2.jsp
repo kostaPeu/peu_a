@@ -2,8 +2,12 @@
 	pageEncoding="UTF-8"%>
 <%
 	String left = request.getParameter("left");
-	if (left == null) {
+	String contents = request.getParameter("contents");
+	if(left == null){
 		left = "";
+	}
+	if(contents == null){
+		contents = "";
 	}
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -72,6 +76,8 @@
 		</div>
 	</div>
 
-	<div class="container" id="contents"></div>
+	<div class="container" id="contents">
+		<jsp:include page="<%=contents %>"></jsp:include>
+	</div>
 </body>
 </html>
