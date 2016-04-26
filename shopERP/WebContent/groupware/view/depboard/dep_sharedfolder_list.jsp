@@ -68,9 +68,9 @@
 					<table cellspacing="0" cellpadding="0">
 						<tbody>
 							<tr>
-								<td class="_item_thumb_box ">
-									<p class="bu _item_thumb_box bu_zip_b">
-										<span class="_item_thumb_box">ZIP</span>
+								<td>
+									<p>
+										<span>ZIP</span>
 									</p>
 								</td>
 							</tr>
@@ -79,82 +79,7 @@
 					<div class="title">뿅뿅</div>
 				</div>
 			</li>
-			<li>
-				<div class="check">
-					<input id="input_check" type="checkbox">
-				</div>
-				<div class="item">
-					<table cellspacing="0" cellpadding="0">
-						<tbody>
-							<tr>
-								<td class="_item_thumb_box ">
-									<p class="bu _item_thumb_box bu_zip_b">
-										<span class="_item_thumb_box">ZIP</span>
-									</p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="title">뿅뿅</div>
-				</div>
-			</li>
-			<li>
-				<div class="check">
-					<input id="input_check" type="checkbox">
-				</div>
-				<div class="item">
-					<table cellspacing="0" cellpadding="0">
-						<tbody>
-							<tr>
-								<td class="_item_thumb_box ">
-									<p class="bu _item_thumb_box bu_zip_b">
-										<span class="_item_thumb_box">ZIP</span>
-									</p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="title">뿅뿅</div>
-				</div>
-			</li>
-			<li>
-				<div class="check">
-					<input id="input_check" type="checkbox">
-				</div>
-				<div class="item">
-					<table cellspacing="0" cellpadding="0">
-						<tbody>
-							<tr>
-								<td class="_item_thumb_box ">
-									<p class="bu _item_thumb_box bu_zip_b">
-										<span class="_item_thumb_box">ZIP</span>
-									</p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="title">뿅뿅</div>
-				</div>
-			</li>
-			<li>
-				<div class="check">
-					<input id="input_check" type="checkbox">
-				</div>
-				<div class="item">
-					<table cellspacing="0" cellpadding="0">
-						<tbody>
-							<tr>
-								<td class="_item_thumb_box ">
-									<p class="bu _item_thumb_box bu_zip_b">
-										<span class="_item_thumb_box">ZIP</span>
-									</p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="title">뿅뿅</div>
-				</div>
-			</li>
+			
 		</ul>
 	</div>
 </body>
