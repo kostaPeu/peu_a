@@ -22,8 +22,7 @@
     <link href="purchase/css/purchase.css" rel="stylesheet">
     <script src="/shopERP/js/jquery.js" type="text/javascript"></script> 
 	<link rel="stylesheet" href="/shopERP/purchase/css/jquery-ui.min.css">
-	<link rel="stylesheet" href="/shopERP/purchase/css/jquery-ui.css">
-	<script src="/shopERP/purchase/js/jquery-ui.js"></script>
+	<script src="/shopERP/purchase/js/jquery.min.js"></script>
 	<script src="/shopERP/purchase/js/jquery-ui.min.js"></script>
     <script src="/shopERP/purchase/js/purchase.js" type="text/javascript"></script>
 </head>

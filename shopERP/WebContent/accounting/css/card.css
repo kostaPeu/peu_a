@@ -4,7 +4,8 @@
 	border-bottom: 1px solid #ccc;
 	font-size: 14px;
 	font-weight: bold;
-	padding: 14px 10px;
+	padding-top: 5px;
+	padding-bottom: 10px;
 }
 
 .contentsName #title {
@@ -165,13 +166,7 @@ i {
 	margin-right: 10px;
 }
 
-a, button, li, li::before {
-	transition: color 0.2s ease-in-out 0s, background-color 0.2s ease-in-out
-		0s;
+th{
+	text-align: center;
+	vertical-align: middle;
 }
-
-#contents{
-	margin-left: 0;
-	padding: 0;
-}
-

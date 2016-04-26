@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -48,7 +48,7 @@
 			<tbody>
 				<tr class="row">
 					<td class="col-sm-1">10001</td>
-					<td class="col-sm-6">라면을 먹자</td>
+					<td class="col-sm-6"><a href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/depboard/dep_board_view.jsp">라면을 먹자</a></td>
 					<td class="col-sm-2">김밥</td>
 					<td class="col-sm-2">16.04.24</td>
 					<td class="col-sm-1">14</td>
@@ -65,9 +65,15 @@
 		</ul>
 	</div>
 
-		<div class="col-xs-2">
+	<div class="row">
+		<a href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/depboard/dep_board_write.jsp"
+			class="btn btn-info col-sm-1 col-sm-push-11">글쓰기</a>
+	</div>
+	
+	<div class="col-xs-2">
 		<div class="dropdown">
-			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button"
+				data-toggle="dropdown">
 				제목+내용 <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu col-xs-2">
@@ -76,10 +82,10 @@
 				<li><a href="#">작성자</a></li>
 			</ul>
 		</div>
-		</div>
-		<div class="col-xs-2">
-  			<input class="form-control" id="ex1" type="text">
-		</div>
-		<button type="button" class="btn btn-default">검색</button>
+	</div>
+	<div class="col-xs-2">
+		<input class="form-control" id="ex1" type="text">
+	</div>
+	<button type="button" class="btn btn-default">검색</button>
 </body>
 </html>

@@ -33,102 +33,69 @@
 				</thead>
 				<tr>
 					<td><input type="checkbox"></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
 				</tr>
 				<tr>
 					<td><input type="checkbox"></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-				</tr>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+				</tr>		
 				<tr>
 					<td><input type="checkbox"></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-				</tr>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+				</tr>		
 				<tr>
 					<td><input type="checkbox"></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-				</tr>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+				</tr>		
 				<tr>
 					<td><input type="checkbox"></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-				</tr>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+				</tr>		
 				<tr>
 					<td><input type="checkbox"></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id=""></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
 				</tr>		
 			</table>
 			<table class="table table-bordered table-hover new">

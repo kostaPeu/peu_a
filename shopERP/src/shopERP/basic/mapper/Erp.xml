@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="shopERP.basic.mapper.ErpMapper">
+	<cache />
+	<insert id="insertCustomer" parameterType="Customer">
+		insert into customer(
+			customer_id, customer_name, repre_name, phone_number, customer_address, copy_bankbook,
+			bankbook_check, customer_email, customer_fax, checkman
+		)
+		values(
+			#{customer_id}, #{customer_name}, #{repre_name}, #{phone_number},
+			#{customer_address}, #{copy_bankbook}, #{bankbook_check}, #{customer_email},
+			#{customer_fax}, #{checkman}
+		)
+	</insert>
+	<select id="customerList" resultType="Customer">
+		select * from customer
+			order by customer_name
+	</select>
+	<select id="totalCount" resultType="Integer">
+		select count(*) from customer
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
