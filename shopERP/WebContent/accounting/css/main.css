@@ -1,8 +1,4 @@
 @CHARSET "UTF-8";
-.container-fluid{
-	margin: 0;
-	padding: 0;
-}
 
 /* 로고부분*/
 .wrapper-erp-global-nav>.erp-global-nav-qm {
@@ -102,7 +98,6 @@
 /*좌측 타이틀 박스*/
 .wrapper-erp-local-nav>.erp-local-nav-title::before {
 	color: #000;
-	display: inline-block;
 	font-family: FontAwesome;
 	font-size: 14px;
 	font-weight: normal;
@@ -121,6 +116,7 @@
 .erp-local-nav>ul>li a {
 	background-color: #f5f5f5;
 	color: #3e3e3e;
+	display: block;
 	padding: 6px 11px;
 	text-decoration: none;
 	word-break: break-all;
@@ -129,4 +125,12 @@
 .erp-local-nav ul {
 	margin: 0;
 	padding: 0;
+}
+
+
+#contents {
+    float: right;
+    width: 82.5%;
+    padding:0;
+    margin: 3.9% 0 0;
 }

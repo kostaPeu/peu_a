@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
-   String left = request.getParameter("left");
-   if (left == null) {
-      left = "";
-   }
-   String contents = request.getParameter("contents");
-   if (contents == null) {
-      contents = "";
-   }
+	String left = request.getParameter("left");
+	if (left == null) {
+		left = "";
+	}
+	String contents = request.getParameter("contents");
+	if (contents == null) {
+		contents = "";
+	}
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -21,8 +21,8 @@
 <script src="/shopERP/js/jquery.js"></script>
 <script src="/shopERP/js/main.js" type="text/javascript"></script>
 <script src="/shopERP/js/bootstrap.min.js"></script>
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
 
@@ -30,7 +30,6 @@
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
-
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <script src="groupware/js/jquery-1.10.2.min.js"></script>

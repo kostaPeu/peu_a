@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,7 +17,7 @@
 	<!-- 상단 메뉴이름 -->
 	<div class="mainContents">
 		<div class="contentsName">
-			<a id="title">거래처로부터</a>
+			<a id="title">어음등록</a>
 		</div><!-- /상단 메뉴이름 -->
 		<br>
 		
@@ -57,30 +57,24 @@
 							size="5" value="25" maxlength="3" name="dd"></td>
 					</tr>
 					<tr id="row-CardTYPE">
-						<th>매입/매출 <span class="card-Info" data-html="true"
+						<th>받는어음 / 지급어음 <span class="card-Info" data-html="true"
 							data-toggle="popover" data-trigger="focus hover"
 							data-placement="right" data-original-title="" title=""></span>
 						</th>
 						<td>
 							<div class="radio-inline">
 								<label> <input id="optionsRadios1" type="radio"
-									checked="" value="option1" name="optionsRadios">매입
+									checked="" value="option1" name="optionsRadios">받는어음
 								</label>
 							</div>
 							<div class="radio-inline">
 								<label> <input id="optionsRadios2" type="radio"
-									value="option2" name="optionsRadios"> 매출
+									value="option2" name="optionsRadios">지급어음
 								</label>
 							</div>
 						</td>
 					</tr>
-					<tr id="row-customer">
-						<th>거래처</th>
-						<td><input id="warehouse_id" type="text">
-							<button id="warehouse_id_search" class="btn btn-default btn-sm">
-								<span class="fa fa-search"></span>
-							</button> <input type="text" name="" value="">
-					</tr>
+					
 					<tr id="row-deptNum">
 						<th>부서코드</th>
 						<td><input id="warehouse_id" type="text">
@@ -89,7 +83,7 @@
 							</button> <input type="text" name="" value="">
 					</tr>
 					<tr id="row-project">
-						<th>프로젝트 번호</th>
+						<th>프로젝트번호</th>
 						<td><input id="project_number" type="text">
 							<button id="project_number_search" class="btn btn-default btn-sm">
 								<span class="fa fa-search"></span>
@@ -102,26 +96,51 @@
 								<span class="fa fa-search"></span>
 							</button> <input type="text" name="" value="">
 					</tr>
-					<tr id="row-cardNum">
-						<th>카드번호</th>
+					<tr id="row-customer">
+						<th>거래처</th>
+						<td><input id="warehouse_id" type="text">
+							<button id="warehouse_id_search" class="btn btn-default btn-sm">
+								<span class="fa fa-search"></span>
+							</button> <input type="text" name="" value="">
+					</tr>
+					<tr id="row-noteNum">
+						<th>어음번호</th>
 						<td><input id="card_number" type="text">
 							<button id="card_number_search" class="btn btn-default btn-sm">
 								<span class="fa fa-search"></span>
 							</button> <input type="text" name="" value="">
 					</tr>
-
+						<tr id="row-CardTYPE">
+						<th>만기일자</th>
+						<td><select id="yy" onfocus="nextfield ='mm';" name="yy">
+								<option value="2017">2017</option>
+								<option value="2016" selected="selected">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2012">2012</option>
+						</select> <select id="mm" onfocus="nextfield ='dd';" name="mm">
+								<option value="01">1월</option>
+								<option value="02">2월</option>
+								<option value="03">3월</option>
+								<option value="04" selected="selected">4월</option>
+								<option value="05">5월</option>
+								<option value="06">6월</option>
+								<option value="07">7월</option>
+								<option value="08">8월</option>
+								<option value="09">9월</option>
+								<option value="10">10월</option>
+								<option value="11">11월</option>
+								<option value="12">12월</option>
+						</select> <input type="text" class="default" id="dd"
+							style="width: 20px; background-color: rgb(255, 255, 255);"
+							size="5" value="25" maxlength="3" name="dd"></td>
+					</tr>
 					<tr id="row-money">
 						<th>금액</th>
 						<td><input class="form-control" type="text" value=""
 							placeholder="금액"></td>
-					</tr>
-
-					<tr id="row-CardName">
-						<th>수수료</th>
-						<td><input class="form-control" type="text" value=""
-							placeholder="수수료 10%" disabled="disabled"></td>
-					</tr>
-
+					</tr>					
 					<tr id="row-Employee">
 						<th>비고</th>
 						<td><input class="form-control" type="text" value=""></td>
@@ -145,6 +164,9 @@
 			</div>
 		</div><!-- 메뉴 footar END -->
 	</div><!-- 신규등록 END -->
+
+</body>
+</html>
 
 </body>
 </html>

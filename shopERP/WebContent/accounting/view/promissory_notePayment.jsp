@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,14 +14,13 @@
 <link href="/shopERP/accounting/css/card.css" rel="stylesheet">
 </head>
 <body>
-	<!-- 상단 메뉴이름 -->
+<!-- 상단 메뉴이름 -->
 	<div class="mainContents">
 		<div class="contentsName">
-			<a id="title">거래처로부터</a>
+			<a id="title">어음지급 / 결제</a>
 		</div><!-- /상단 메뉴이름 -->
 		<br>
-		
-		<div class="contents contents-fixed" style="top: 29px; bottom: 34px">
+			<div class="contents contents-fixed" style="top: 29px; bottom: 34px">
 		<!-- 신규등록 Table Start -->
 			<table
 				class="table table-bordered table-hover table-left table-striped">
@@ -57,30 +56,25 @@
 							size="5" value="25" maxlength="3" name="dd"></td>
 					</tr>
 					<tr id="row-CardTYPE">
-						<th>매입/매출 <span class="card-Info" data-html="true"
+						<th>받는어음 / 지급어음 <span class="card-Info" data-html="true"
 							data-toggle="popover" data-trigger="focus hover"
 							data-placement="right" data-original-title="" title=""></span>
 						</th>
+						
 						<td>
 							<div class="radio-inline">
 								<label> <input id="optionsRadios1" type="radio"
-									checked="" value="option1" name="optionsRadios">매입
+									checked="" value="option1" name="optionsRadios">받는어음
 								</label>
 							</div>
 							<div class="radio-inline">
 								<label> <input id="optionsRadios2" type="radio"
-									value="option2" name="optionsRadios"> 매출
+									value="option2" name="optionsRadios">지급어음
 								</label>
 							</div>
 						</td>
 					</tr>
-					<tr id="row-customer">
-						<th>거래처</th>
-						<td><input id="warehouse_id" type="text">
-							<button id="warehouse_id_search" class="btn btn-default btn-sm">
-								<span class="fa fa-search"></span>
-							</button> <input type="text" name="" value="">
-					</tr>
+					
 					<tr id="row-deptNum">
 						<th>부서코드</th>
 						<td><input id="warehouse_id" type="text">
@@ -89,39 +83,31 @@
 							</button> <input type="text" name="" value="">
 					</tr>
 					<tr id="row-project">
-						<th>프로젝트 번호</th>
+						<th>프로젝트번호</th>
 						<td><input id="project_number" type="text">
 							<button id="project_number_search" class="btn btn-default btn-sm">
 								<span class="fa fa-search"></span>
 							</button> <input type="text" name="" value="">
-					</tr>
-					<tr id="row-accountNum">
-						<th>계좌번호</th>
-						<td><input id="account_number" type="text">
-							<button id="account_number_search" class="btn btn-default btn-sm">
+					</tr>				
+					<tr id="row-customer">
+						<th>거래처</th>
+						<td><input id="warehouse_id" type="text">
+							<button id="warehouse_id_search" class="btn btn-default btn-sm">
 								<span class="fa fa-search"></span>
 							</button> <input type="text" name="" value="">
 					</tr>
-					<tr id="row-cardNum">
-						<th>카드번호</th>
+					<tr id="row-noteNum">
+						<th>어음번호</th>
 						<td><input id="card_number" type="text">
 							<button id="card_number_search" class="btn btn-default btn-sm">
 								<span class="fa fa-search"></span>
 							</button> <input type="text" name="" value="">
-					</tr>
-
+					</tr>						
 					<tr id="row-money">
 						<th>금액</th>
 						<td><input class="form-control" type="text" value=""
-							placeholder="금액"></td>
-					</tr>
-
-					<tr id="row-CardName">
-						<th>수수료</th>
-						<td><input class="form-control" type="text" value=""
-							placeholder="수수료 10%" disabled="disabled"></td>
-					</tr>
-
+							placeholder="금액" disabled></td>
+					</tr>					
 					<tr id="row-Employee">
 						<th>비고</th>
 						<td><input class="form-control" type="text" value=""></td>
@@ -145,6 +131,8 @@
 			</div>
 		</div><!-- 메뉴 footar END -->
 	</div><!-- 신규등록 END -->
+
+
 
 </body>
 </html>
