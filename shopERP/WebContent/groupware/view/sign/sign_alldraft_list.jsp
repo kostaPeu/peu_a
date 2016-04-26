@@ -30,7 +30,6 @@
 
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="./groupware/js/gw_ajax.js"></script>
 
 </head>
 <body>

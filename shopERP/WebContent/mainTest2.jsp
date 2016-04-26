@@ -2,11 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%
 	String left = request.getParameter("left");
-	if (left == null) {
+	String contents = request.getParameter("contents");
+	if(left == null){
 		left = "";
 	}
-	String contents = request.getParameter("contents");
-	if (contents == null) {
+	if(contents == null){
 		contents = "";
 	}
 %>
@@ -22,7 +22,8 @@
 <script src="/shopERP/js/main.js" type="text/javascript"></script>
 <script src="/shopERP/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
 
@@ -67,7 +68,7 @@
 
 				<li class=""><a id="TopMainMenu8"
 					href="./mainTest2.jsp?left=./groupware/view/groupware.jsp">그룹웨어</a></li>
-				<li class=""><a id="TopMainMenu9" href="#">마이페이지</a></li>
+				<li class=""><a id="TopMainMenu9" href="./mainTest2.jsp?left=./mypage/view/mypage.jsp">마이페이지</a></li>
 			</ul>
 		</div>
 		<!-- topbar end -->

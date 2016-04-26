@@ -8,6 +8,7 @@
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
+
 </head>
 <body>
 	<div class="container">
@@ -29,9 +30,12 @@
 				내용</p>
 			<hr>
 		</div>
-		<button type="button" class="btn btn-default">수정</button>
-		<button type="button" class="btn btn-default">삭제</button>
-		<button type="button" class="btn btn-default">목록</button>
+		<div class="row">
+			<a type="button" href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_write.jsp"
+				class="btn btn-default">수정</a>
+			<button type="button" class="btn btn-default">삭제</button>
+			<button type="button" class="btn btn-default">목록</button>
+		</div>
 
 		<div id="view_comment">
 			<ul class="list-unstyled">
