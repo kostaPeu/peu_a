@@ -7,34 +7,35 @@
 <title>Insert title here</title>
 <script src="/shopERP/accounting/js/jquery.js"></script>
 <script src="/shopERP/accounting/js/main.js" type="text/javascript"></script>
-<script src="/shopERP/accounting/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href="/shopERP/accounting/css/bootstrap.min.css" rel="stylesheet">
+<link href="/shopERP/css/bootstrap.css" rel="stylesheet">
 <link href="/shopERP/accounting/css/card.css" rel="stylesheet">
+
 </head>
 <body id="body_html" class="font-dotum">
 	<!-- 상단 컨텐츠 이름 -->
 	<div class="contentsName">
 		<a id="title">입출금보고서</a>
 	</div>
-
-	<form class="form-horizontal" action="">
-		<table class="table table-bordered table-hover new" id="saleList" style="width: 50%">
-			<thead style="width: 50%">
-				<tr id="abc">
-					<th><input type="checkbox"></th>
-					<th><input type="button"
+	<br>
+	<form class="form-horizontal">
+		<table class="table table-bordered table-hover new" id="saleList">
+			<thead>
+				<tr id="abc" align="center" valign="middle">
+					<th class="abcd" align="center" valign="middle"><input
+						type="checkbox" disabled="disabled"></th>
+					<th align="center" valign="middle"><input type="button"
 						class="btn btn-default btn-sm saleListAdd" value="▼"></input></th>
-					<th>계정코드</th>
-					<th>계좌번호</th>				
-					<th>거래처</th>
-					<th>금액</th>
-					<th>수수료</th>
-					<th>부서</th>
-					<th>프로젝트</th>
-					<th>비고</th>
+					<th align="center" valign="middle" class="col-sm-12">계정코드</th>
+					<th align="center" valign="middle">계좌번호</th>
+					<th align="center" valign="middle">거래처</th>
+					<th align="center" valign="middle">금액</th>
+					<th align="center" valign="middle">수수료</th>
+					<th align="center" valign="middle">부서</th>
+					<th align="center" valign="middle">프로젝트</th>
+					<th align="center" valign="middle">비고</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -42,9 +43,22 @@
 					<td><input type="checkbox"></td>
 					<td><input type="button"
 						class="btn btn-default btn-sm saleListAdd" value="▼"></input></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id="" size="35"></td>
-					<td><input type="text" name="" id=""></td>
+					<td class="col-sm-8"><input type="text" name="" id=""
+						size="10">
+					<button class="btn btn-default btn-sm" type="submit"
+							style="margin-left: 10px;">
+							<span class="fa fa-search" style="width: 100%"></span>
+						</button></td>
+					<td><input type="text" name="" id="" size="20">
+					<button class="btn btn-default btn-sm" type="submit"
+							style="margin-left: 10px;">
+							<span class="fa fa-search"></span>
+						</button></td>
+					<td><input type="text" name="" id="" size="15">
+					<button class="btn btn-default btn-sm" type="submit"
+							style="margin-left: 10px;">
+							<span class="fa fa-search"></span>
+						</button></td>
 					<td><input type="text" name="" id=""></td>
 					<td><input type="text" name="" id=""></td>
 					<td><input type="text" name="" id=""></td>
@@ -55,9 +69,21 @@
 					<td><input type="checkbox"></td>
 					<td><input type="button"
 						class="btn btn-default btn-sm saleListAdd" value="▼"></input></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id="" size="35"></td>
-					<td><input type="text" name="" id=""></td>
+					<td><input type="text" name="" id="" class="col-sm-6">
+					<button class="btn btn-default btn-sm" type="submit"
+							style="margin-left: 10px;">
+							<span class="fa fa-search" style="width: 100%"></span>
+						</button></td>
+					<td><input type="text" name="" id="" size="20">
+					<button class="btn btn-default btn-sm" type="submit"
+							style="margin-left: 10px;">
+							<span class="fa fa-search"></span>
+						</button></td>
+					<td><input type="text" name="" id="" size="15">
+					<button class="btn btn-default btn-sm" type="submit"
+							style="margin-left: 10px;">
+							<span class="fa fa-search"></span>
+						</button></td>
 					<td><input type="text" name="" id=""></td>
 					<td><input type="text" name="" id=""></td>
 					<td><input type="text" name="" id=""></td>
@@ -68,31 +94,45 @@
 					<td><input type="checkbox"></td>
 					<td><input type="button"
 						class="btn btn-default btn-sm saleListAdd" value="▼"></input></td>
-					<td><input type="text" name="" id=""></td>
-					<td><input type="text" name="" id="" size="35"></td>
-					<td><input type="text" name="" id=""></td>
+					<td><input type="text" name="" id="" class="col-sm-6">
+					<button class="btn btn-default btn-sm" type="submit"
+							style="margin-left: 10px;">
+							<span class="fa fa-search" style="width: 100%"></span>
+						</button></td>
+					<td><input type="text" name="" id="" size="20">
+					<button class="btn btn-default btn-sm" type="submit"
+							style="margin-left: 10px;">
+							<span class="fa fa-search"></span>
+						</button></td>
+					<td><input type="text" name="" id="" size="15">
+					<button class="btn btn-default btn-sm" type="submit"
+							style="margin-left: 10px;">
+							<span class="fa fa-search"></span>
+						</button></td>
 					<td><input type="text" name="" id=""></td>
 					<td><input type="text" name="" id=""></td>
 					<td><input type="text" name="" id=""></td>
 					<td><input type="text" name="" id=""></td>
 					<td><input type="text" name="" id=""></td>
 				</tr>
-			
+
+
+
 				<tr style="text-align: center; font-size: 14px; font-weight: bold;">
-				<td colspan="3">금액합계</td>
-				<td colspan="2"><input type="text" name="" id="" width="100%" size="65"
-					disabled="disabled"></td>
-				<td colspan="2">수수료합계</td>
-				<td colspan="3"><input type="text" name="" id="" disabled="disabled"
-					size="65" width="20"></td>
-			</tr>
+					<td colspan="3">금액합계</td>
+					<td colspan="2"><input type="text" name="" id="" width="100%"
+						size="65" disabled="disabled"></td>
+					<td colspan="2">수수료합계</td>
+					<td colspan="3"><input type="text" name="" id=""
+						disabled="disabled" size="65" width="20"></td>
+				</tr>
 			</tbody>
 		</table>
 
 		<table class="table table-bordered table-hover new">
-			
+
 		</table>
-		
+
 		<div id="footer-Group" class="footer footer-fixed"
 			style="display: block;">
 			<div class="wrapper-toolbar">
@@ -100,7 +140,7 @@
 					<button id="btn-footer-Save" class="btn btn-xs btn-default"
 						type="Submit">저장</button>
 					<button id="btn-footer-Reset" class="btn btn-xs btn-default"
-						value="reset" type="button">다시작성</button>
+						value="reset" type="button">선택삭제</button>
 					<button id="btn-footer-Close" class="btn btn-xs btn-default"
 						type="button">닫기</button>
 				</div>

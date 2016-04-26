@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,16 +8,13 @@
 <title>Insert title here</title>
 <script src="/shopERP/accounting/js/jquery.js"></script>
 <script src="/shopERP/accounting/js/main.js" type="text/javascript"></script>
-<script src="/shopERP/accounting/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href="/shopERP/accounting/css/bootstrap.min.css" rel="stylesheet">
 <link href="/shopERP/accounting/css/card.css" rel="stylesheet">
-
 </head>
 <body id="body_html" class="font-dotum">
-
-	<!-- 상단 컨텐츠 이름 -->
+		<!-- 상단 컨텐츠 이름 -->
 		<div class="contentsName">
 			<a id="title">신용카드리스트</a>
 		</div>
