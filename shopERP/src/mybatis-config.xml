@@ -11,6 +11,7 @@
 		<typeAlias type="shopERP.basic.model.ProductList" alias="ProductList"/>
 		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
 		<typeAlias type="shopERP.groupware.model.Gw" alias="Gw"/>
+		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>
 	</typeAliases>
 	
 	<environments default="development">

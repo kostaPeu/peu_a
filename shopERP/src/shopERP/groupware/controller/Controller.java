@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import shopERP.groupware.action.Action;
 import shopERP.groupware.action.ActionForward;
-import shopERP.groupware.action.notice_write_action;
+import shopERP.groupware.action.notice_list_action;
 
 @WebServlet("*.gw")
 public class Controller extends HttpServlet {
@@ -41,8 +41,8 @@ public class Controller extends HttpServlet {
 		Action action = null;
 		ActionForward forward = null;
 
-		if (command.equals("notice_write.gw")) {
-			action = new notice_write_action();
+		if (command.equals("notice_list.gw")) {
+			action = new notice_list_action();
 			forward = action.excute(request, response);
 		}
 		

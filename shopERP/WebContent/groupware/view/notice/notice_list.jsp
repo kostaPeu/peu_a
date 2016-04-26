@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -50,67 +53,35 @@
 				<tr class="row">
 					<td class="col-sm-1">10001</td>
 					<td class="col-sm-6"><a
-						href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_view.jsp">라면을 먹자</a></td>
+						href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_view.jsp">라면을
+							먹자</a></td>
 					<td class="col-sm-2">김밥</td>
 					<td class="col-sm-2">16.04.24</td>
 					<td class="col-sm-1">14</td>
 				</tr>
-				<tr class="row">
-					<td class="col-sm-1">10001</td>
-					<td class="col-sm-6">라면을 먹자</td>
-					<td class="col-sm-2">김밥</td>
-					<td class="col-sm-2">16.04.24</td>
-					<td class="col-sm-1">14</td>
-				</tr>
-				<tr class="row">
-					<td class="col-sm-1">10001</td>
-					<td class="col-sm-6">라면을 먹자</td>
-					<td class="col-sm-2">김밥</td>
-					<td class="col-sm-2">16.04.24</td>
-					<td class="col-sm-1">14</td>
-				</tr>
-				<tr class="row">
-					<td class="col-sm-1">10001</td>
-					<td class="col-sm-6">라면을 먹자</td>
-					<td class="col-sm-2">김밥</td>
-					<td class="col-sm-2">16.04.24</td>
-					<td class="col-sm-1">14</td>
-				</tr>
-				<tr class="row">
-					<td class="col-sm-1">10001</td>
-					<td class="col-sm-6">라면을 먹자</td>
-					<td class="col-sm-2">김밥</td>
-					<td class="col-sm-2">16.04.24</td>
-					<td class="col-sm-1">14</td>
-				</tr>
-				<tr class="row">
-					<td class="col-sm-1">10001</td>
-					<td class="col-sm-6">라면을 먹자</td>
-					<td class="col-sm-2">김밥</td>
-					<td class="col-sm-2">16.04.24</td>
-					<td class="col-sm-1">14</td>
-				</tr>
-				<tr class="row">
-					<td class="col-sm-1">10001</td>
-					<td class="col-sm-6">라면을 먹자</td>
-					<td class="col-sm-2">김밥</td>
-					<td class="col-sm-2">16.04.24</td>
-					<td class="col-sm-1">14</td>
-				</tr>
-				<tr class="row">
-					<td class="col-sm-1">10001</td>
-					<td class="col-sm-6">라면을 먹자</td>
-					<td class="col-sm-2">김밥</td>
-					<td class="col-sm-2">16.04.24</td>
-					<td class="col-sm-1">14</td>
-				</tr>
-				<tr class="row">
-					<td class="col-sm-1">10001</td>
-					<td class="col-sm-6">라면을 먹자</td>
-					<td class="col-sm-2">김밥</td>
-					<td class="col-sm-2">16.04.24</td>
-					<td class="col-sm-1">14</td>
-				</tr>
+
+			<%-- 	<c:forEach var="notice" items="${list}">
+					<tr class="row">
+						<td class="col-sm-1">${notice.notice_id}</td>
+						<td class="col-sm-6"><a
+							href="notice_view.gw?notice_id=${notice.notice_id }">${notice.notice_title }</a></td>
+						<td class="col-sm-2">${e_name_list}</td>
+						<td class="col-sm-2"><fmt:formatDate
+								value="${notice.notice_date }" pattern="yyyy-MM-dd" /></td>
+						<td class="col-sm-1">${notice.notice_hit }</td>
+					</tr>
+				</c:forEach> --%>
+
+				<c:forEach var="i" begin="0" end="${list.size()-1}" step="1">
+					<tr class="row">
+						<td class="col-sm-1">${list.get(i).getNotice_id()}</td>
+					 	<td class="col-sm-6"><a href="notice_view.gw?notice_id=${list.get(i).getNotice_id()}">${list.get(i).getNotice_title() }</a></td>
+						<td class="col-sm-2">${e_name_list.get(i)}</td>
+						<td class="col-sm-2"><fmt:formatDate value="${notice.notice_date }"
+								pattern="yyyy-MM-dd" /></td>
+						<td class="col-sm-1">${notice.notice_hit }</td>
+					</tr>
+				</c:forEach>
 
 			</tbody>
 		</table>
@@ -124,9 +95,10 @@
 		</ul>
 
 		<div class="row">
-			<a href="notice_write.gw" class="btn btn-info col-sm-1 col-sm-push-11">글쓰기</a>
+			<a href="notice_write.gw"
+				class="btn btn-info col-sm-1 col-sm-push-11">글쓰기</a>
 		</div>
-		
+
 		<div class="col-xs-2">
 			<div class="dropdown">
 				<button class="btn btn-primary dropdown-toggle" type="button"
