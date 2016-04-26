@@ -5,9 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../css/emp.css">
-<link href="../css/bootstrap.min.css" rel="stylesheet">
-<script src="../js/jquery.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/shopERP/css/emp.css">
+<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
+<script src="/shopERP/js/jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(function() {
 		$("#dept").click(function() {
@@ -177,6 +177,6 @@
 			</table>
 		</div>
 	</div>
-	<script src="../js/bootstrap.min.js"></script>
+	<script src="/shopERP/js/bootstrap.min.js"></script>
 </body>
 </html>

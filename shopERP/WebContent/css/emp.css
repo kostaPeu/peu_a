@@ -7,9 +7,13 @@
 .emp_info_body button{
 	margin: 0px;
 }
+.hr_body{
+	margin-right: 20px;
+}
+
 #search_form{
 	margin-bottom: 10px;
-	margin-left: 30px;
+	margin-right: 50px;
 }
 
 #emp_insert, #indol_update{

@@ -5,6 +5,10 @@
 	if (left == null) {
 		left = "";
 	}
+	String contents = request.getParameter("contents");
+	if (contents == null) {
+		contents = "";
+	}
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -58,7 +62,9 @@
 							href="./mainTest2.jsp?left=./stock/view/stock.jsp">재고관리</a></li>
 						<li class=""><a id="TopMainMenu6"
 							href="./mainTest2.jsp?left=./accounting/view/Accounleft.jsp">회계관리</a></li>
-						<li class=""><a id="TopMainMenu7" href="#">인사관리</a></li>
+							
+						<li class=""><a id="TopMainMenu7" href="./mainTest2.jsp?left=./hr/view/hr_side.jsp">인사관리</a></li>
+						
 						<li class=""><a id="TopMainMenu8"
 							href="./mainTest2.jsp?left=./groupware/view/groupware.jsp">그룹웨어</a></li>
 						<li class=""><a id="TopMainMenu9" href="#">마이페이지</a></li>
@@ -72,6 +78,8 @@
 		</div>
 	</div>
 
-	<div class="container" id="contents"></div>
+	<div class="container" id="contents">
+		<jsp:include page="<%=contents%>"></jsp:include>
+	</div>
 </body>
 </html>
