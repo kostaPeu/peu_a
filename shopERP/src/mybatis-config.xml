@@ -13,7 +13,7 @@
 <!-- 		<typeAlias type="shopERP.groupware.model.Gw" alias="Gw"/>
 		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/> -->
 		<typeAlias type="shopERP.purchase.model.Purchase" alias="Purchase"/>
-		<typeAlias type="shopERP.purchase.model.PurchaseList" alias="PurchaseList"/>
+		<typeAlias type="shopERP.purchase.model.PurchaseListView" alias="PurchaseList"/>
 	</typeAliases>
 	
 	<environments default="development">
