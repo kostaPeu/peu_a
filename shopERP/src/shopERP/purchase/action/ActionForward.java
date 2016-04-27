@@ -1,4 +1,4 @@
-package shopERP.basic.action;
+package shopERP.purchase.action;
 
 public class ActionForward {
 	private boolean isRedirect;
