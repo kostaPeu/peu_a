@@ -5,13 +5,12 @@
 
 <configuration>
 	<typeAliases>
-		<typeAlias type="shopERP.basic.model.Product" alias="Product"/>
+	<!-- 	<typeAlias type="shopERP.basic.model.Product" alias="Product"/>
 		<typeAlias type="shopERP.basic.model.Standards" alias="Standards"/>
 		<typeAlias type="shopERP.basic.model.ProductGroup" alias="ProductGroup"/>
 		<typeAlias type="shopERP.basic.model.ProductList" alias="ProductList"/>
-		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
-<!-- 		<typeAlias type="shopERP.groupware.model.Gw" alias="Gw"/>
-		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/> -->
+		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/> -->
+		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -24,8 +23,8 @@
 	</environments>
 	
 	<mappers>
-		<mapper resource="shopERP/basic/mapper/Erp.xml"/>
-		<!-- <mapper resource="shopERP/groupware/mapper/Gw.xml"/> -->
+		<!-- <mapper resource="shopERP/basic/mapper/Erp.xml"/> -->
+		 <mapper resource="shopERP/groupware/mapper/Gw.xml"/>
 	</mappers>
 	
 </configuration>
