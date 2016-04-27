@@ -4,5 +4,7 @@ $(function(){
       
       $('#contents').empty();
       $('#contents').load($(this).attr('href'));
+     
+      $(".collapse").shown()
    });
-});
+})

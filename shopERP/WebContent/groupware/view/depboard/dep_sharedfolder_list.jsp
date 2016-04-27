@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="css/contents.css">
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="./groupware/css/sharedfolder.css" rel="stylesheet">
+<link href="./groupware/css/dep_sharedfolder_list.css" rel="stylesheet">
 
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
@@ -57,29 +57,44 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="item_list">
-		<ul class="type_thumb">
+		<ul class="share_contents">
 			<li>
 				<div class="check">
 					<input id="input_check" type="checkbox">
 				</div>
 				<div class="item">
-					<table cellspacing="0" cellpadding="0">
-						<tbody>
-							<tr>
-								<td>
-									<p>
-										<span>ZIP</span>
-									</p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="title">뿅뿅</div>
+					<img src="./groupware/images/zipimg.png" alt="파일이미지" />
+				</div>
+				<div class="title">
+					<span>파일명</span>
+				</div>
+				<div class="">
+					<span>파일크기</span>
+				</div>
+				<div class="writer">
+					<span>작성자</span>
 				</div>
 			</li>
-			
+			<li>
+				<div class="check">
+					<input id="input_check" type="checkbox">
+				</div>
+				<div class="item">
+					<img src="./groupware/images/zipimg.png" alt="파일이미지" />
+				</div>
+				<div class="title">
+					<span>파일명</span>
+				</div>
+				<div class="">
+					<span>파일크기</span>
+				</div>
+				<div class="writer">
+					<span>작성자</span>
+				</div>
+			</li>
+
 		</ul>
 	</div>
 </body>
