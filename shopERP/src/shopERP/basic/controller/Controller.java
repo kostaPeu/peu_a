@@ -11,13 +11,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import shopERP.basic.action.Action;
 import shopERP.basic.action.ActionForward;
-import shopERP.basic.action.deleteProductAction;
-import shopERP.basic.action.insertProductAction;
 import shopERP.basic.action.productCodeListAction;
 import shopERP.basic.action.productListAction;
 import shopERP.basic.action.updateProductAction;
 import shopERP.basic.action.CustomerAction;
 import shopERP.basic.action.CustomerList;
+import shopERP.basic.action.DeleteAction;
+import shopERP.basic.action.UpdateAction;
+import shopERP.basic.action.deleteProductAction;
+import shopERP.basic.action.insertProductAction;
 
 @WebServlet("*.ba")
 public class Controller extends HttpServlet {
@@ -68,6 +70,11 @@ public class Controller extends HttpServlet {
 		}else if(command.equals("productCodeJson.ba")){
 			action = new productCodeListAction();
 			System.out.println("액션성공!");
+		}else if(command.equals("UpdateAction.ba")){
+			action = new UpdateAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("DeleteAction.ba")){
+			action = new DeleteAction();
 			forward = action.excute(request, response);
 		}
 		

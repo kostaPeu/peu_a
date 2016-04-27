@@ -34,7 +34,7 @@
 </head>
 <body>
 	<div class="container">
-		<h2>Bordered Table</h2>
+		<h2>전체 프로젝트</h2>
 		<p>The .table-bordered class adds borders to a table:</p>
 		<table class="table table-bordered">
 			<thead>

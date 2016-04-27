@@ -24,17 +24,31 @@
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/contents.css">
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="./groupware/css/sharedfolder.css" rel="stylesheet">
+<link href="./groupware/css/dep_sharedfolder_list.css" rel="stylesheet">
 
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
-
+<!-- 
+<script src="./js/checkbox.js"></script>
+ -->
 </head>
 <body>
-	<div class="container">
+	<div class="container col-sm-12">
+		<div class="col-sm-9">
+			<div class="col-sm-5">
+				<button class="ta_ic dw _download" type="button">
+					<span>내려받기</span>
+				</button>
+				<button class="del _delete" type="button">
+					<span>삭제</span>
+				</button>
+			</div>
+			<div class="col-sm-7">
+				<input class="up_file_all" type="file" title="파일 올리기">
+			</div>
+		</div>
 		<div class="col-sm-3">
 			<div class="search_area _quick_search">
 				<input id="search_txt" class="input_txt _textbox_quick_search"
@@ -43,119 +57,37 @@
 					for="search_txt">검색</label></a>
 			</div>
 		</div>
-		<div class="col-sm-9">
-			<div class="col-sm-5">
-				<input class="up_file_all" type="file" title="파일 올리기">
-			</div>
-			<div class="col-sm-7">
-				<button class="ta_ic dw _download" type="button">
-					<span>내려받기</span>
-				</button>
-				<button class="del _delete" type="button">
-					<span>삭제</span>
-				</button>
-			</div>
-		</div>
 	</div>
-	
-	<div class="item_list">
-		<ul class="type_thumb">
-			<li>
-				<div class="check">
-					<input id="input_check" type="checkbox">
+
+	<div class="item_list col-sm-12">
+		<ul>
+			<li class="item_box">
+				<div class="checkbox">
+				 <label>
+					<input id="input_check" type="checkbox" value="file1">
+					<div class="item">
+						<img src="./groupware/images/zipimg.png" alt="파일이미지" />
+					</div>
+					<div class="item_text">
+						<span class="item_title">파일명</span>
+						<span class="item_size">파일크기</span>
+						<span class="item_writer">작성자</span>
+					</div>
+				 </label>
+				 
 				</div>
-				<div class="item">
-					<table cellspacing="0" cellpadding="0">
-						<tbody>
-							<tr>
-								<td class="_item_thumb_box ">
-									<p class="bu _item_thumb_box bu_zip_b">
-										<span class="_item_thumb_box">ZIP</span>
-									</p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="title">뿅뿅</div>
-				</div>
-			</li>
-			<li>
-				<div class="check">
-					<input id="input_check" type="checkbox">
-				</div>
-				<div class="item">
-					<table cellspacing="0" cellpadding="0">
-						<tbody>
-							<tr>
-								<td class="_item_thumb_box ">
-									<p class="bu _item_thumb_box bu_zip_b">
-										<span class="_item_thumb_box">ZIP</span>
-									</p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="title">뿅뿅</div>
-				</div>
-			</li>
-			<li>
-				<div class="check">
-					<input id="input_check" type="checkbox">
-				</div>
-				<div class="item">
-					<table cellspacing="0" cellpadding="0">
-						<tbody>
-							<tr>
-								<td class="_item_thumb_box ">
-									<p class="bu _item_thumb_box bu_zip_b">
-										<span class="_item_thumb_box">ZIP</span>
-									</p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="title">뿅뿅</div>
-				</div>
-			</li>
-			<li>
-				<div class="check">
-					<input id="input_check" type="checkbox">
-				</div>
-				<div class="item">
-					<table cellspacing="0" cellpadding="0">
-						<tbody>
-							<tr>
-								<td class="_item_thumb_box ">
-									<p class="bu _item_thumb_box bu_zip_b">
-										<span class="_item_thumb_box">ZIP</span>
-									</p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="title">뿅뿅</div>
-				</div>
-			</li>
-			<li>
-				<div class="check">
-					<input id="input_check" type="checkbox">
-				</div>
-				<div class="item">
-					<table cellspacing="0" cellpadding="0">
-						<tbody>
-							<tr>
-								<td class="_item_thumb_box ">
-									<p class="bu _item_thumb_box bu_zip_b">
-										<span class="_item_thumb_box">ZIP</span>
-									</p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="title">뿅뿅</div>
-				</div>
+			
 			</li>
 		</ul>
 	</div>
+	
+	<ul class="pager col-sm-12">
+		<li class="previous"><a href="#">Previous</a></li>
+		<li><a>1</a></li>
+		<li><a>2</a></li>
+		<li><a>3</a></li>
+		<li class="next"><a href="#">Next</a></li>
+	</ul>
+		
 </body>
 </html>

@@ -30,7 +30,8 @@ public class ActionForward {
 
 	@Override
 	public String toString() {
-		return "basic_ActionForward [isRedirect=" + isRedirect + ", path=" + path + "]";
+		return "ActionForward [isRedirect=" + isRedirect + ", path=" + path + "]";
+
 	}
 	
 }

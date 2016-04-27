@@ -5,7 +5,6 @@ import javax.servlet.http.HttpServletResponse;
 import shopERP.basic.action.Action;
 import shopERP.basic.action.ActionForward;
 import shopERP.basic.model.ErpService;
-import shopERP.basic.model.Product;
 
 public class deleteProductAction implements Action {
 

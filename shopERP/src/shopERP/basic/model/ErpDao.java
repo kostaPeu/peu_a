@@ -171,4 +171,52 @@ private static ErpDao dao = new ErpDao();
 		}
 		return list;
 	}
+	public Customer selectCustomer(String customer_id) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		Customer customer = null;
+		try {
+			customer = sqlSession.getMapper(ErpMapper.class).selectCustomer(customer_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return customer;
+	}
+
+	public int updateCustomer(Customer customer) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = -1;
+		try {
+			re = sqlSession.getMapper(ErpMapper.class).updateCustomer(customer);
+			if(re > 0){
+				sqlSession.commit();
+			}else{
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return re;
+	}
+
+	public int deleteCustomer(String customer_id) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = -1;
+		try {
+			re = sqlSession.getMapper(ErpMapper.class).deleteCustomer(customer_id);
+			if(re > 0){
+				sqlSession.commit();
+			}else{
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return re;
+	}
 }

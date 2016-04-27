@@ -8,6 +8,7 @@
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="//cdn.ckeditor.com/4.5.8/standard/ckeditor.js"></script>
 </head>
 <body>
 <div class="container">
@@ -25,7 +26,7 @@
 		<div id="write_content">
 			<label class="control-label col-sm-1" for="content">내용</label>
 			<div class="col-sm-11">
-				<textarea class="form-control" rows="5" id="content"></textarea>
+				<textarea class="ckeditor" cols="1" id="editor1" name="editor1" rows="15"></textarea>
 			</div>
 		</div>
 
