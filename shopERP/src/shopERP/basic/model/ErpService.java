@@ -3,6 +3,7 @@ package shopERP.basic.model;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 public class ErpService {
 	public static ErpDao dao;
@@ -67,6 +68,15 @@ public class ErpService {
 		}
 		List<Customer> list = dao.customerList((requestPage - 1)*PAGE_SIZE);
 		return new ListModel(list, requestPage, totalPageCount, startPage, endPage);
+	}
+
+	public List<ProductCode> productCodeList(HttpServletRequest request, Search search) {
+		System.out.println("service");
+		System.out.println(request.getParameter("searchKey"));
+		if (request.getParameter("searchkey") != null) {
+			search.setSearchKey("%"+request.getParameter("searchKey")+"%");
+		}
+		return dao.productCodeList(search);
 	}
 
 

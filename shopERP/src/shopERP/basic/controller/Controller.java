@@ -13,6 +13,7 @@ import shopERP.basic.action.Action;
 import shopERP.basic.action.ActionForward;
 import shopERP.basic.action.deleteProductAction;
 import shopERP.basic.action.insertProductAction;
+import shopERP.basic.action.productCodeListAction;
 import shopERP.basic.action.productListAction;
 import shopERP.basic.action.updateProductAction;
 import shopERP.basic.action.CustomerAction;
@@ -63,6 +64,10 @@ public class Controller extends HttpServlet {
 			forward = action.excute(request, response);
 		}else if(command.equals("CustomerList.ba")){
 			action = new CustomerList();
+			forward = action.excute(request, response);
+		}else if(command.equals("productCodeJson.ba")){
+			action = new productCodeListAction();
+			System.out.println("액션성공!");
 			forward = action.excute(request, response);
 		}
 		

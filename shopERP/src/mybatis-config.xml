@@ -10,6 +10,8 @@
 		<typeAlias type="shopERP.basic.model.ProductGroup" alias="ProductGroup"/>
 		<typeAlias type="shopERP.basic.model.ProductList" alias="ProductList"/>
 		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
+		<typeAlias type="shopERP.basic.model.Search" alias="Search"/>
+		<typeAlias type="shopERP.basic.model.ProductCode" alias="ProductCode"/>
 <!-- 		<typeAlias type="shopERP.groupware.model.Gw" alias="Gw"/>
 		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/> -->
 	</typeAliases>

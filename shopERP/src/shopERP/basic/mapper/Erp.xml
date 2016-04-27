@@ -60,6 +60,10 @@
 	<select id="totalCountProduct" resultType="int">
 		select count(*) from product
 	</select>
+	<select id="productCodeList" parameterType="search" resultType="ProductCode">
+		select product_id, product_name from product
+				where product_id LIKE #{searchKey}
+	</select>
 </mapper>
 
 

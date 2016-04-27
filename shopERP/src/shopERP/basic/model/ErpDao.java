@@ -158,4 +158,17 @@ private static ErpDao dao = new ErpDao();
 		}
 		return re;
 	}
+
+	public List<ProductCode> productCodeList(Search search) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		List<ProductCode> list = null;
+		try {
+			list = sqlSession.getMapper(ErpMapper.class).productCodeList(search);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			sqlSession.close();
+		}
+		return list;
+	}
 }

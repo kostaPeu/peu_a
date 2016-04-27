@@ -25,6 +25,7 @@ $(function(){
 })
 $(function(){
 	$(".productChecked").click(function() {
+		$('#searchTable').empty();
 		$("input[name=productRow]:checked").each(function() {
 			var checks = $(this).val();
 			$(".product_id2").attr("value",checks);
