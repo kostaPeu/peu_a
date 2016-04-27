@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,26 +9,22 @@
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
-
 </head>
 <body>
 	<div class="container">
-		<p>공지사항 > 10001번 글</p>
+		<p>공지사항 > ${notice.notice_id }번 글</p>
 
 		<div class="page-header">
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					<h4 class="panel-title">이거슨 글의 제목</h4>
-					<small> 글번호 : 10001 작성자 : 김밥 작성일 : 2016-04-24 조회수 : 13</small>
+					<h4 class="panel-title">${notice.notice_title }</h4>
+					<small> 글번호 : ${notice.notice_id } 작성자 : ${e_name}
+					작성일 : <fmt:formatDate value="${notice.notice_date }" pattern="yyyy-MM-dd" /> 조회수 : ${notice.notice_hit }</small>
 				</div>
 			</div>
 		</div>
 		<div id="write_content">
-			<p>이거슨 글의 내용, 이거슨 글의 내용, 이거슨 글의 내용, 이거슨 글의 내용, 이거슨 글의 내용 , 이거슨 글의
-				내용, 이거슨 글의 내용, 이거슨 글의 내용, 이거슨 글의 내용, 이거슨 글의 내용 , 이거슨 글의 내용, 이거슨 글의
-				내용, 이거슨 글의 내용, 이거슨 글의 내용, 이거슨 글의 내용 , 이거슨 글의 내용, 이거슨 글의 내용, 이거슨 글의
-				내용, 이거슨 글의 내용, 이거슨 글의 내용 , 이거슨 글의 내용, 이거슨 글의 내용, 이거슨 글의 내용, 이거슨 글의
-				내용</p>
+			<p>${notice.notice_content }</p>
 			<hr>
 		</div>
 		<div class="row">

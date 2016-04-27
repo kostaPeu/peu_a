@@ -36,7 +36,7 @@ public class CustomerList implements Action {
 		}
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("./mainTest2.jsp?left=./basic/view/basic.jsp&contents=./basic/view/basic_customerList.jsp&pageNum="+page);
+		forward.setPath("./mainTest.jsp?left=./basic/view/basic.jsp&contents=./basic/view/basic_customerList.jsp&pageNum="+page);
 		return forward;
 	}
 
