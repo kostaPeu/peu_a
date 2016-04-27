@@ -1,20 +1,21 @@
 $(function(){
 	$(".item_box").mouseover(function(){
-		$(this).css("box-shadow", "0 0 10px #aaa");
+		$(this).find(".item").addClass("mouseover");
 	}).mouseout(function(){
-		$(this).css("box-shadow", "none");
-	}).on('click', function(){
+		$(this).find(".item").removeClass("mouseover");
+	}).on("click",function(e){
+		e.preventDefault();
 
 	    var $thischeck = $(this).find("#input_check");
+	    var $thisimg = $(this).find("label .item");
 	    
-	    alert($thischeck.is(":checked"));
-
 	    if($thischeck.is(":checked")){
-	    	$thischeck.attr("checked", false);
-	    	$(this).css("background", "none");
+	    	$thischeck.prop("checked", false);
+	    	$thisimg.removeClass("oncheck");
 	    } else {
-	    	$thischeck.attr("checked", true);
-	    	$(this).css("background", "#aaa");
+	    	$thischeck.prop("checked", true);
+	    	$thisimg.addClass("oncheck");
 	    }
 	});
+	
 });

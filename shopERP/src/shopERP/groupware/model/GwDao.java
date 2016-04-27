@@ -11,65 +11,89 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import shopERP.groupware.mapper.GwMapper;
 
 public class GwDao {
-	private static GwDao dao = new GwDao();
+   private static GwDao dao = new GwDao();
 
-	public static GwDao getInstance() {
-		return dao;
-	}
+   public static GwDao getInstance() {
+      return dao;
+   }
 
-	public SqlSessionFactory getSqlSessionFactory() {
-		String resource = "mybatis-config.xml";
-<<<<<<< HEAD
-		InputStream input = null;		
-=======
-		InputStream input = null;
+   public SqlSessionFactory getSqlSessionFactory() {
+      String resource = "mybatis-config.xml";
+      InputStream input = null;
 
->>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
-		try {
-			input = Resources.getResourceAsStream(resource);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return new SqlSessionFactoryBuilder().build(input);
-	}
+      try {
+         input = Resources.getResourceAsStream(resource);
+      } catch (Exception e) {
+         e.printStackTrace();
+      }
+      return new SqlSessionFactoryBuilder().build(input);
+   }
 
-	public List<Notice> noticeList() {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		return sqlSession.getMapper(GwMapper.class).noticeList();
-	}
+   public List<Notice> noticeList() {
+      SqlSession sqlSession = getSqlSessionFactory().openSession();
+      List<Notice> list = null;
+            
+      try {
+         list = sqlSession.getMapper(GwMapper.class).noticeList();
+      } catch (Exception e) {
+         e.printStackTrace();
+      } finally {
+         sqlSession.close();
+      }
 
-	public String getEmpName(String emp_id) {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		return sqlSession.getMapper(GwMapper.class).getEmpName(emp_id);
-	}
+      return list;
+   }
 
-	public int noticeInsert(Notice notice) {
-		int re = -1;
+   public String getEmpName(String emp_id) {
+      SqlSession sqlSession = getSqlSessionFactory().openSession();
+      String name = null;
+      
+      try {
+         name = sqlSession.getMapper(GwMapper.class).getEmpName(emp_id);
+      } catch (Exception e) {
+         e.printStackTrace();
+      } finally {
+         sqlSession.close();
+      }
 
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
+      return name;
+   }
 
-		try {
-			re = sqlSession.getMapper(GwMapper.class).noticeInsert(notice);
+   public int noticeInsert(Notice notice) {
+      int re = -1;
 
-			if (re > 0) {
-				sqlSession.commit();
-			} else {
-				sqlSession.rollback();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			sqlSession.close();
-		}
+      SqlSession sqlSession = getSqlSessionFactory().openSession();
 
-		return re;
-	}
-	
-	public Notice selectNotice(int notice_id){
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		Notice notice = sqlSession.getMapper(GwMapper.class).selectNotice(notice_id);
-		
-		return notice;
-		
-	}
+      try {
+         re = sqlSession.getMapper(GwMapper.class).noticeInsert(notice);
+
+         if (re > 0) {
+            sqlSession.commit();
+         } else {
+            sqlSession.rollback();
+         }
+      } catch (Exception e) {
+         e.printStackTrace();
+      } finally {
+         sqlSession.close();
+      }
+
+      return re;
+   }
+   
+   public Notice selectNotice(int notice_id){
+      SqlSession sqlSession = getSqlSessionFactory().openSession();
+      Notice notice = null;
+      
+      try {
+         notice = sqlSession.getMapper(GwMapper.class).selectNotice(notice_id);
+      } catch (Exception e) {
+         e.printStackTrace();
+      } finally {
+         sqlSession.close();
+      }
+      
+      return notice;
+      
+   }
 }

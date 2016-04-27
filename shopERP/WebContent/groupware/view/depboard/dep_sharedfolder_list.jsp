@@ -30,9 +30,7 @@
 
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
-<!-- 
-<script src="./js/checkbox.js"></script>
- -->
+ <script src="./js/checkbox.js"></script>
 </head>
 <body>
 	<div class="container col-sm-12">
@@ -60,6 +58,7 @@
 	</div>
 
 	<div class="item_list col-sm-12">
+		<!-- 
 		<ul>
 			<li class="item_box">
 				<div class="checkbox">
@@ -74,12 +73,65 @@
 						<span class="item_writer">작성자</span>
 					</div>
 				 </label>
-				 
 				</div>
-			
 			</li>
 		</ul>
+		 -->
+		
+		<div class="item_box">
+		  <label>
+			  	<input id="input_check" type="checkbox" autocomplete="off">
+				<div class="item">
+					<img src="./groupware/images/zipimg.png" alt="파일이미지" />
+				</div>
+				<div class="item_text">
+					<span class="item_title">파일명</span>
+					<span class="item_size">파일크기</span>
+					<span class="item_writer">작성자</span>
+				</div>
+		  </label>
+		</div>
+		<div class="item_box">
+		  <label>
+			  	<input id="input_check" type="checkbox" autocomplete="off">
+				<div class="item">
+					<img src="./groupware/images/zipimg.png" alt="파일이미지" />
+				</div>
+				<div class="item_text">
+					<span class="item_title">파일명</span>
+					<span class="item_size">파일크기</span>
+					<span class="item_writer">작성자</span>
+				</div>
+		  </label>
+		</div>
+		<div class="item_box">
+		  <label>
+			  	<input id="input_check" type="checkbox" autocomplete="off">
+				<div class="item">
+					<img src="./groupware/images/zipimg.png" alt="파일이미지" />
+				</div>
+				<div class="item_text">
+					<span class="item_title">파일명</span>
+					<span class="item_size">파일크기</span>
+					<span class="item_writer">작성자</span>
+				</div>
+		  </label>
+		</div>
+		<div class="item_box">
+		  <label>
+			  	<input id="input_check" type="checkbox" autocomplete="off">
+				<div class="item">
+					<img src="./groupware/images/zipimg.png" alt="파일이미지" />
+				</div>
+				<div class="item_text">
+					<span class="item_title">파일명</span>
+					<span class="item_size">파일크기</span>
+					<span class="item_writer">작성자</span>
+				</div>
+		  </label>
+		</div>
 	</div>
+	
 	
 	<ul class="pager col-sm-12">
 		<li class="previous"><a href="#">Previous</a></li>

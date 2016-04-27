@@ -24,7 +24,7 @@
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/contents.css">
+
 
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>

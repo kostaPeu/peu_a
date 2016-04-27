@@ -12,14 +12,10 @@ import javax.servlet.http.HttpSession;
 
 import shopERP.groupware.action.Action;
 import shopERP.groupware.action.ActionForward;
-<<<<<<< HEAD
-
-=======
 import shopERP.groupware.action.loginAction;
 import shopERP.groupware.action.noticeInsertAction;
 import shopERP.groupware.action.noticeListAction;
 import shopERP.groupware.action.noticeViewAction;
->>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 
 @WebServlet("*.gw")
 public class Controller extends HttpServlet {

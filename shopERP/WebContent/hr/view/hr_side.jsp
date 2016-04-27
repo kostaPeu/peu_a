@@ -17,6 +17,8 @@
 				<li><a href="./mainTest2.jsp?left=./hr/view/hr_side.jsp?&contents=./hr/view/emp_info.jsp">직원조회</a></li>
 				<li><a href="./mainTest2.jsp?left=./hr/view/hr_side.jsp?&contents=./hr/view/hr_basic.jsp">인사기초등록</a></li>
 				<li><a href="./mainTest2.jsp?left=./hr/view/hr_side.jsp?&contents=./hr/view/indol_info.jsp">근태조회</a></li>
+				<li><a href="./mainTest2.jsp?left=./hr/view/hr_side.jsp?&contents=./hr/view/indol_request.jsp">휴가/연차 요청</a></li>
+				<li><a href="./mainTest2.jsp?left=./hr/view/hr_side.jsp?&contents=./hr/view/jubis.jsp">주비스관리</a></li>
 			</ul>
 		</div>
 	</div>
