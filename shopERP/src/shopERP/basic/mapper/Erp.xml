@@ -4,8 +4,7 @@
 
 
 <mapper namespace="shopERP.basic.mapper.ErpMapper">
-	<cache />	
-
+	<cache />
 	<insert id="insertProduct" parameterType="Product">
 		insert into Product (
 			product_id,

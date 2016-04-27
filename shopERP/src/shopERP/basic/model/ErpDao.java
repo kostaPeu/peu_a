@@ -3,8 +3,6 @@ package shopERP.basic.model;
 import java.io.InputStream;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
@@ -32,6 +30,110 @@ private static ErpDao dao = new ErpDao();
 		return new SqlSessionFactoryBuilder().build(input);
 	}
 
+	public int insertCustomer(Customer customer) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = -1;
+		try {
+			re = sqlSession.getMapper(ErpMapper.class).insertCustomer(customer);
+			if(re > 0){
+				sqlSession.commit();
+			}else{
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return re;
+	}
+
+	public List<Customer> customerList(int startRow) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		List<Customer> list = null;
+		try {
+			list = sqlSession.getMapper(ErpMapper.class).customerList(new RowBounds(startRow, 5));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return list;
+	}
+
+	public Integer totalCount() {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = 0;
+		try {
+			re = sqlSession.getMapper(ErpMapper.class).totalCount();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return re;
+	}
+
+	public List<ProductCode> productCodeList(Search search) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		List<ProductCode> list = null;
+		try {
+			list = sqlSession.getMapper(ErpMapper.class).productCodeList(search);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			sqlSession.close();
+		}
+		return list;
+	}
+	public Customer selectCustomer(String customer_id) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		Customer customer = null;
+		try {
+			customer = sqlSession.getMapper(ErpMapper.class).selectCustomer(customer_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return customer;
+	}
+
+	public int updateCustomer(Customer customer) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = -1;
+		try {
+			re = sqlSession.getMapper(ErpMapper.class).updateCustomer(customer);
+			if(re > 0){
+				sqlSession.commit();
+			}else{
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return re;
+	}
+
+	public int deleteCustomer(String customer_id) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = -1;
+		try {
+			re = sqlSession.getMapper(ErpMapper.class).deleteCustomer(customer_id);
+			if(re > 0){
+				sqlSession.commit();
+			}else{
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return re;
+	}
 	public int insertProduct(Product product) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		int re = -1;
@@ -102,116 +204,11 @@ private static ErpDao dao = new ErpDao();
 		}
 		return re;
 	}
-	public int insertCustomer(Customer customer) {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		int re = -1;
-		try {
-			re = sqlSession.getMapper(ErpMapper.class).insertCustomer(customer);
-			if(re > 0){
-				sqlSession.commit();
-			}else{
-				sqlSession.rollback();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-			sqlSession.close();
-		}
-		return re;
-	}
-
-	public List<Customer> customerList(int startRow) {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		List<Customer> list = null;
-		try {
-			list = sqlSession.getMapper(ErpMapper.class).customerList(new RowBounds(startRow, 5));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-			sqlSession.close();
-		}
-		return list;
-	}
-
-	public Integer totalCount() {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		int re = 0;
-		try {
-			re = sqlSession.getMapper(ErpMapper.class).totalCount();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-			sqlSession.close();
-		}
-		return re;
-		}
-
 	public int totalCountProduct() {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		int re = 0;
 		try {
 			re = sqlSession.getMapper(ErpMapper.class).totalCountProduct();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-			sqlSession.close();
-		}
-		return re;
-	}
-
-	public List<ProductCode> productCodeList(Search search) {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		List<ProductCode> list = null;
-		try {
-			list = sqlSession.getMapper(ErpMapper.class).productCodeList(search);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally{
-			sqlSession.close();
-		}
-		return list;
-	}
-	public Customer selectCustomer(String customer_id) {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		Customer customer = null;
-		try {
-			customer = sqlSession.getMapper(ErpMapper.class).selectCustomer(customer_id);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-			sqlSession.close();
-		}
-		return customer;
-	}
-
-	public int updateCustomer(Customer customer) {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		int re = -1;
-		try {
-			re = sqlSession.getMapper(ErpMapper.class).updateCustomer(customer);
-			if(re > 0){
-				sqlSession.commit();
-			}else{
-				sqlSession.rollback();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-			sqlSession.close();
-		}
-		return re;
-	}
-
-	public int deleteCustomer(String customer_id) {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		int re = -1;
-		try {
-			re = sqlSession.getMapper(ErpMapper.class).deleteCustomer(customer_id);
-			if(re > 0){
-				sqlSession.commit();
-			}else{
-				sqlSession.rollback();
-			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally{

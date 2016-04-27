@@ -9,12 +9,10 @@ public class ErpService {
 	public static ErpDao dao;
 	public static ErpService service = new ErpService();
 	private static final int PAGE_SIZE = 5;
-	
 	public static ErpService getInstance(){
 		dao = dao.getInstance();
 		return service;
 	}
-
 	public int insertProduct(Product product) {
 		return dao.insertProduct(product);
 	}
@@ -69,6 +67,7 @@ public class ErpService {
 		List<Customer> list = dao.customerList((requestPage - 1)*PAGE_SIZE);
 		return new ListModel(list, requestPage, totalPageCount, startPage, endPage);
 	}
+
 	public Customer selectCustomer(String customer_id){
 		return dao.selectCustomer(customer_id);
 	}
@@ -86,7 +85,4 @@ public class ErpService {
 		}
 		return dao.productCodeList(search);
 	}
-
-
 }
-

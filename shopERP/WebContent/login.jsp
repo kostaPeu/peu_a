@@ -22,13 +22,16 @@
         <div class="card card-container">
                        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
             <p id="profile-name" class="profile-name-card"></p>
-            <form class="form-signin">
+            <form  class="form-signin" method="post" action="loginAction.gw">
                 <span id="reauth-num" class="reauth-num"></span>
-                <input type="NUM" id="inputNUM" class="form-control" placeholder="사번" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="비밀번호" required>
+                <input type="text" name = "idid" id="inputId" class="form-control" placeholder="사번" required autofocus>
+                <input type="password" name = "pwpw" id="inputPwd" class="form-control" placeholder="비밀번호" required>
                 <div id="remember" class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> 기억하기
+                    </label>
+                    <label>
+                        <input type="checkbox" value="arrival"> 출근
                     </label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">로그인</button>

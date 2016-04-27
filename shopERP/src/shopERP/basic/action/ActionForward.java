@@ -29,7 +29,9 @@ public class ActionForward {
 	}
 
 	@Override
+
 	public String toString() {
+
 		return "ActionForward [isRedirect=" + isRedirect + ", path=" + path + "]";
 
 	}
