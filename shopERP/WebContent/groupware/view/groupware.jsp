@@ -24,7 +24,6 @@
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/contents.css">
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
@@ -44,16 +43,16 @@
 					<ul id="dep_board" class="collapse">
 						<li><a href="./groupware/view/depboard/dep_board_list.jsp">부서 게시판</a></li>
 						<li><a href="./groupware/view/depboard/dep_sharedfolder_list.jsp">공유 폴더</a></li>
-						<li><a id="gw_cal" href="./selectable.html">부서 일정</a></li>
+						<li><a id="gw_cal" href="./selectable.html">부서 일정</a></li> 
 					</ul>
 				</li>
 				
 				<li data-toggle="collapse" href="#dep_sign"><a href="./groupware/view/sign/sign_alldraft_list.jsp">전자결재</a>
 					<ul id="dep_sign" class="collapse">
 						<li><a href="./groupware/view/sign/sign_alldraft_list.jsp">기안서 작성</a></li>
-						<li><a href="#">내 결재 관리</a></li>
-						<li><a href="#">기안서 통합 관리</a></li>
-						<li><a href="#">공통 양식 관리</a></li>
+						<li><a href="./groupware/view/sign/sign_mydraft_list.jsp">내 결재 관리</a></li>
+						<li><a href="./groupware/view/sign/sign_alldraft_list.jsp">기안서 통합 관리</a></li>
+						<li><a href="./groupware/view/sign/sign_draftformat_list.jsp">공통 양식 관리</a></li>
 					</ul>
 				</li>
 				
@@ -61,7 +60,7 @@
 				<li data-toggle="collapse" href="#dep_project"><a href="./groupware/view/projectboard/pb_allproject_list.jsp">프로젝트게시판</a>
 	               <ul id="dep_project" class="collapse">
 	                  <li><a href="./groupware/view/projectboard/pb_allproject_list.jsp">전체 프로젝트</a></li>
-	                  <li><a href="#">내 프로젝트</a></li>
+	                  <li><a href="./groupware/view/projectboard/pb_myproject_list.jsp">내 프로젝트</a></li>
 	               </ul>
           		</li>
 			</ul>
