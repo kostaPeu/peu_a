@@ -51,39 +51,18 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class="row">
-					<td class="col-sm-1">10001</td>
-					<td class="col-sm-6"><a
-						href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_view.jsp">라면을
-							먹자</a></td>
-					<td class="col-sm-2">김밥</td>
-					<td class="col-sm-2">16.04.24</td>
-					<td class="col-sm-1">14</td>
-				</tr>
-
-			<%-- 	<c:forEach var="notice" items="${list}">
-					<tr class="row">
-						<td class="col-sm-1">${notice.notice_id}</td>
-						<td class="col-sm-6"><a
-							href="notice_view.gw?notice_id=${notice.notice_id }">${notice.notice_title }</a></td>
-						<td class="col-sm-2">${e_name_list}</td>
-						<td class="col-sm-2"><fmt:formatDate
-								value="${notice.notice_date }" pattern="yyyy-MM-dd" /></td>
-						<td class="col-sm-1">${notice.notice_hit }</td>
-					</tr>
-				</c:forEach> --%>
-
-				<c:forEach var="i" begin="0" end="${list.size()-1}" step="1">
-					<tr class="row">
-						<td class="col-sm-1">${list.get(i).getNotice_id()}</td>
-					 	<td class="col-sm-6"><a href="notice_view.gw?notice_id=${list.get(i).getNotice_id()}">${list.get(i).getNotice_title() }</a></td>
-						<td class="col-sm-2">${e_name_list.get(i)}</td>
-						<td class="col-sm-2"><fmt:formatDate value="${notice.notice_date }"
-								pattern="yyyy-MM-dd" /></td>
-						<td class="col-sm-1">${notice.notice_hit }</td>
-					</tr>
-				</c:forEach>
-
+				<c:if test="${list.size()-1 >=0}">
+					<c:forEach var="i" begin="0" end="${list.size()-1}" step="1">
+						<tr class="row">
+							<td class="col-sm-1">${list.get(i).getNotice_id()}</td>
+						 	<td class="col-sm-6"><a href="noticeViewAction.gw?notice_id=${list.get(i).getNotice_id()}">${list.get(i).getNotice_title() }</a></td>
+							<td class="col-sm-2">${e_name_list.get(i)}</td>
+							<td class="col-sm-2"><fmt:formatDate value="${list.get(i).getNotice_date() }"
+									pattern="yyyy-MM-dd" /></td>
+							<td class="col-sm-1">${list.get(i).getNotice_hit()}</td>
+						</tr>
+					</c:forEach>
+				</c:if>
 			</tbody>
 		</table>
 
@@ -96,8 +75,7 @@
 		</ul>
 
 		<div class="row">
-			<a href="notice_write.gw"
-				class="btn btn-info col-sm-1 col-sm-push-11">글쓰기</a>
+			<a href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_write.jsp"	class="btn btn-info col-sm-1 col-sm-push-11">글쓰기</a>
 		</div>
 
 		<div class="col-xs-2">

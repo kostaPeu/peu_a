@@ -16,13 +16,18 @@ public class GwService {
 		return list;
 	}
 	
-	public String getEmpName(int emp_id){
+	public String getEmpName(String emp_id){
 		String name = dao.getEmpName(emp_id);
 		return name;
 	}
-
-	public List<Gw> gwList() {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public int noticeInsert(Notice notice){
+		int re = dao.noticeInsert(notice);
+		return re;
 	}
+	
+	public Notice selectNotice(int notice_id){
+		return dao.selectNotice(notice_id);
+	}
+
 }

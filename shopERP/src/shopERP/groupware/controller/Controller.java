@@ -8,10 +8,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import shopERP.groupware.action.Action;
 import shopERP.groupware.action.ActionForward;
+<<<<<<< HEAD
 
+=======
+import shopERP.groupware.action.loginAction;
+import shopERP.groupware.action.noticeInsertAction;
+import shopERP.groupware.action.noticeListAction;
+import shopERP.groupware.action.noticeViewAction;
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 
 @WebServlet("*.gw")
 public class Controller extends HttpServlet {
@@ -41,8 +49,21 @@ public class Controller extends HttpServlet {
 		Action action = null;
 		ActionForward forward = null;
 
-		if (command.equals("notice_list.gw")) {
-			action = new notice_list_action();
+		if (command.equals("noticeListAction.gw")) {
+			action = new noticeListAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("noticeInsertAction.gw")){
+			action = new noticeInsertAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("noticeViewAction.gw")){
+			action = new noticeViewAction();
+			forward = action.excute(request, response);
+		}
+		else if(command.equals("loginAction.gw")){
+			request.setAttribute("emp_id", request.getParameter("idid"));
+			request.setAttribute("emp_pwd", request.getParameter("pwpw"));
+
+			action = new loginAction();
 			forward = action.excute(request, response);
 		}
 		
