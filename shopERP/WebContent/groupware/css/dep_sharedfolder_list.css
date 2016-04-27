@@ -1,22 +1,27 @@
 @CHARSET "UTF-8";
 
-.item_list li {
+.item_box {
     display: inline;
     float: left;
-    padding:10px 15px 10px 0;
+    padding:8px 10px;
+    margin:10px;
     vertical-align: top;
-    width: 100px;
-    background:blue;
+    border-radius:10px;
 }
 
-.item_list li .item {
+.item {
 	width:100px;
-	height:80px;
+	height:90px;
 	text-align:center;
+	margin:6px 0;
 	border:1px solid #ccc;
 }
 
 .item img {
 	width:40px;
 	margin:15px auto 0;
+}
+
+.item_text span {
+	display:block;
 }
