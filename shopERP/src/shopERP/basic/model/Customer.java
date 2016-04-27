@@ -13,6 +13,34 @@ public class Customer implements Serializable{
 	private String customer_email;
 	private String customer_fax;
 	private String checkman;
+	public Customer(){}	
+	@Override
+	public String toString() {
+		return "Customer [customer_id=" + customer_id + ", customer_name="
+				+ customer_name + ", repre_name=" + repre_name
+				+ ", phone_number=" + phone_number + ", customer_address="
+				+ customer_address + ", copy_bankbook=" + copy_bankbook
+				+ ", bankbook_check=" + bankbook_check + ", customer_email="
+				+ customer_email + ", customer_fax=" + customer_fax
+				+ ", checkman=" + checkman + "]";
+	}
+	public Customer(String customer_id, String customer_name,
+			String repre_name, String phone_number, String customer_address,
+			String copy_bankbook, String bankbook_check, String customer_email,
+			String customer_fax, String checkman) {
+		super();
+		this.customer_id = customer_id;
+		this.customer_name = customer_name;
+		this.repre_name = repre_name;
+		this.phone_number = phone_number;
+		this.customer_address = customer_address;
+		this.copy_bankbook = copy_bankbook;
+		this.bankbook_check = bankbook_check;
+		this.customer_email = customer_email;
+		this.customer_fax = customer_fax;
+		this.checkman = checkman;
+	}
+
 	public String getCustomer_id() {
 		return customer_id;
 	}

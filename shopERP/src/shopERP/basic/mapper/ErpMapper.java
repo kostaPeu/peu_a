@@ -9,6 +9,15 @@ import shopERP.basic.model.Product;
 import shopERP.basic.model.ProductList;
 
 public interface ErpMapper {
+<<<<<<< HEAD
+	int insertCustomer(Customer customer);
+	List<Customer> customerList(RowBounds rb);
+	Integer totalCount();
+	Customer selectCustomer(String customer_id);
+	int updateCustomer(Customer customer);
+	int deleteCustomer(String customer_id);
+}
+=======
 
 	public int insertProduct(Product product);
 	public List<ProductList> selectAllProducts(RowBounds rb);
@@ -19,3 +28,4 @@ public interface ErpMapper {
 	public Integer totalCount();
 	public int totalCountProduct();
 }
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git

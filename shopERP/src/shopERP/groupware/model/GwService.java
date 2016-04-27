@@ -20,4 +20,9 @@ public class GwService {
 		String name = dao.getEmpName(emp_id);
 		return name;
 	}
+
+	public List<Gw> gwList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

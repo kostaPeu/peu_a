@@ -17,8 +17,15 @@ import shopERP.basic.action.productListAction;
 import shopERP.basic.action.updateProductAction;
 import shopERP.basic.action.CustomerAction;
 import shopERP.basic.action.CustomerList;
+<<<<<<< HEAD
+import shopERP.basic.action.DeleteAction;
+import shopERP.basic.action.UpdateAction;
 
 @WebServlet("*.ba")
+=======
+
+@WebServlet("*.ba")
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -63,6 +70,12 @@ public class Controller extends HttpServlet {
 			forward = action.excute(request, response);
 		}else if(command.equals("CustomerList.ba")){
 			action = new CustomerList();
+			forward = action.excute(request, response);
+		}else if(command.equals("UpdateAction.ba")){
+			action = new UpdateAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("DeleteAction.ba")){
+			action = new DeleteAction();
 			forward = action.excute(request, response);
 		}
 		
