@@ -28,6 +28,7 @@
 					<tr class="mainTable">
 						<th>카드번호</th>
 						<th>카드명</th>
+						<th>계좌번호</th>
 						<th>구분</th>
 						<th>사원명</th>
 						<th>계정명</th>
@@ -39,6 +40,7 @@
 					<tr class="mainTable">
 						<td>1010-0006-4648-1663</td>
 						<td>국민은행1010</td>
+						<td>382-44-384732</td>
 						<td>회사</td>
 						<td>안주호</td>
 						<td>거래처거래</td>
@@ -123,6 +125,11 @@
 						<td><input class="form-control" type="text" value=""
 							placeholder="카드명"></td>
 					</tr>
+					<tr id="row-BankBookNum">
+						<th>계좌번호</th>
+						<td><input class="form-control" type="text" value=""
+							placeholder="계좌번호"></td>
+					</tr>
 
 					<tr id="row-Employee">
 						<th>사원명</th>
@@ -179,7 +186,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- 신규카드 footer END -->
+			<!-- 신규카드 footer END -->
 	</div>
 	<!-- 신규카드END -->
 

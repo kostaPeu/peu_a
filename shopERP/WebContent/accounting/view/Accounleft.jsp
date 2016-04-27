@@ -11,9 +11,8 @@
 <link href="/shopERP/accounting/css/main.css" rel="stylesheet">
 
 <script src="/shopERP/accounting/js/jquery.js"></script>
-<script src="/shopERP/accounting/js/main.js" type="text/javascript"></script>
 <script src="/shopERP/accounting/js/bootstrap.min.js"></script>
-<script src="/shopERP/accounting/js/ac_js.js"></script>
+<script src="/shopERP/js/ajax.js"></script>
 
 <style type="text/css">
 ul li {
@@ -33,7 +32,7 @@ ul li {
 					<ul id="one" class="collapse" aria-expanded="false">
 						<li><a href="./accounting/view/moneyCheck.jsp">기초잔액등록</a></li>
 						<li><a href="./accounting/view/card.jsp">신용카드등록</a></li>
-						<li><a href="./accounting/view/BackBook.jsp">통장계좌등록</a></li>
+						<li><a href="accountList.ac">통장계좌등록</a></li>
 						<li><a href="./accounting/view/Project.jsp">프로젝트등록</a></li>
 					</ul></li>
 				<li><a data-target="#two" data-toggle="collapse">현금거래관리</a>
