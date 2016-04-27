@@ -15,9 +15,6 @@ public class productListAction implements Action {
 		ErpService service = ErpService.getInstance();
 
 		String page = request.getParameter("pageNum");
-		if(page == null){
-			page = "1";
-		}
 		ListModelProduct listModel = null;
 		try {
 			listModel = service.selectAllProducts(request);
