@@ -23,6 +23,21 @@
 	<select id="totalCount" resultType="Integer">
 		select count(*) from customer
 	</select>
+	<select id="selectCustomer" parameterType="String" resultType="Customer">
+		select * from customer
+			where customer_id = #{customer_id}
+	</select>
+	<update id="updateCustomer" parameterType="Customer">
+		update customer set customer_name = #{customer_name}, repre_name = #{repre_name},
+		phone_number = #{phone_number}, customer_address = #{customer_address}, copy_bankbook = #{copy_bankbook},
+		bankbook_check = #{bankbook_check}, customer_email = #{customer_email},
+		customer_fax = #{customer_fax}, checkman = #{checkman}
+			where customer_id = #{customer_id}
+	</update>
+	<delete id="deleteCustomer" parameterType="String">
+		delete from customer
+			where customer_id = #{customer_id}
+	</delete>
 </mapper>
 
 

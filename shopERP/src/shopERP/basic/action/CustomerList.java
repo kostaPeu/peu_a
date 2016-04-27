@@ -22,6 +22,9 @@ public class CustomerList implements Action {
 		search.setArea(request.getParameterValues("area"));
 		search.setSearchKey("%"+request.getParameter("searchKey")+"%");*/
 		String page = request.getParameter("pageNum");
+		if(page != null){
+			page = "1";
+		}
 		ListModel listModel = null;
 		try {
 			listModel = erpService.CustomerList(request);
@@ -33,7 +36,7 @@ public class CustomerList implements Action {
 		}
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("./mainTest.jsp?left=./basic/view/basic.jsp&contents=./basic/view/basic_customerList.jsp&pageNum="+page);
+		forward.setPath("./mainTest2.jsp?left=./basic/view/basic.jsp&contents=./basic/view/basic_customerList.jsp&pageNum="+page);
 		return forward;
 	}
 

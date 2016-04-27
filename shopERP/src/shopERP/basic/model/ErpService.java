@@ -34,4 +34,13 @@ public class ErpService {
 		List<Customer> list = dao.customerList((requestPage - 1)*PAGE_SIZE);
 		return new ListModel(list, requestPage, totalPageCount, startPage, endPage);
 	}
+	public Customer selectCustomer(String customer_id){
+		return dao.selectCustomer(customer_id);
+	}
+	public int updateCustomer(Customer customer){
+		return dao.updateCustomer(customer);
+	}
+	public int deleteCustomer(String customer_id){
+		return dao.deleteCustomer(customer_id);
+	}
 }

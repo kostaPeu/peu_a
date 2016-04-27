@@ -13,6 +13,8 @@ import shopERP.basic.action.Action;
 import shopERP.basic.action.ActionForward;
 import shopERP.basic.action.CustomerAction;
 import shopERP.basic.action.CustomerList;
+import shopERP.basic.action.DeleteAction;
+import shopERP.basic.action.UpdateAction;
 
 @WebServlet("*.ba")
 public class Controller extends HttpServlet {
@@ -47,6 +49,12 @@ public class Controller extends HttpServlet {
 			forward = action.excute(request, response);
 		}else if(command.equals("CustomerList.ba")){
 			action = new CustomerList();
+			forward = action.excute(request, response);
+		}else if(command.equals("UpdateAction.ba")){
+			action = new UpdateAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("DeleteAction.ba")){
+			action = new DeleteAction();
 			forward = action.excute(request, response);
 		}
 		
