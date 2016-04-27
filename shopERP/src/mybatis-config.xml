@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="shopERP.basic.model.Product" alias="Product"/>
+		<typeAlias type="shopERP.basic.model.Standards" alias="Standards"/>
+		<typeAlias type="shopERP.basic.model.ProductGroup" alias="ProductGroup"/>
+		<typeAlias type="shopERP.basic.model.ProductList" alias="ProductList"/>
+		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
+<!-- 		<typeAlias type="shopERP.groupware.model.Gw" alias="Gw"/>
+		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/> -->
+		<typeAlias type="shopERP.purchase.model.Purchase" alias="Purchase"/>
+		<typeAlias type="shopERP.purchase.model.PurchaseList" alias="PurchaseList"/>
+	</typeAliases>
+	
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="JNDI">
+				<property name="data_source" value="java:comp/env/jdbc/oracle"/>
+			</dataSource>
+		</environment>		
+	</environments>
+	
+	<mappers>
+		<mapper resource="shopERP/basic/mapper/Erp.xml"/>
+		<!-- <mapper resource="shopERP/groupware/mapper/Gw.xml"/> -->
+		<mapper resource="shopERP/purchase/mapper/Erp.xml"/>
+	</mappers>
+	
+</configuration>
