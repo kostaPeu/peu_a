@@ -26,9 +26,42 @@
 <link rel="stylesheet" href="/shopERP/css/style.css">
 <link rel="stylesheet" href="/shopERP/css/responsive.css">
 <script src="/shopERP/js/jquery.min.js"></script>
-<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
+<link href="/shopERP/basic/css/bootstrap.css" rel="stylesheet">
 <link href="/shopERP/basic/css/basic_productList.css" rel="stylesheet">
 <script src="/shopERP/basic/js/basic.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	$('#search_id').on('click', function() {
+		var searchKey = $('#search_product').val();
+		/* $(location).attr("href","productCodeJson.ba?searchKey="+searchKey); */
+		$('#searchTable').empty();
+		$('#useBtnArea').empty();
+		var html = "<tr><th>품목코드</th><th>품목명</th></tr>";
+  		$.ajax({
+			url : "productCodeJson.ba?searchKey="+searchKey,
+			type : "post",
+			dataType : "json",
+			success : function(data) {
+				var html = "<tr><th>품목코드</th><th>품목명</th></tr>";
+				$.each(data, function(index, list) {
+					html += "<tr><td>" + list.product_id + "</td><td>" + list.product_name + "</td></tr>";
+			});
+				if(html == "<tr><th>품목코드</th><th>품목명</th></tr>"){
+					html += "<tr><td colspan='2'> 해당코드는 사용가능합니다.</td></tr>";
+				}; 
+				$('#searchTable').append(html);
+				},
+			error : function(){
+				alert("실패!");
+			}
+		});
+	});
+	$('#useBtn').on('click',function(){
+		var searchKey = $('#search_product').val();
+		$('product_id').attr('value',searchKey);
+	});
+});
+</script>
 </head>
 <body>
 	<div class="add xclose">
@@ -46,7 +79,7 @@
 						<input type="text" class="form-control" id="product_id" name="product_id">
 					</div>
 					<div class="col-sm-1">
-						<button class="btn btn-default btn-sm" type="submit"><span class="fa fa-search"></span></button>
+						<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal"><span class="fa fa-search"></span></button>
 					</div>
 				</div>
 				<div class="form-group has-feedback">
@@ -216,5 +249,39 @@
 		<input type="button" id="deleteBtn" class="btn btn-default" value="삭제">
 	</div>
 	
+	
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+      
+    <div class="modal-content">
+	<div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">중복확인(품목코드)</h4>
+      </div>
+      <div class="modal-body">
+			<div class="col-sm-10">
+				<input type="text" class="form-control" name="product_id" id="search_product">
+			</div>
+			<div class="col-sm-2">
+				<button type="button" class="btn btn-info btn-sm" id="search_id"><span class="fa fa-search"></span></button>
+			</div>
+			<br><br><br>
+  				<table id="searchTable" class="table table-bordered">
+				</table>
+				<div id="useBtnArea">
+					<input type="button" id="useBtn" class="btn btn-default center" value="사용">
+				</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>

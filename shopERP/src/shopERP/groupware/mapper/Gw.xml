@@ -6,15 +6,30 @@
 <mapper namespace="shopERP.groupware.mapper.GwMapper">
 	<cache />
 
+	<insert id="noticeInsert" parameterType="Notice">
+		insert into Notice(
+			notice_id, emp_id, notice_title, notice_content, notice_date, notice_hit
+		)
+		values(
+			notice_seq.NEXTVAL, #{emp_id}, #{notice_title}, #{notice_content}, SYSDATE,
+			0
+		)
+	</insert>
+	
 <!-- notice list 불러옴. -->
 	<select id="noticeList" resultType="Notice">
 		select * from notice
 	</select>
 	
 	<!-- emp_id로 emp_name 불러옴 -->
-	<select id="getEmpName" resultType="String" parameterType="int">
+	<select id="getEmpName" resultType="String" parameterType="String">
 		select e_name from employee where emp_id=#{emp_id}	
 	</select>
+	
+	<select id="selectNotice" resultType="Notice" parameterType="int">
+		select * from Notice where notice_id = #{notice_id}
+	</select>
+	
 </mapper>
 
 

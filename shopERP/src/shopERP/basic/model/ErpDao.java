@@ -3,8 +3,6 @@ package shopERP.basic.model;
 import java.io.InputStream;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
@@ -31,7 +29,6 @@ private static ErpDao dao = new ErpDao();
 		}
 		return new SqlSessionFactoryBuilder().build(input);
 	}
-
 	public int insertProduct(Product product) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		int re = -1;
@@ -144,19 +141,6 @@ private static ErpDao dao = new ErpDao();
 			sqlSession.close();
 		}
 		return re;
-		}
-
-	public int totalCountProduct() {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		int re = 0;
-		try {
-			re = sqlSession.getMapper(ErpMapper.class).totalCountProduct();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-			sqlSession.close();
-		}
-		return re;
 	}
 
 	public Customer selectCustomer(String customer_id) {
@@ -206,5 +190,30 @@ private static ErpDao dao = new ErpDao();
 			sqlSession.close();
 		}
 		return re;
+	}
+	public int totalCountProduct() {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = 0;
+		try {
+			re = sqlSession.getMapper(ErpMapper.class).totalCountProduct();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return re;
+	}
+
+	public List<ProductCode> productCodeList(Search search) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		List<ProductCode> list = null;
+		try {
+			list = sqlSession.getMapper(ErpMapper.class).productCodeList(search);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			sqlSession.close();
+		}
+		return list;
 	}
 }
