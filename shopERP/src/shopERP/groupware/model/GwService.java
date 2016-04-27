@@ -11,6 +11,16 @@ public class GwService {
 		return service;
 	}
 
+	public List<Notice> noticeList(){
+		List<Notice> list = dao.noticeList();
+		return list;
+	}
+	
+	public String getEmpName(int emp_id){
+		String name = dao.getEmpName(emp_id);
+		return name;
+	}
+
 	public List<Gw> gwList() {
 		// TODO Auto-generated method stub
 		return null;

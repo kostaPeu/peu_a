@@ -1,8 +1,9 @@
 $(function(){
 	$('#newBtn').on('click', function(){
-		$('.add').css("display","block")
+		$('.add').css("display","block");
 	})
 	$('#updateBtn').on('click', function(){
+<<<<<<< HEAD
 		
 		$("input[name=id_box]:checked").each(function() {
 			var upSelect = $(this).val();
@@ -12,9 +13,12 @@ $(function(){
 		});
 		console.log("aaaa");
 		$('.update').css("display","block")
+=======
+		$('.update').css("display","block");
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 	})
 	$('.closeBtn').click(function(){
-		$('.xclose').css("display","none")
+		$('.xclose').css("display","none");
 	})
 	
 })
@@ -31,3 +35,18 @@ $(function(){
 		}
 	})
 })
+$(function(){
+	$(".productChecked").click(function() {
+		$("input[name=productRow]:checked").each(function() {
+			var checks = $(this).val();
+			$(".product_id2").attr("value",checks);
+		});
+	});
+	$("#deleteBtn").on('click',function(){
+ 		$("input[name=productRow]:checked").each(function() {
+			var checks = $(this).val();
+			$(location).attr("href","deleteProduct.ba?checks="+checks);
+		});
+	});
+	
+});

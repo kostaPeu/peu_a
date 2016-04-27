@@ -30,7 +30,11 @@ public class ActionForward {
 
 	@Override
 	public String toString() {
+<<<<<<< HEAD
 		return "ActionForward [isRedirect=" + isRedirect + ", path=" + path + "]";
+=======
+		return "basic_ActionForward [isRedirect=" + isRedirect + ", path=" + path + "]";
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 	}
 	
 }
