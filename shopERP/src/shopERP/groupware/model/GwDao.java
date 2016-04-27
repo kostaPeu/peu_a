@@ -19,7 +19,7 @@ public class GwDao {
 
 	public SqlSessionFactory getSqlSessionFactory() {
 		String resource = "mybatis-config.xml";
-		InputStream input = null;
+		InputStream input = null;		
 
 		try {
 			input = Resources.getResourceAsStream(resource);

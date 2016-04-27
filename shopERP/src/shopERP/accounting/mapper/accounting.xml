@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="shopERP.accounting.mapper.AccountingMapper">
+	<cache />
+	<insert id="insertAccount" parameterType="Accounts">
+		insert into accounts(
+		ACCOUNT_NUMBER, ACCOUNT_NAME, CODE, ACCOUNT_DETAIL, USE, REMARKS
+		)values(
+		#{account_number}, #{account_name}, #{code},
+		#{account_detail}, #{use}, #{remarks}
+		)
+	</insert>
+	
+	<select id="accountlist" resultType="Accounts">
+	select * from accounts	
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
