@@ -5,8 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script src="/shopERP/js/jquery.js"></script>
 <link rel="stylesheet" href="/shopERP/css/emp.css">
 <link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
+<script src="/shopERP/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
 	$(function() {
@@ -74,6 +76,28 @@
 			$("#insert_type").val("duty");
 			$("#update_type").val("duty");
 		});
+		
+		$("#check_id").click(function() {
+			var b_id = $("#basic_id_input").val();
+			var b_type  = $("#insert_type").val();
+			$.ajax({
+				type: "POST",
+				url: "idcheck.hr",
+				data: {
+					b_id: b_id,
+					b_type: b_type
+				},
+				dataType: "json",
+				success: function(data){
+					if(jQuery.trim(data)=="yes"){
+						alert("사용가능");
+					}
+					else{
+						alert("사용불가");
+					}
+				}
+			})
+		});
 
 		$("#closebtn").click(function() {
 			$(".add_basic").css("display", "none");
@@ -109,22 +133,22 @@
 			</div>
 		</div>
 
-		<form class="form-horizontal" id="b_insert">
+		<form class="form-horizontal" id="b_insert" action="basic_insert.hr" method="post">
 			<div class="form-group">
 				<div class="container-fluid" id="basic_insert_form">
 					<label id="insert_id_label" for="basic_id_label" class="col-sm-2 control-label">부서번호</label>
 					<div class="col-sm-2">
-						<input type="text" class="form-control" name="basic_id">
+						<input type="text" class="form-control" name="basic_id" id="basic_id_input">
 					</div>
 					<div class="col-sm-1">
-						<button type="button" class="btn btn-default">중복확인</button>
+						<button type="button" class="btn btn-default" id="check_id">중복확인</button>
 					</div>
 					<label id="insert_name_label" for="basic_name_label" class="col-sm-2 control-label">부서명</label>
 					<div class="col-sm-3">
 						<input type="text" class="form-control" name="basic_name">
 					</div>
 					
-					<input type="hidden" id="insert_type" name="basic_type" value="">
+					<input type="hidden" id="insert_type" name="basic_type" value="dept">
 					
 					<div class="col-sm-1">
 						<button type="submit" class="btn btn-default">등록</button>
@@ -132,7 +156,7 @@
 				</div>
 			</div>
 		</form>
-		<form class="form-horizontal" id="b_update">
+		<form class="form-horizontal" id="b_update" action="basic_update.hr" method="post">
 			<div class="form-group">
 				<div class="container-fluid" id="basic_update_form">
 					<label id="update_id_label" for="basic_id_label" class="col-sm-2 control-label">부서번호</label>
@@ -146,7 +170,7 @@
 						<input type="text" class="form-control" name="basic_name">
 					</div>
 					
-					<input type="hidden" id="update_type" name="basic_type" value="">
+					<input type="hidden" id="update_type" name="basic_type" value="dept">
 					
 					<div class="col-sm-2">
 						<button type="submit" class="btn btn-default">수정</button>
