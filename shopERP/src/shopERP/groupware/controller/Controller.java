@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import shopERP.groupware.action.Action;
 import shopERP.groupware.action.ActionForward;
-import shopERP.groupware.action.notice_list_action;
+
 
 @WebServlet("*.gw")
 public class Controller extends HttpServlet {

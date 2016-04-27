@@ -13,7 +13,7 @@ import shopERP.accounting.action.Action;
 import shopERP.accounting.action.ActionForward;
 import shopERP.accounting.action.insertAccountsAction;
 import shopERP.accounting.action.listAccountsAction;
-import shopERP.basic.action.insertProductAction;
+
 
 @WebServlet("*.ac")
 public class Controller extends HttpServlet {

@@ -1,22 +1,28 @@
-@CHARSET "UTF-8";
-
-.contentsName {
-	border-bottom: 1px solid #ccc;
-	font-size: 14px;
-	font-weight: bold;
-	padding: 14px 10px;
+#bland {
+	top: 5px;
+	left: 10px;
+	padding-bottom: 5px;
+	font-size: 30px;
+	font-weight: 3px;
+	position: relative;
+	z-index: 100;
 }
 
-.contentsName #title {
-	color: #000;
-	display: inline-block;
-	font-family: FontAwesome;
-	font-size: 13px;
-	font-weight: bold;
-	margin-right: 3px;
+.wapper-fixed{
+	position: fixed;
+}
+
+.main-contents-wapper{
+	position: fixed;
+	margin-top: 100px;
+
+}
+#bland a {
+	color: #222;
 	text-decoration: none;
 }
 
+<<<<<<< HEAD
 /*카드리스트*/
 #cardList {
 	font-weight: bold;
@@ -59,117 +65,73 @@ type =[button] {
 	position: absolute;
 	top: 7%;
 	width: 50%;
+=======
+/*메인 상단바*/
+.mainmenu-area {
+	background: none repeat scroll 0 0 #aaa;
+	font-family: "Roboto Condensed", sans-serif;
+	text-transform: uppercase;
+	width: 100%;
+	position: fixed;
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 	z-index: 100;
-	display: none;
 }
 
-/*신규카드등록창*/
-.wrapper-title {
-	color: #000;
-	font-family: FontAwesome;
-	font-size: 13px;
-	font-weight: normal;
-	margin-left: 3px;
-	margin-right: 3px;
+/*상단메뉴 글자*/
+.mainmenu-area ul.navbar-nav li a {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
 }
 
-.close {
-	position: relative;
-}
-
-/*작은상단패널 설정*/
-.miniMenuTitle {
-	border-collapse: collapse;
-	content: "";
-	cursor: move;
-	background-color: #222;
-	color: #9d9d9d;
-	position: relative;
-	clear: both;
-	box-sizing: content-box;
-	width: 100%;
-	height: 30px;
-}
-
-/*작은 타이틀 제목*/
-.title-name {
-	float: left;
-	margin-left: 5px;
-	margin-top: 5px;
-	margin-bottom: 3px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	width: 100%;
-	overflow: hidden;
-}
-
-.header.header-fixed {
-	top: 0;
-	width: inherit;
-	z-index: 100;
-	position: absolute !important;
-}
-
-.header-fixed {
-	background-color: #f5f5f5;
-	border-bottom: 1px solid #bbb;
-	border-right: 1px solid #bbb;
-	clear: both;
-	width: 100px;
-}
-
-/*작은 타이틀 x버튼*/
-#closeBtn {
-	height: 20px;
-	margin: -10px 0 0;
-	padding: 1px;
-	position: absolute;
-	right: 0.3em;
-	top: 50%;
-	width: 20px;
-}
-
-
-
-/*footer그룹*/
-#footer-Group {
-	background-color: #f5f5f5;
-	border-bottom: 1px solid #bbb;
-	border-right: 1px solid #bbb;
-	border-top: 1px solid #bbb;
-	width: 100%;
-	position: relative;
-}
-/*버튼 그룹*/
-#button-Group {
-	margin-top: 10px;
-	margin-right: 10px;
-}
-
-.row-CardTYPE {
-	text-align: left;
-}
-
-/*##공통사항##*/
-/*라디오 체크박스 부분*/
-.radio-inline input[type="radio"], .checkbox-inline input[type="checkbox"]
+/*상단메뉴 오버효과*/
+.mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a
 	{
-	margin: 0 3px;
-	position: relative;
-	vertical-align: middle;
+	background: #222
+}
+/*상단메뉴 클릭효과*/
+.mainmenu-area .nav>li>a:focus {
+	color: #bbb
 }
 
-i {
-	left: 5px;
-	margin-right: 10px;
+/*좌측 고정바*/
+.wrapper-erp-local-nav {
+    background-color: #f8f8f8;
+    border-right: 1px solid #c0c0c0;
+    float: left;
+    height: 100%;
+    left: -5px;
+    margin: 0;
+    overflow-y: auto;
+    padding: 0;
+    position: fixed;
+    top: 98px;
+    width: 18%;
 }
 
-a, button, li, li::before {
-	transition: color 0.2s ease-in-out 0s, background-color 0.2s ease-in-out
-		0s;
+/*좌측 상단 타이틀*/
+.wrapper-erp-local-nav > .erp-local-nav-title {
+    background: #e9e8e8 none repeat scroll 0 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 14px 10px;
+ 
 }
 
+.main-contents-wapper{
+position: relative;
+	 margin-left: +180px;
+	top: 0px;
+	 -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+ul{
+	list-style: none;
+}
 
 #contents {
     float: right;

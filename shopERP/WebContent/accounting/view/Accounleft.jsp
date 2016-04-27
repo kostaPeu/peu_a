@@ -5,14 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href="/shopERP/accounting/css/bootstrap.min.css" rel="stylesheet">
-<link href="/shopERP/accounting/css/main.css" rel="stylesheet">
-
-<script src="/shopERP/accounting/js/jquery.js"></script>
-<script src="/shopERP/accounting/js/bootstrap.min.js"></script>
-<script src="/shopERP/js/ajax.js"></script>
 
 <style type="text/css">
 ul li {
