@@ -38,7 +38,6 @@
 <body id="body_html" class="font-dotum">
 
 	<!-- 상단 -->
-	<jsp:include page="Test.jsp"></jsp:include>
 
 	<!-- 왼쪽 -->
 	<div id="Left_Menu" class="wrapper-frame-erp-local-nav show">
@@ -51,8 +50,6 @@
 	<div class="container" id="contents">
 		<jsp:include page="<%=contents%>"></jsp:include>
 	</div>
-
-	<jsp:include page="MainContents.jsp"></jsp:include>
 
 </body>
 </html>

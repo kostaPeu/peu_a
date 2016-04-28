@@ -11,15 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import shopERP.basic.action.Action;
 import shopERP.basic.action.ActionForward;
-import shopERP.basic.action.CustomerAction;
-import shopERP.basic.action.CustomerList;
-import shopERP.basic.action.DeleteAction;
-import shopERP.basic.action.UpdateAction;
 import shopERP.basic.action.deleteProductAction;
 import shopERP.basic.action.insertProductAction;
 import shopERP.basic.action.productCodeListAction;
 import shopERP.basic.action.productListAction;
 import shopERP.basic.action.updateProductAction;
+import shopERP.basic.action.CustomerAction;
+import shopERP.basic.action.CustomerList;
 
 @WebServlet("*.ba")
 public class Controller extends HttpServlet {
@@ -45,39 +43,31 @@ public class Controller extends HttpServlet {
 		String requestUri = request.getRequestURI();
 		String conPath = request.getContextPath();
 		String command = requestUri.substring(conPath.length() + 1);
-		
 		Action action = null;
 		ActionForward forward = null;
-
-		if(command.equals("customerProc.ba")) {
-			action = new CustomerAction();
-			forward = action.excute(request, response);
-		}else if(command.equals("CustomerList.ba")){
-			action = new CustomerList();
-			forward = action.excute(request, response);
-		}else if(command.equals("UpdateAction.ba")){
-			action = new UpdateAction();
-			forward = action.excute(request, response);
-		}else if(command.equals("DeleteAction.ba")){
-			action = new DeleteAction();
-			forward = action.excute(request, response);
-		}else if(command.equals("insertProduct.ba")) {
+		System.out.println(command);
+		
+		if (command.equals("insertProduct.ba")) {
 			action = new insertProductAction();
 			forward = action.excute(request, response);
-		}else if(command.equals("productList.ba")) {
+		}else if (command.equals("productList.ba")) {
 			action = new productListAction();
 			forward = action.excute(request, response);
-		}else if(command.equals("updateProduct.ba")){
+		}else if (command.equals("updateProduct.ba")){
 			action = new updateProductAction();
 			forward = action.excute(request, response);
-		}else if(command.equals("deleteProduct.ba")){
+		}else if (command.equals("deleteProduct.ba")){
 			action = new deleteProductAction();
 			forward = action.excute(request, response);
 		}else if(command.equals("customerProc.ba")) {
 			action = new CustomerAction();
 			forward = action.excute(request, response);
+		}else if(command.equals("CustomerList.ba")){
+			action = new CustomerList();
+			forward = action.excute(request, response);
 		}else if(command.equals("productCodeJson.ba")){
 			action = new productCodeListAction();
+			System.out.println("액션성공!");
 			forward = action.excute(request, response);
 		}
 		

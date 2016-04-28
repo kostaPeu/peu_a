@@ -22,9 +22,6 @@ public class CustomerList implements Action {
 		search.setArea(request.getParameterValues("area"));
 		search.setSearchKey("%"+request.getParameter("searchKey")+"%");*/
 		String page = request.getParameter("pageNum");
-		if(page != null){
-			page = "1";
-		}
 		ListModel listModel = null;
 		try {
 			listModel = erpService.CustomerList(request);

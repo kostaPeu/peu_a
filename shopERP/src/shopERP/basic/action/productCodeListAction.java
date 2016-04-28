@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.sf.json.JSONArray;
 import shopERP.basic.model.ErpService;
 import shopERP.basic.model.ProductCode;
 import shopERP.basic.model.Search;
@@ -34,7 +35,15 @@ public class productCodeListAction implements Action {
 		if(list != null){
 			request.setAttribute("list", list);
 		}
-		System.out.println("¼º°ø");
+		String jsonArray = JSONArray.fromObject(list).toString();
+		//JSONArray jsonArray = JSONArray.fromObject(list);
+		System.out.println(jsonArray);
+		/*Map<String, Object> map = new HashMap<String, Object>();
+		map.put("list", jsonArray);
+		JSONObject jsonObject = JSONObject.fromObject(map);
+		System.out.println("json - " + jsonObject);*/
+		
+		request.setAttribute("jsonArray", jsonArray);
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
 		forward.setPath("./basic/view/basic_productCodeJson.jsp");

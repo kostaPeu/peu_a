@@ -8,20 +8,8 @@ $(function(){
 	$('.closeBtn').click(function(){
 		$('.xclose').css("display","none");
 	})
-	$("input[name=id_box]:checked").each(function() {
-			var upSelect = $(this).val();
-			console.log(upSelect);
-			var url = "upSelect.ba?upSelect="+upSelect;
-			$(location).attr('href',url);
-		});
-		console.log("aaaa");
-		$('.update').css("display","block")
-		$('.update').css("display","block");
-	})
-	$('.closeBtn').click(function(){
-		$('.xclose').css("display","none");
-	})
 	
+})
 $(function(){
 	$('input').keyup(function(){
 		if($(this).val() != null){
@@ -51,4 +39,3 @@ $(function(){
 	});
 	
 });
-
