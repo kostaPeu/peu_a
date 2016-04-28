@@ -8,13 +8,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import shopERP.groupware.action.Action;
 import shopERP.groupware.action.ActionForward;
 import shopERP.groupware.action.loginAction;
+import shopERP.groupware.action.noticeDeleteAction;
 import shopERP.groupware.action.noticeInsertAction;
 import shopERP.groupware.action.noticeListAction;
+import shopERP.groupware.action.noticeReplyInsertAction;
+import shopERP.groupware.action.noticeUpdateAction;
+import shopERP.groupware.action.noticeUpdateFormAction;
 import shopERP.groupware.action.noticeViewAction;
 
 @WebServlet("*.gw")
@@ -53,6 +56,18 @@ public class Controller extends HttpServlet {
 			forward = action.excute(request, response);
 		}else if(command.equals("noticeViewAction.gw")){
 			action = new noticeViewAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("noticeDeleteAction.gw")){
+			action = new noticeDeleteAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("noticeUpdateFormAction.gw")){
+			action = new noticeUpdateFormAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("noticeUpdateAction.gw")){
+			action = new noticeUpdateAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("noticeReplyInsertAction.gw")){
+			action = new noticeReplyInsertAction();
 			forward = action.excute(request, response);
 		}
 		else if(command.equals("loginAction.gw")){

@@ -8,6 +8,7 @@
 		<typeAlias type="shopERP.accounting.model.Accounts" alias="Accounts"/>
 		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
 		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>
+		<typeAlias type="shopERP.groupware.model.NoticeReply" alias="NoticeReply"/>
 
 	</typeAliases>
 	
