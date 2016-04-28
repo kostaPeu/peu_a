@@ -4,12 +4,18 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
+<<<<<<< HEAD
 	<typeAliases>
 <!-- 		<typeAlias type="shopERP.basic.model.Product" alias="Product"/>
 		<typeAlias type="shopERP.basic.model.Standards" alias="Standards"/>
 		<typeAlias type="shopERP.basic.model.ProductGroup" alias="ProductGroup"/>
 		<typeAlias type="shopERP.basic.model.ProductList" alias="ProductList"/>
+=======
+	<typeAliases>
+		<typeAlias type="shopERP.accounting.model.Accounts" alias="Accounts"/>
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
+<<<<<<< HEAD
 		<typeAlias type="shopERP.groupware.model.Gw" alias="Gw"/>
 		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/> 
 		<typeAlias type="shopERP.purchase.model.Purchase" alias="Purchase"/>
@@ -17,6 +23,9 @@
 		<typeAlias type="shopERP.purchase.model.PurchaseList" alias="PurchaseList"/> -->
 		<typeAlias type="shopERP.hr.model.hr_basic" alias="hr_basic"/>
 		<typeAlias type="shopERP.hr.model.deptList" alias="deptList"/>
+=======
+		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 
 	</typeAliases>
 	
@@ -30,10 +39,15 @@
 	</environments>
 	
 	<mappers>
+<<<<<<< HEAD
 		<!-- <mapper resource="shopERP/basic/mapper/Erp.xml"/> -->
 		<!-- <mapper resource="shopERP/groupware/mapper/Gw.xml"/> -->
 		<!-- <mapper resource="shopERP/purchase/mapper/Erp.xml"/> -->
 		<mapper resource="shopERP/hr/mapper/HR.xml"/>
+=======
+		<mapper resource="shopERP/accounting/mapper/accounting.xml"/>
+		 <mapper resource="shopERP/groupware/mapper/Gw.xml"/>
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 	</mappers>
 	
 </configuration>

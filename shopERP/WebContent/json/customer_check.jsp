@@ -59,7 +59,6 @@
 	}	
 	if(list != null && list.size() != 0){
 		String json = JSONArray.fromObject(list).toString();
-		System.out.println(json);
 		out.print(json);
 	}
 %>

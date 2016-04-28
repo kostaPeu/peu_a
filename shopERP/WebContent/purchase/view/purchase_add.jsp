@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="container">
-	<form class="form-horizontal" action="insertPurchase.pc">
+	<form class="form-horizontal" action="">
 		<table class="table table-bordered table-hover new">
 				<thead>
 				<tr>
@@ -33,14 +33,69 @@
 				</thead>
 				<tr>
 					<td><input type="checkbox"></td>
-					<td><input type="text" name="buy_id" id="buy_id" size="8"></td>
-					<td><input type="text" name="customer_id" id="customer_id" size="8"></td>
-					<td><input type="text" name="product_id" id="product_id" size="8"></td>
-					<td><input type="text" name="buy_price" id="buy_price" size="8"></td>
-					<td><input type="text" name="buy_amount" id="buy_amount" size="8"></td>
-					<td><input type="text" name="buy_date" id="buy_date" size="8"></td>
-					<td><input type="text" name="warehouse_id" id="warehouse_id" size="8"></td>
-					<td><input type="text" name="pay_type" id="pay_type" size="8"></td>					
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+				</tr>		
+				<tr>
+					<td><input type="checkbox"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+				</tr>		
+				<tr>
+					<td><input type="checkbox"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+				</tr>		
+				<tr>
+					<td><input type="checkbox"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+				</tr>		
+				<tr>
+					<td><input type="checkbox"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
+					<td><input type="text" name="" id="" size="8"></td>
 				</tr>		
 			</table>
 			<table class="table table-bordered table-hover new">
