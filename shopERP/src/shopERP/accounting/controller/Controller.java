@@ -12,7 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import shopERP.accounting.action.Action;
 import shopERP.accounting.action.ActionForward;
 import shopERP.accounting.action.insertAccountsAction;
+import shopERP.accounting.action.insertCardsAction;
+import shopERP.accounting.action.insertMoneyPlanAction;
 import shopERP.accounting.action.listAccountsAction;
+import shopERP.accounting.action.listCardsAction;
+import shopERP.accounting.action.listMoneyPlanAction;
 
 
 @WebServlet("*.ac")
@@ -48,6 +52,18 @@ public class Controller extends HttpServlet {
 			forward = action.excute(request, response);
 		}else if(command.equals("accountList.ac")){
 			action = new listAccountsAction();
+			forward = action.excute(request, response);
+		}else if (command.equals("insertCard.ac")) {
+			action = new insertCardsAction();
+			forward = action.excute(request, response);
+		}else if (command.equals("cardList.ac")) {
+			action = new listCardsAction();
+			forward = action.excute(request, response);
+		}else if (command.equals("insertMoneyPlan.ac")) {
+			action= new insertMoneyPlanAction();
+			forward= action.excute(request, response);
+		}else if (command.equals("listMoneyPlan.ac")) {
+			action = new listMoneyPlanAction();
 			forward = action.excute(request, response);
 		}
 		

@@ -6,9 +6,7 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="shopERP.accounting.model.Accounts" alias="Accounts"/>
-		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
-		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>
-
+		<typeAlias type="shopERP.accounting.model.Cards" alias="Cards"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -22,7 +20,6 @@
 	
 	<mappers>
 		<mapper resource="shopERP/accounting/mapper/accounting.xml"/>
-		 <mapper resource="shopERP/groupware/mapper/Gw.xml"/>
 	</mappers>
 	
 </configuration>

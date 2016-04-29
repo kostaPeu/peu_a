@@ -5,6 +5,7 @@
 
 <mapper namespace="shopERP.accounting.mapper.AccountingMapper">
 	<cache />
+	<!-- 통장계좌 Strat -->
 	<insert id="insertAccount" parameterType="Accounts">
 		insert into accounts(
 		ACCOUNT_NUMBER, ACCOUNT_NAME, CODE, ACCOUNT_DETAIL, USE, REMARKS
@@ -13,10 +14,27 @@
 		#{account_detail}, #{use}, #{remarks}
 		)
 	</insert>
-	
+
 	<select id="accountlist" resultType="Accounts">
-	select * from accounts	
+		select * from accounts
 	</select>
+	<!-- 통장계좌 END -->
+
+	<!-- 신용카드 Start -->
+	<insert id="insertCard" parameterType="Cards">
+		insert into cards(
+		CARD_NUMBER, CARD_NAME, ACCOUNT_NUMBER, TYPE, EMP_ID, USE_DETAIL, USE,
+		REMARKS
+		)values(
+			#{card_number}, #{card_name}, #{account_number},
+			#{type}, #{emp_id}, #{use_detail},#{use},#{remarks}
+		)
+	</insert>
+	
+	<select id="cardlist" resultType="Cards">
+		select*from cards
+	</select>
+	<!-- 신용카드 END -->
 </mapper>
 
 
