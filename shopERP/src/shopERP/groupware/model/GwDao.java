@@ -156,11 +156,40 @@ public class GwDao {
 
 	}
 
+	public NoticeReply selectNoticeReply(int nreply_id) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		NoticeReply noticeReply = null;
+		
+		try {
+			noticeReply = sqlSession.getMapper(GwMapper.class).selectNoticeReply(nreply_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		
+		return noticeReply;
+		
+	}
+
 	public void noticeDelete(int notice_id) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 
 		try {
 			sqlSession.getMapper(GwMapper.class).noticeDelete(notice_id);
+			sqlSession.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+	}
+
+	public void replyDelete(int nreply_id) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		
+		try {
+			sqlSession.getMapper(GwMapper.class).replyDelete(nreply_id);
 			sqlSession.commit();
 		} catch (Exception e) {
 			e.printStackTrace();

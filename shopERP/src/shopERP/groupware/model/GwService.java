@@ -45,8 +45,16 @@ public class GwService {
 		return dao.selectNotice(notice_id);
 	}
 
+	public NoticeReply selectNoticeReply(int nreply_id){
+		return dao.selectNoticeReply(nreply_id);
+	}
+
 	public void noticeDelete(int notice_id){
 		dao.noticeDelete(notice_id);
+	}
+
+	public void replyDelete(int nreply_id){
+		dao.replyDelete(nreply_id);
 	}
 	
 	public int loginIdCheck(String emp_id){

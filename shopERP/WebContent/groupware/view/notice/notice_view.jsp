@@ -34,32 +34,21 @@
 			<a type="button" href="noticeDeleteAction.gw?notice_id=${notice.notice_id }" class="btn btn-default">삭제</a>
 			<a type="button" href="noticeListAction.gw" class="btn btn-default">목록</a>
 		</div>
-
+			<br/>
 		<form action="noticeReplyInsertAction.gw?notice_id=${notice.notice_id }" method="post">
 			<div id="view_comment">
 				<ul class="list-unstyled">
-					<li>
-						<div style="margin-left: 0px;">
-							<div class="panel panel-warning">
-								<div class="panel-heading">
-									<span class="text-muted">작성자</span>
-								</div>
-								<div class="panel-body">내용</div>
-							</div>
-						</div>
-					</li>
-				
 					<c:if test="${list.size()-1 >=0}">
 						<c:forEach var="i" begin="0" end="${list.size()-1}" step="1">
 							<li>
-								<div style="margin-left: 0px;">
 									<div class="panel panel-warning">
 										<div class="panel-heading">
 											<span class="text-muted">${re_name.get(i) }</span>
+											<span class="redate"> ${list.get(i).getNreply_date() }</span>
+											<a type="button" href="replyDeleteAction.gw?re_id=${list.get(i).getNreply_id() }"	class="btn btn-sm pull-right">삭제</a>
 										</div>
 										<div class="panel-body">${list.get(i).getNreply_content() }</div>
 									</div>
-								</div>
 							</li>
 						</c:forEach>
 					</c:if>

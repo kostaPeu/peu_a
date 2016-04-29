@@ -48,9 +48,17 @@
 	<select id="selectNotice" resultType="Notice" parameterType="int">
 		select * from notice where notice_id = #{notice_id}
 	</select>
+
+	<select id="selectNoticeReply" resultType="NoticeReply" parameterType="int">
+		select * from notice_reply where nreply_id = #{nreply_id}
+	</select>
 	
 	<delete id="noticeDelete" parameterType="int">
 		delete from notice where notice_id=#{notice_id}
+	</delete>
+
+	<delete id="replyDelete" parameterType="int">
+		delete from notice_reply where nreply_id=#{nreply_id}
 	</delete>
 	
 	<select id="loginIdCheck" resultType="int" parameterType="String">
