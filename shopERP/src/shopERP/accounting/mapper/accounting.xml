@@ -26,15 +26,33 @@
 		CARD_NUMBER, CARD_NAME, ACCOUNT_NUMBER, TYPE, EMP_ID, USE_DETAIL, USE,
 		REMARKS
 		)values(
-			#{card_number}, #{card_name}, #{account_number},
-			#{type}, #{emp_id}, #{use_detail},#{use},#{remarks}
+		#{card_number}, #{card_name}, #{account_number},
+		#{type}, #{emp_id}, #{use_detail},#{use},#{remarks}
 		)
 	</insert>
-	
+
 	<select id="cardlist" resultType="Cards">
 		select*from cards
 	</select>
 	<!-- 신용카드 END -->
+
+	<!-- 자금계획 Start -->
+	<insert id="insertMoneyPlan" parameterType="MoneyPlan">
+		insert into
+		FUNDS_PLAN(
+		TYPELIST, FUNDS_ID, REPEAT_UNIT, START_DATE, PERIODS,
+		DEPT_ID, PROJ_ID, ACCOUNT_NUMBER, CUSTOMER_ID, SUMS,
+		DIAGNOSIS_NUMBER, REMARKS
+		)values(
+		#{typelist}, #{funds_id},#{repeat_unit}, #{start_date},
+		#{period}, #{dept_id}, #{proj_id}, #{account_number}, #{customer_id},
+		#{sums}, #{diagnosis_number}, #{remarks}
+		)
+	</insert>
+
+	<select id="MoneyPlanList" resultType="MoneyPlan">
+		SELECT*FROM FUNDS_PLAN
+	</select>
 </mapper>
 
 

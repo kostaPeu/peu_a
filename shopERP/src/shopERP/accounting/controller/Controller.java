@@ -45,7 +45,6 @@ public class Controller extends HttpServlet {
 		String command = requestUri.substring(conPath.length() + 1);
 		Action action = null;
 		ActionForward forward = null;
-		System.out.println(command);
 		
 		if (command.equals("insertAccount.ac")) {
 			action = new insertAccountsAction();

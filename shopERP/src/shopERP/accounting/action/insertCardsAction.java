@@ -14,10 +14,8 @@ public class insertCardsAction implements Action {
 			HttpServletResponse response) {
 		Cards cards = new Cards();
 		AcService service = AcService.getInstance();
-		
-		
+
 		cards.setCard_number(request.getParameter("card_number"));
-		
 		cards.setCard_name(request.getParameter("card_name"));
 		cards.setAccount_number(request.getParameter("account_number"));
 		cards.setType(request.getParameter("type"));
@@ -25,15 +23,14 @@ public class insertCardsAction implements Action {
 		cards.setUse_detail(request.getParameter("use_detail"));
 		cards.setUse(request.getParameter("use"));
 		cards.setRemarks(request.getParameter("remarks"));
-		
+
 		int re = -1;
 		try {
 			re = service.insertCardService(cards);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	
-		
+
 		ActionForward forward = new ActionForward();
 		if (re == 1) {
 			forward.setInRedirect(true);

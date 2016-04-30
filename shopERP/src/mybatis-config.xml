@@ -7,6 +7,8 @@
 	<typeAliases>
 		<typeAlias type="shopERP.accounting.model.Accounts" alias="Accounts"/>
 		<typeAlias type="shopERP.accounting.model.Cards" alias="Cards"/>
+		<typeAlias type="shopERP.accounting.model.MoneyPlan" alias="MoneyPlan"/>
+		
 	</typeAliases>
 	
 	<environments default="development">

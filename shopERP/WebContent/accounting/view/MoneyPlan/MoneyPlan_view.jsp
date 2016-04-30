@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -29,6 +30,7 @@
 					<thead id="cardList">
 						<tr class="mainTable">
 							<th>구분</th>
+							<th>자금계획번호</th>
 							<th>발생기간</th>
 							<th>금액</th>
 							<th>계좌명</th>
@@ -36,15 +38,19 @@
 							<th>비고</th>
 						</tr>
 					</thead>
+					
 					<tbody id="cardInfos">
+					<c:forEach var="m" items="${list }">
 						<tr class="mainTable">
-							<td>출금</td>
-							<td>2016년 3월 22일</td>
-							<td>70,000</td>
-							<td>신한은행-1113</td>
-							<td>Kosta</td>
-							<td>마우스 10개</td>
+							<td>${m.typelist }</td>
+							<td>${m.funds_id }</td>
+							<td>${m.repeat_unit }</td>
+							<td>${m.sums }</td>
+							<td>${m.account_number}</td>
+							<td>${m.customer_id }</td>
+							<td>${m.remarks }</td>
 						</tr>
+					</c:forEach>
 					</tbody>
 				</table>
 			</div>

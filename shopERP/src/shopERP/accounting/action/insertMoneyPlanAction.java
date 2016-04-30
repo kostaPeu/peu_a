@@ -1,5 +1,6 @@
 package shopERP.accounting.action;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
@@ -17,48 +18,36 @@ public class insertMoneyPlanAction implements Action {
 		MoneyPlan plan = new MoneyPlan();
 		AcService service = AcService.getInstance();
 
-		String awd = null;
-
-		// date 받아오기
-		String date1 = request.getParameter("repeat_unit");
-		Timestamp date = null;
-		if (date1 == null) {
-			date = java.sql.Timestamp.valueOf(date1);
-		}
-		System.out.println(date);
-		String date2 = request.getParameter("period");
-		Timestamp dates = null;
-		if (date2 == null) {
-			date = java.sql.Timestamp.valueOf(date2);
-		}
-
-		/* plan.setRepeat_unit(request.getParameter(DateStr)); */
-	
 		plan.setTypelist(request.getParameter("typelist"));
 		plan.setFunds_id(request.getParameter("funds_id"));
-		plan.setRepeat_unit(date);
-		plan.setPeriod(dates);
+		plan.setRepeat_unit(request.getParameter("repeat_unit"));
+		plan.setStart_date(Date.valueOf(request.getParameter("start_date")+ "YYYY/MM/DD"));
+		plan.setPeriod(Date.valueOf(request.getParameter("period")+ "YYYY/MM/DD"));
 		plan.setDept_id(request.getParameter("dept_id"));
-		plan.setProj_id(Integer.parseInt("proj_id"));
+		plan.setProj_id(Integer.parseInt(request.getParameter("proj_id")));
 		plan.setAccount_number(request.getParameter("account_number"));
 		plan.setCustomer_id(request.getParameter("customer_id"));
 		plan.setSums(Integer.parseInt(request.getParameter("sums")));
 		plan.setRemarks(request.getParameter("remarks"));
+		plan.setDiagnosis_number(Integer.parseInt(request
+				.getParameter("diagnosis_number")));
+
 		int re = -1;
+
 		try {
 			re = service.insertMoneyPlanService(plan);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
+		System.out.println(re);
 		ActionForward forward = new ActionForward();
 
 		if (re == 1) {
 			forward.setInRedirect(true);
-			forward.setPath("MoneyPlan_view.jsp");
+			forward.setPath("listMoneyPlan.ac");
 		} else {
 			forward.setInRedirect(true);
-			forward.setPath("MoneyPlan_view.jsp");
+			forward.setPath("listMoneyPlan.ac");
 		}
 		return forward;
 	}
