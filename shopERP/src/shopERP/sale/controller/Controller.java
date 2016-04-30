@@ -14,6 +14,7 @@ import shopERP.sale.action.ActionForward;
 import shopERP.sale.action.InsertSale;
 import shopERP.sale.action.SaleList;
 import shopERP.sale.action.SearchSaleList;
+import shopERP.sale.action.insertcBuy;
 
 @WebServlet("*.sale")
 public class Controller extends HttpServlet {
@@ -52,7 +53,13 @@ public class Controller extends HttpServlet {
 		}else if(command.equals("SaleSearch.sale")) {
 			action = new SearchSaleList();
 			forward = action.excute(request, response);
-		}
+		}else if(command.equals("insertcBuy.sale")) {
+			action = new insertcBuy();
+			forward = action.excute(request, response);
+		}else if(command.equals("CbuyList.sale")) {
+			action = new SearchSaleList();
+			forward = action.excute(request, response);
+		}	
 		if (forward != null) {
 			if (forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());

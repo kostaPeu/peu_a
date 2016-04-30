@@ -39,6 +39,14 @@
 					and s.warehouse_id = #{warehouse_id}
 				</if>
 	</select>
+	<insert id="insertCbuy" parameterType="Company_buy">
+		insert into sell(
+			cbuy_id, customer_id, product_id, cbuy_date, warehouse_id, pay_type,cbuy_priceout, cbuy_amount
+		)		
+		values(
+			#{cbuy_id},#{customer_id},#{product_id},SYSDATE,#{warehouse_id},#{pay_type},#{cbuy_priceout},#{cbuy_amount}
+		)		
+	</insert>
 </mapper>
 
 

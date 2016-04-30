@@ -73,4 +73,22 @@ private static ErpDao dao = new ErpDao();
 		}
 		return list;
 	}
+
+	public int insertCbuy(Company_buy cbuy) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = -1;
+		try {
+			re = sqlSession.getMapper(ErpMapper.class).insertCbuy(cbuy);
+			if(re > 0){
+				sqlSession.commit();
+			}else{
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return re;
+	}
 }
