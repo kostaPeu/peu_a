@@ -42,6 +42,7 @@
 					<tbody id="cardInfos">
 					<c:forEach var="m" items="${list }">
 						<tr class="mainTable">
+							
 							<td>${m.typelist }</td>
 							<td>${m.funds_id }</td>
 							<td>${m.repeat_unit }</td>

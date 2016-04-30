@@ -26,7 +26,6 @@ ul li {
 		<div class="erp-local-nav">
 			<ul class="local">
 				<li><a href="#">재무상태표</a></li>
-
 				<li data-toggle="collapse" href="#one" aria-expanded="false"
 					aria-controls="collapseListGroup"><a>회계기초등록</a>
 					<ul id="one" class="collapse" aria-expanded="false">

@@ -13,7 +13,8 @@ public class insertCardsAction implements Action {
 	public ActionForward excute(HttpServletRequest request,
 			HttpServletResponse response) {
 		Cards cards = new Cards();
-		AcService service = AcService.getInstance();
+
+		int re = -1;
 
 		cards.setCard_number(request.getParameter("card_number"));
 		cards.setCard_name(request.getParameter("card_name"));
@@ -24,7 +25,7 @@ public class insertCardsAction implements Action {
 		cards.setUse(request.getParameter("use"));
 		cards.setRemarks(request.getParameter("remarks"));
 
-		int re = -1;
+		AcService service = AcService.getInstance();
 		try {
 			re = service.insertCardService(cards);
 		} catch (Exception e) {
@@ -32,12 +33,11 @@ public class insertCardsAction implements Action {
 		}
 
 		ActionForward forward = new ActionForward();
-		if (re == 1) {
+		if (re > 0) {
 			forward.setInRedirect(true);
 			forward.setPath("cardList.ac");
 		} else {
-			forward.setInRedirect(true);
-			forward.setPath("cardList.ac");
+			System.out.println("성공좀..");
 		}
 		return forward;
 	}

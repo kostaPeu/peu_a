@@ -11,10 +11,27 @@ public class Cards implements Serializable {
 	private String use_detail;
 	private String use;
 	private String remarks;
-/*
-	public Cards() {
+
+	public Cards() {}
+
+	
+	
+	public Cards(String card_number, String card_name, String account_number,
+			String type, String emp_id, String use_detail, String use,
+			String remarks) {
+		super();
+		this.card_number = card_number;
+		this.card_name = card_name;
+		this.account_number = account_number;
+		this.type = type;
+		this.emp_id = emp_id;
+		this.use_detail = use_detail;
+		this.use = use;
+		this.remarks = remarks;
 	}
-*/
+
+
+
 	public String getCard_number() {
 		return card_number;
 	}

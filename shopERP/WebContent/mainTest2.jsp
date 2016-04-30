@@ -22,8 +22,7 @@
 <script src="/shopERP/js/main.js" type="text/javascript"></script>
 <script src="/shopERP/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
 <!-- Custom CSS -->
@@ -31,9 +30,6 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
-
-<script src="groupware/js/jquery-1.10.2.min.js"></script>
-<script src="groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
 </head>
 <body id="body_html" class="font-dotum">
 	<!-- top -->
@@ -64,7 +60,6 @@
 					href="./mainTest2.jsp?left=./accounting/view/Accounleft.jsp">회계관리</a></li>
 				<li class=""><a id="TopMainMenu7"
 					href="./mainTest2.jsp?left=./hr/view/hr_side.jsp">인사관리</a></li>
-
 				<li class=""><a id="TopMainMenu8"
 					href="./mainTest2.jsp?left=./groupware/view/groupware.jsp">그룹웨어</a></li>
 				<li class=""><a id="TopMainMenu9" href="./mainTest2.jsp?left=./mypage/view/mypage.jsp">마이페이지</a></li>

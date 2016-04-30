@@ -6,7 +6,7 @@
 <configuration>
 	<typeAliases>
 	<!-- 기초관리 START-->
-		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
+		<!-- <typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
 		<typeAlias type="shopERP.basic.model.ListModel" alias="ListModel"/>
 		<typeAlias type="shopERP.basic.model.ListModelProduct" alias="ListModelProduct"/>
 		<typeAlias type="shopERP.basic.model.ListModelProductCode" alias="ListModelProductCode"/>
@@ -15,38 +15,40 @@
 		<typeAlias type="shopERP.basic.model.ProductGroup" alias="ProductGroup"/>
 		<typeAlias type="shopERP.basic.model.ProductList" alias="ProductList"/>
 		<typeAlias type="shopERP.basic.model.Search" alias="Search"/>
-		<typeAlias type="shopERP.basic.model.Standards" alias="Standards"/>
+		<typeAlias type="shopERP.basic.model.Standards" alias="Standards"/> -->
 	<!-- 기초관리 END -->
 	
 	<!-- 구매관리 START -->
-		<typeAlias type="shopERP.purchase.model.Customer" alias="Customer"/>
+		<!-- <typeAlias type="shopERP.purchase.model.Customer" alias="Customer"/>
 		<typeAlias type="shopERP.purchase.model.ListModel" alias="ListModel"/>
 		<typeAlias type="shopERP.purchase.model.Product" alias="Product"/>
 		<typeAlias type="shopERP.purchase.model.Purchase" alias="Purchase"/>
 		<typeAlias type="shopERP.purchase.model.PurchaseListView" alias="PurchaseListView"/>
 		<typeAlias type="shopERP.purchase.model.PurchaseSearch" alias="PurchaseSearch"/>
-		<typeAlias type="shopERP.purchase.model.WareHouse" alias="WareHouse"/>
+		<typeAlias type="shopERP.purchase.model.WareHouse" alias="WareHouse"/> -->
 	<!-- 구매관리 END -->
 	
 	<!-- 판매관리 START -->
+		<!--
 		<typeAlias type="shopERP.sale.model.ListModel" alias="ListModel"/>
 		<typeAlias type="shopERP.sale.model.Sale" alias="Sale"/>
 		<typeAlias type="shopERP.sale.model.SaleListView" alias="SaleListView"/>
-		<typeAlias type="shopERP.sale.model.Search" alias="Search"/>	
+		<typeAlias type="shopERP.sale.model.Search" alias="Search"/>	-->
 	<!-- 판매관리 END -->
 		
 	<!-- 회계 START-->
+	
 		<typeAlias type="shopERP.accounting.model.Accounts" alias="Accounts"/>
 		<typeAlias type="shopERP.accounting.model.Cards" alias="Cards"/>
 		<typeAlias type="shopERP.accounting.model.MoneyPlan" alias="MoneyPlan"/>
 	<!-- 회계 END -->
 	<!-- 인사관리 START -->
-		<typeAlias type="shopERP.hr.model.deptList" alias="deptList"/>
-		<typeAlias type="shopERP.hr.model.hrbasic" alias="hrbasic"/>	
+	<!--  <typeAlias type="shopERP.hr.model.deptList" alias="deptList"/>
+		<typeAlias type="shopERP.hr.model.hrbasic" alias="hrbasic"/>	-->
 	<!-- 인사관리 END -->	
 	
 	<!-- 그룹웨어 START -->
-		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>	
+		<!-- <typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>	 -->
 	<!-- 그룹웨어 END -->	
 	</typeAliases>
 	
@@ -61,12 +63,13 @@
 	
 	<mappers>
 		<mapper resource="shopERP/accounting/mapper/accounting.xml"/>
-		<mapper resource="shopERP/basic/mapper/Erp.xml"/>
+		
+		<!--  <mapper resource="shopERP/basic/mapper/Erp.xml"/>
 		<mapper resource="shopERP/groupware/mapper/Gw.xml"/>
 		<mapper resource="shopERP/hr/mapper/HR.xml"/>
 		<mapper resource="shopERP/purchase/mapper/Erp.xml"/>
 		<mapper resource="shopERP/purchase/mapper/purchase.xml"/>
-		<mapper resource="shopERP/sale/mapper/sale.xml"/>
+		<mapper resource="shopERP/sale/mapper/sale.xml"/>-->
 	</mappers>
 	
 </configuration>

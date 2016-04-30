@@ -13,6 +13,19 @@ public class Accounts implements Serializable {
 	
 	public Accounts(){}
 	
+	
+	public Accounts(String account_number, String account_name, int code,
+			String account_detail, String use, String remarks) {
+		super();
+		this.account_number = account_number;
+		this.account_name = account_name;
+		this.code = code;
+		this.account_detail = account_detail;
+		this.use = use;
+		this.remarks = remarks;
+	}
+
+
 	public String getAccount_number() {
 		return account_number;
 	}

@@ -29,7 +29,7 @@
 	<table class="table table-bordered table-hover new">
 		<thead>
 			<tr>
-				<th><input type="checkbox"></th>
+				<th><input type="checkbox" disabled="disabled"></th>
 				<th>판매번호</th>
 				<th>거래처명</th>
 				<th>품목명</th>

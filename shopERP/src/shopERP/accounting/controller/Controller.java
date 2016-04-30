@@ -43,6 +43,7 @@ public class Controller extends HttpServlet {
 		String requestUri = request.getRequestURI();
 		String conPath = request.getContextPath();
 		String command = requestUri.substring(conPath.length() + 1);
+	
 		Action action = null;
 		ActionForward forward = null;
 		

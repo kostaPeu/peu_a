@@ -34,8 +34,7 @@ public class AcDao {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		int re = -1;
 		try {
-			re = sqlSession.getMapper(AccountingMapper.class).insertAccount(
-					accounts);
+			re = sqlSession.getMapper(AccountingMapper.class).insertAccount(accounts);
 			if (re > 0) {
 				sqlSession.commit();
 			} else {
