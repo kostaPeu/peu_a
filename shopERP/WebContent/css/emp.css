@@ -42,3 +42,14 @@
 }
 
 body { font-family: 'Titillium Web', sans-serif; }
+
+.indol_request_th th, .indol_request_td td{
+	text-align: center;
+}
+
+.jubis_th th, .jubis_td td{
+	text-align: center;
+}
+#jubis_table{
+	margin-top: 2%;
+}

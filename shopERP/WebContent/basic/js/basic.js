@@ -4,6 +4,9 @@ $(function(){
 	})
 	$('#updateBtn').on('click', function(){
 <<<<<<< HEAD
+		$('.update').css("display","block");
+=======
+<<<<<<< HEAD
 		
 		$("input[name=id_box]:checked").each(function() {
 			var upSelect = $(this).val();
@@ -15,6 +18,7 @@ $(function(){
 		$('.update').css("display","block")
 =======
 		$('.update').css("display","block");
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 >>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 	})
 	$('.closeBtn').click(function(){
@@ -49,4 +53,8 @@ $(function(){
 		});
 	});
 	
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git

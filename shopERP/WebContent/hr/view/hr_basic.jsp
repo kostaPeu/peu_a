@@ -9,11 +9,22 @@
 <link rel="stylesheet" href="/shopERP/css/emp.css">
 <link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 <script src="/shopERP/js/bootstrap.min.js"></script>
+<<<<<<< HEAD
+<%
+	String check = request.getParameter("result");
+%>
+=======
 
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 <script type="text/javascript">
 	$(function() {
 		$("#dept").click(function() {
 			$(".add_basic").css("display", "block");
+<<<<<<< HEAD
+			
+			$(".make_empty").val("");
+=======
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 
 			$(".basic_title").html("부서");
 
@@ -27,11 +38,36 @@
 
 			$("#insert_type").val("dept");
 			$("#update_type").val("dept");
+			
+			var b_type = $("#insert_type").val();
+			
+			$.ajax({
+				type : "POST",
+				url : "deptlist.hr",
+				data : {
+					"b_type" : b_type
+				},
+				success : function(data){
+					if($.trim(data)=="exist"){
+						alert("사용불가");
+						$("#can_use").val("no");
+					}
+					else{
+						alert("사용가능");
+						$("#can_use").val("yes");
+					}
+				}
+			})
 		});
 		$("#position").click(function() {
 			$(".add_basic").css("display", "block");
 
 			$(".basic_title").html("직급");
+<<<<<<< HEAD
+			
+			$(".make_empty").val("");
+=======
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 
 			$(".basic_info_head th:nth-child(1)").html("직급번호");
 			$(".basic_info_head th:nth-child(2)").html("직급명");
@@ -48,6 +84,11 @@
 			$(".add_basic").css("display", "block");
 
 			$(".basic_title").html("직무");
+<<<<<<< HEAD
+			
+			$(".make_empty").val("");
+=======
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 
 			$(".basic_info_head th:nth-child(1)").html("직무번호");
 			$(".basic_info_head th:nth-child(2)").html("직무명");
@@ -64,6 +105,11 @@
 			$(".add_basic").css("display", "block");
 
 			$(".basic_title").html("직책");
+<<<<<<< HEAD
+			
+			$(".make_empty").val("");
+=======
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 
 			$(".basic_info_head th:nth-child(1)").html("직책번호");
 			$(".basic_info_head th:nth-child(2)").html("직책명");
@@ -76,6 +122,31 @@
 			$("#insert_type").val("duty");
 			$("#update_type").val("duty");
 		});
+<<<<<<< HEAD
+	
+			
+		$("#check_id").click(function() {
+			var b_id = $("#basic_id_input").val();
+			var b_type = $("#insert_type").val();
+			
+			$.ajax({
+				type : "POST",
+				url : "idcheck.hr",
+				data : {
+					"b_id" : b_id,
+					"b_type" : b_type
+				},
+				success : function(data){
+					if($.trim(data)=="exist"){
+						alert("사용불가");
+						$("#can_use").val("no");
+					}
+					else{
+						alert("사용가능");
+						$("#can_use").val("yes");
+					}
+				}
+=======
 
 		$("#check_id").click(function() {
 			var b_id = $("#basic_id_input").val();
@@ -100,6 +171,7 @@
 					} 
 					alert((data));
 				} */
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 			})
 		});
 
@@ -135,7 +207,10 @@
 				</table>
 			</div>
 		</div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 		<form class="form-horizontal" id="b_insert" action="basic_insert.hr"
 			method="post">
 			<div class="form-group">
@@ -143,7 +218,11 @@
 					<label id="insert_id_label" for="basic_id_label"
 						class="col-sm-2 control-label">부서번호</label>
 					<div class="col-sm-2">
+<<<<<<< HEAD
+						<input type="text" class="form-control make_empty" name="basic_id"
+=======
 						<input type="text" class="form-control" name="basic_id"
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 							id="basic_id_input">
 					</div>
 					<div class="col-sm-1">
@@ -152,11 +231,16 @@
 					<label id="insert_name_label" for="basic_name_label"
 						class="col-sm-2 control-label">부서명</label>
 					<div class="col-sm-3">
-						<input type="text" class="form-control" name="basic_name">
+						<input type="text" class="form-control make_empty" name="basic_name">
 					</div>
 
 					<input type="hidden" id="insert_type" name="basic_type"
 						value="dept">
+<<<<<<< HEAD
+					<input type="hidden" id="can_use" name="can_use_type"
+						value="no">
+=======
+>>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 
 					<div class="col-sm-1">
 						<button type="submit" class="btn btn-default">등록</button>
@@ -171,13 +255,13 @@
 					<label id="update_id_label" for="basic_id_label"
 						class="col-sm-2 control-label">부서번호</label>
 					<div class="col-sm-2">
-						<input type="text" class="form-control" name="basic_id">
+						<input type="text" class="form-control make_empty" name="basic_id">
 					</div>
 
 					<label id="update_name_label" for="basic_name_label"
 						class="col-sm-2 col-sm-offset-1 control-label">부서명</label>
 					<div class="col-sm-3">
-						<input type="text" class="form-control" name="basic_name">
+						<input type="text" class="form-control make_empty" name="basic_name">
 					</div>
 
 					<input type="hidden" id="update_type" name="basic_type"
