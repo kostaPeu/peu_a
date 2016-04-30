@@ -32,8 +32,18 @@
 	</update>
 	
 	<!-- notice list 불러옴. -->
-	<select id="noticeList" resultType="Notice">
-		select * from notice order by notice_id desc
+	<select id="noticeList" resultType="Notice" parameterType="Paging">
+	SELECT *
+		FROM (SELECT ROWNUM as rnum, A.* 
+					FROM (SELECT * 
+								FROM notice 
+								ORDER BY notice_date DESC) A 
+					WHERE ROWNUM <![CDATA[<]]> = #{limit}) 
+		WHERE rnum <![CDATA[>]]> = #{start } 
+	</select>
+
+	<select id="noticeCount" resultType="int">
+		select count(*) from notice
 	</select>
 
 	<select id="noticeReplyList" resultType="NoticeReply" parameterType="int">

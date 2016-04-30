@@ -9,7 +9,7 @@
 		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
 		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>
 		<typeAlias type="shopERP.groupware.model.NoticeReply" alias="NoticeReply"/>
-
+		<typeAlias type="shopERP.groupware.action.Paging" alias="Paging"/>
 	</typeAliases>
 	
 	<environments default="development">

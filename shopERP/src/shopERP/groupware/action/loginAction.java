@@ -44,9 +44,11 @@ public class loginAction implements Action {
 			
 			if(pwd.equals(emp_pwd)){
 				System.out.println("로그인 성공.");
+				String main_e_name = service.getEmpName(emp_id);
 
 				session.setAttribute("emp_id", emp_id);
 				session.setAttribute("emp_pwd", emp_pwd);
+				session.setAttribute("main_e_name", main_e_name);
 			}else{
 				System.out.println("비번 틀림.");
 				

@@ -32,10 +32,24 @@
 
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
-
 </head>
 <body>
-
+	<c:if test="${coin != '' || coin ne null}">
+	
+		<c:if test="${coin eq '0'}">
+			<script type="text/javascript">
+				alert("삭제 권한이 없습니다.");
+			</script>
+		</c:if>
+		
+		<c:if test="${coin eq '1'}">
+			<script type="text/javascript">
+				alert("삭제 완료.");
+			</script>
+		</c:if>
+		
+	</c:if>
+	
 	<div class="container">
 		<h2>공지사항</h2>
 		<table class="table table-hover">
@@ -64,13 +78,22 @@
 			</tbody>
 		</table>
 
-		<ul class="pager">
+	<!-- 	<ul class="pager">
 			<li class="previous"><a href="#">Previous</a></li>
 			<li><a>1</a></li>
 			<li><a>2</a></li>
 			<li><a>3</a></li>
 			<li class="next"><a href="#">Next</a></li>
-		</ul>
+		</ul> -->
+		<jsp:include page="paging.jsp" flush="true">
+		    <jsp:param name="firstPageNo" value="${paging.firstPageNo}" />	
+		    <jsp:param name="prevPageNo" value="${paging.prevPageNo}" />
+		   	<jsp:param name="startPageNo" value="${paging.startPageNo}" />
+		    <jsp:param name="pageNo" value="${paging.pageNo}" />
+		    <jsp:param name="endPageNo" value="${paging.endPageNo}" />
+		    <jsp:param name="nextPageNo" value="${paging.nextPageNo}" />
+ 		    <jsp:param name="finalPageNo" value="${paging.finalPageNo}" />
+		</jsp:include>
 
 		<div class="row">
 			<a href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_write.jsp"	class="btn btn-info col-sm-1 col-sm-push-11">글쓰기</a>

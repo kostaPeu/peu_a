@@ -2,6 +2,8 @@ package shopERP.groupware.model;
 
 import java.util.List;
 
+import shopERP.groupware.action.Paging;
+
 public class GwService {
 	public static GwDao dao;
 	public static GwService service = new GwService();
@@ -11,14 +13,19 @@ public class GwService {
 		return service;
 	}
 
-	public List<Notice> noticeList(){
-		List<Notice> list = dao.noticeList();
+	public List<Notice> noticeList(Paging paging){
+		List<Notice> list = dao.noticeList(paging);
 		return list;
 	}
 	
 	public List<NoticeReply> noticeReplyList(int notice_id){
 		List<NoticeReply> list = dao.noticeReplyList(notice_id);
 		return list;
+	}
+
+	public int noticeCount(){
+		int count = dao.noticeCount();
+		return count;
 	}
 	
 	public String getEmpName(String emp_id){

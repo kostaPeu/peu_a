@@ -2,12 +2,14 @@ package shopERP.groupware.mapper;
 
 import java.util.List;
 
+import shopERP.groupware.action.Paging;
 import shopERP.groupware.model.Notice;
 import shopERP.groupware.model.NoticeReply;
 
 public interface GwMapper {
-	public List<Notice> noticeList();
+	public List<Notice> noticeList(Paging paging);
 	public List<NoticeReply> noticeReplyList(int notice_id);
+	public int noticeCount();
 	public String getEmpName(String emp_id);
 	public int noticeInsert(Notice notice);
 	public int noticeReplyInsert(NoticeReply noticeReply);

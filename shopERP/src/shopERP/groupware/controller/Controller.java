@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import shopERP.groupware.action.Action;
 import shopERP.groupware.action.ActionForward;
+import shopERP.groupware.action.Paging;
 import shopERP.groupware.action.loginAction;
 import shopERP.groupware.action.noticeDeleteAction;
 import shopERP.groupware.action.noticeInsertAction;
@@ -50,7 +51,7 @@ public class Controller extends HttpServlet {
 		ActionForward forward = null;
 
 		if (command.equals("noticeListAction.gw")) {
-			action = new noticeListAction();
+		    action = new noticeListAction();
 			forward = action.excute(request, response);
 		}else if(command.equals("noticeInsertAction.gw")){
 			action = new noticeInsertAction();

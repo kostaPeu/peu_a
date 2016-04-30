@@ -14,6 +14,7 @@ public class noticeDeleteAction implements Action {
 		GwService service= GwService.getInstance();
 		String id = request.getParameter("notice_id");
 		int notice_id = Integer.parseInt(id);
+		int coin=0;
 		
 		HttpSession session = request.getSession();
 		String e_id = (String)session.getAttribute("emp_id");
@@ -24,13 +25,11 @@ public class noticeDeleteAction implements Action {
 		
 		if(e_id.equals(notice.getEmp_id())){
 			service.noticeDelete(notice_id);
-			System.out.println("삭제 완료.");
-		}else{
-			System.out.println("삭제 권한 없음.");
+			coin=1;
 		}
-
+		
 		forward.setRedirect(true);
-		forward.setPath("noticeListAction.gw");
+		forward.setPath("noticeListAction.gw?coin="+coin);
 
 		return forward;
 	}

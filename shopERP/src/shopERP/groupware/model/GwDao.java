@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import shopERP.groupware.action.Paging;
 import shopERP.groupware.mapper.GwMapper;
 
 public class GwDao {
@@ -29,12 +30,12 @@ public class GwDao {
 		return new SqlSessionFactoryBuilder().build(input);
 	}
 
-	public List<Notice> noticeList() {
+	public List<Notice> noticeList(Paging paging) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		List<Notice> list = null;
 
 		try {
-			list = sqlSession.getMapper(GwMapper.class).noticeList();
+			list = sqlSession.getMapper(GwMapper.class).noticeList(paging);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -57,6 +58,21 @@ public class GwDao {
 		}
 		
 		return list;
+	}
+
+	public int noticeCount() {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int count=0;
+		
+		try {
+			count = sqlSession.getMapper(GwMapper.class).noticeCount();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		
+		return count;
 	}
 
 	public String getEmpName(String emp_id) {
