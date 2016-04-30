@@ -60,4 +60,86 @@ private static ErpDao dao = new ErpDao();
 		}
 		return list;
 	}
+
+	public List<Customer> customerList() {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		List<Customer> list = null;
+		try {
+			list = sqlSession.getMapper(ErpMapper.class).customerList();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return list;
+	}
+
+	public List<Product> productList() {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		List<Product> list = null;
+		try {
+			list = sqlSession.getMapper(ErpMapper.class).productList();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return list;
+	}
+
+	public List<WareHouse> warehouseList() {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		List<WareHouse> list = null;
+		try {
+			list = sqlSession.getMapper(ErpMapper.class).warehouseList();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return list;
+	}
+
+	public void updateStockAmount(Purchase purchase) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = -1;
+		try {
+			re = sqlSession.getMapper(ErpMapper.class).updateStockAmount(purchase);
+			if(re > 0){
+				sqlSession.commit();
+			}else{
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}		
+	}
+
+	public List<PurchaseSearch> searchPurchase() {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		List<PurchaseSearch> list = null;
+		try {
+			list = sqlSession.getMapper(ErpMapper.class).searchPurchase();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return list;
+	}
+
+	public List<PurchaseListView> searchPurchaseList(Search search) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		List<PurchaseListView> list = null;
+		try {
+			list = sqlSession.getMapper(ErpMapper.class).searchPurchaseList(search);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return list;
+	}
 }

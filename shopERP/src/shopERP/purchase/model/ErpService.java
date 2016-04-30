@@ -13,9 +13,25 @@ public class ErpService {
 		return service;
 	}
 	public int insertPurchase(Purchase purchase){
+		dao.updateStockAmount(purchase);
 		return dao.insertPurchase(purchase);
 	}
 	public List<PurchaseListView> purchaseList(){
 		return dao.purchaseList();
+	}
+	public List<Customer> customerList(){
+		return dao.customerList();
+	}
+	public List<Product> productList(){
+		return dao.productList();
+	}
+	public List<WareHouse> warehouseList(){
+		return dao.warehouseList();
+	}
+	public List<PurchaseSearch> searchPurchase(){
+		return dao.searchPurchase();
+	}
+	public List<PurchaseListView> SearchPurchaseList(Search search){
+		return dao.searchPurchaseList(search);
 	}
 }

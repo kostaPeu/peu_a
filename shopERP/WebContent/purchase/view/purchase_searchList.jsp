@@ -22,8 +22,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="purchase/css/purchase.css" rel="stylesheet">
     
-    <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="purchase/js/purchase.js" type="text/javascript"></script>
+    <script src="js/jquery.js" type="text/javascript"></script><!-- 
+    <script src="purchase/js/purchase.js" type="text/javascript"></script> -->
 </head>
 <body>
 	<table class="table table-bordered table-hover new">
@@ -54,10 +54,5 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<div class="buttongroup">
-		<input type="button" id="newBtn" class="btn btn-default" value="등록" onclick="fn_add()">
-		<input type="button" id="newBtn" class="btn btn-default" value="수정">
-		<input type="button" id="newBtn" class="btn btn-default" value="삭제">
-	</div>
 </body>
 </html>

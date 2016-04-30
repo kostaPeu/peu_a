@@ -10,13 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import shopERP.basic.action.Action;
-<<<<<<< HEAD
 import shopERP.basic.action.ActionForward;
-=======
 import shopERP.basic.action.ActionForward;
 import shopERP.basic.action.CustomerAction;
 import shopERP.basic.action.CustomerList;
->>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 import shopERP.basic.action.deleteProductAction;
 import shopERP.basic.action.insertProductAction;
 import shopERP.basic.action.productCodeListAction;
@@ -73,7 +70,6 @@ public class Controller extends HttpServlet {
 			forward = action.excute(request, response);
 		}else if(command.equals("productCodeJson.ba")){
 			action = new productCodeListAction();
-			System.out.println("액션성공!");
 			forward = action.excute(request, response);
 		}
 		

@@ -1,4 +1,4 @@
-package shopERP.purchase.controller;
+package shopERP.sale.controller;
 
 import java.io.IOException;
 
@@ -9,18 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import shopERP.purchase.action.Action;
-import shopERP.purchase.action.ActionForward;
-import shopERP.purchase.action.CustomerList;
-import shopERP.purchase.action.InsertPurchase;
-import shopERP.purchase.action.ProductList;
-import shopERP.purchase.action.PurchaseList;
-import shopERP.purchase.action.SearchPurchase;
-import shopERP.purchase.action.SearchPurchaseList;
-import shopERP.purchase.action.WareHouseList;
-import shopERP.purchase.model.Product;
+import shopERP.sale.action.Action;
+import shopERP.sale.action.ActionForward;
+import shopERP.sale.action.InsertSale;
+import shopERP.sale.action.SaleList;
+import shopERP.sale.action.SearchSaleList;
 
-@WebServlet("*.pc")
+@WebServlet("*.sale")
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -48,28 +43,16 @@ public class Controller extends HttpServlet {
 		Action action = null;
 		ActionForward forward = null;
 		
-		if(command.equals("insertPurchase.pc")) {
-			action = new InsertPurchase();
+		if(command.equals("insertSale.sale")) {
+			action = new InsertSale();
 			forward = action.excute(request, response);
-		}else if(command.equals("PurchaseList.pc")) {
-			action = new PurchaseList();
+		}else if(command.equals("SaleList.sale")) {
+			action = new SaleList();
 			forward = action.excute(request, response);
-		}else if(command.equals("GetCustomerValue.pc")){
-			action = new CustomerList();
+		}else if(command.equals("SaleSearch.sale")) {
+			action = new SearchSaleList();
 			forward = action.excute(request, response);
-		}else if(command.equals("GetProductValue.pc")){
-			action = new ProductList();
-			forward = action.excute(request, response);
-		}else if(command.equals("GetWarehouseValue.pc")){
-			action = new WareHouseList();
-			forward = action.excute(request, response);
-		}else if(command.equals("GetPurchaseValue.pc")){
-			action = new SearchPurchase();
-			forward = action.excute(request, response);
-		}else if(command.equals("SearchPurchase.pc")){
-			action = new SearchPurchaseList();
-			forward = action.excute(request, response);
-		}			
+		}
 		if (forward != null) {
 			if (forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());
