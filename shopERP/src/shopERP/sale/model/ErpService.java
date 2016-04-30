@@ -21,4 +21,7 @@ public class ErpService {
 	public List<SaleListView> searchSaleList(Search search) {
 		return dao.searchSaleList(search);
 	}
+	public int insertCbuy(Company_buy cbuy) {
+		return dao.insertCbuy(cbuy);
+	}
 }

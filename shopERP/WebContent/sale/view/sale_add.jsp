@@ -37,17 +37,17 @@
 				<tr>
 					<td><input type="text" name="sell_id" id="sell_id" size="8"></td>
 					<td>
-						<input type="text" name="customer_id" id="customer_id" size="8">
+						<input type="text" name="customer_id" id="customer_id" size="15">
 						<button type="button" id="customer_SearchKey" class="btn btn-info btn-sm" data-toggle="modal" data-target="#customerSearch_modal"><span class="fa fa-search"></span></button>
 					</td>
 					<td>
-						<input type="text" name="product_id" id="product_id" size="8">
+						<input type="text" name="product_id" id="product_id" size="15">
 						<button type="button" id="product_SearchKey" class="btn btn-info btn-sm" data-toggle="modal" data-target="#productSearch_modal"><span class="fa fa-search"></span></button>
 					</td>
-					<td><input type="text" name="sell_price" id="sell_price" size="8"></td>
-					<td><input type="text" name="sell_amount" id="sell_amount" size="8"></td>
+					<td><input type="text" name="sell_price" id="sell_price" size="15"></td>
+					<td><input type="text" name="sell_amount" id="sell_amount" size="15"></td>
 					<td>
-						<input type="text" name="warehouse_id" id="warehouse_id" size="8">
+						<input type="text" name="warehouse_id" id="warehouse_id" size="15">
 						<button type="button" id="warehouse_SearchKey" class="btn btn-info btn-sm" data-toggle="modal" data-target="#warehouseSearch_modal"><span class="fa fa-search"></span></button>
 					</td>
 					<td>
@@ -58,14 +58,14 @@
 					</td>
 				</tr>
 			</table>
-			<table class="table table-bordered table-hover new">
+			<!-- <table class="table table-bordered table-hover new">
 				<tr>
 					<td>수량</td>
 					<td><input type="text" name="" id=""></td>
 					<td>합계금액</td>
 					<td><input type="text" name="" id=""></td>
 				</tr>
-			</table>
+			</table> -->
 		<div class="buttongroup">
 			<input type="submit" id="save" class="btn btn-default" value="저장">			
 		</div>
