@@ -45,10 +45,8 @@
 			</div>
 		</div>
 		<!--logo end-->
-
-<<<<<<< HEAD
 	<!-- 상단 -->
-=======
+
 		<!-- topMenuBar start-->
 		<div class="erp-global-nav">
 			<ul>
@@ -64,8 +62,6 @@
 					href="./mainTest2.jsp?left=./stock/view/stock.jsp">재고관리</a></li>
 				<li class=""><a id="TopMainMenu6"
 					href="./mainTest2.jsp?left=./accounting/view/Accounleft.jsp">회계관리</a></li>
->>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
-
 				<li class=""><a id="TopMainMenu7"
 					href="./mainTest2.jsp?left=./hr/view/hr_side.jsp">인사관리</a></li>
 
@@ -87,9 +83,5 @@
 	<div class="container" id="contents">
 		<jsp:include page="<%=contents%>"></jsp:include>
 	</div>
-<<<<<<< HEAD
-
-=======
->>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 </body>
 </html>

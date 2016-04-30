@@ -10,20 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import shopERP.basic.action.Action;
-<<<<<<< HEAD
-import shopERP.basic.action.ActionForward;
-=======
 import shopERP.basic.action.ActionForward;
 import shopERP.basic.action.CustomerAction;
 import shopERP.basic.action.CustomerList;
->>>>>>> branch 'master' of https://github.com/kostaPeu/peu_a.git
 import shopERP.basic.action.deleteProductAction;
 import shopERP.basic.action.insertProductAction;
 import shopERP.basic.action.productCodeListAction;
 import shopERP.basic.action.productListAction;
 import shopERP.basic.action.updateProductAction;
-import shopERP.basic.action.CustomerAction;
-import shopERP.basic.action.CustomerList;
 
 @WebServlet("*.ba")
 public class Controller extends HttpServlet {
