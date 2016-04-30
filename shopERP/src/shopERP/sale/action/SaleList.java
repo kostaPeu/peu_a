@@ -1,25 +1,23 @@
-package shopERP.purchase.action;
+package shopERP.sale.action;
 
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import shopERP.purchase.model.ErpService;
-import shopERP.purchase.model.PurchaseListView;
+import shopERP.sale.model.ErpService;
+import shopERP.sale.model.Sale;
+import shopERP.sale.model.SaleListView;
 
-
-
-public class PurchaseList implements Action {
+public class SaleList implements Action {
 
 	@Override
 	public ActionForward excute(HttpServletRequest request,
 			HttpServletResponse response) {
-		
-		List<PurchaseListView> list = null;
+		List<SaleListView> list = null;
 		ErpService erpService = ErpService.getInstance();
 		try {
-			list = erpService.purchaseList();
+			list = erpService.saleList();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -28,8 +26,9 @@ public class PurchaseList implements Action {
 		}		
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("./mainTest2.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_check.jsp");
+		forward.setPath("./mainTest2.jsp?left=./sale/view/sale.jsp&contents=./sale/view/sale_check.jsp");
 		return forward;
+		
 	}
 
 }

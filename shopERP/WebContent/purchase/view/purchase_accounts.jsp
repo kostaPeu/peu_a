@@ -20,100 +20,55 @@
     <link rel="stylesheet" href="css/responsive.css">    
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="purchase/css/purchase.css" rel="stylesheet">
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-	
-	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-	<script src="js/jquery.js" type="text/javascript"></script> 
-    <script src="purchase/js/purchase.js" type="text/javascript"></script>   
+    <script src="/shopERP/js/jquery.js" type="text/javascript"></script> 
+	<link rel="stylesheet" href="/shopERP/purchase/css/jquery-ui.min.css">
+	<script src="/shopERP/purchase/js/jquery.min.js"></script>
+	<script src="/shopERP/purchase/js/jquery-ui.min.js"></script>
+    <script src="/shopERP/purchase/js/purchase2.js" type="text/javascript"></script>
+    <script src="/shopERP/purchase/js/purchase.js" type="text/javascript"></script>  
 </head>
 <body>
-	<div class="item_div">
-		<div class="title">
-			<span class=""><strong>품목코드검색</strong></span>
-			<button type="button" class="close" id="item_closeBtn"><span>&times;</span></button>
-		</div>
-		<form class="form-horizontal" action="">
-			<div class="form1">
-				<div class="form-group has-feedback">				
-					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong></label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="product_id">
-						<button class="btn btn-default btn-sm" type="submit"><span class="fa fa-search"></span></button>
-						<span></span>					
-					</div>
-				</div>
+<!-- 거래처 검색 -->
+<div id="customerSearch_modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+      
+    <div class="modal-content">
+	<div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">거래처 검색</h4>
+      </div>
+      <div class="modal-body">
+			<div class="col-sm-10">
+				<input type="text" class="form-control" name="customer_id" id="search_customerID">
 			</div>
-		</form>
-	</div>
-	<div class="customer_div">
-		<div class="title">
-			<span class=""><strong>거래처검색</strong></span>
-			<button type="button" class="close" id="customer_closeBtn"><span>&times;</span></button>
-		</div>
-		<form class="form-horizontal" action="">
-			<div class="form1">
-				<div class="form-group has-feedback">
-					<div class="radio">
-						<label class="radio-inline">
-	  						<input type="radio" name="search" id="simple_search" value="option1">간편검색
-						</label>
-						<label class="radio-inline">
-	  						<input type="radio" name="search" id="detail_search" value="option2">상세검색
-						</label>
-					</div>
-					<label for="product_id" class="col-sm-2 control-label"><strong>거래처코드</strong></label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="product_id">
-						<span></span>					
-					</div>
-					<div class="hide_detail">
-						<label for="product_id" class="col-sm-2 control-label"><strong>거래처명</strong></label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="product_id">
-							<span></span>					
-						</div>
-						<label for="product_id" class="col-sm-2 control-label"><strong>대표자명</strong></label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="product_id">
-							<span></span>					
-						</div>
-						<label for="product_id" class="col-sm-2 control-label"><strong>핸드폰번호</strong></label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="product_id">
-							<span></span>					
-						</div>
-						<label for="product_id" class="col-sm-2 control-label"><strong>email</strong></label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="product_id">
-							<span></span>					
-						</div>
-						<label for="product_id" class="col-sm-2 control-label"><strong>FAX</strong></label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="product_id">
-							<span></span>					
-						</div>
-						<label for="product_id" class="col-sm-2 control-label"><strong>담당자</strong></label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="product_id">							
-							<span></span>					
-						</div>						
-					</div><!-- hide detail end -->
-					<button class="btn btn-default btn-sm" type="submit"><span class="fa fa-search"></span></button>
-				</div>
+			<div class="col-sm-2">
+				<button type="button" class="btn btn-info btn-sm" id="customerID"><span class="fa fa-search"></span></button>
 			</div>
-		</form>
-	</div><!-- customer_div End -->
+			<br><br><br>
+  			<table id="searchTable" class="table table-bordered table-hover">
+  				
+			</table>
+			<div id="useBtnArea">
+				<input type="button" class="btn btn-default center useBtn" value="사용" data-dismiss="modal">
+			</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div><!-- 거래처 끝 -->
+<form class="form-horizontal" action="SearchPurchase.pc">
 	<table class="table table-bordered table-hover new">
 		<tr>
 			<td>기준일자</td>
-			<td><input type="text" id="purchase_date" name="" id=""> ~ <input type="text" id="purchase_date" name="" id=""></td>
+			<td><input type="text" class="purchase_date" name="" id=""> ~ <input type="text" class="purchase_date" name="" id=""></td>
 		</tr>
 		<tr>
-			<td>거래처</td>
+			<td>거래처코드</td>
 			<td>
-				<input type="text" id="" name="">
-				<button id="customer_search" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button>
+				<input type="text" name="customer_id" id="customer_id" size="8">
+				<button type="button" id="customer_SearchKey" class="btn btn-info btn-sm" data-toggle="modal" data-target="#customerSearch_modal"><span class="fa fa-search"></span></button>
 			</td>
 		</tr>
 		<tr>
@@ -125,8 +80,8 @@
 		</tr>
 	</table>
 	<div class="buttongroup">
-		<input type="button" id="newBtn" class="btn btn-default" value="등록">
 		<input type="button" id="searchBtn" class="btn btn-default" value="검색">
 	</div>
+</form>
 </body>
 </html>

@@ -1,4 +1,4 @@
-/*$(function(){
+$(function(){
 	$('#item_search').click(function(){
 		$('.item_div').css("display","block")
 	})
@@ -17,14 +17,9 @@
 	$('#simple_search').click(function(){
 		$('.hide_detail').css("display","none");
 	})
-})*/
+	
+})
 $(function(){
-	$('.purchase_date').datepicker({
-		showButtonPanel : true,
-		dateFormat : "yy-mm-dd",
-		changeYear : true,
-		changeMonth : true
-	});
 	//거래처 인풋창 초기화
 	$('#customer_SearchKey').click(function(){
 		$('#searchTable').empty();
@@ -134,6 +129,3 @@ $(function(){
 		$('#w_searchTable').append(html);
 	}
 })
-function fn_add(){	
-	location.href = "./mainTest2.jsp?left=./sale/view/sale.jsp&contents=./sale/view/sale_add.jsp";
-}
