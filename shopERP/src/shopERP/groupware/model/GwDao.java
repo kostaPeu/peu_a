@@ -45,6 +45,21 @@ public class GwDao {
 		return list;
 	}
 
+	public List<Notice> noticeSearch(Search search) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		List<Notice> list = null;
+		
+		try {
+			list = sqlSession.getMapper(GwMapper.class).noticeSearch(search);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		
+		return list;
+	}
+
 	public List<NoticeReply> noticeReplyList(int notice_id) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		List<NoticeReply> list = null;

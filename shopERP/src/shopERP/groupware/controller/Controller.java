@@ -17,6 +17,7 @@ import shopERP.groupware.action.noticeDeleteAction;
 import shopERP.groupware.action.noticeInsertAction;
 import shopERP.groupware.action.noticeListAction;
 import shopERP.groupware.action.noticeReplyInsertAction;
+import shopERP.groupware.action.noticeSearchAction;
 import shopERP.groupware.action.noticeUpdateAction;
 import shopERP.groupware.action.noticeUpdateFormAction;
 import shopERP.groupware.action.noticeViewAction;
@@ -72,8 +73,10 @@ public class Controller extends HttpServlet {
 			action = new noticeReplyInsertAction();
 			forward = action.excute(request, response);
 		}else if(command.equals("replyDeleteAction.gw")){
-			System.out.println("뭐냐 니는");
 			action = new replyDeleteAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("noticeSearchAction.gw")){
+			action = new noticeSearchAction();
 			forward = action.excute(request, response);
 		}
 		else if(command.equals("loginAction.gw")){

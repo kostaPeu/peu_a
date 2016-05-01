@@ -46,6 +46,18 @@
 		select count(*) from notice
 	</select>
 
+	<select id="noticeSearch" resultType="Notice" parameterType="Search">
+		select * from notice where 1=1
+		
+		  <if test="title != null">
+    		AND title like #{title}
+		  </if>
+  		  <if test="author != null and author.name != null">
+    		AND author_name like #{author.name}
+		  </if>
+		  
+	</select>
+
 	<select id="noticeReplyList" resultType="NoticeReply" parameterType="int">
 		select * from notice_reply where notice_id=#{notice_id} order by nreply_date
 	</select>

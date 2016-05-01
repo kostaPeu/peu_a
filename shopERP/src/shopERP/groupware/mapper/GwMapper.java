@@ -5,9 +5,11 @@ import java.util.List;
 import shopERP.groupware.action.Paging;
 import shopERP.groupware.model.Notice;
 import shopERP.groupware.model.NoticeReply;
+import shopERP.groupware.model.Search;
 
 public interface GwMapper {
 	public List<Notice> noticeList(Paging paging);
+	public List<Notice> noticeSearch(Search search);
 	public List<NoticeReply> noticeReplyList(int notice_id);
 	public int noticeCount();
 	public String getEmpName(String emp_id);

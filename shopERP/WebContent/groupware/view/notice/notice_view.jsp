@@ -35,6 +35,7 @@
 			<a type="button" href="noticeListAction.gw" class="btn btn-default">목록</a>
 		</div>
 			<br/>
+			
 		<form action="noticeReplyInsertAction.gw?notice_id=${notice.notice_id }" method="post">
 			<div id="view_comment">
 				<ul class="list-unstyled">

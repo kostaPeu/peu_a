@@ -17,6 +17,11 @@ public class GwService {
 		List<Notice> list = dao.noticeList(paging);
 		return list;
 	}
+
+	public List<Notice> noticeSearch(Search search){
+		List<Notice> list = dao.noticeSearch(search);
+		return list;
+	}
 	
 	public List<NoticeReply> noticeReplyList(int notice_id){
 		List<NoticeReply> list = dao.noticeReplyList(notice_id);
