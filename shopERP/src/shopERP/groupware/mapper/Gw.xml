@@ -32,7 +32,7 @@
 	</update>
 	
 	<!-- notice list 불러옴. -->
-	<select id="noticeList" resultType="Notice" parameterType="Paging">
+	<select id="noticeList" resultType="Notice" parameterType="GwPaging">
 	SELECT *
 		FROM (SELECT ROWNUM as rnum, A.* 
 					FROM (SELECT * 
@@ -46,7 +46,7 @@
 		select count(*) from notice
 	</select>
 
-	<select id="noticeSearch" resultType="Notice" parameterType="Search">
+	<select id="noticeSearch" resultType="Notice" parameterType="GwSearch">
 		select * from notice where 1=1
 		
 		  <if test="title != null">

@@ -8,7 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import shopERP.groupware.action.Paging;
+import shopERP.groupware.action.GwPaging;
 import shopERP.groupware.mapper.GwMapper;
 
 public class GwDao {
@@ -30,7 +30,7 @@ public class GwDao {
 		return new SqlSessionFactoryBuilder().build(input);
 	}
 
-	public List<Notice> noticeList(Paging paging) {
+	public List<Notice> noticeList(GwPaging paging) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		List<Notice> list = null;
 
@@ -45,7 +45,7 @@ public class GwDao {
 		return list;
 	}
 
-	public List<Notice> noticeSearch(Search search) {
+	public List<Notice> noticeSearch(GwSearch search) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		List<Notice> list = null;
 		

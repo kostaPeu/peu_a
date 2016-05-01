@@ -8,5 +8,12 @@
 </head>
 <body>
 
+			<div id="file-upload">
+				<label class="control-label col-sm-1" for="title">첨부파일</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="title" placeholder="경로">
+					<button type="button" class="btn btn-default">찾기</button>
+				</div>
+			</div>
 </body>
 </html>

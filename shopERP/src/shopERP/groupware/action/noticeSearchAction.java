@@ -7,13 +7,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import shopERP.groupware.model.GwService;
 import shopERP.groupware.model.Notice;
-import shopERP.groupware.model.Search;
+import shopERP.groupware.model.GwSearch;
 
 public class noticeSearchAction implements Action {
 
 	@Override
 	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) {
-		Search search = new Search();
+		GwSearch search = new GwSearch();
 		String type = request.getParameter("type");
 		String word = request.getParameter("word");
 		

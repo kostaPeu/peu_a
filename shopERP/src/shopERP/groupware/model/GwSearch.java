@@ -1,12 +1,12 @@
 package shopERP.groupware.model;
 
-public class Search {
+public class GwSearch {
 	private String type;
 	private String word;
 	
-	public Search(){}
+	public GwSearch(){}
 
-	public Search(String type, String word) {
+	public GwSearch(String type, String word) {
 		super();
 		this.type = type;
 		this.word = word;

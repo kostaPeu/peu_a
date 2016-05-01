@@ -9,7 +9,6 @@
 		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
 		<typeAlias type="shopERP.basic.model.ListModel" alias="ListModel"/>
 		<typeAlias type="shopERP.basic.model.ListModelProduct" alias="ListModelProduct"/>
-		<typeAlias type="shopERP.basic.model.ListModelProductCode" alias="ListModelProductCode"/>
 		<typeAlias type="shopERP.basic.model.Product" alias="Product"/>
 		<typeAlias type="shopERP.basic.model.ProductCode" alias="ProductCode"/>
 		<typeAlias type="shopERP.basic.model.ProductGroup" alias="ProductGroup"/>
@@ -18,36 +17,51 @@
 		<typeAlias type="shopERP.basic.model.Standards" alias="Standards"/>
 	<!-- 기초관리 END -->
 	
-	<!-- 구매관리 START -->
-		<typeAlias type="shopERP.purchase.model.Customer" alias="Customer"/>
-		<typeAlias type="shopERP.purchase.model.ListModel" alias="ListModel"/>
-		<typeAlias type="shopERP.purchase.model.Product" alias="Product"/>
-		<typeAlias type="shopERP.purchase.model.Purchase" alias="Purchase"/>
-		<typeAlias type="shopERP.purchase.model.PurchaseListView" alias="PurchaseListView"/>
-		<typeAlias type="shopERP.purchase.model.PurchaseSearch" alias="PurchaseSearch"/>
-		<typeAlias type="shopERP.purchase.model.WareHouse" alias="WareHouse"/>
-	<!-- 구매관리 END -->
-	
-	<!-- 판매관리 START -->
-		<typeAlias type="shopERP.sale.model.ListModel" alias="ListModel"/>
-		<typeAlias type="shopERP.sale.model.Sale" alias="Sale"/>
-		<typeAlias type="shopERP.sale.model.SaleListView" alias="SaleListView"/>
-		<typeAlias type="shopERP.sale.model.Search" alias="Search"/>	
-	<!-- 판매관리 END -->
+	<!-- Purchase -->
+     	 <typeAlias type="shopERP.purchase.model.PurchaseListView" alias="PurchaseListView"/>
+         <typeAlias type="shopERP.purchase.model.Customer" alias="GetCustomer"/>
+         <typeAlias type="shopERP.purchase.model.Product" alias="GetProduct"/>
+         <typeAlias type="shopERP.purchase.model.WareHouse" alias="GetWareHouse"/>
+         <typeAlias type="shopERP.purchase.model.PurchaseSearch" alias="PurchaseSearch"/>
+         <typeAlias type="shopERP.purchase.model.Search" alias="PurchaseSearchList"/>
+            
+      <!-- Sale -->
+         <typeAlias type="shopERP.sale.model.Sale" alias="Sale"/>
+         <typeAlias type="shopERP.sale.model.SaleListView" alias="SaleListView"/>
+         <typeAlias type="shopERP.sale.model.Search" alias="SaleSearch"/>
+         <typeAlias type="shopERP.sale.model.Company_buy" alias="Company_buy"/>
+         <typeAlias type="shopERP.sale.model.Company_buyList" alias="Company_buyList"/>
 		
-	<!-- 회계 START-->
+<!-- 	회계 START -->
 		<typeAlias type="shopERP.accounting.model.Accounts" alias="Accounts"/>
 		<typeAlias type="shopERP.accounting.model.Cards" alias="Cards"/>
 		<typeAlias type="shopERP.accounting.model.MoneyPlan" alias="MoneyPlan"/>
-	<!-- 회계 END -->
-	<!-- 인사관리 START -->
+	 <!-- 회계 END  -->
+	
+	<!-- 주문/배송 START -->
+		<typeAlias type="shopERP.odm.model.ShoppingMall" alias="ShoppingMall"/>
+		<typeAlias type="shopERP.odm.model.OrderCollectList" alias="OrderCollectList"/>
+		<typeAlias type="shopERP.odm.model.Clients" alias="Clients"/>
+		<typeAlias type="shopERP.odm.model.OrderList" alias="OrderList"/>
+		<typeAlias type="shopERP.odm.model.OrderDetail" alias="OrderDetail"/>
+		<typeAlias type="shopERP.odm.model.FullOrder" alias="FullOrder"/>
+		<typeAlias type="shopERP.odm.model.DeliveryList" alias="DeliveryList"/>
+		<typeAlias type="shopERP.odm.model.Delivery" alias="Delivery"/>
+	<!-- 주문/배송 END -->
+	
+ 	<!-- 인사관리 START -->
 		<typeAlias type="shopERP.hr.model.deptList" alias="deptList"/>
-		<typeAlias type="shopERP.hr.model.hrbasic" alias="hrbasic"/>	
+		<typeAlias type="shopERP.hr.model.hr_basic" alias="hr_basic"/>	
 	<!-- 인사관리 END -->	
 	
 	<!-- 그룹웨어 START -->
-		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>	
-	<!-- 그룹웨어 END -->	
+		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>
+		<typeAlias type="shopERP.groupware.action.GwPaging" alias="GwPaging"/>
+		<typeAlias type="shopERP.groupware.action.GwSearch" alias="GwSearch"/>
+		<typeAlias type="shopERP.groupware.model.NoticeReply" alias="NoticeReply"/>
+		<typeAlias type="shopERP.groupware.model.ShareFolder" alias="ShareFolder"/>
+	<!-- 그룹웨어 END -->	 
+
 	</typeAliases>
 	
 	<environments default="development">
@@ -58,7 +72,8 @@
 			</dataSource>
 		</environment>		
 	</environments>
-	
+
+		
 	<mappers>
 		<mapper resource="shopERP/accounting/mapper/accounting.xml"/>
 		<mapper resource="shopERP/basic/mapper/Erp.xml"/>
@@ -67,6 +82,7 @@
 		<mapper resource="shopERP/purchase/mapper/Erp.xml"/>
 		<mapper resource="shopERP/purchase/mapper/purchase.xml"/>
 		<mapper resource="shopERP/sale/mapper/sale.xml"/>
+		<mapper resource="shopERP/odm/mapper/Odm.xml"/>
 	</mappers>
 	
 </configuration>

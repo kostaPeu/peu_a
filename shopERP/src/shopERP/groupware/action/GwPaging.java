@@ -1,6 +1,6 @@
 package shopERP.groupware.action;
 
-public class Paging {
+public class GwPaging {
 	
     private int pageSize; // 게시 글 수
     private int firstPageNo; // 첫 번째 페이지 번호

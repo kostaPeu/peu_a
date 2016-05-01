@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import shopERP.groupware.action.Action;
 import shopERP.groupware.action.ActionForward;
-import shopERP.groupware.action.Paging;
+import shopERP.groupware.action.GwPaging;
 import shopERP.groupware.action.depFileInsertAction;
 import shopERP.groupware.action.depFileListAction;
 import shopERP.groupware.action.downloadAction;

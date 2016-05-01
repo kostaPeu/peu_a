@@ -17,7 +17,7 @@ public class noticeListAction implements Action {
 	   GwService service = GwService.getInstance();
 	   int totalCount = service.noticeCount();
 	   
-	   Paging paging = new Paging();
+	   GwPaging paging = new GwPaging();
 	   paging.setPageNo(1);
 	   paging.setPageSize(8);
 	   paging.setTotalCount(totalCount);
