@@ -119,7 +119,6 @@
 		</tr>
 	</table>
 	<div class="buttongroup">
-		<input type="button" id="newBtn" class="btn btn-default" value="등록">
 		<input type="button" id="searchBtn" class="btn btn-default" value="검색">
 	</div>
 </body>

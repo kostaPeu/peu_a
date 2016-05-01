@@ -32,7 +32,6 @@
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
 <script src="./js/bootstrap-datepicker.js"></script>
 
-
 </head>
 <body>
 

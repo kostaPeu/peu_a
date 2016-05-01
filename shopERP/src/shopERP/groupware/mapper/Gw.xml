@@ -7,7 +7,7 @@
 	<cache />
 
 	<insert id="noticeInsert" parameterType="Notice">
-		insert into Notice(
+		insert into notice(
 			notice_id, emp_id, notice_title, notice_content, notice_date, notice_hit
 		)
 		values(
@@ -15,10 +15,51 @@
 			0
 		)
 	</insert>
+
+	<insert id="noticeReplyInsert" parameterType="Notice">
+		insert into notice_reply(
+			nreply_id, emp_id, nreply_content, nreply_date, nreply_ref, nreply_step, nreply_level, notice_id
+		)
+		values(
+			notice_reply_seq.NEXTVAL, #{emp_id}, #{nreply_content}, SYSDATE, 0, 0, 0,
+			#{notice_id}
+		)
+	</insert>
 	
-<!-- notice list 불러옴. -->
-	<select id="noticeList" resultType="Notice">
-		select * from notice
+	<update id="noticeUpdate" parameterType="Notice">
+		update notice set notice_title=#{notice_title}, notice_content=#{notice_content}
+			where notice_id=#{notice_id}
+	</update>
+	
+	<!-- notice list 불러옴. -->
+	<select id="noticeList" resultType="Notice" parameterType="Paging">
+	SELECT *
+		FROM (SELECT ROWNUM as rnum, A.* 
+					FROM (SELECT * 
+								FROM notice 
+								ORDER BY notice_date DESC) A 
+					WHERE ROWNUM <![CDATA[<]]> = #{limit}) 
+		WHERE rnum <![CDATA[>]]> = #{start } 
+	</select>
+
+	<select id="noticeCount" resultType="int">
+		select count(*) from notice
+	</select>
+
+	<select id="noticeSearch" resultType="Notice" parameterType="Search">
+		select * from notice where 1=1
+		
+		  <if test="title != null">
+    		AND title like #{title}
+		  </if>
+  		  <if test="author != null and author.name != null">
+    		AND author_name like #{author.name}
+		  </if>
+		  
+	</select>
+
+	<select id="noticeReplyList" resultType="NoticeReply" parameterType="int">
+		select * from notice_reply where notice_id=#{notice_id} order by nreply_date
 	</select>
 	
 	<!-- emp_id로 emp_name 불러옴 -->
@@ -27,9 +68,48 @@
 	</select>
 	
 	<select id="selectNotice" resultType="Notice" parameterType="int">
-		select * from Notice where notice_id = #{notice_id}
+		select * from notice where notice_id = #{notice_id}
+	</select>
+
+	<select id="selectNoticeReply" resultType="NoticeReply" parameterType="int">
+		select * from notice_reply where nreply_id = #{nreply_id}
 	</select>
 	
+	<delete id="noticeDelete" parameterType="int">
+		delete from notice where notice_id=#{notice_id}
+	</delete>
+
+	<delete id="replyDelete" parameterType="int">
+		delete from notice_reply where nreply_id=#{nreply_id}
+	</delete>
+	
+	<select id="loginIdCheck" resultType="int" parameterType="String">
+		select count(*) from employee where emp_id=#{emp_id}
+	</select>
+	
+	<select id="getPwd" resultType="String" parameterType="String">
+		select e_pwd from employee where emp_id=#{emp_id}
+	</select>
+	
+	<!-- ShareFolder -->
+	<insert id="depFileInsert" parameterType="ShareFolder">
+		insert into share_folder(
+			share_folder_id, file_type, file_name, file_size,
+			share_folder_date, down_amount, upload_file, emp_id
+		)
+		values(
+			share_folder_seq.NEXTVAL, #{file_type}, #{file_name}, #{file_size},
+			SYSDATE, 0, #{upload_file}, #{emp_id}
+		)
+	</insert>
+	
+	<select id="depFileList" resultType="ShareFolder">
+		SELECT * FROM share_folder
+	</select>
+	
+	<select id="selectShareFolder" resultType="ShareFolder" parameterType="int">
+		SELECT * FROM share_folder WHERE share_folder_id = #{share_folder_id}
+	</select>
 </mapper>
 
 

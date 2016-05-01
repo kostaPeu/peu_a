@@ -129,8 +129,13 @@
 
 
 #contents {
-    float: right;
+ 	float: left;
     width: 82.5%;
     padding:0;
-    margin: 3.9% 0 0;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right:0;
+	margin-left: 0;
+	left: -500px;
+
 }

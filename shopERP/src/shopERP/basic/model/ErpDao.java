@@ -3,6 +3,8 @@ package shopERP.basic.model;
 import java.io.InputStream;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
@@ -29,6 +31,7 @@ private static ErpDao dao = new ErpDao();
 		}
 		return new SqlSessionFactoryBuilder().build(input);
 	}
+
 	public int insertProduct(Product product) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		int re = -1;
@@ -141,56 +144,8 @@ private static ErpDao dao = new ErpDao();
 			sqlSession.close();
 		}
 		return re;
-	}
-
-	public Customer selectCustomer(String customer_id) {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		Customer customer = null;
-		try {
-			customer = sqlSession.getMapper(ErpMapper.class).selectCustomer(customer_id);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-			sqlSession.close();
 		}
-		return customer;
-	}
 
-	public int updateCustomer(Customer customer) {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		int re = -1;
-		try {
-			re = sqlSession.getMapper(ErpMapper.class).updateCustomer(customer);
-			if(re > 0){
-				sqlSession.commit();
-			}else{
-				sqlSession.rollback();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-			sqlSession.close();
-		}
-		return re;
-	}
-
-	public int deleteCustomer(String customer_id) {
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		int re = -1;
-		try {
-			re = sqlSession.getMapper(ErpMapper.class).deleteCustomer(customer_id);
-			if(re > 0){
-				sqlSession.commit();
-			}else{
-				sqlSession.rollback();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-			sqlSession.close();
-		}
-		return re;
-	}
 	public int totalCountProduct() {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		int re = 0;

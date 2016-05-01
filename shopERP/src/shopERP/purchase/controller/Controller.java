@@ -11,8 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import shopERP.purchase.action.Action;
 import shopERP.purchase.action.ActionForward;
+import shopERP.purchase.action.CustomerList;
 import shopERP.purchase.action.InsertPurchase;
+import shopERP.purchase.action.ProductList;
 import shopERP.purchase.action.PurchaseList;
+import shopERP.purchase.action.SearchPurchase;
+import shopERP.purchase.action.SearchPurchaseList;
+import shopERP.purchase.action.WareHouseList;
+import shopERP.purchase.model.Product;
 
 @WebServlet("*.pc")
 public class Controller extends HttpServlet {
@@ -45,11 +51,25 @@ public class Controller extends HttpServlet {
 		if(command.equals("insertPurchase.pc")) {
 			action = new InsertPurchase();
 			forward = action.excute(request, response);
-		}else if(command.equals("PurchaseList.ps")) {
+		}else if(command.equals("PurchaseList.pc")) {
 			action = new PurchaseList();
 			forward = action.excute(request, response);
-		}
-		
+		}else if(command.equals("GetCustomerValue.pc")){
+			action = new CustomerList();
+			forward = action.excute(request, response);
+		}else if(command.equals("GetProductValue.pc")){
+			action = new ProductList();
+			forward = action.excute(request, response);
+		}else if(command.equals("GetWarehouseValue.pc")){
+			action = new WareHouseList();
+			forward = action.excute(request, response);
+		}else if(command.equals("GetPurchaseValue.pc")){
+			action = new SearchPurchase();
+			forward = action.excute(request, response);
+		}else if(command.equals("SearchPurchase.pc")){
+			action = new SearchPurchaseList();
+			forward = action.excute(request, response);
+		}			
 		if (forward != null) {
 			if (forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());

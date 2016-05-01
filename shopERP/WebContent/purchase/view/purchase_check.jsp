@@ -31,41 +31,28 @@
 			<tr>
 				<th><input type="checkbox"></th>
 				<th>구매번호</th>
-				<th>거래처</th>
+				<th>거래처명</th>
 				<th>품목명</th>
 				<th>구매금액</th>
-				<th>구매수량</th>
+				<th>수량</th>
 				<th>구매일자</th>
 				<th>입고창고</th>
-			</tr>
+				<th>지급방법</th>
+			</tr>			
 		</thead>
 		<c:forEach var="list" items="${list }">
 			<tr>
-				<td><input type="checkbox" class="upSelect check_id" name="id_box" value="${list.customer_id }"></td>
+				<td><input type="checkbox" class="upSelect check_id" name="id_box"></td>
 				<td>${list.buy_id}</td>
-				<td>${list.customer_id }</td>
-				<td>${list.product_id }</td>
-				<td>${list.phone_number }</td>
-				<td>${list.customer_address }</td>
-				<td>${list.copy_bankbook }</td>
-				<td>${list.bankbook_check }</td>
-				<td>${list.customer_email }</td>
-				<td>${list.customer_fax }</td>
-				<td>${list.checkman }</td>
-				(pk)	customer_id(fk)	product_id(fk)	buy_date	warehouse_id(fk)	pay_type	buy_price	buy_amount
-				
+				<td>${list.customer_name }</td>
+				<td>${list.product_name }</td>
+				<td>${list.buy_price }</td>
+				<td>${list.buy_amount }</td>
+				<td>${list.buy_date }</td>
+				<td>${list.warehouse_name }</td>
+				<td>${list.pay_type }</td>		
 			</tr>
 		</c:forEach>
-		<tr>
-			<td><input type="checkbox"></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
 	</table>
 	<div class="buttongroup">
 		<input type="button" id="newBtn" class="btn btn-default" value="등록" onclick="fn_add()">

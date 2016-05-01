@@ -26,12 +26,11 @@ ul li {
 		<div class="erp-local-nav">
 			<ul class="local">
 				<li><a href="#">재무상태표</a></li>
-
 				<li data-toggle="collapse" href="#one" aria-expanded="false"
 					aria-controls="collapseListGroup"><a>회계기초등록</a>
 					<ul id="one" class="collapse" aria-expanded="false">
 						<li><a href="./accounting/view/moneyCheck.jsp">기초잔액등록</a></li>
-						<li><a href="./accounting/view/card.jsp">신용카드등록</a></li>
+						<li><a href="cardList.ac">신용카드등록</a></li>
 						<li><a href="accountList.ac">통장계좌등록</a></li>
 						<li><a href="./accounting/view/Project.jsp">프로젝트등록</a></li>
 					</ul></li>
@@ -63,8 +62,8 @@ ul li {
 					</ul></li>
 				<li><a class="" data-target="#five" data-toggle="collapse" href="javascript:;">자금계획관리</a>
 					<ul id="five" class="collapse">
-						<li><a href="./accounting/view/MoneyPlan_Add.jsp">자금계획등록</a></li>
-						<li><a href="./accounting/view/MoneyPlan_view.jsp">자금계획현금조회</a></li>
+						<li><a href="./accounting/view/MoneyPlan/MoneyPlan_Add.jsp">자금계획등록</a></li>
+						<li><a href="listMoneyPlan.ac">자금계획현금조회</a></li>
 						<li><a href="./accounting/view/MoneyPlan_promissory_view.jsp">자금계획전표조회</a></li>
 						<li><a href="./accounting/view/MoneyPlan_calendar.jsp">자금증감계획일정표</a></li>
 					</ul>

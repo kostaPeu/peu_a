@@ -43,11 +43,23 @@ public class Controller extends HttpServlet {
 		String requestUri = request.getRequestURI();
 		String conPath = request.getContextPath();
 		String command = requestUri.substring(conPath.length() + 1);
-		
 		Action action = null;
 		ActionForward forward = null;
-
-		if(command.equals("customerProc.ba")) {
+		System.out.println(command);
+		
+		if (command.equals("insertProduct.ba")) {
+			action = new insertProductAction();
+			forward = action.excute(request, response);
+		}else if (command.equals("productList.ba")) {
+			action = new productListAction();
+			forward = action.excute(request, response);
+		}else if (command.equals("updateProduct.ba")){
+			action = new updateProductAction();
+			forward = action.excute(request, response);
+		}else if (command.equals("deleteProduct.ba")){
+			action = new deleteProductAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("customerProc.ba")) {
 			action = new CustomerAction();
 			forward = action.excute(request, response);
 		}else if(command.equals("CustomerList.ba")){
