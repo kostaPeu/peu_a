@@ -1,4 +1,4 @@
-$(function(){
+/*$(function(){
 	$('#item_search').click(function(){
 		$('.item_div').css("display","block")
 	})
@@ -11,42 +11,132 @@ $(function(){
 	$('#customer_closeBtn').click(function(){
 		$('.customer_div').css("display","none")
 	})
-})
-$(function(){
-	$('.purchase_date').datepicker();
-	$('input').keyup(function(){
-		if($(this).val() != null){
-			$(this).next().addClass("glyphicon");
-			$(this).next().addClass("glyphicon-ok");
-			$(this).next().addClass("form-control-feedback");
-		}if($(this).val() == ""){
-			$(this).next().removeClass("glyphicon");
-			$(this).next().removeClass("glyphicon-ok");
-			$(this).next().removeClass("form-control-feedback");
-		}
-	})
 	$('#detail_search').click(function(){
 		$('.hide_detail').css("display","block");
 	})
 	$('#simple_search').click(function(){
 		$('.hide_detail').css("display","none");
 	})
-	/*$('.saleListAdd').on("click",function(){
-		var html = "<tr>";
-		html += "<td><input type='checkbox'></td>";
-		html += "<td></td>";
-		html += "<td><input type='text' name='' id='' size='8'></td>";
-		html += "<td><input type='text' name='' id='' size='8'></td>";
-		html += "<td><input type='text' name='' id='' size='8'></td>";
-		html += "<td><input type='text' name='' id='' size='8'></td>";
-		html += "<td><input type='text' name='' id='' size='8'></td>";
-		html += "<td><input type='text' name='' id='' size='8'></td>";
-		html += "<td><input type='text' name='' id='' size='8'></td>";
-		html += "<td><input type='text' name='' id='' size='8'></td>";
-		html += "</tr>";
-		$('#saleList').append(html);
-	})*/
+})*/
+$(function(){
+	$('.purchase_date').datepicker({
+		showButtonPanel : true,
+		dateFormat : "yy-mm-dd",
+		changeYear : true,
+		changeMonth : true
+	});
+	//거래처 인풋창 초기화
+	$('#customer_SearchKey').click(function(){
+		$('#searchTable').empty();
+		$('#search_customerID').val('');
+	})
+	//거래처 사용 버튼
+	$('.useBtn').on('click',function(){
+		var customerName = $('#search_customerID').val();
+		$('#customer_id').val(customerName);
+	})
+	
+	//거래처 테이블 클릭
+	$('#searchTable').on('click','.getValue',function(){
+		var customerName = $(this).find('.getCustomerName').text();
+		$('#search_customerID').val(customerName);
+	})
+	
+	// 거래처 검색
+	$('#customerID').click(function(){
+		var customer_id = $('#search_customerID').val();
+		var url = "GetCustomerValue.pc?customer_id="+customer_id;
+		$('#searchTable').empty();
+		$.ajax({
+			url : url,
+			dataType : 'json',
+			success : handler
+		});
+	});
+	function handler(data){
+		var html = '<tr><th>거래처 코드</th><th>거래처명</th><th>담당자</th></tr>';	
+		$.each(data, function(index, list){
+			html += '<tr class="getValue"><td class="getCustomerName">'+list.customer_id+'</td>';
+			html += '<td>'+list.customer_name+'</td>';
+			html += '<td>'+list.repre_name+'</td>';
+		});
+		$('#searchTable').append(html);
+	}
+	//품목 인풋창 초기화
+	$('#product_SearchKey').click(function(){
+		$('#p_searchTable').empty();
+		$('#search_productID').val('');
+	})
+	//품목 사용 버튼
+	$('.useBtn').on('click',function(){
+		var productName = $('#search_productID').val();
+		$('#product_id').val(productName);
+	})
+	//품목 테이블 클릭
+	$('#p_searchTable').on('click','.p_getValue',function(){
+		var productName = $(this).find('.p_getCustomerName').text();
+		$('#search_productID').val(productName);
+	})
+	//품목 검색
+	$('#productID').click(function(){
+		var product_id = $('#search_productID').val();
+		var url = "GetProductValue.pc?product_id="+product_id;
+		$('#p_searchTable').empty();
+		$.ajax({
+			url : url,
+			dataType : 'json',
+			success : p_handler
+		});
+	});
+	function p_handler(data){
+		var html = '<tr><th>품목 코드</th><th>품목명</th><th>원산지</th></tr>';	
+		$.each(data, function(index, list){
+			html += '<tr class="p_getValue"><td class="p_getCustomerName">'+list.product_id+'</td>';
+			html += '<td>'+list.product_name+'</td>';
+			html += '<td>'+list.made_in+'</td>';
+		});
+		$('#p_searchTable').append(html);
+	}
+	
+	//창고 인풋창 초기화
+	$('#warehouse_SearchKey').click(function(){
+		$('#w_searchTable').empty();
+		$('#search_warehouseID').val('');
+	})
+	//창고 사용 버튼
+	$('.useBtn').on('click',function(){
+		var warehouseName = $('#search_warehouseID').val();
+		$('#warehouse_id').val(warehouseName);
+	})
+	//창고 테이블 클릭
+	$('#w_searchTable').on('click','.w_getValue',function(){
+		var warehouseName = $(this).find('.w_getCustomerName').text();
+		$('#search_warehouseID').val(warehouseName);
+	})
+	//창고 검색
+	$('#warehouseID').click(function(){
+		var warehouse_id = $('#search_warehouseID').val();
+		var url = "GetWarehouseValue.pc?warehouse_id="+warehouse_id;
+		$('#w_searchTable').empty();
+		$.ajax({
+			url : url,
+			dataType : 'json',
+			success : w_handler
+		});
+	});
+	function w_handler(data){
+		var html = '<tr><th>창고 코드</th><th>창고명</th><th>창고위치</th></tr>';	
+		$.each(data, function(index, list){
+			html += '<tr class="w_getValue"><td class="w_getCustomerName">'+list.warehouse_id+'</td>';
+			html += '<td>'+list.warehouse_name+'</td>';
+			html += '<td>'+list.warehouse_loc+'</td>';
+		});
+		$('#w_searchTable').append(html);
+	}
 })
 function fn_add(){	
-	window.open("./sale/view/sale_add.jsp","구매입력","width=1000, height=800");
+	location.href = "./mainTest2.jsp?left=./sale/view/sale.jsp&contents=./sale/view/sale_add.jsp";
+}
+function fn_Cbuyadd(){
+	location.href = "./mainTest2.jsp?left=./sale/view/sale.jsp&contents=./sale/view/buyingMgt_add.jsp";
 }

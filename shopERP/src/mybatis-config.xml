@@ -5,12 +5,19 @@
 
 <configuration>
 	<typeAliases>
-		<typeAlias type="shopERP.accounting.model.Accounts" alias="Accounts"/>
-		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
+		<typeAlias type="shopERP.hr.model.hr_basic" alias="hr_basic"/>
+		<typeAlias type="shopERP.hr.model.deptList" alias="deptList"/>
 		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>
-		<typeAlias type="shopERP.groupware.model.NoticeReply" alias="NoticeReply"/>
-		<typeAlias type="shopERP.groupware.model.Search" alias="Search"/>
-		<typeAlias type="shopERP.groupware.action.Paging" alias="Paging"/>
+		<typeAlias type="shopERP.purchase.model.PurchaseListView" alias="PurchaseListView"/>
+		<typeAlias type="shopERP.purchase.model.Customer" alias="GetCustomer"/>
+		<typeAlias type="shopERP.purchase.model.Product" alias="GetProduct"/>
+		<typeAlias type="shopERP.purchase.model.WareHouse" alias="GetWareHouse"/>
+		<typeAlias type="shopERP.purchase.model.PurchaseSearch" alias="PurchaseSearch"/>
+		<typeAlias type="shopERP.purchase.model.Search" alias="PurchaseSearchList"/>
+		<typeAlias type="shopERP.purchase.model.Purchase" alias="Purchase"/>
+		<typeAlias type="shopERP.sale.model.Sale" alias="Sale"/>
+		<typeAlias type="shopERP.sale.model.SaleListView" alias="SaleListView"/>
+		<typeAlias type="shopERP.sale.model.Search" alias="SaleSearch"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -23,8 +30,11 @@
 	</environments>
 	
 	<mappers>
+		<mapper resource="shopERP/hr/mapper/HR.xml"/>
 		<mapper resource="shopERP/accounting/mapper/accounting.xml"/>
 		 <mapper resource="shopERP/groupware/mapper/Gw.xml"/>
+		  <mapper resource="shopERP/sale/mapper/sale.xml"/>
+		   <mapper resource="shopERP/purchase/mapper/purchase.xml"/>
 	</mappers>
 	
 </configuration>

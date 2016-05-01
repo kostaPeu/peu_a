@@ -1,6 +1,8 @@
 package shopERP.purchase.model;
 
-public class PurchaseListView {
+import java.io.Serializable;
+
+public class PurchaseListView implements Serializable{
 	private String buy_id;
 	private String customer_name;
 	private String product_name;	
