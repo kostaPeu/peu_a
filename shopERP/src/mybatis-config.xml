@@ -5,11 +5,10 @@
 
 <configuration>
 	<typeAliases>
-<!-- 		<typeAlias type="shopERP.basic.model.Product" alias="Product"/>
+ 		<typeAlias type="shopERP.basic.model.Product" alias="Product"/>
 		<typeAlias type="shopERP.basic.model.Standards" alias="Standards"/>
 		<typeAlias type="shopERP.basic.model.ProductGroup" alias="ProductGroup"/>
 		<typeAlias type="shopERP.basic.model.ProductList" alias="ProductList"/>
-	<typeAliases>
 		<typeAlias type="shopERP.accounting.model.Accounts" alias="Accounts"/>
 		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
 
@@ -17,7 +16,7 @@
 		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/> 
 		<typeAlias type="shopERP.purchase.model.Purchase" alias="Purchase"/>
 		<typeAlias type="shopERP.purchase.model.PurchaseListView" alias="PurchaseList"/>
-		<typeAlias type="shopERP.purchase.model.PurchaseList" alias="PurchaseList"/> -->
+		<typeAlias type="shopERP.purchase.model.PurchaseList" alias="PurchaseList"/>
 		<typeAlias type="shopERP.hr.model.hr_basic" alias="hr_basic"/>
 		<typeAlias type="shopERP.hr.model.deptList" alias="deptList"/>
 		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>
