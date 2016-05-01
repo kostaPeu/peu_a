@@ -24,7 +24,8 @@
          <typeAlias type="shopERP.purchase.model.WareHouse" alias="GetWareHouse"/>
          <typeAlias type="shopERP.purchase.model.PurchaseSearch" alias="PurchaseSearch"/>
          <typeAlias type="shopERP.purchase.model.Search" alias="PurchaseSearchList"/>
-            
+         <typeAlias type="shopERP.purchase.model.Purchase" alias="Purchase"/>
+
       <!-- Sale -->
          <typeAlias type="shopERP.sale.model.Sale" alias="Sale"/>
          <typeAlias type="shopERP.sale.model.SaleListView" alias="SaleListView"/>
@@ -57,7 +58,7 @@
 	<!-- 그룹웨어 START -->
 		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>
 		<typeAlias type="shopERP.groupware.action.GwPaging" alias="GwPaging"/>
-		<typeAlias type="shopERP.groupware.action.GwSearch" alias="GwSearch"/>
+		<typeAlias type="shopERP.groupware.model.GwSearch" alias="GwSearch"/>
 		<typeAlias type="shopERP.groupware.model.NoticeReply" alias="NoticeReply"/>
 		<typeAlias type="shopERP.groupware.model.ShareFolder" alias="ShareFolder"/>
 	<!-- 그룹웨어 END -->	 
@@ -79,8 +80,8 @@
 		<mapper resource="shopERP/basic/mapper/Erp.xml"/>
 		<mapper resource="shopERP/groupware/mapper/Gw.xml"/>
 		<mapper resource="shopERP/hr/mapper/HR.xml"/>
-		<mapper resource="shopERP/purchase/mapper/Erp.xml"/>
-		<mapper resource="shopERP/purchase/mapper/purchase.xml"/>
+<!-- 		<mapper resource="shopERP/purchase/mapper/Erp.xml"/>
+ -->		<mapper resource="shopERP/purchase/mapper/purchase.xml"/>
 		<mapper resource="shopERP/sale/mapper/sale.xml"/>
 		<mapper resource="shopERP/odm/mapper/Odm.xml"/>
 
