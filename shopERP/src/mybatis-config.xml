@@ -5,12 +5,26 @@
 
 <configuration>
 	<typeAliases>
+		<typeAlias type="shopERP.basic.model.Product" alias="Product"/>
+		<typeAlias type="shopERP.basic.model.Standards" alias="Standards"/>
+		<typeAlias type="shopERP.basic.model.ProductGroup" alias="ProductGroup"/>
+		<typeAlias type="shopERP.basic.model.ProductList" alias="ProductList"/>
+		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
+		<typeAlias type="shopERP.basic.model.Search" alias="Search"/>
 		<typeAlias type="shopERP.accounting.model.Accounts" alias="Accounts"/>
 		<typeAlias type="shopERP.basic.model.Customer" alias="Customer"/>
 		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>
-		<!-- <typeAlias type="shopERP.purchase.model.Purchase" alias="Purchase"/> -->
-		<!-- <typeAlias type="shopERP.purchase.model.PurchaseList" alias="PurchaseList"/> -->
+		<typeAlias type="shopERP.purchase.model.Purchase" alias="Purchase"/>
+ 		<typeAlias type="shopERP.purchase.model.PurchaseListView" alias="PurchaseList"/>
 		<typeAlias type="shopERP.groupware.model.Notice" alias="Notice"/>
+		<typeAlias type="shopERP.odm.model.ShoppingMall" alias="ShoppingMall"/>
+		<typeAlias type="shopERP.odm.model.OrderCollectList" alias="OrderCollectList"/>
+		<typeAlias type="shopERP.odm.model.Clients" alias="Clients"/>
+		<typeAlias type="shopERP.odm.model.OrderList" alias="OrderList"/>
+		<typeAlias type="shopERP.odm.model.OrderDetail" alias="OrderDetail"/>
+		<typeAlias type="shopERP.odm.model.FullOrder" alias="FullOrder"/>
+		<typeAlias type="shopERP.odm.model.DeliveryList" alias="DeliveryList"/>
+		<typeAlias type="shopERP.odm.model.Delivery" alias="Delivery"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -27,7 +41,8 @@
 		<mapper resource="shopERP/groupware/mapper/Gw.xml"/>
 		<mapper resource="shopERP/purchase/mapper/Erp.xml"/>
 		<mapper resource="shopERP/accounting/mapper/accounting.xml"/>
-		<mapper resource="shopERP/groupware/mapper/Gw.xml"/>
+		<mapper resource="shopERP/odm/mapper/Odm.xml"/>
+		
 	</mappers>
 	
 </configuration>

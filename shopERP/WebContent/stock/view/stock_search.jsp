@@ -11,6 +11,79 @@
 <script src="/shopERP/stock/js/jquery.min.js"></script>
 <script src="/shopERP/stock/js/jquery-ui.min.js"></script>
 <script src="/shopERP/stock/js/stock_search.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#newBtn').click(function(){
+		$('.add').css("display","block");
+	})
+	$('#updateBtn').click(function(){
+		$('.update').css("display","block");
+	})
+	$('.closeBtn').click(function(){
+		$('.xclose').css("display","none");
+	})
+})
+$(function(){
+	$('input').keyup(function(){
+		if($(this).val() != null){
+			$(this).next().addClass("glyphicon");
+			$(this).next().addClass("glyphicon-ok");
+			$(this).next().addClass("form-control-feedback");
+		}if($(this).val() == ""){
+			$(this).next().removeClass("glyphicon");
+			$(this).next().removeClass("glyphicon-ok");
+			$(this).next().removeClass("form-control-feedback");
+		}
+	})
+})
+$(function(){
+	$(".productChecked").click(function() {
+		$('#searchTable').empty();
+		$("input[name=productRow]:checked").each(function() {
+			var checks = $(this).val();
+			$(".product_id2").attr("value",checks);
+		});
+	});
+	$("#deleteBtn").on('click',function(){
+ 		$("input[name=productRow]:checked").each(function() {
+			var checks = $(this).val();
+			$(location).attr("href","deleteProduct.ba?checks="+checks);
+		});
+	});
+	
+});
+$(function(){
+	$('#search_product').keyup(function() {
+		var searchKey = $('#search_product').val();
+  		$.ajax({
+			url : "productCodeJson.ba?searchKey="+searchKey,
+			type : "post",
+			dataType : "json",
+			success : function(data) {
+				var html = "<tr><th>품목코드</th><th>품목명</th></tr>";
+				$('#searchTable').empty();
+				$.each(data, function(index, list) {
+					html += "<tr><td>" + list.product_id + "</td><td>" + list.product_name + "</td></tr>";
+			});
+				if(html == "<tr><th>품목코드</th><th>품목명</th></tr>"){
+					html += "<tr><td colspan='2'> 해당코드는 사용가능합니다.</td></tr>";
+					$('#useBtn').on('click',function(){
+						var searchKey = $('#search_product').val();
+						$('#product_id').val(searchKey);
+						$('#search_product').val('');
+						$('#myModal').modal('hide');
+					});
+				}; 
+				$('#searchTable').append(html);
+				},
+			error : function(){
+				alert("실패!");
+			}
+		});
+	});
+ 	
+});
+</script>
 </head>
 <body>
 	<div class="item_div">
@@ -73,11 +146,41 @@
 				</tr>
 				<tr>
 					<td>품목코드</td>
-					<td><input type="text" id="product_id" disabled="disabled">&nbsp;&nbsp;<button id="product_search" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button></td>
+					<td><input type="text" id="product_id" disabled="disabled">&nbsp;&nbsp;<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal"><span class="fa fa-search"></span></button></td>
 				</tr>
 			</table>
-				<a href="./mainTest.jsp?left=./stock/view/stock.jsp&contents=./stock/view/stock_search_calendar.jsp"" class="btn btn-default btn-sm localcenter"><span class="fa fa-search"></span></a>
+				<a href="./mainTest2.jsp?left=./stock/view/stock.jsp&contents=./stock/view/stock_search_calendar.jsp"" class="btn btn-default btn-sm localcenter"><span class="fa fa-search"></span></a>
 			</div>
-	</div>
+</div>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+      
+    <div class="modal-content">
+	<div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">중복확인(품목코드)</h4>
+      </div>
+      <div class="modal-body">
+			<div class="col-sm-10">
+				<input type="text" class="form-control" name="product_id" id="search_product">
+			</div>
+			<div class="col-sm-2">
+				<button type="button" class="btn btn-info btn-sm" id="search_id"><span class="fa fa-search"></span></button>
+			</div>
+			<br><br><br>
+  				<table id="searchTable" class="table table-bordered">
+				</table>
+				<div id="useBtnArea">
+					<input type="button" id="useBtn" class="btn btn-default center" value="사용">
+				</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 </body>
 </html>

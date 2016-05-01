@@ -1,19 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="/shopERP/odm/css/odm.css" rel="stylesheet">
 <script type="text/javascript">
 $(function(){
 	$('#collectBtn').on('click', function(){
-		$('.success').css("display","block");
-		/* $('.failed').css("display","block"); */
-	})
-	$('.closeBtn').click(function(){
-		$('.xclose').css("display","none")
-	})
+	 		$("input[name=shopList]:checked").each(function() {
+				var checks = $(this).val();
+				$(location).attr("href","orderCollect.odm?checks="+checks);
+				alert("ìˆ˜ì§‘ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.1");
+			});
+	 		/* $('.success').css("display","block"); */
+			/* $('.failed').css("display","block"); */
+
+		});
+/* 	$('.closeBtn').click(function(){
+		$('.xclose').css("display","none");
+	}); */
+	/* $('#successBtn').click(function(){
+		$(location).attr("href","shoppingMallList.odm");
+	}) */
 })
 </script>
 </head>
@@ -25,7 +35,8 @@ $(function(){
 			</button>
 		</div>
 		<br><br>
-		<div class="localcenter"><strong>¼öÁıÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.</strong></div>
+		<div class="localcenter"><strong>ìˆ˜ì§‘ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.</strong>
+			<button type="button" id="successBtn">í™•ì¸</button> </div>
 	</div>
 		<div class="failed xclose">
 		<div class="title">
@@ -33,25 +44,25 @@ $(function(){
 				<span>&times;</span>
 			</button>
 		</div>
-		<div class="localcenter"><strong>¿¡·¯!</strong></div>
+		<div class="localcenter"><strong>ì—ëŸ¬!</strong></div>
 	</div>
 	<div class="search">
 		<div class="searchform">
 			<table class="table table-bordered table-hover new">
 				<tr>
 					<th><input type="checkbox"></th>
-					<th>¼îÇÎ¸ô</th>
-					<th>¼îÇÎ¸ô ·Î±×ÀÎ ID</th>
-					<th>ÁÖ¹®¼öÁıÀÏ</th>
+					<th>ì‡¼í•‘ëª°ì´ë¦„</th>
+					<th>ì£¼ë¬¸ìˆ˜ì§‘ì¼</th>
 				</tr>
-				<tr class="localcenter">
-					<td><input type="checkbox"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
+				<c:forEach var="shop" items="${list }">
+					<tr class="localcenter">
+						<td><input type="checkbox" value="${shop.shoppingmall_name }" name="shopList"></td>
+						<td>${shop.shoppingmall_name }</td>
+						<td>${shop.collect_date }</td>
+					</tr>
+				</c:forEach>
 			</table>
-			<div class="localcenter"><input type="button" id="collectBtn" class="btn btn-default" value="¼öÁı"></div>
+			<div class="localcenter"><input type="button" id="collectBtn" class="btn btn-default" value="ìˆ˜ì§‘"></div>
 			
 		</div>
 	</div>

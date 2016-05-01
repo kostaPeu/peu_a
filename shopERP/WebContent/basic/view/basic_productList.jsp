@@ -23,45 +23,12 @@
 
 <!-- Custom CSS -->
 
-<link rel="stylesheet" href="/shopERP/css/style.css">
-<link rel="stylesheet" href="/shopERP/css/responsive.css">
-<script src="/shopERP/js/jquery.min.js"></script>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/responsive.css">
+<script src="./js/jquery.min.js"></script>
 <link href="/shopERP/basic/css/bootstrap.css" rel="stylesheet">
 <link href="/shopERP/basic/css/basic_productList.css" rel="stylesheet">
 <script src="/shopERP/basic/js/basic.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(function(){
-	$('#search_id').on('click', function() {
-		var searchKey = $('#search_product').val();
-		/* $(location).attr("href","productCodeJson.ba?searchKey="+searchKey); */
-		$('#searchTable').empty();
-		$('#useBtnArea').empty();
-		var html = "<tr><th>품목코드</th><th>품목명</th></tr>";
-  		$.ajax({
-			url : "productCodeJson.ba?searchKey="+searchKey,
-			type : "post",
-			dataType : "json",
-			success : function(data) {
-				var html = "<tr><th>품목코드</th><th>품목명</th></tr>";
-				$.each(data, function(index, list) {
-					html += "<tr><td>" + list.product_id + "</td><td>" + list.product_name + "</td></tr>";
-			});
-				if(html == "<tr><th>품목코드</th><th>품목명</th></tr>"){
-					html += "<tr><td colspan='2'> 해당코드는 사용가능합니다.</td></tr>";
-				}; 
-				$('#searchTable').append(html);
-				},
-			error : function(){
-				alert("실패!");
-			}
-		});
-	});
-	$('#useBtn').on('click',function(){
-		var searchKey = $('#search_product').val();
-		$('product_id').attr('value',searchKey);
-	});
-});
-</script>
 </head>
 <body>
 	<div class="add xclose">
@@ -143,7 +110,7 @@ $(function(){
 			</button>
 		</div>
 				<form class="form-horizontal" action="updateProduct.ba" method="post">
-			<div class="addform">
+			<div class="updateform">
 				<div class="form-group has-feedback">
 					<label for="product_id" class="col-sm-2 control-label"><strong>품목코드</strong>
 					</label>

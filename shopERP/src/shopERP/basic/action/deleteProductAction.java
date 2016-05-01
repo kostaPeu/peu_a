@@ -1,4 +1,6 @@
 package shopERP.basic.action;
+import java.io.UnsupportedEncodingException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -6,12 +8,17 @@ import shopERP.basic.action.Action;
 import shopERP.basic.action.ActionForward;
 import shopERP.basic.model.ErpService;
 import shopERP.basic.model.Product;
-
 public class deleteProductAction implements Action {
 
 	@Override
 	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) {
 		
+		try {
+			request.setCharacterEncoding("utf-8");
+		} catch (UnsupportedEncodingException e1) {
+
+			e1.printStackTrace();
+		}
 		String check = request.getParameter("checks");
 
 		ErpService service = ErpService.getInstance();
@@ -27,10 +34,8 @@ public class deleteProductAction implements Action {
 		
 		if(re == 1){
 			forward.setRedirect(true);
-			System.out.println("성공");
 			forward.setPath("productList.ba");
 		}else{
-			System.out.println("실패");
 /*			forward.setRedirect(true);
 			forward.setPath("insert_form.jsp");*/
 		}

@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import net.sf.json.JSONArray;
 import shopERP.basic.model.ErpService;
+import shopERP.basic.model.Product;
 import shopERP.basic.model.ProductCode;
 import shopERP.basic.model.Search;
 
@@ -22,7 +23,7 @@ public class productCodeListAction implements Action {
 		
 		search.setSearchKey("%"+request.getParameter("searchKey")+"%");
 		
-		List<ProductCode> list = null;
+		List<Product> list = null;
 		
 		try {
 			list = service.productCodeList(request,search);
@@ -38,10 +39,6 @@ public class productCodeListAction implements Action {
 		String jsonArray = JSONArray.fromObject(list).toString();
 		//JSONArray jsonArray = JSONArray.fromObject(list);
 		System.out.println(jsonArray);
-		/*Map<String, Object> map = new HashMap<String, Object>();
-		map.put("list", jsonArray);
-		JSONObject jsonObject = JSONObject.fromObject(map);
-		System.out.println("json - " + jsonObject);*/
 		
 		request.setAttribute("jsonArray", jsonArray);
 		ActionForward forward = new ActionForward();

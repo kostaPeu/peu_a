@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="shopERP.odm.mapper.OdmMapper">
+	<cache />	
+	<select id="shoppingMallList" resultType="ShoppingMall">
+		select shoppingmall_name, collect_date from shoppingmall
+	</select>
+	<select id="collectOrderList" resultType="OrderCollectList">
+		select d.shoporder_id, c.s_client_name, c.s_client_id, c.s_client_phonenumber, c.s_client_address, s.s_product_id, s.s_sell_price,d.s_detail_id, o.s_order_date, d.s_order_amount
+			from sell_product@link_shoppingmall s, shop_client@link_shoppingmall c, shop_order@link_shoppingmall o, shop_order_detail@link_shoppingmall d
+			where s.s_sell_id = d.s_sell_id and
+	  			o.shoporder_id = d.shoporder_id and
+	 			 o.s_client_id = c.s_client_id
+	</select>
+	<insert id="insertClient" parameterType="Clients">
+		insert into clients(
+			client_id,
+			client_name,
+			client_phonenumber,
+			client_address	
+		) values (
+			#{client_id},
+			#{client_name},
+			#{client_phonenumber},
+			#{client_address}
+		)
+	</insert>
+	<select id="maxClient" resultType="int">
+		select count(*) from clients
+	</select>
+	<select id="selectClientNames" resultType="Clients">
+		select client_name from clients
+	</select>
+	<insert id="insertOrderList" parameterType="OrderList">
+		insert into orderlist (
+			order_id,
+			client_id,
+			order_date
+		) values(
+			#{order_id},
+			#{client_id},
+			#{order_date}
+		)
+	</insert>
+	<insert id="insertOrderDetail" parameterType="OrderDetail">
+		insert into order_detail(
+			order_detail_id,
+			product_id,
+			order_amount,
+			order_id,
+			sell_price		
+		) values(
+			#{order_detail_id},
+			#{product_id},
+			#{order_amount},
+			#{order_id},
+			#{sell_price}
+		)
+	</insert>
+	<update id="updateOrderCollectDate" parameterType="String">
+		update shoppingmall set collect_Date = sysdate
+	where shoppingmall_name = #{shop_name}
+	</update>
+	<select id="fullOrderList" resultType="FullOrder">
+		select o.order_date,od.order_id,od.order_detail_id, p.product_id, p.product_name, c.client_name	
+		from orderlist o, product p, clients c, order_detail od
+		where c.client_id = o.client_id and
+			o.order_id = od.order_id and
+			od.product_id = p.product_id
+	</select>
+	<select id="maxDeliveryList" resultType="int">
+		select count(*) from delivery
+	</select>
+	<select id="DeliveryList" resultType="Delivery" parameterType="String">
+		select od.order_detail_id, c.client_name, c.client_address from orderlist o, clients c, order_detail od 
+		where o.client_id = c.client_id and 
+			od.order_id = o.order_id and order_detail_id = #{check}
+	</select>
+	<insert id="deliveryAdd" parameterType="DeliveryList">
+		insert into delivery(
+			delivery_id,
+			order_id,
+			invoice_number,
+			addressee,
+			addressee_address,
+			delivery_state
+		) values(
+			#{delivery_id},
+			#{order_id},
+			#{invoice_number},
+			#{addressee},
+			#{addressee_address},
+			#{delivery_state}
+		)
+	</insert>
+	<select id="selectDelivery" resultType="DeliveryList">
+		select * from delivery
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+

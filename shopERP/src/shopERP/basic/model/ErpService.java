@@ -75,7 +75,7 @@ public class ErpService {
 		return dao.deleteProduct(check);
 	}
 
-	public List<ProductCode> productCodeList(HttpServletRequest request, Search search) {
+	public List<Product> productCodeList(HttpServletRequest request, Search search) {
 		System.out.println("service");
 		System.out.println(request.getParameter("searchKey"));
 		if (request.getParameter("searchkey") != null) {

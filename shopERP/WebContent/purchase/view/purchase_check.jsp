@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -38,6 +39,23 @@
 				<th>입고창고</th>
 			</tr>
 		</thead>
+		<c:forEach var="list" items="${list }">
+			<tr>
+				<td><input type="checkbox" class="upSelect check_id" name="id_box" value="${list.customer_id }"></td>
+				<td>${list.buy_id}</td>
+				<td>${list.customer_id }</td>
+				<td>${list.product_id }</td>
+				<td>${list.phone_number }</td>
+				<td>${list.customer_address }</td>
+				<td>${list.copy_bankbook }</td>
+				<td>${list.bankbook_check }</td>
+				<td>${list.customer_email }</td>
+				<td>${list.customer_fax }</td>
+				<td>${list.checkman }</td>
+				(pk)	customer_id(fk)	product_id(fk)	buy_date	warehouse_id(fk)	pay_type	buy_price	buy_amount
+				
+			</tr>
+		</c:forEach>
 		<tr>
 			<td><input type="checkbox"></td>
 			<td></td>
