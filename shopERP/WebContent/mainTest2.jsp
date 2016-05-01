@@ -36,13 +36,19 @@
 	<div id="Top-Menu" class="wrapper-erp-global-nav">
 		<!-- logo start -->
 		<div class="erp-global-nav-qm">
-			<div class="qm-company-logo" >
+			<div class="qm-company-logo col-sm-1" >
 				<a href="mainTest2.jsp"><img width="150" height="35" alt="logo" src="images/logo2.png"></a>
 			</div>
+			<div class="hello col-sm-2 col-sm-push-9">
+				<span class="delicious-spam">
+					<a id = "a-in-spam" href="./mainTest2.jsp?left=./mypage/view/mypage.jsp">${main_e_name }</a>님 환영합니다.
+					<a href="logoutAction.gw" class="btn btn-default">로그아웃</a>
+				</span>
+			</div>
 		</div>
+
 		<!--logo end-->
 	<!-- 상단 -->
-
 		<!-- topMenuBar start-->
 		<div class="erp-global-nav">
 			<ul>

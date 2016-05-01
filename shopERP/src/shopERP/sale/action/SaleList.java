@@ -26,7 +26,7 @@ public class SaleList implements Action {
 		}		
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("./mainTest2.jsp?left=./sale/view/sale.jsp&contents=./sale/view/sale_check.jsp");
+		forward.setPath("./sale/view/sale_check.jsp");
 		return forward;
 		
 	}

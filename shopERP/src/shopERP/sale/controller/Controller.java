@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import shopERP.sale.action.Action;
 import shopERP.sale.action.ActionForward;
+import shopERP.sale.action.CbuyList;
 import shopERP.sale.action.InsertSale;
 import shopERP.sale.action.SaleList;
 import shopERP.sale.action.SearchSaleList;
@@ -57,7 +58,7 @@ public class Controller extends HttpServlet {
 			action = new insertcBuy();
 			forward = action.excute(request, response);
 		}else if(command.equals("CbuyList.sale")) {
-			action = new SearchSaleList();
+			action = new CbuyList();
 			forward = action.excute(request, response);
 		}	
 		if (forward != null) {

@@ -32,10 +32,24 @@
 
 <script src="./groupware/js/jquery-1.10.2.min.js"></script>
 <script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
-
 </head>
 <body>
-
+	<c:if test="${coin != '' || coin ne null}">
+	
+		<c:if test="${coin eq '0'}">
+			<script type="text/javascript">
+				alert("삭제 권한이 없습니다.");
+			</script>
+		</c:if>
+		
+		<c:if test="${coin eq '1'}">
+			<script type="text/javascript">
+				alert("삭제 완료.");
+			</script>
+		</c:if>
+		
+	</c:if>
+	
 	<div class="container">
 		<h2>공지사항</h2>
 		<table class="table table-hover">
@@ -64,35 +78,36 @@
 			</tbody>
 		</table>
 
-		<ul class="pager">
-			<li class="previous"><a href="#">Previous</a></li>
-			<li><a>1</a></li>
-			<li><a>2</a></li>
-			<li><a>3</a></li>
-			<li class="next"><a href="#">Next</a></li>
-		</ul>
+		<jsp:include page="../../paging.jsp" flush="true">
+		    <jsp:param name="firstPageNo" value="${paging.firstPageNo}" />	
+		    <jsp:param name="prevPageNo" value="${paging.prevPageNo}" />
+		   	<jsp:param name="startPageNo" value="${paging.startPageNo}" />
+		    <jsp:param name="pageNo" value="${paging.pageNo}" />
+		    <jsp:param name="endPageNo" value="${paging.endPageNo}" />
+		    <jsp:param name="nextPageNo" value="${paging.nextPageNo}" />
+ 		    <jsp:param name="finalPageNo" value="${paging.finalPageNo}" />
+		</jsp:include>
 
 		<div class="row">
 			<a href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_write.jsp"	class="btn btn-info col-sm-1 col-sm-push-11">글쓰기</a>
 		</div>
 
-		<div class="col-xs-2">
-			<div class="dropdown">
-				<button class="btn btn-primary dropdown-toggle" type="button"
-					data-toggle="dropdown">
-					제목+내용 <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu col-xs-2">
-					<li><a href="#">제목</a></li>
-					<li><a href="#">내용</a></li>
-					<li><a href="#">작성자</a></li>
-				</ul>
+
+		<form action="noticeSearchAction.gw" method="post">
+			<div class="col-xs-2">
+				<select name="type" class="form-control">
+					<option value="writer">글쓴이</option>
+					<option value="title">제목</option>
+					<option value="content">내용</option>
+				</select>
 			</div>
-		</div>
-		<div class="col-xs-2">
-			<input class="form-control" id="ex1" type="text">
-		</div>
-		<button type="button" class="btn btn-default">검색</button>
+			
+			<div class="col-xs-2">
+				<input class="form-control" id="ex1" type="text" name="word">
+			</div>
+			<button type="submit" class="btn btn-default">검색</button>
+		</form>
+		
 	</div>
 
 </body>

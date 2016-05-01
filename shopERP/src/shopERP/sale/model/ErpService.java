@@ -24,4 +24,7 @@ public class ErpService {
 	public int insertCbuy(Company_buy cbuy) {
 		return dao.insertCbuy(cbuy);
 	}
+	public List<Company_buyList> cBuyList() {
+		return dao.cBuyList();
+	}
 }

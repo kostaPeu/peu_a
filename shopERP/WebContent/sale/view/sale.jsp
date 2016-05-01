@@ -14,14 +14,12 @@
 		<div class="erp-local-nav">
 			<ul class="local">
 				<li><a href="SaleList.sale">판매조회</a></li>
-				<li><a href="./mainTest2.jsp?left=./sale/view/sale.jsp&contents=./sale/view/sale_search.jsp">판매현황</a></li>
-				<li><a href="./mainTest2.jsp?left=./sale/view/sale.jsp&contents=./sale/view/sale_accounts.jsp">판매처별 정산</a></li>	
+				<li><a href="./sale/view/sale_search.jsp">판매현황</a></li>
+				<li><a href="./sale/view/sale_accounts.jsp">판매처별 정산</a></li>	
 				<li><a class="" data-target="#five" data-toggle="collapse" href="javascript:;">사입관리</a>
 					<ul id="five" class="collapse">
-						<li><a href="./accounting/view/MoneyPlan_Add.jsp">사입 이력 조회</a></li>
+						<li><a href="CbuyList.sale">사입 이력 조회</a></li>
 						<li><a href="./sale/view/buyingMgt_add.jsp">입고 상품 등록</a></li>
-						<li><a href="./accounting/view/MoneyPlan_promissory_view.jsp">사입</a></li>
-						<li><a href="./accounting/view/MoneyPlan_calendar.jsp">사입</a></li>
 					</ul>
 				</li>
 			</ul>

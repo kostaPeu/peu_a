@@ -43,19 +43,19 @@
 		<c:forEach var="list" items="${list }">
 			<tr>
 				<td><input type="checkbox" class="upSelect check_id" name="id_box"></td>
-				<td>${list.sell_id}</td>
+				<td>${list.cbuy_id}</td>
 				<td>${list.customer_name }</td>
 				<td>${list.product_name }</td>
-				<td>${list.sell_price }</td>
-				<td>${list.sell_amount }</td>
-				<td>${list.sell_date }</td>
+				<td>${list.cbuy_priceout }</td>
+				<td>${list.cbuy_amount }</td>
+				<td>${list.cbuy_date }</td>
 				<td>${list.pay_type }</td>
 				<td>${list.warehouse_name }</td>					
 			</tr>			
 		</c:forEach>
 	</table>
 	<div class="buttongroup">
-		<input type="button" id="newBtn" class="btn btn-default" value="등록"" onclick="fn_add()">
+		<input type="button" id="newBtn" class="btn btn-default" value="등록"" onclick="fn_Cbuyadd()">
 		<input type="button" id="newBtn" class="btn btn-default" value="수정">
 		<input type="button" id="newBtn" class="btn btn-default" value="삭제">
 	</div>
