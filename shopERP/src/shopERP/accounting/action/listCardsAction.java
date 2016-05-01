@@ -20,7 +20,7 @@ public class listCardsAction implements Action {
 		request.setAttribute("list", list);
 		ActionForward forward = new ActionForward();
 		forward.setInRedirect(false);
-		forward.setPath("./mainTest2.jsp?left=./accounting/view/Accounleft.jsp&contents=./accounting/view/basic/card.jsp");
+		forward.setPath("./accounting/view/basic/card.jsp");
 		return forward;
 	}
 

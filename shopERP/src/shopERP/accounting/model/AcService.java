@@ -22,8 +22,12 @@ public class AcService {
 	public List<Accounts> listAccountService() {
 		List<Accounts> list = dao.accountlist();
 		return list;
+		
 	}
-
+	
+	public int updateAccountService(Accounts accounts){
+		return dao.updateAccount(accounts);
+	}
 	// 신용카드 신규등록//
 
 	public int insertCardService(Cards cards) {

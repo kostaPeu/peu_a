@@ -61,6 +61,27 @@ public class AcDao {
 		}
 		return list;
 	}
+	
+//통장업데이트//
+	
+	public int updateAccount(Accounts accounts){
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = -1;
+		try {
+			re = sqlSession.getMapper(AccountingMapper.class).updateAccount(accounts);
+			if (re >0){
+				sqlSession.commit();
+			}else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+	return re;
+	}
+	
 
 	// 신용카드 Start//
 	public int insertCard(Cards cards) {

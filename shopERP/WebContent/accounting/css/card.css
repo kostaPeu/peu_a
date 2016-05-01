@@ -4,10 +4,17 @@
 	border-bottom: 1px solid #ccc;
 	font-size: 14px;
 	font-weight: bold;
-	padding-top: 0px;
+	padding-top: 15px;
 	padding-bottom: 10px;
+	padding-left: 20px;
 	margin: 0;
 }
+
+.mainContents{
+	left:  100px;
+	top: 150px;
+}
+
 
 .contentsName #title {
 	color: #000;

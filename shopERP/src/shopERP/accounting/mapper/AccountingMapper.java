@@ -19,4 +19,6 @@ public interface AccountingMapper {
 
 	public List<MoneyPlan> MoneyPlanList();
 
+	public int updateAccount(Accounts accounts);
+
 }
