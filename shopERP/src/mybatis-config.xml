@@ -83,6 +83,7 @@
 		<mapper resource="shopERP/purchase/mapper/purchase.xml"/>
 		<mapper resource="shopERP/sale/mapper/sale.xml"/>
 		<mapper resource="shopERP/odm/mapper/Odm.xml"/>
+
 	</mappers>
 	
 </configuration>

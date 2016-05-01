@@ -11,10 +11,10 @@
 		<div class="erp-local-nav-title">구매관리</div>
 		<div class="erp-local-nav">
 			<ul class="local">
-				<li><a href="PurchaseList.pc">구매조회</a></li>
-				<li><a href="./mainTest2.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_add.jsp">구매입력</a></li>
-				<li><a href="./mainTest2.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_search.jsp">구매현황</a></li>
-				<li><a href="./mainTest2.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_accounts.jsp">구매처별 정산</a></li>
+				<li><a href="PurchaseList.ps">구매조회</a></li>
+				<li><a href="./mainTest.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_add.jsp">구매입력</a></li>
+				<li><a href="./mainTest.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_search.jsp">구매현황</a></li>
+				<li><a href="./mainTest.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_accounts.jsp">구매처별 정산</a></li>
 			</ul>
 		</div>
 	</div>

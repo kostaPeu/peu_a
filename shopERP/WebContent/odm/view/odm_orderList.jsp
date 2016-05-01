@@ -1,42 +1,54 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link href="/shopERP/odm/css/odm.css" rel="stylesheet"> 
+<script type="text/javascript">
+$("#addBtn").on('click',function(){
+		$("input[name=orderRow]:checked").each(function() {
+		var checks = $(this).val();
+		$(location).attr("href","deliveryAdd.odm?checks="+checks);
+		
+	});
+});
+</script>
 </head>
 <body>
 	<table class="table table-bordered table-hover">
 		<thead>
 			<tr>
 				<th><input type="checkbox"></th>
-				<th>ÁÖ¹®ÀÏ</th>
-				<th>ÁÖ¹®¹øÈ£</th>
-				<th>»óÇ°ÄÚµå</th>
-				<th>»óÇ°¸í</th>
-				<th>ÁÖ¹®ÀÚ¸í</th>
-				<th>ÁÖ¹®¼ö·®</th>
-				<th>°áÁ¦±İ¾×</th>
+				<th>ì£¼ë¬¸ì¼</th>
+				<th>ì£¼ë¬¸ë²ˆí˜¸</th>
+				<th>ìƒí’ˆì½”ë“œ</th>
+				<th>ìƒí’ˆëª…</th>
+				<th>ì£¼ë¬¸ìëª…</th>
+<!-- 				<th>ì£¼ë¬¸ìˆ˜ëŸ‰</th> -->
+<!-- 				<th>ê²°ì œê¸ˆì•¡</th> -->
 			</tr>
 		</thead>
-		<tr class="tablecenter">
-			<td><input type="checkbox"></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
+		<c:forEach var="order" items="${list }">
+				<tr class="tablecenter">
+					<td><input type="checkbox" class="orderChecked" name="orderRow" value="${order.order_detail_id }"></td>
+					<td>${order.order_date}</td>
+					<td>${order.order_id }</td>
+					<td>${order.product_id }</td>
+					<td>${order.product_name }</td>
+					<td>${order.client_name }</td>
+	<!-- 			<td></td> -->
+	<!-- 			<td></td> -->
+				</tr>
+		</c:forEach>
+
 	</table>
 	<div class="buttongroup">
-		<input type="button" id="checkBtn" class="btn btn-default" value="¹ßÁÖÈ®ÀÎ">
-		<input type="button" id="addBtn" class="btn btn-default" value="¼ÛÀåµî·Ï">
-		<input type="button" id="sendBtn" class="btn btn-default" value="¼ÛÀåÀü¼Û">
+<!-- 		<input type="button" id="checkBtn" class="btn btn-default" value="ë°œì£¼í™•ì¸"> -->
+		<input type="button" id="addBtn" class="btn btn-default" value="ì†¡ì¥ë“±ë¡">
+		<input type="button" id="sendBtn" class="btn btn-default" value="ì†¡ì¥ì „ì†¡">
 	</div>
 </body>
 </html>

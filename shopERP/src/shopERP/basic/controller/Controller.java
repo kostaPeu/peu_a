@@ -65,6 +65,27 @@ public class Controller extends HttpServlet {
 		}else if(command.equals("CustomerList.ba")){
 			action = new CustomerList();
 			forward = action.excute(request, response);
+		}/*else if(command.equals("UpdateAction.ba")){
+			action = new UpdateAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("DeleteAction.ba")){
+			action = new DeleteAction();
+			forward = action.excute(request, response);
+		}*/else if(command.equals("insertProduct.ba")) {
+			action = new insertProductAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("productList.ba")) {
+			action = new productListAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("updateProduct.ba")){
+			action = new updateProductAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("deleteProduct.ba")){
+			action = new deleteProductAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("customerProc.ba")) {
+			action = new CustomerAction();
+			forward = action.excute(request, response);
 		}else if(command.equals("productCodeJson.ba")){
 			action = new productCodeListAction();
 			forward = action.excute(request, response);

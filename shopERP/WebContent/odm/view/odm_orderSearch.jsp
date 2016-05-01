@@ -40,7 +40,7 @@
 				</tr>
 			</table>
 			<div class="localcenter">
-				<a href="./mainTest.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_orderList.jsp"" class="btn btn-default btn-sm localcenter"><span class="fa fa-search"></span></a>
+				<a href="./mainTest2.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_orderList.jsp"" class="btn btn-default btn-sm localcenter"><span class="fa fa-search"></span></a>
 				</div>
 			</div>
 	</div>

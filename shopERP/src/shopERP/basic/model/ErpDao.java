@@ -39,7 +39,7 @@ private static ErpDao dao = new ErpDao();
 		try {
 			re = sqlSession.getMapper(ErpMapper.class).insertProduct(product);
 			if(re > 0){
-				sqlSession.commit();	//commit()À» ÇØ¾ß µ¥ÀÌÅÍ°¡ µé¾î°¨
+				sqlSession.commit();	//commit()ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í°ï¿½ ï¿½ï¿½î°¨
 			}else {
 				sqlSession.rollback();
 			}
@@ -159,9 +159,9 @@ private static ErpDao dao = new ErpDao();
 		return re;
 	}
 
-	public List<ProductCode> productCodeList(Search search) {
+	public List<Product> productCodeList(Search search) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
-		List<ProductCode> list = null;
+		List<Product> list = null;
 		try {
 			list = sqlSession.getMapper(ErpMapper.class).productCodeList(search);
 		} catch (Exception e) {

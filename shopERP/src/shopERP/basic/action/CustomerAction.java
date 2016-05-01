@@ -37,7 +37,7 @@ public class CustomerAction implements Action{
 			forward.setPath("CustomerList.ba");
 		}else{
 			forward.setRedirect(true);
-			forward.setPath("/shopERP/mainTest.jsp");
+			forward.setPath("/shopERP/mainTest2.jsp");
 		}
 		return forward;
 	}
