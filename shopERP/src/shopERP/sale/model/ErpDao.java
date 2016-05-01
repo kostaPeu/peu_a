@@ -91,4 +91,17 @@ private static ErpDao dao = new ErpDao();
 		}
 		return re;
 	}
+
+	public List<Company_buyList> cBuyList() {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		List<Company_buyList> list = null;
+		try {
+			list = sqlSession.getMapper(ErpMapper.class).cBuyList();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			sqlSession.close();
+		}
+		return list;
+	}
 }

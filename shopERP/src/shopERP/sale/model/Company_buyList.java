@@ -1,8 +1,9 @@
 package shopERP.sale.model;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class Company_buyList {
+public class Company_buyList implements Serializable{
 	private String cbuy_id;
 	private String customer_name;
 	private String product_name;
