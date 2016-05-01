@@ -42,7 +42,7 @@
 				<li data-toggle="collapse" href="#dep_board"><a href="./groupware/view/depboard/dep_board_list.jsp">부서게시판</a>
 					<ul id="dep_board" class="collapse">
 						<li><a href="./groupware/view/depboard/dep_board_list.jsp">부서 게시판</a></li>
-						<li><a href="./groupware/view/depboard/dep_sharedfolder_list.jsp">공유 폴더</a></li>
+						<li><a href="depFileListAction.gw">공유 폴더</a></li>
 						<li><a id="gw_cal" href="./selectable.html">부서 일정</a></li> 
 					</ul>
 				</li>

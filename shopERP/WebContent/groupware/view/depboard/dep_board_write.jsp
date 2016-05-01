@@ -26,7 +26,14 @@
 		<div id="write_content">
 			<label class="control-label col-sm-1" for="content">내용</label>
 			<div class="col-sm-11">
-				<textarea class="ckeditor" cols="1" id="editor1" name="editor1" rows="15"></textarea>
+				<textarea class="ckeditor" cols="1" id="editor1" name="editor1" rows="15">
+				<iframe src="" frameborder="0" class="cke_wysiwyg_frame cke_reset" title="Rich Text Editor, editor1"
+						aria-describedby="cke_49" tabindex="0" allowtransparency="true" style="width: 100%; height: 100%;">
+						<body contenteditable="true" class="cke_editable cke_editable_themed cke_contents_ltr" spellcheck="false">
+							<h1>hoho</h1>
+						</body>
+				</iframe>
+				</textarea>
 			</div>
 		</div>
 

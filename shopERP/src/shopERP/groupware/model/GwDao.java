@@ -258,4 +258,57 @@ public class GwDao {
 		}
 		return pwd;
 	}
+	
+
+	   public List<ShareFolder> depFileList() {
+		      SqlSession sqlSession = getSqlSessionFactory().openSession();
+		      List<ShareFolder> list = null;
+		            
+		      try {
+		         list = sqlSession.getMapper(GwMapper.class).depFileList();
+		      } catch (Exception e) {
+		         e.printStackTrace();
+		      } finally {
+		         sqlSession.close();
+		      }
+
+		      return list;
+	   }
+
+	   public int depFileInsert(ShareFolder sharedfolder) {
+			 int re = -1;
+
+		      SqlSession sqlSession = getSqlSessionFactory().openSession();
+
+		      try {
+		         re = sqlSession.getMapper(GwMapper.class).depFileInsert(sharedfolder);
+
+		         if (re > 0) {
+		            sqlSession.commit();
+		         } else {
+		            sqlSession.rollback();
+		         }
+		      } catch (Exception e) {
+		         e.printStackTrace();
+		      } finally {
+		         sqlSession.close();
+		      }
+
+		      return re;
+		}
+
+		public ShareFolder selectShareFolder(int share_folder_id) {
+			  SqlSession sqlSession = getSqlSessionFactory().openSession();
+			  ShareFolder sharefolder = null;
+		      
+		      try {
+		    	  sharefolder = sqlSession.getMapper(GwMapper.class).selectShareFolder(share_folder_id);
+		      } catch (Exception e) {
+		         e.printStackTrace();
+		      } finally {
+		         sqlSession.close();
+		      }
+		      
+		      return sharefolder;
+		}
 }

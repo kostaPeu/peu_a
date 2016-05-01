@@ -90,6 +90,26 @@
 	<select id="getPwd" resultType="String" parameterType="String">
 		select e_pwd from employee where emp_id=#{emp_id}
 	</select>
+	
+	<!-- ShareFolder -->
+	<insert id="depFileInsert" parameterType="ShareFolder">
+		insert into share_folder(
+			share_folder_id, file_type, file_name, file_size,
+			share_folder_date, down_amount, upload_file, emp_id
+		)
+		values(
+			share_folder_seq.NEXTVAL, #{file_type}, #{file_name}, #{file_size},
+			SYSDATE, 0, #{upload_file}, #{emp_id}
+		)
+	</insert>
+	
+	<select id="depFileList" resultType="ShareFolder">
+		SELECT * FROM share_folder
+	</select>
+	
+	<select id="selectShareFolder" resultType="ShareFolder" parameterType="int">
+		SELECT * FROM share_folder WHERE share_folder_id = #{share_folder_id}
+	</select>
 </mapper>
 
 

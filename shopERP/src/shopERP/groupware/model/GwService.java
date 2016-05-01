@@ -79,4 +79,20 @@ public class GwService {
 		return pwd;
 	}
 
+	public List<ShareFolder> depFileList(){
+		List<ShareFolder> list = dao.depFileList();
+		return list;
+	}
+
+	public int depFileInsert(ShareFolder sharefolder){
+		int re = dao.depFileInsert(sharefolder);
+		return re;
+	}
+	
+	public ShareFolder selectShareFolder(int share_folder_id){
+		return dao.selectShareFolder(share_folder_id);
+	}
+	
+	
+
 }

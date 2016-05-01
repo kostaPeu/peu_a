@@ -6,6 +6,7 @@ import shopERP.groupware.action.Paging;
 import shopERP.groupware.model.Notice;
 import shopERP.groupware.model.NoticeReply;
 import shopERP.groupware.model.Search;
+import shopERP.groupware.model.ShareFolder;
 
 public interface GwMapper {
 	public List<Notice> noticeList(Paging paging);
@@ -22,4 +23,7 @@ public interface GwMapper {
 	public void replyDelete(int nreply_id);
 	public int loginIdCheck(String emp_id);
 	public String getPwd(String emp_id);
+	public List<ShareFolder> depFileList();
+	public int depFileInsert(ShareFolder sharefolder);
+	public ShareFolder selectShareFolder(int share_folder_id);
 }

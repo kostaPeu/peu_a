@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import shopERP.groupware.action.Action;
 import shopERP.groupware.action.ActionForward;
 import shopERP.groupware.action.Paging;
+import shopERP.groupware.action.depFileInsertAction;
+import shopERP.groupware.action.depFileListAction;
+import shopERP.groupware.action.downloadAction;
 import shopERP.groupware.action.loginAction;
 import shopERP.groupware.action.noticeDeleteAction;
 import shopERP.groupware.action.noticeInsertAction;
@@ -77,6 +80,15 @@ public class Controller extends HttpServlet {
 			forward = action.excute(request, response);
 		}else if(command.equals("noticeSearchAction.gw")){
 			action = new noticeSearchAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("depFileListAction.gw")){
+			action = new depFileListAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("depFileInsertAction.gw")){
+			action = new depFileInsertAction();
+			forward = action.excute(request, response);
+		}else if(command.equals("downloadAction.gw")){
+			action = new downloadAction();
 			forward = action.excute(request, response);
 		}
 		else if(command.equals("loginAction.gw")){
