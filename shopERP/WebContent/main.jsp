@@ -37,11 +37,11 @@
 		<!-- logo start -->
 		<div class="erp-global-nav-qm">
 			<div class="qm-company-logo col-sm-1" >
-				<a href="mainTest2.jsp"><img width="150" height="35" alt="logo" src="images/logo2.png"></a>
+				<a href="main.jsp"><img width="150" height="35" alt="logo" src="images/logo2.png"></a>
 			</div>
 			<div class="hello col-sm-2 col-sm-push-9">
 				<span class="delicious-spam">
-					<a id = "a-in-spam" href="./mainTest2.jsp?left=./mypage/view/mypage.jsp">${main_e_name }</a>님 환영합니다.
+					<a id = "a-in-spam" href="./main.jsp?left=./mypage/view/mypage.jsp">${main_e_name }</a>님 환영합니다.
 					<a href="logoutAction.gw" class="btn btn-default">로그아웃</a>
 				</span>
 			</div>
@@ -53,22 +53,22 @@
 		<div class="erp-global-nav">
 			<ul>
 				<li class=""><a id="TopMainMenu1"
-					href="./mainTest2.jsp?left=./basic/view/basic.jsp">기초관리</a>
+					href="./main.jsp?left=./basic/view/basic.jsp">기초관리</a>
 				<li class=""><a id="TopMainMenu2"
-					href="./mainTest2.jsp?left=./purchase/view/purchase.jsp">구매관리</a></li>
+					href="./main.jsp?left=./purchase/view/purchase.jsp">구매관리</a></li>
 				<li class=""><a id="TopMainMenu3"
-					href="./mainTest2.jsp?left=./sale/view/sale.jsp">판매관리</a></li>
+					href="./main.jsp?left=./sale/view/sale.jsp">판매관리</a></li>
 				<li class=""><a id="TopMainMenu4"
-					href="./mainTest2.jsp?left=./odm/view/odm.jsp">주문/배송관리</a></li>
+					href="./main.jsp?left=./odm/view/odm.jsp">주문/배송관리</a></li>
 				<li class=""><a id="TopMainMenu5"
-					href="./mainTest2.jsp?left=./stock/view/stock.jsp">재고관리</a></li>
+					href="./main.jsp?left=./stock/view/stock.jsp">재고관리</a></li>
 				<li class=""><a id="TopMainMenu6"
-					href="./mainTest2.jsp?left=./accounting/view/Accounleft.jsp">회계관리</a></li>
+					href="./main.jsp?left=./accounting/view/Accounleft.jsp">회계관리</a></li>
 				<li class=""><a id="TopMainMenu7"
-					href="./mainTest2.jsp?left=./hr/view/hr_side.jsp">인사관리</a></li>
+					href="./main.jsp?left=./hr/view/hr_side.jsp">인사관리</a></li>
 				<li class=""><a id="TopMainMenu8"
-					href="./mainTest2.jsp?left=./groupware/view/groupware.jsp">그룹웨어</a></li>
-				<li class=""><a id="TopMainMenu9" href="./mainTest2.jsp?left=./mypage/view/mypage.jsp">마이페이지</a></li>
+					href="./main.jsp?left=./groupware/view/groupware.jsp">그룹웨어</a></li>
+				<li class=""><a id="TopMainMenu9" href="./main.jsp?left=./mypage/view/mypage.jsp">마이페이지</a></li>
 			</ul>
 		</div>
 		<!-- topbar end -->
