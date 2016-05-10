@@ -4,16 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
-<link rel="stylesheet" href="/shopERP/css/style.css">
-<link rel="stylesheet" href="/shopERP/css/responsive.css">
-<script src="/shopERP/js/jquery.min.js"></script>
-<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 <!-- <link href="/shopERP/basic/css/basic_customerList.css" rel="stylesheet"> -->
 <script src="/shopERP/basic/js/basic2.js" type="text/javascript"></script>
 </head>
 <body>
-<div class="update xclose">
+	<div class="update xclose">
 		<div class="title">
 			<span class=""><strong>거래처수정</strong></span>
 			<button type="button" class="close closeBtn"><span>&times;</span></button>

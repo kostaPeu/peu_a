@@ -4,9 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 <link rel="stylesheet" href="/shopERP/css/emp.css">
-<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container-fluid">
@@ -55,6 +53,5 @@
 			</form>
 		</div>
 	</div>
-	<script src="/shopERP/js/bootstrap.min.js"></script>
 </body>
 </html>

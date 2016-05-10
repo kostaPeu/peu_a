@@ -15,5 +15,5 @@ $(function(){
 });
 
 function fn_add(){	
-	location.href = "./mainTest2.jsp?left=./accounting/view/Accounleft.jsp&contents=./accounting/view/basic/BackBookAdd.jsp";
+	location.href = "./main.jsp?left=./accounting/view/Accounleft.jsp&contents=./accounting/view/basic/BackBookAdd.jsp";
 }

@@ -5,7 +5,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 <link href="/shopERP/odm/css/odm.css" rel="stylesheet"> 
 <script type="text/javascript">
 $("#addBtn").on('click',function(){
@@ -18,6 +17,8 @@ $("#addBtn").on('click',function(){
 </script>
 </head>
 <body>
+
+	<h2 class="page_title">주문리스트</h2>
 	<table class="table table-bordered table-hover">
 		<thead>
 			<tr>

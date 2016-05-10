@@ -4,21 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<script src="/shopERP/accounting/js/jquery.js"></script>
 <script src="/shopERP/accounting/js/main.js" type="text/javascript"></script>
-
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href="/shopERP/accounting/css/bootstrap.min.css" rel="stylesheet">
 <link href="/shopERP/accounting/css/card.css" rel="stylesheet">
 </head>
-<body id="body_html" class="font-dotum">
-	<!-- 상단 컨텐츠 이름 -->
-	<div class="contentsName">
-		<a id="title">기초잔액등록</a>
-	</div>
-	<br>
+<body>
+
+	<h2 class="page_title">기초잔액등록</h2>
+
 
 	<form class="form-horizontal" action="">
 		<table class="table table-bordered table-hover new" id="moneyList">

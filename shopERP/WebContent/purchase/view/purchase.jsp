@@ -4,19 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 </head>
 <body>
-	<div class="wrapper-erp-local-nav">
-		<div class="erp-local-nav-title">구매관리</div>
-		<div class="erp-local-nav">
-			<ul class="local">
-				<li><a href="PurchaseList.ps">구매조회</a></li>
-				<li><a href="./main.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_add.jsp">구매입력</a></li>
-				<li><a href="./main.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_search.jsp">구매현황</a></li>
-				<li><a href="./main.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_accounts.jsp">구매처별 정산</a></li>
-			</ul>
-		</div>
+	<div class="erp-local-nav-title">구매관리</div>
+	<div class="erp-local-nav">
+		<ul class="local">
+			<li><a href="PurchaseList.ps">구매조회</a></li>
+			<li><a href="./main.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_add.jsp">구매입력</a></li>
+			<li><a href="./main.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_search.jsp">구매현황</a></li>
+			<li><a href="./main.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_accounts.jsp">구매처별 정산</a></li>
+		</ul>
 	</div>
 </body>
 </html>

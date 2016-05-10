@@ -5,28 +5,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href="/shopERP/css/bootstrap.css" rel="stylesheet">
 <link href="/shopERP/accounting/css/card.css" rel="stylesheet">
-
-<script src="/shopERP/accounting/js/jquery.js"></script>
 <script src="/shopERP/accounting/js/main.js" type="text/javascript"></script>
 <script src="/shopERP/accounting/js/ac.js" type="text/javascript"></script>
 
-<script type="text/javascript"></script>
-
-
 </head>
 <body>
+
+	<h2 class="page_title">신용카드등록</h2>
+
 	<div class="mainContents">
-		<div class="contentsName">
-			<h3><a id="title">카드리스트</a></h3>
-		</div>
-		<!-- /상단 메뉴이름 -->
-		<br>
+	
 	<div class="container-fluid">
 		<div class="table-responsive">
 			<table class="table table-bordered table-hover table-striped"

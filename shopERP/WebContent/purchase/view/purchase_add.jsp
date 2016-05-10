@@ -4,23 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 	<!-- 참조 -->
-	<link rel="stylesheet"
-		href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
- 	<link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
     <link href="/shopERP/purchase/css/purchase.css" rel="stylesheet"> 
-    <script src="/shopERP/js/jquery.min.js"></script>
-    <link rel="stylesheet" href="/shopERP/purchase/css/jquery-ui.min.css">
-	<script src="/shopERP/purchase/js/jquery.min.js"></script>
-	<script src="/shopERP/purchase/js/jquery-ui.min.js"></script>
-    <script src="/shopERP/js/jquery.js" type="text/javascript"></script>
-    <script src="/shopERP/js/bootstrap.min.js"></script>
     <script src="/shopERP/purchase/js/purchase2.js" type="text/javascript"></script>
 </head>
 <body>
-<div class="container">
+
+	<h2 class="page_title">구매입력</h2>
+	
 	<form class="form-horizontal" action="insertPurchase.pc">
 		<table class="table table-bordered table-hover new">
 				<thead>
@@ -72,7 +63,6 @@
 			<input type="submit" id="newBtn" class="btn btn-default" value="저장">
 		</div>
 	</form>
-</div>
 
 <!-- 모달 -->
 

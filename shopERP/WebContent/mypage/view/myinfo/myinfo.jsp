@@ -4,40 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-
-<!-- Google Fonts -->
-<link
-	href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600'
-	rel='stylesheet' type='text/css'>
-<link
-	href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300'
-	rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,100'
-	rel='stylesheet' type='text/css'>
-
-<!-- Font Awesome -->
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <!-- Custom CSS -->
-
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="./mypage/css/myinfo.css">
-
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-<script src="./groupware/js/jquery-1.10.2.min.js"></script>
-<script src="./groupware/js/jquery-ui-1.10.3.custom.min.js"></script>
 <script src="./js/bootstrap-datepicker.js"></script>
 
 </head>
 <body>
 
-	<div class="container">
-		<h2>개인정보</h2>
-		
+	<h2 class="page_title">개인정보 및 휴무신청</h2>
+	
 		<div id="indolence" class="group">
 		<h4>근태현황</h4>
 			<table class="table table-hover">
@@ -185,7 +161,6 @@
 			<button type="button" class="col-sm-4 btn btn-default">신청</button>
 		</form>
 		</div>
-	</div>
 
 </body>
 </html>

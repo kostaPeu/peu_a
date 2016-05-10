@@ -8,26 +8,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-
-<!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
-
- <!-- Font Awesome -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
 <!-- Custom CSS -->
-
-<link rel="stylesheet" href="/shopERP/css/style.css">
-<link rel="stylesheet" href="/shopERP/css/responsive.css">
-<script src="/shopERP/js/jquery.min.js"></script>
-<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 <link href="/shopERP/basic/css/basic_customerList.css" rel="stylesheet">
 <script src="/shopERP/basic/js/basic.js" type="text/javascript"></script>
 </head>
 <body>
+
+	<h2 class="page_title">거래처관리</h2>
+	
 	<div class="add xclose">
 		<div class="title">
 			<span class=""><strong>거래처등록</strong></span>
@@ -200,6 +188,8 @@
 			</div>
 		</form>
 	</div>
+	
+
 	<table class="table table-bordered table-hover">
 		<tr>
 			<th><input type="checkbox"></th>

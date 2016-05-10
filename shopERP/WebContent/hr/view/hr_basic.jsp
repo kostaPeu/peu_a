@@ -4,10 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 <link rel="stylesheet" href="/shopERP/css/emp.css">
-<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
-<script src="/shopERP/js/jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(function() {
 		$("#dept").click(function() {
@@ -83,6 +80,9 @@
 </script>
 </head>
 <body>
+
+	<h2 class="page_title">인사기초등록</h2>
+	
 	<div class="add_basic">
 		<div class="title">
 			<span class="basic_title"><strong>부서등록</strong></span>
@@ -160,22 +160,20 @@
 	
 	
 	<div class="container-fluid">
-		<div class="col-md-8 col-md-offset-2">
-			<table class="table table-bordered" id="basic_insert">
-				<tr>
-					<th>부서</th>
-					<th>직급</th>
-					<th>직무</th>
-					<th>직책</th>
-				</tr>
-				<tr>
-					<td><button type="button" class="btn btn-default" id="dept">등록</button></td>
-					<td><button type="button" class="btn btn-default" id="position">등록</button></td>
-					<td><button type="button" class="btn btn-default" id="job">등록</button></td>
-					<td><button type="button" class="btn btn-default" id="duty">등록</button></td>
-				</tr>
-			</table>
-		</div>
+		<table class="table table-bordered" id="basic_insert">
+			<tr>
+				<th>부서</th>
+				<th>직급</th>
+				<th>직무</th>
+				<th>직책</th>
+			</tr>
+			<tr>
+				<td><button type="button" class="btn btn-default" id="dept">등록</button></td>
+				<td><button type="button" class="btn btn-default" id="position">등록</button></td>
+				<td><button type="button" class="btn btn-default" id="job">등록</button></td>
+				<td><button type="button" class="btn btn-default" id="duty">등록</button></td>
+			</tr>
+		</table>
 	</div>
 	<script src="/shopERP/js/bootstrap.min.js"></script>
 </body>

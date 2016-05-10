@@ -4,16 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 </head>
 <body>
 
-			<div id="file-upload">
-				<label class="control-label col-sm-1" for="title">첨부파일</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" id="title" placeholder="경로">
-					<button type="button" class="btn btn-default">찾기</button>
-				</div>
-			</div>
+	<h2 class="page_title">이미지게시판</h2>
+
+	<div id="file-upload">
+		<label class="control-label col-sm-1" for="title">첨부파일</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="title" placeholder="경로">
+			<button type="button" class="btn btn-default">찾기</button>
+		</div>
+	</div>
 </body>
 </html>

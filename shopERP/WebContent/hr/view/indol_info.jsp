@@ -4,10 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 <link rel="stylesheet" href="/shopERP/css/emp.css">
-<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
-
 <script type="text/javascript">
 	
 	function fn_update_indol(){
@@ -17,26 +14,20 @@
 </script>
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<h3 class="col-md-2 col-md-offset-1">직원근태사항</h3>
+
+	<h2 class="page_title">근태조회</h2>
+	
+	<div class="hr_body">
+		<div class="pull-right">
+			<form class="form-inline" id="search_form">
+				<div class="form-group">
+					<label for="search_employee">이름</label> <input type="text"
+						class="form-control input-sm" id="emp_name_input" name="emp_id">
+				</div>
+				<button type="submit" class="btn btn-sm">직원검색</button>
+			</form>
 		</div>
-	</div>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-4 col-md-offset-8">			
-				<form class="form-inline" id="search_form">
-					<div class="form-group">
-						<label for="search_employee">이름</label> 
-						<input type="text" class="form-control input-sm" id="emp_name_input" name="emp_id">
-					</div>
-					<button type="submit" class="btn btn-sm">직원검색</button>
-				</form>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid">
-		<div class="col-md-10 col-md-offset-1">
+		<div class="container-fluid">
 			<table class="table table-condensed table table-bordered">
 				<thead>
 					<tr class="indol_info_head">
@@ -53,24 +44,27 @@
 						<th>삭제</th>
 					</tr>
 				</thead>
-				<tr class="indol_info_body">
-					<td>aa</td>
-					<td>aa</td>
-					<td>aa</td>
-					<td>aa</td>
-					<td>aa</td>
-					<td>aa</td>
-					<td>aa</td>
-					<td>aa</td>
-					<td>aa</td>
-					<td>
-						<button type="button" class="btn btn-default btn-xs" id="insert_emp_btn" onclick="fn_update_indol()">수정</button>
-					</td>
-					<td><button type="button" class="btn btn-default btn-xs">삭제</button></td>
-				</tr>
+				<tbody>
+					<tr class="indol_info_body">
+						<td>aa</td>
+						<td>aa</td>
+						<td>aa</td>
+						<td>aa</td>
+						<td>aa</td>
+						<td>aa</td>
+						<td>aa</td>
+						<td>aa</td>
+						<td>aa</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs" id="insert_emp_btn" onclick="fn_update_indol()">수정</button>
+						</td>
+						<td><button type="button" class="btn btn-default btn-xs">삭제</button></td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
+		<button type="button" class="btn btn-default" id="insert_emp_btn" onclick="fn_insert_emp()">신규등록</button>
 	</div>
-	<script src="/shopERP/js/bootstrap.min.js"></script>
+
 </body>
 </html>

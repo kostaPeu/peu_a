@@ -4,17 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 </head>
 <body>
-	<div class="wrapper-erp-local-nav">
-		<div class="erp-local-nav-title">기초등록</div>
-		<div class="erp-local-nav">
-			<ul class="local">
-				<li><a href="productList.ba">품목관리</a></li>
-				<li><a href="CustomerList.ba">거래처관리</a></li>
-			</ul>
-		</div>
+	<div class="erp-local-nav-title">기초등록</div>
+	<div class="erp-local-nav">
+		<ul class="local">
+			<li><a href="productList.ba">품목관리</a></li>
+			<li><a href="CustomerList.ba">거래처관리</a></li>
+		</ul>
 	</div>
 </body>
 </html>

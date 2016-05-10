@@ -14,7 +14,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>POWER ERP</title>
 
 <!-- Font Awesome -->
 
@@ -27,58 +27,43 @@
 <link href="css/main.css" rel="stylesheet">
 <!-- Custom CSS -->
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body id="body_html" class="font-dotum">
 	<!-- top -->
-	<div id="Top-Menu" class="wrapper-erp-global-nav">
-		<!-- logo start -->
-		<div class="erp-global-nav-qm">
-			<div class="qm-company-logo col-sm-1" >
-				<a href="main.jsp"><img width="150" height="35" alt="logo" src="images/logo2.png"></a>
-			</div>
-			<div class="hello col-sm-2 col-sm-push-9">
-				<span class="delicious-spam">
-					<a id = "a-in-spam" href="./main.jsp?left=./mypage/view/mypage.jsp">${main_e_name }</a>님 환영합니다.
-					<a href="logoutAction.gw" class="btn btn-default">로그아웃</a>
-				</span>
-			</div>
-		</div>
 
-		<!--logo end-->
-	<!-- 상단 -->
-		<!-- topMenuBar start-->
-		<div class="erp-global-nav">
-			<ul>
-				<li class=""><a id="TopMainMenu1"
-					href="./main.jsp?left=./basic/view/basic.jsp">기초관리</a>
-				<li class=""><a id="TopMainMenu2"
-					href="./main.jsp?left=./purchase/view/purchase.jsp">구매관리</a></li>
-				<li class=""><a id="TopMainMenu3"
-					href="./main.jsp?left=./sale/view/sale.jsp">판매관리</a></li>
-				<li class=""><a id="TopMainMenu4"
-					href="./main.jsp?left=./odm/view/odm.jsp">주문/배송관리</a></li>
-				<li class=""><a id="TopMainMenu5"
-					href="./main.jsp?left=./stock/view/stock.jsp">재고관리</a></li>
-				<li class=""><a id="TopMainMenu6"
-					href="./main.jsp?left=./accounting/view/Accounleft.jsp">회계관리</a></li>
-				<li class=""><a id="TopMainMenu7"
-					href="./main.jsp?left=./hr/view/hr_side.jsp">인사관리</a></li>
-				<li class=""><a id="TopMainMenu8"
-					href="./main.jsp?left=./groupware/view/groupware.jsp">그룹웨어</a></li>
-				<li class=""><a id="TopMainMenu9" href="./main.jsp?left=./mypage/view/mypage.jsp">마이페이지</a></li>
-			</ul>
+	<!-- logo start -->
+	<div class="erp-global-nav-qm">
+		<div class="qm-company-logo col-sm-2" >
+			<a href="main.jsp"><img width="150" height="35" alt="logo" src="images/logo2.png"></a>
 		</div>
-		<!-- topbar end -->
+		<div class="hello pull-right">
+			<span class="delicious-spam">
+				<a id = "a-in-spam" href="./main.jsp?left=./mypage/view/mypage.jsp">${main_e_name }</a>님 환영합니다.
+				<a href="logoutAction.gw" class="btn btn-default">로그아웃</a>
+			</span>
+		</div>
 	</div>
-	<!-- top end -->
 
-	<div id="Left_Menu" class="wrapper-frame-erp-local-nav show">
-		<div class="wrapper-erp-local-nav">
-			<jsp:include page="<%=left%>"></jsp:include>
-		</div>
+	<!--logo end-->
+		
+	<!-- topMenuBar start-->
+	<div id="Top-Menu" class="erp-global-nav">
+		<ul>
+			<li class=""><a href="./main.jsp?left=./basic/view/basic.jsp">기초관리</a>
+			<li class=""><a	href="./main.jsp?left=./purchase/view/purchase.jsp">구매관리</a></li>
+			<li class=""><a	href="./main.jsp?left=./sale/view/sale.jsp">판매관리</a></li>
+			<li class=""><a	href="./main.jsp?left=./odm/view/odm.jsp">주문/배송관리</a></li>
+			<li class=""><a	href="./main.jsp?left=./stock/view/stock.jsp">재고관리</a></li>
+			<li class=""><a	href="./main.jsp?left=./accounting/view/Accounleft.jsp">회계관리</a></li>
+			<li class=""><a href="./main.jsp?left=./hr/view/hr_side.jsp">인사관리</a></li>
+			<li class=""><a href="./main.jsp?left=./groupware/view/groupware.jsp">그룹웨어</a></li>
+			<li class=""><a href="./main.jsp?left=./mypage/view/mypage.jsp">마이페이지</a></li>
+		</ul>
+	</div>
+	<!-- topMenuBar end -->
+
+	<div id="Left_Menu" class="show erp-local-nav">
+		<jsp:include page="<%=left%>"></jsp:include>
 	</div>
 
 	<div class="container" id="contents">

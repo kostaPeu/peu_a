@@ -4,22 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<script src="/shopERP/accounting/js/jquery.js"></script>
 <script src="/shopERP/accounting/js/main.js" type="text/javascript"></script>
-
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href="/shopERP/css/bootstrap.css" rel="stylesheet">
 <link href="/shopERP/accounting/css/card.css" rel="stylesheet">
 </head>
 <body>
-	<!-- 상단 메뉴이름 -->
+
+	<h2 class="page_title">거래처로부터</h2>
+
 	<div class="mainContents">
-		<div class="contentsName">
-			<a id="title">거래처로부터</a>
-		</div><!-- /상단 메뉴이름 -->
-		<br>
+		
 		
 		<div class="contents contents-fixed" style="top: 29px; bottom: 34px">
 		<!-- 신규등록 Table Start -->

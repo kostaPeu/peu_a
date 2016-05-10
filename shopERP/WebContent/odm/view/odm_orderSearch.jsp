@@ -4,11 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<link rel="stylesheet" href="/shopERP/stock/css/jquery-ui.min.css">
-<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 <link href="/shopERP/stock/css/stock.css" rel="stylesheet">
-<script src="/shopERP/stock/js/jquery.min.js"></script>
-<script src="/shopERP/stock/js/jquery-ui.min.js"></script>
 <script src="/shopERP/stock/js/stock_search.js"></script>
 </head>
 <body>
@@ -40,7 +36,7 @@
 				</tr>
 			</table>
 			<div class="localcenter">
-				<a href="./mainTest2.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_orderList.jsp"" class="btn btn-default btn-sm localcenter"><span class="fa fa-search"></span></a>
+				<a href="./main.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_orderList.jsp"" class="btn btn-default btn-sm localcenter"><span class="fa fa-search"></span></a>
 				</div>
 			</div>
 	</div>

@@ -135,8 +135,8 @@ $(function(){
 	}
 })
 function fn_add(){	
-	location.href = "./mainTest2.jsp?left=./sale/view/sale.jsp&contents=./sale/view/sale_add.jsp";
+	location.href = "./main.jsp?left=./sale/view/sale.jsp&contents=./sale/view/sale_add.jsp";
 }
 function fn_Cbuyadd(){
-	location.href = "./mainTest2.jsp?left=./sale/view/sale.jsp&contents=./sale/view/buyingMgt_add.jsp";
+	location.href = "./main.jsp?left=./sale/view/sale.jsp&contents=./sale/view/buyingMgt_add.jsp";
 }

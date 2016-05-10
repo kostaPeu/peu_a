@@ -13,9 +13,6 @@
 
 <!-- Custom CSS -->
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
-
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="./groupware/css/imageboard_list.css">
@@ -27,187 +24,185 @@
 </head>
 <body>
 	
-	<div class="container">
-		<h2>이미지 게시판</h2>
-		<table id="imageboard_list" class="td-over">
-			<tr>
-				<td>
-					<a href="./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/imageboard/imageboard_view.jsp">
-					<div class="box">
-						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
-						<h3>이미지제목</h3>
-						<p>
-							<span>16.04.25</span><br/>
-							<span>김보람</span>
-						</p>
-					</div>
-					</a>
-				</td>
-				<td>
-					<a href="#">
-					<div class="box">
-						<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
-						<h3>이미지제목</h3>
-						<p>
-							<span>16.04.25</span><br/>
-							<span>오파도</span>
-						</p>
-					</div>
-					</a>
-				</td>
-				<td>
-					<a href="#">
-					<div class="box">
-						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
-						<h3>이미지제목</h3>
-						<p>
-							<span>16.04.25</span><br/>
-							<span>김보람</span>
-						</p>
-					</div>
-					</a>
-				</td>
-				<td>
-					<a href="#">
-					<div class="box">
-						<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
-						<h3>이미지제목</h3>
-						<p>
-							<span>16.04.25</span><br/>
-							<span>오파도</span>
-						</p>
-					</div>
-					</a>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="#">
-					<div class="box">
-						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
-						<h3>이미지제목</h3>
-						<p>
-							<span>16.04.25</span><br/>
-							<span>김보람</span>
-						</p>
-					</div>
-					</a>
-				</td>
-				<td>
-					<a href="#">
-					<div class="box">
-						<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
-						<h3>이미지제목</h3>
-						<p>
-							<span>16.04.25</span><br/>
-							<span>오파도</span>
-						</p>
-					</div>
-					</a>
-				</td>
-				<td>
-					<a href="#">
-					<div class="box">
-						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
-						<h3>이미지제목</h3>
-						<p>
-							<span>16.04.25</span><br/>
-							<span>김보람</span>
-						</p>
-					</div>
-					</a>
-				</td>
-				<td>
-					<a href="#">
-					<div class="box">
-						<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
-						<h3>이미지제목</h3>
-						<p>
-							<span>16.04.25</span><br/>
-							<span>오파도</span>
-						</p>
-					</div>
-					</a>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="#">
-					<div class="box">
-						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
-						<h3>이미지제목</h3>
-						<p>
-							<span>16.04.25</span><br/>
-							<span>김보람</span>
-						</p>
-					</div>
-					</a>
-				</td>
-				<td>
-					<a href="#">
-					<div class="box">
-						<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
-						<h3>이미지제목</h3>
-						<p>
-							<span>16.04.25</span><br/>
-							<span>오파도</span>
-						</p>
-					</div>
-					</a>
-				</td>
-				<td>
-					<a href="#">
-					<div class="box">
-						<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
-						<h3>이미지제목</h3>
-						<p>
-							<span>16.04.25</span><br/>
-							<span>김보람</span>
-						</p>
-					</div>
-					</a>
-				</td>
-				<td>
-					<a href="#">
-					<div class="box">
-						<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
-						<h3>이미지제목</h3>
-						<p>
-							<span>16.04.25</span><br/>
-							<span>오파도</span>
-						</p>
-					</div>
-					</a>
-				</td>
-			</tr>
-		</table>
+	<h2 class="page_title">이미지게시판</h2>
+	
+	<table id="imageboard_list" class="td-over">
+		<tr>
+			<td>
+				<a href="./main.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/imageboard/imageboard_view.jsp">
+				<div class="box">
+					<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
+					<h3>이미지제목</h3>
+					<p>
+						<span>16.04.25</span><br/>
+						<span>김보람</span>
+					</p>
+				</div>
+				</a>
+			</td>
+			<td>
+				<a href="#">
+				<div class="box">
+					<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
+					<h3>이미지제목</h3>
+					<p>
+						<span>16.04.25</span><br/>
+						<span>오파도</span>
+					</p>
+				</div>
+				</a>
+			</td>
+			<td>
+				<a href="#">
+				<div class="box">
+					<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
+					<h3>이미지제목</h3>
+					<p>
+						<span>16.04.25</span><br/>
+						<span>김보람</span>
+					</p>
+				</div>
+				</a>
+			</td>
+			<td>
+				<a href="#">
+				<div class="box">
+					<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
+					<h3>이미지제목</h3>
+					<p>
+						<span>16.04.25</span><br/>
+						<span>오파도</span>
+					</p>
+				</div>
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#">
+				<div class="box">
+					<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
+					<h3>이미지제목</h3>
+					<p>
+						<span>16.04.25</span><br/>
+						<span>김보람</span>
+					</p>
+				</div>
+				</a>
+			</td>
+			<td>
+				<a href="#">
+				<div class="box">
+					<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
+					<h3>이미지제목</h3>
+					<p>
+						<span>16.04.25</span><br/>
+						<span>오파도</span>
+					</p>
+				</div>
+				</a>
+			</td>
+			<td>
+				<a href="#">
+				<div class="box">
+					<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
+					<h3>이미지제목</h3>
+					<p>
+						<span>16.04.25</span><br/>
+						<span>김보람</span>
+					</p>
+				</div>
+				</a>
+			</td>
+			<td>
+				<a href="#">
+				<div class="box">
+					<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
+					<h3>이미지제목</h3>
+					<p>
+						<span>16.04.25</span><br/>
+						<span>오파도</span>
+					</p>
+				</div>
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#">
+				<div class="box">
+					<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
+					<h3>이미지제목</h3>
+					<p>
+						<span>16.04.25</span><br/>
+						<span>김보람</span>
+					</p>
+				</div>
+				</a>
+			</td>
+			<td>
+				<a href="#">
+				<div class="box">
+					<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
+					<h3>이미지제목</h3>
+					<p>
+						<span>16.04.25</span><br/>
+						<span>오파도</span>
+					</p>
+				</div>
+				</a>
+			</td>
+			<td>
+				<a href="#">
+				<div class="box">
+					<img class="list_img" src="./groupware/images/image_pic1.png" alt="게시한이미지"/>
+					<h3>이미지제목</h3>
+					<p>
+						<span>16.04.25</span><br/>
+						<span>김보람</span>
+					</p>
+				</div>
+				</a>
+			</td>
+			<td>
+				<a href="#">
+				<div class="box">
+					<img class="list_img" src="./groupware/images/image_pic2.png" alt="게시한이미지"/>
+					<h3>이미지제목</h3>
+					<p>
+						<span>16.04.25</span><br/>
+						<span>오파도</span>
+					</p>
+				</div>
+				</a>
+			</td>
+		</tr>
+	</table>
 
-		<ul class="pager">
-			<li class="previous"><a href="#">Previous</a></li>
-			<li><a>1</a></li>
-			<li><a>2</a></li>
-			<li><a>3</a></li>
-			<li class="next"><a href="#">Next</a></li>
-		</ul>
+	<ul class="pager">
+		<li class="previous"><a href="#">Previous</a></li>
+		<li><a>1</a></li>
+		<li><a>2</a></li>
+		<li><a>3</a></li>
+		<li class="next"><a href="#">Next</a></li>
+	</ul>
 
-		<div class="col-xs-2">
-			<div class="dropdown">
-				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-					제목+내용 <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu col-xs-2">
-					<li><a href="#">제목</a></li>
-					<li><a href="#">내용</a></li>
-					<li><a href="#">작성자</a></li>
-				</ul>
-			</div>
+	<div class="col-xs-2">
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+				제목+내용 <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu col-xs-2">
+				<li><a href="#">제목</a></li>
+				<li><a href="#">내용</a></li>
+				<li><a href="#">작성자</a></li>
+			</ul>
 		</div>
-		<div class="col-xs-2">
-  			<input class="form-control" id="ex1" type="text">
-		</div>
-		<button type="button" class="btn btn-default">검색</button>
-
 	</div>
+	<div class="col-xs-2">
+ 			<input class="form-control" id="ex1" type="text">
+	</div>
+	<button type="button" class="btn btn-default">검색</button>
 
 </body>
 </html>

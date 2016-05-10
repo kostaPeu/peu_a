@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 </head>
 <body>
+
+	<h2 class="page_title">통장계좌등록</h2>
 
 	<!-- 통장계좌 신규추가 -->
 	<div class="newAddCard miniTitle-panel">

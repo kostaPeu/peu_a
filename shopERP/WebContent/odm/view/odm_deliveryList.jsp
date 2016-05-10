@@ -8,6 +8,9 @@
 <link href="/shopERP/stock/css/stock.css" rel="stylesheet">
 </head>
 <body>
+
+	<h2 class="page_title">배송리스트</h2>
+	
 	<table class="table table-bordered table-hover">
 		<thead>
 			<tr>

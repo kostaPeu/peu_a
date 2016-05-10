@@ -4,13 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="/shopERP/stock/css/jquery-ui.min.css">
-<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 <link href="/shopERP/stock/css/stock.css" rel="stylesheet">
-<script src="/shopERP/stock/js/jquery.min.js"></script>
-<script src="/shopERP/stock/js/jquery-ui.min.js"></script>
 <script src="/shopERP/stock/js/stock_search.js"></script>
+<script src="./js/bootstrap-datepicker.js"></script>
+
 <script type="text/javascript">
 $(function(){
 	$('#newBtn').click(function(){
@@ -86,6 +83,9 @@ $(function(){
 </script>
 </head>
 <body>
+
+	<h2 class="page_title">재고현황</h2>
+
 	<div class="item_div">
 		<div class="title">
 			<span class=""><strong>품목코드검색</strong></span>

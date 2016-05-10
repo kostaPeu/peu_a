@@ -4,12 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href="/shopERP/css/bootstrap.css" rel="stylesheet">
 <link href="/shopERP/accounting/css/card.css" rel="stylesheet">
-<script src="/shopERP/accounting/js/jquery.js"></script>
 <script src="./js/bootstrap-datepicker.js"></script>
 <script src="/shopERP/accounting/js/main.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -23,12 +18,10 @@ $(function() {
 </script>
 </head>
 <body>
+
+	<h2 class="page_title">자금계획등록</h2>
+
 	<div class="mainContents">
-		<div class="contentsName">
-			<a id="title">자금계획등록</a>
-		</div>
-		<!-- /상단 메뉴이름 -->
-		<br>
 		<form action="insertMoneyPlan.ac" method="post">
 			<div class="contents contents-fixed" style="top: 29px; bottom: 34px">
 				<!-- 신규등록 Table Start -->

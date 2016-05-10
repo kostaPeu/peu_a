@@ -4,17 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 <link rel="stylesheet" href="/shopERP/css/emp.css">
-<link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<h3 class="col-md-2">주비스관리</h3>
-		</div>
-	</div>
-	<div class="container-fluid">
+
+	<h2 class="page_title">쥬비스 관리</h2>
+	
 		<div class="col-md-12" id="jubis_table">
 			<table class="table table-condensed table table-bordered">
 				<thead>
@@ -33,7 +28,6 @@
 				</tr>
 			</table>
 		</div>
-	</div>
 
 	<form class="form-horizontal" id="j_insert">
 		<div class="form-group">

@@ -28,6 +28,9 @@ $(function(){
 </script>
 </head>
 <body>
+
+	<h2 class="page_title">주문수집</h2>
+
 	<div class="success xclose">
 		<div class="title">
 			<button type="button" class="close closeBtn">

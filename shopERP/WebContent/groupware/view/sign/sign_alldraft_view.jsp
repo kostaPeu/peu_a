@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 </head>
 <body>
+
+	<h2 class="page_title">기안서 통합관리</h2>
 
 </body>
 </html>

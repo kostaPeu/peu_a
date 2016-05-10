@@ -4,30 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-
-<!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
-
- <!-- Font Awesome -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	
-<!-- Custom CSS -->
-   	
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">    
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="purchase/css/purchase.css" rel="stylesheet">
-    <script src="/shopERP/js/jquery.js" type="text/javascript"></script> 
-	<link rel="stylesheet" href="/shopERP/purchase/css/jquery-ui.min.css">
-	<script src="/shopERP/purchase/js/jquery.min.js"></script>
-	<script src="/shopERP/purchase/js/jquery-ui.min.js"></script>
     <script src="/shopERP/purchase/js/purchase2.js" type="text/javascript"></script>
     <script src="/shopERP/purchase/js/purchase.js" type="text/javascript"></script>
 </head>
 <body>
+
+	<h2 class="page_title">구매현황</h2>
+
 	<!-- 거래처 검색 -->
 <div id="customerSearch_modal" class="modal fade" role="dialog">
   <div class="modal-dialog">

@@ -4,14 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 <link href='css/fullcalendar.css' rel='stylesheet' />
 <link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
 <script src='js/moment.min.js'></script>
-<script src='js/jquery.min.js'></script>
 <script src='js/fullcalendar.min.js'></script>
 </head>
 <body>
+
+	<h2 class="page_title">자금계획등록</h2>
+
 	<div id="calendar" class="fc fc-cursor fc-ltr fc-unthemed">
 		<div class="fc-toolbar">
 			<div class="fc-left">

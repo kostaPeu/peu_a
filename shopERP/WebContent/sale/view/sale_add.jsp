@@ -5,22 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-	<link rel="stylesheet"
-		href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
- 	<link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="/shopERP/sale/css/sale.css" rel="stylesheet">
-    <link rel="stylesheet" href="/shopERP/sale/css/jquery-ui.min.css">
-    <script src="/shopERP/js/jquery.js" type="text/javascript"></script>
-	<script src="/shopERP/sale/js/jquery.min.js"></script>
-	<script src="/shopERP/sale/js/jquery-ui.min.js"></script>   
-    <script src="/shopERP/js/bootstrap.min.js"></script>
     <script src="/shopERP/sale/js/sale.js" type="text/javascript"></script>
-   
 </head>
 
 <body>
-<div class="container">
+
+	<h2 class="page_title">판매입력</h2>
+
 	<form class="form-horizontal" action="insertSale.sale">
 		<table class="table table-bordered table-hover new" id="saleList">
 				<thead>
@@ -70,7 +63,6 @@
 			<input type="submit" id="save" class="btn btn-default" value="저장">			
 		</div>
 	</form>
-</div>
 <!-- 모달 -->
 
 <!-- 거래처 검색 -->
