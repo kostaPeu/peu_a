@@ -61,7 +61,7 @@ public class DeliveryAddAction implements Action {
 		
 		if(re == 1){
 			forward.setRedirect(true);
-			forward.setPath("./mainTest2.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_deliveryList.jsp");
+			forward.setPath("./main.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_deliveryList.jsp");
 		}else{
 /*			forward.setRedirect(true);
 			forward.setPath("insert_form.jsp");*/

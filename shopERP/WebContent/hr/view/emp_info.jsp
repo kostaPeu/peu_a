@@ -20,11 +20,11 @@
 <script type="text/javascript">
 	
 	function fn_update_emp(){
-		location.href="./mainTest2.jsp?left=./hr/view/hr_side.jsp?&contents=./hr/view/update_emp.jsp";
+		location.href="./main.jsp?left=./hr/view/hr_side.jsp?&contents=./hr/view/update_emp.jsp";
 	}
 
 	function fn_insert_emp(){
-		location.href="./mainTest2.jsp?left=./hr/view/hr_side.jsp?&contents=./hr/view/insert_emp.jsp";
+		location.href="./main.jsp?left=./hr/view/hr_side.jsp?&contents=./hr/view/insert_emp.jsp";
 	}
 
 </script>

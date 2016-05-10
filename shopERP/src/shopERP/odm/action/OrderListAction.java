@@ -25,7 +25,7 @@ public class OrderListAction implements Action {
 		}
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("./mainTest2.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_orderList.jsp");
+		forward.setPath("./main.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_orderList.jsp");
 		return forward;
 	}
 

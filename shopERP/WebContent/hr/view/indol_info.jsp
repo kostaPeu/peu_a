@@ -11,7 +11,7 @@
 <script type="text/javascript">
 	
 	function fn_update_indol(){
-		location.href="./mainTest2.jsp?left=./hr/view/hr_side.jsp?&contents=./hr/view/update_indol.jsp";
+		location.href="./main.jsp?left=./hr/view/hr_side.jsp?&contents=./hr/view/update_indol.jsp";
 	}
 
 </script>

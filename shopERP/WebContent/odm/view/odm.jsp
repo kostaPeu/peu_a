@@ -17,9 +17,9 @@
 							<li><a href="orderList.odm">주문리스트</a></li>
 						</ul>
 					</li>					
-				<li><a href="./mainTest2.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_deliveryList.jsp">배송리스트</a></li>
-				<li><a href="./mainTest2.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_crMgt.jsp">취소/환불관리</a></li>
-				<li><a href="./mainTest2.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_csMgt.jsp">C/S관리</a></li>
+				<li><a href="./main.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_deliveryList.jsp">배송리스트</a></li>
+				<li><a href="./main.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_crMgt.jsp">취소/환불관리</a></li>
+				<li><a href="./main.jsp?left=./odm/view/odm.jsp&contents=./odm/view/odm_csMgt.jsp">C/S관리</a></li>
 			</ul>
 		</div>
 	</div>

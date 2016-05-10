@@ -28,7 +28,7 @@ public class PurchaseList implements Action {
 		}		
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("./mainTest2.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_check.jsp");
+		forward.setPath("./main.jsp?left=./purchase/view/purchase.jsp&contents=./purchase/view/purchase_check.jsp");
 		return forward;
 	}
 

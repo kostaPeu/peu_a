@@ -12,7 +12,7 @@
 		)
 		values(
 			notice_seq.NEXTVAL, #{emp_id}, #{notice_title}, #{notice_content}, SYSDATE,
-			0
+			#{notice_hit}
 		)
 	</insert>
 
@@ -47,13 +47,21 @@
 	</select>
 
 	<select id="noticeSearch" resultType="Notice" parameterType="GwSearch">
-		select * from notice where 1=1
+		select * from notice n where 1=1 
 		
-		  <if test="title != null">
-    		AND title like #{title}
+		  <if test='type eq "writer"'>
+    		AND n.emp_id = (select e1.emp_id from employee e1 where e1.e_name = #{word})
+    		order by notice_id desc
 		  </if>
-  		  <if test="author != null and author.name != null">
-    		AND author_name like #{author.name}
+		  
+		  <if test='type eq "title"'>
+    		AND n.notice_title LIKE  '%'||#{word}||'%'
+    		order by n.notice_id desc
+		  </if>
+		  
+		  <if test='type eq "content"'>
+    		AND n.notice_content LIKE  '%'||#{word}||'%'
+    		order by n.notice_id desc
 		  </if>
 		  
 	</select>
@@ -68,6 +76,10 @@
 	</select>
 	
 	<select id="selectNotice" resultType="Notice" parameterType="int">
+		select * from notice where notice_id = #{notice_id}
+	</select>
+
+	<select id="viewNotice" resultType="Notice" parameterType="int">
 		select * from notice where notice_id = #{notice_id}
 	</select>
 
@@ -110,6 +122,10 @@
 	<select id="selectShareFolder" resultType="ShareFolder" parameterType="int">
 		SELECT * FROM share_folder WHERE share_folder_id = #{share_folder_id}
 	</select>
+	
+	<update id="noticeHit" parameterType="Notice">
+		update notice set notice_hit = notice_hit+1 where notice_id=#{notice_id}
+	</update>
 </mapper>
 
 

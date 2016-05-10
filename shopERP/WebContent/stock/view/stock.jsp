@@ -10,8 +10,8 @@
 		<div class="erp-local-nav-title">재고관리</div>
 		<div class="erp-local-nav">
 			<ul class="local">
-				<li><a href="./mainTest2.jsp?left=./stock/view/stock.jsp&contents=./stock/view/stock_search.jsp">재고현황</a></li>
-				<li><a href="./mainTest2.jsp?left=./stock/view/stock.jsp&contents=./stock/view/stock_rp_list.jsp">재고수불부</a></li>
+				<li><a href="./main.jsp?left=./stock/view/stock.jsp&contents=./stock/view/stock_search.jsp">재고현황</a></li>
+				<li><a href="./main.jsp?left=./stock/view/stock.jsp&contents=./stock/view/stock_rp_list.jsp">재고수불부</a></li>
 			</ul>
 		</div>
 	</div>

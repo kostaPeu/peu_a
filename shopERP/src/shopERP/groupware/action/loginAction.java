@@ -60,7 +60,7 @@ public class loginAction implements Action {
 		ActionForward forward = new ActionForward();
 		
 		forward.setRedirect(false);
-		forward.setPath("./mainTest2.jsp");
+		forward.setPath("./main.jsp");
 	
 		return forward;
 	}

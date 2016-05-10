@@ -39,7 +39,7 @@ public class noticeViewAction implements Action {
 		
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_view.jsp");
+		forward.setPath("./main.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_view.jsp");
 		
 		return forward;
 	}

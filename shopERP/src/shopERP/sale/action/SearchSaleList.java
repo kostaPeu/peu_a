@@ -39,7 +39,7 @@ public class SearchSaleList implements Action {
 		}		
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("./mainTest2.jsp?left=./sale/view/sale.jsp&contents=./sale/view/sale_searchList.jsp");
+		forward.setPath("./main.jsp?left=./sale/view/sale.jsp&contents=./sale/view/sale_searchList.jsp");
 		return forward;
 	}
 

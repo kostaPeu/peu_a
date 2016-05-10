@@ -18,6 +18,7 @@ public interface GwMapper {
 	public int noticeReplyInsert(NoticeReply noticeReply);
 	public int noticeUpdate(Notice notice);
 	public Notice selectNotice(int notice_id);
+	public Notice viewNotice(int notice_id);
 	public NoticeReply selectNoticeReply(int nreply_id);
 	public void noticeDelete(int notice_id);
 	public void replyDelete(int nreply_id);
@@ -26,4 +27,5 @@ public interface GwMapper {
 	public List<ShareFolder> depFileList();
 	public int depFileInsert(ShareFolder sharefolder);
 	public ShareFolder selectShareFolder(int share_folder_id);
+	public void noticeHit(Notice notice);
 }

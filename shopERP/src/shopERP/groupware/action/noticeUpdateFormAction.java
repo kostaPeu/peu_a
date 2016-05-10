@@ -29,7 +29,7 @@ public class noticeUpdateFormAction implements Action {
 			
 			
 			forward.setRedirect(false);
-			forward.setPath("./mainTest2.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_update.jsp");
+			forward.setPath("./main.jsp?left=./groupware/view/groupware.jsp&contents=./groupware/view/notice/notice_update.jsp");
 		}else{
 			System.out.println("수정 권한 없음.");
 

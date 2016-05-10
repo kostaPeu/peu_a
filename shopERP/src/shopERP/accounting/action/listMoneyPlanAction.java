@@ -20,7 +20,7 @@ public class listMoneyPlanAction implements Action {
 		request.setAttribute("list", list);
 		ActionForward forward = new ActionForward();
 		forward.setInRedirect(false);
-		forward.setPath("./mainTest2.jsp?left=./accounting/view/Accounleft.jsp&contents=./accounting/view/MoneyPlan/MoneyPlan_view.jsp");
+		forward.setPath("./main.jsp?left=./accounting/view/Accounleft.jsp&contents=./accounting/view/MoneyPlan/MoneyPlan_view.jsp");
 		return forward;
 	}
 

@@ -26,7 +26,7 @@ public class productListAction implements Action {
 		}
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("./mainTest2.jsp?left=./basic/view/basic.jsp&contents=./basic/view/basic_productList.jsp&pageNum="+page);
+		forward.setPath("./main.jsp?left=./basic/view/basic.jsp&contents=./basic/view/basic_productList.jsp&pageNum="+page);
 		return forward;
 	}
 }
