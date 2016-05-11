@@ -7,7 +7,6 @@
 <script src="/shopERP/js/ajax.js"></script>
 </head>
 <body>
-	<div class="wrapper-erp-local-nav">
 		<div class="erp-local-nav-title">회계관리</div>
 		<div class="erp-local-nav">
 			<ul class="local">
@@ -54,6 +53,5 @@
 					</ul></li>
 			</ul>
 		</div>
-	</div>
 </body>
 </html>
