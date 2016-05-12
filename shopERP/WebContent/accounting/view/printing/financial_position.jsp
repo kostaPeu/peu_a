@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/shopERP/css/accunting_print.css">
+<link rel="stylesheet" href="/shopERP/accounting/css/accunting_print.css">
 <link href="/shopERP/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
