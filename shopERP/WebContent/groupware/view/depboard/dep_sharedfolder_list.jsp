@@ -9,55 +9,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="./groupware/css/dep_sharedfolder_list.css" rel="stylesheet">
+<script src="./groupware/js/dep_sharedfolder_list.js"></script>
 <script src="./js/checkbox.js"></script>
-<script type="text/javascript">
-	function onUpload() {
-		alert("upup");
-		var files = document.getElementById("fileUp").files;
-		for(var i=0; i<files.length; i++){
-			alert(files[i].size);
-		}
-		
-		document.sharefolderForm.action = "depFileInsertAction.gw";
-		document.sharefolderForm.submit();
-	}
-	
-	function onDownload() {
-		alert("dada");
-		document.sharefolderForm.action = "downloadAction.gw";
-		document.sharefolderForm.submit();
-	}
-	
-</script>
+
 </head>
 <body>
 
 	<h2 class="page_title">공유폴더</h2>
 	
-	<div class="container col-sm-12">
-	<form name="sharefolderForm" method="post" enctype="multipart/form-data">
-		<div class="col-sm-8">
-			<div class="col-sm-5">
-				<button type="button" onclick="onDownload()">
-					<span>내려받기</span>
-				</button>
-				<button type="button" onclick="onUpload()">
-					<span>올리기</span>
-				</button>
-				<button type="button">
-					<span>삭제</span>
-				</button>
-			</div>
-			<div class="col-sm-7">
-				<input type="file" id="fileUp" name="filename" multiple title="파일 올리기"><br/>
-			</div>
+	<form class="form-inline" name="sharefolderForm" method="post" enctype="multipart/form-data">
+		<div class="col-sm-9">
+			<input class="btn btn-sm btn-default form-control" type="file" id="fileUp" name="filename" multiple title="파일 올리기">
+			<button class="btn btn-sm btn-default form-control" type="button" onclick="onUpload()">
+				<span>올리기</span>
+			</button>
+			<button class="btn btn-sm btn-default form-control" type="button" onclick="onDownload()">
+				<span>내려받기</span>
+			</button>
+			<button class="btn btn-sm btn-default form-control" type="button">
+				<span>삭제</span>
+			</button>
 		</div>
-		<div class="col-sm-4 search_area_quick_search">
-			<input id="search_txt" class="input_txt _textbox_quick_search"
+		<div class="col-sm-3 search_area_quick_search">
+			<input id="search_txt" class="form-control"
 				type="text" name="p_search" accesskey="s">
-			<a class="search_btn _link_search_btn_quick_search" href="#">
-				<label for="search_txt">검색</label>
-			</a>
+			<button class="btn btn-sm btn-warning form-control" href="#"><span>검색</span></button>
 		</div>
 		
 		<div class="item_list col-sm-12">
@@ -66,11 +42,36 @@
 				<div class="item_box">
 				  <label>
 					  	<input id="input_check" name="fileCheck" type="checkbox" autocomplete="off" value="${list.get(i).getShare_folder_id() }">
-						<div class="item">
-							<img src="./groupware/images/zipimg.png" alt="파일이미지" />
-						</div>
+						<c:choose>
+							<c:when test="${list.get(i).getFile_type().substring(0,5).equals('image')}">
+								<div class="imagefile item"></div>
+							</c:when>
+							<c:otherwise>
+								<div class="item">
+									<c:choose>
+										<c:when test="${list.get(i).getFile_type() =='application/zip' }">
+											<img src="./groupware/images/zipfile.jpg" alt="zip file image" />
+											<span class="file_type_text">ZIP</span>
+										</c:when>
+										<c:when test="${list.get(i).getFile_type().substring(0,5).equals('audio') }">
+											<img src="./groupware/images/musicfile.jpg" alt="music file image" />
+											<span class="file_type_text">Audio</span>
+										</c:when>
+										<c:when test="${list.get(i).getFile_type().substring(0,4).equals('text') }">
+											<img src="./groupware/images/textfile.jpg" alt="text file image" />
+											<span class="file_type_text">Text</span>
+										</c:when>
+										<c:otherwise>
+											<img src="./groupware/images/otherfile.jpg" alt="other file image" />
+											<span class="file_type_text">File</span>
+										</c:otherwise>
+									</c:choose>
+								</div>
+							</c:otherwise>
+						</c:choose>
+
 						<div class="item_text">
-							<span class="item_title">${list.get(i).getFile_name() }</span>
+							<span class="item_title" value="${list.get(i).getFile_name() }">${f_name_list.get(i) }</span>
 							<span class="item_size">${list.get(i).getFile_size() }</span>
 							<span class="item_writer">${e_name_list.get(i)}</span>
 						</div>
@@ -81,7 +82,6 @@
 		</div>
 		
 	</form>
-	</div>
 	
 	<ul class="pager col-sm-12">
 		<li class="previous"><a href="#">Previous</a></li>

@@ -8,6 +8,7 @@
     vertical-align:middle;
     border-radius:10px;
     background:#fff;
+    width:142px;
 }
 
 .item {
@@ -18,11 +19,25 @@
 	border:1px solid #ccc;
 	vertical-align:middle;
 	padding:6px;
+	position:relative;
+}
+
+.imagefile {
+	background:center center no-repeat;
 }
 
 .item img {
-	width:40px;
-	margin:15px auto;
+	margin:12px auto;
+	width:50px;
+}
+
+.file_type_text{
+	width:50px;
+	font-size:11pt;
+	color:#fff;
+	display:block;
+	margin:-35px auto 0;
+	text-align:center;
 }
 
 .item_text span {
