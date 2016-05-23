@@ -17,8 +17,7 @@
 
 	<h2 class="page_title">공유폴더</h2>
 	
-	<form class="form-inline" name="sharefolderForm" method="post" enctype="multipart/form-data">
-		<div class="col-sm-9">
+	<form class="form-inline pull-left sharefolderForm" name="sharefolderForm" method="post" enctype="multipart/form-data">
 			<input class="btn btn-sm btn-default form-control" type="file" id="fileUp" name="filename" multiple title="파일 올리기">
 			<button class="btn btn-sm btn-default form-control" type="button" onclick="onUpload()">
 				<span>올리기</span>
@@ -29,14 +28,11 @@
 			<button class="btn btn-sm btn-default form-control" type="button">
 				<span>삭제</span>
 			</button>
-		</div>
-		<div class="col-sm-3 search_area_quick_search">
 			<input id="search_txt" class="form-control"
 				type="text" name="p_search" accesskey="s">
 			<button class="btn btn-sm btn-warning form-control" href="#"><span>검색</span></button>
-		</div>
 		
-		<div class="item_list col-sm-12">
+		<div class="item_list">
 			<c:if test="${list.size()-1 >=0}">
 			<c:forEach var="i" begin="0" end="${list.size()-1}" step="1">
 				<div class="item_box">
@@ -83,7 +79,7 @@
 		
 	</form>
 	
-	<ul class="pager col-sm-12">
+	<ul class="pager">
 		<li class="previous"><a href="#">Previous</a></li>
 		<li><a>1</a></li>
 		<li class="next"><a href="#">Next</a></li>

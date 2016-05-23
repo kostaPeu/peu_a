@@ -1,5 +1,10 @@
 @CHARSET "UTF-8";
 
+.sharefolderForm {
+	position:relative;
+	width:100%;
+}
+
 .item_box {
     display: inline;
     float: left;
